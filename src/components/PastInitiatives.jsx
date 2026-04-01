@@ -134,32 +134,7 @@ const PastInitiatives = () => {
                 </div>
             </section>
 
-            {/* SECTION 3: Current Project Teaser (Target Beneficiaries) */}
-            <section className={styles.beneficiariesSection}>
-                <motion.div 
-                    className={styles.contentWrapper}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    variants={baseVariants}
-                >
-                    <h2 className={styles.pedagogyTitleStyle}>TARGET BENEFICIARIES</h2>
-                    
-                    <div className={styles.beneficiariesList}>
-                        <ul>
-                            <li>
-                                <strong>Youth from underprivileged backgrounds</strong> who possess the talent but cannot afford expensive college education.
-                            </li>
-                            <li>
-                                <strong>Girls from humble backgrounds</strong>, whose parents work in challenging jobs such as domestic help, auto-driving, or daily labor.
-                            </li>
-                            <li>
-                                <strong>Underprivileged Graduates</strong> who are struggling to find suitable employment due to a lack of industry-specific skills.
-                            </li>
-                        </ul>
-                    </div>
-                </motion.div>
-            </section>
+    
 
         </div>
     );

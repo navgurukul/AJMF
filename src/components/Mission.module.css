@@ -11,6 +11,8 @@
 }
 
 .pageContainer {
+    min-height: 100vh; /* Puri screen ki height */
+    padding-bottom: 100px;
     width: 100%;
     overflow-x: hidden;
     font-family: 'Arial', sans-serif;
@@ -259,6 +261,10 @@
     width: 100%;
     height: auto;
     display: block;
+}
+
+#trustee {
+    scroll-margin-top: 100px; /* Isse scroll apne aap thoda upar rukega */
 }
 
 @media (max-width: 1024px) {

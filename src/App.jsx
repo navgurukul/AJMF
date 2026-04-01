@@ -21,6 +21,7 @@ import Mission from './components/Mission';
 import DayAtCampus from './components/DayAtCampus';
 import Gallery from './components/Gallery';
 import EventsAndActivities from './components/EventsAndActivities';
+import Pedagogy from './components/Pedagogy';
 
 function App() {
   const location = useLocation();
@@ -84,6 +85,7 @@ function App() {
         
           <Route path="/contact" element={<ContactUs />} /> 
           <Route path="/donate" element={<Donate />} />
+          <Route path="/pedagogy" element={<Pedagogy />} />
     
         </Routes>
       </main>

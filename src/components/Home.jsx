@@ -17,7 +17,7 @@ const staggerContainer = {
     visible: { transition: { staggerChildren: 0.2 } }
 };
 
-// --- 1. HERO SECTION (Unchanged) ---
+
 const HeroSection = () => {
     return (
         <Motion.section

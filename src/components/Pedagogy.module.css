@@ -1,0 +1,111 @@
+.pedagogyPage {
+    width: 100%;
+    min-height: 100vh; /* Puri screen cover karne ke liye */
+    background-color: #fcf8f2; /* Aapka white-bg */
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.mainTitle {
+    color: #112B68; /* Deep Blue */
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: 10px;
+}
+
+.underline {
+    width: 80px;
+    height: 4px;
+    background-color: #ff9100; /* Title Gold */
+    margin: 0 auto 20px;
+    border-radius: 2px;
+}
+
+.subtitle {
+    color: #7d3900; /* Subtitle Brown/Gold */
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.contentCard {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(17, 43, 104, 0.08);
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+}
+
+.cardHeader {
+    background-color: #e7f1fd; /* Light Blue BG */
+    padding: 30px;
+    text-align: center;
+    border-bottom: 1px solid #d0e4ff;
+}
+
+.cardHeader h2 {
+    color: #112B68;
+    margin: 0;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+
+.cardBody {
+    padding: 50px;
+}
+
+.introText {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.pointsList {
+    list-style: none;
+    padding: 0;
+}
+
+.pointsList li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 25px;
+    padding: 15px;
+    border-radius: 12px;
+    transition: background 0.3s ease;
+}
+
+.pointsList li:hover {
+    background-color: #f4f8ff; /* Hover effect */
+}
+
+.bulletIcon {
+    color: #ff9100; /* Gold Bullets */
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+@media (max-width: 768px) {
+    .cardBody {
+        padding: 30px 20px;
+    }
+    .mainTitle {
+        font-size: 2.2rem;
+    }
+}

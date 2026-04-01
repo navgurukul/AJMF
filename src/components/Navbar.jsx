@@ -24,7 +24,8 @@ function Navbar() {
         { label: 'Study Behind Foundation', path: '/#story-behind-foundation' },
         { label: 'Current Project', path: '/#current-project' },
         { label: 'Mission & Trustee', path: '/mission' } ,
-        { label: 'Past Initiatives', path: '/past-initiatives' } // You can create a /mission route later
+        { label: 'Mission & Trustee', path: '/mission#trustee'}
+        { label: 'Past Initiatives', path: '/past-initiatives' } // You can create a /miss
       ]
     },
     {
@@ -37,6 +38,7 @@ function Navbar() {
       path: '#', // Not a page itself, just opens dropdown
       dropdown: [
         { label: 'Our Programs', path: '/programs' },
+        { label: 'Pedagogy', path: '/pedagogy' },
         { label: 'Student Led Campus', path: '/student-campus' },
         { label: 'A Day at Campus', path: '/day-at-campus' }
       ]
