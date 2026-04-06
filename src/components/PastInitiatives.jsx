@@ -1,6 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './PastInitiatives.module.css';
+import anudip1 from '../assets/anudip1.jpeg';
+import anudip2 from '../assets/anudip2.jpeg';
+import anudip3 from '../assets/anudip3.jpeg';
 
 
 const baseVariants = {
@@ -65,7 +68,7 @@ const PastInitiatives = () => {
                             </p>
                         </motion.div>
 
-                        {/* Right Side: Image Placeholders (Since you don't have images) */}
+                        {/* Right Side: Image Collage */}
                         <motion.div 
                             className={styles.imageGrid}
                             initial="hidden"
@@ -73,18 +76,30 @@ const PastInitiatives = () => {
                             viewport={{ once: true }}
                             variants={cardVariants}
                         >
-                            {/* Placeholder 1 */}
-                            {/* <div className={styles.imagePlaceholder}>
-                                <span>Classroom Training Photo</span>
-                            </div> */}
-                            {/* Placeholder 2 */}
-                            {/* <div className={styles.imagePlaceholder}>
-                                <span>Certificate Distribution</span>
-                            </div> */}
-                            {/* Placeholder 3 */}
-                            {/* <div className={styles.imagePlaceholderFull}>
-                                <span>Group Photo with Students</span>
-                            </div> */}
+                            <figure className={`${styles.galleryCard} ${styles.galleryCardHero}`}>
+                                <img
+                                    src={anudip1}
+                                    alt="Anudip training session with students"
+                                    className={styles.galleryImage}
+                                    loading="lazy"
+                                />
+                            </figure>
+                            <figure className={`${styles.galleryCard} ${styles.galleryCardTop}`}>
+                                <img
+                                    src={anudip2}
+                                    alt="Students participating in Anudip initiative"
+                                    className={styles.galleryImage}
+                                    loading="lazy"
+                                />
+                            </figure>
+                            <figure className={`${styles.galleryCard} ${styles.galleryCardBottom}`}>
+                                <img
+                                    src={anudip3}
+                                    alt="Anudip program group moment"
+                                    className={styles.galleryImage}
+                                    loading="lazy"
+                                />
+                            </figure>
                         </motion.div>
                     </div>
                 </div>
