@@ -1,6 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './PastInitiatives.module.css';
+import anudip1 from '../assets/anudip1.jpeg';
+import anudip2 from '../assets/anudip2.jpeg';
+import anudip3 from '../assets/anudip3.jpeg';
 
 
 const baseVariants = {
@@ -28,51 +31,7 @@ const PastInitiatives = () => {
                 <p className={styles.pageSubtitle}>Addressing the roots of the problem since 2019</p>
             </motion.section>
 
-            {/* SECTION 1: The Higher Education Gap (Context) */}
-            <section className={styles.gapSection}>
-                <motion.div 
-                    className={styles.contentWrapper}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    variants={baseVariants}
-                >
-                    <h2 className={styles.sectionHeading}>The Higher Education Gap</h2>
-                    <p className={styles.sectionDescription}>
-                        India's higher education system struggles to equip students with the skills needed for real-world employment. 
-                        Limited affordability, outdated curricula, language barriers, and a disconnect from industry demands leave millions of students unprepared.
-                    </p>
-
-                    {/* Challenges Grid */}
-                    <div className={styles.challengesGrid}>
-                        <motion.div className={styles.challengeCard} variants={cardVariants}>
-                            <div className={styles.iconCircle}>₹</div>
-                            <h3>Unaffordability</h3>
-                            <p>Public colleges are guarded by tough entrance exams, and private ones are often financially out of reach for the underprivileged.</p>
-                        </motion.div>
-
-                        <motion.div className={styles.challengeCard} variants={cardVariants}>
-                            <div className={styles.iconCircle}>⚙️</div>
-                            <h3>Outdated Curricula</h3>
-                            <p>Lack of proper pedagogy and an improper learning environment lead to a disconnect with modern industry needs.</p>
-                        </motion.div>
-
-                        <motion.div className={styles.challengeCard} variants={cardVariants}>
-                            <div className={styles.iconCircle}>💬</div>
-                            <h3>Language Barrier</h3>
-                            <p>Most content is in English, making it difficult for students from marginalized backgrounds to compete.</p>
-                        </motion.div>
-
-                        <motion.div className={styles.challengeCard} variants={cardVariants}>
-                            <div className={styles.iconCircle}>💼</div>
-                            <h3>Unemployability</h3>
-                            <p>Even after completing college, ~97% of engineers lack the technical and cognitive skills required for software-related jobs.</p>
-                        </motion.div>
-                    </div>
-                </motion.div>
-            </section>
-
-            {/* SECTION 2: 2019 Past Initiative (Anudip Partnership) */}
+            {/* SECTION 1: 2019 Past Initiative (Anudip Partnership) */}
             <section className={styles.initiativeSection}>
                 <div className={styles.contentWrapper}>
                     <motion.div 
@@ -109,7 +68,7 @@ const PastInitiatives = () => {
                             </p>
                         </motion.div>
 
-                        {/* Right Side: Image Placeholders (Since you don't have images) */}
+                        {/* Right Side: Image Collage */}
                         <motion.div 
                             className={styles.imageGrid}
                             initial="hidden"
@@ -117,49 +76,36 @@ const PastInitiatives = () => {
                             viewport={{ once: true }}
                             variants={cardVariants}
                         >
-                            {/* Placeholder 1 */}
-                            {/* <div className={styles.imagePlaceholder}>
-                                <span>Classroom Training Photo</span>
-                            </div> */}
-                            {/* Placeholder 2 */}
-                            {/* <div className={styles.imagePlaceholder}>
-                                <span>Certificate Distribution</span>
-                            </div> */}
-                            {/* Placeholder 3 */}
-                            {/* <div className={styles.imagePlaceholderFull}>
-                                <span>Group Photo with Students</span>
-                            </div> */}
+                            <figure className={`${styles.galleryCard} ${styles.galleryCardHero}`}>
+                                <img
+                                    src={anudip1}
+                                    alt="Anudip training session with students"
+                                    className={styles.galleryImage}
+                                    loading="lazy"
+                                />
+                            </figure>
+                            <figure className={`${styles.galleryCard} ${styles.galleryCardTop}`}>
+                                <img
+                                    src={anudip2}
+                                    alt="Students participating in Anudip initiative"
+                                    className={styles.galleryImage}
+                                    loading="lazy"
+                                />
+                            </figure>
+                            <figure className={`${styles.galleryCard} ${styles.galleryCardBottom}`}>
+                                <img
+                                    src={anudip3}
+                                    alt="Anudip program group moment"
+                                    className={styles.galleryImage}
+                                    loading="lazy"
+                                />
+                            </figure>
                         </motion.div>
                     </div>
                 </div>
             </section>
 
-            {/* SECTION 3: Current Project Teaser (Target Beneficiaries) */}
-            <section className={styles.beneficiariesSection}>
-                <motion.div 
-                    className={styles.contentWrapper}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    variants={baseVariants}
-                >
-                    <h2 className={styles.pedagogyTitleStyle}>TARGET BENEFICIARIES</h2>
-                    
-                    <div className={styles.beneficiariesList}>
-                        <ul>
-                            <li>
-                                <strong>Youth from underprivileged backgrounds</strong> who possess the talent but cannot afford expensive college education.
-                            </li>
-                            <li>
-                                <strong>Girls from humble backgrounds</strong>, whose parents work in challenging jobs such as domestic help, auto-driving, or daily labor.
-                            </li>
-                            <li>
-                                <strong>Underprivileged Graduates</strong> who are struggling to find suitable employment due to a lack of industry-specific skills.
-                            </li>
-                        </ul>
-                    </div>
-                </motion.div>
-            </section>
+    
 
         </div>
     );

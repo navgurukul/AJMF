@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import styles from './Mission.module.css'; // Note: Using new CSS file
+import styles from './Mission.module.css';
 
-// Images needed for these sections
+// Images
 import FoundationImage from '../assets/AJMF_0324.jpg'; 
 import campusImg25 from '../assets/partnershipSign.png';
 
@@ -21,7 +22,6 @@ const MissionVisionSection = () => {
     return (
         <section className={styles.missionVisionSection}>
             <div className={styles.cardsContainer}>
-                {/* Vision Card */}
                 <motion.div
                     className={styles.missionVisionCard}
                     initial="hidden"
@@ -36,7 +36,6 @@ const MissionVisionSection = () => {
                     </p>
                 </motion.div>
 
-                {/* Mission Card */}
                 <motion.div
                     className={styles.missionVisionCard}
                     initial="hidden"
@@ -57,7 +56,7 @@ const MissionVisionSection = () => {
 
 const FounderSection = () => {
     return (
-        <section className={styles.founderSection}>
+        <section id="trustee" className={styles.founderSection}>
             <div className={styles.founderContainer}>
                 <div className={styles.founderImageContainer}>
                     <img src={FoundationImage} alt="Brigadier (Dr) Kishor Jadhav" className={styles.founderImage} />
@@ -74,29 +73,7 @@ const FounderSection = () => {
     );
 };
 
-const PedagogySection = () => {
-    return (
-        <motion.section
-            className={styles.pedagogySection}
-            initial="hidden"
-            whileInView="visible"
-            variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
-            viewport={{ once: true, amount: 0.1 }}
-        >
-            <h2 className={styles.pedagogyTitle}>RESIDENTIAL COURSES - PEDAGOGY</h2>
-            <div className={styles.pedagogyText}>
-                <p>At our campus, we follow a unique, innovative, and effective learning approach that goes beyond traditional education:</p>
-                <ul>
-                    <li>We emphasize Self-Learning, guided by a structured system of peer mentorship and industry mentors.</li>
-                    <li>Facilitators act as learning coaches to support and enhance the process, rather than traditional full-time teachers.</li>
-                    <li>The curriculum focuses on developing the essential ability of 'Learning How to Learn' in a world driven by AI.</li>
-                    <li>Our student-driven campus provides real-world leadership and collaboration opportunities through the Student Council System.</li>
-                    <li>The program develops essential life skills (communication, negotiation, problem-solving, and teamwork).</li>
-                </ul>
-            </div>
-        </motion.section>
-    );
-};
+
 
 const VisionInPartnershipSection = () => {
     return (
@@ -129,17 +106,86 @@ const VisionInPartnershipSection = () => {
     );
 };
 
+// const Mission = () => {
+//     const { hash } = useLocation();
+
+//     useEffect(() => {
+//         if (hash) {
+//             const id = hash.replace('#', '');
+//             const element = document.getElementById(id);
+//             if (element) {
+//                 setTimeout(() => {
+//                     // Offset matlab kitna pixel upar se jagah chhodni hai
+//                     // Agar 100px navbar hai, toh hum 120px ki jagah chhodenge
+//                     const offset = 190; 
+//                     const bodyRect = document.body.getBoundingClientRect().top;
+//                     const elementRect = element.getBoundingClientRect().top;
+//                     const elementPosition = elementRect - bodyRect;
+//                     const offsetPosition = elementPosition - offset;
+
+//                     window.scrollTo({
+//                         top: offsetPosition,
+//                         behavior: 'smooth'
+//                     });
+//                 }, 100);
+//             }
+//         } else {
+//             window.scrollTo({ top: 0, behavior: 'smooth' });
+//         }
+//     }, [hash]);
+
+//     return (
+//         <div className={styles.pageContainer}>
+//             <div style={{ textAlign: 'center', padding: '40px 0 0 0' }}>
+//                 <h1 className={styles.modernTitleBlue}>Our Mission & Vision</h1>
+//             </div>
+
+//             <MissionVisionSection />
+//             <FounderSection />
+//             <PedagogySection />
+//             <VisionInPartnershipSection />
+//         </div>
+//     );
+// };
+
+
 const Mission = () => {
+    const { hash } = useLocation();
+
+    useEffect(() => {
+        if (hash) {
+            const id = hash.replace('#', '');
+            const element = document.getElementById(id);
+            if (element) {
+                // Thoda wait taaki page puri tarah load ho jaye
+                setTimeout(() => {
+                    const offset = 160; // Aapne pehle 190 rakha tha, adjust kar sakti hain
+                    const bodyRect = document.body.getBoundingClientRect().top;
+                    const elementRect = element.getBoundingClientRect().top;
+                    const elementPosition = elementRect - bodyRect;
+                    const offsetPosition = elementPosition - offset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }, 100);
+            }
+        } else {
+            // Agar normal Mission link hai, toh top par jao
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    }, [hash]);
+
     return (
         <div className={styles.pageContainer}>
-            {/* Page Header (Optional) */}
             <div style={{ textAlign: 'center', padding: '40px 0 0 0' }}>
                 <h1 className={styles.modernTitleBlue}>Our Mission & Vision</h1>
             </div>
 
             <MissionVisionSection />
             <FounderSection />
-            <PedagogySection />
+            {/* Pedagogy hat gaya hai, lekin VisionInPartnership niche rehna chahiye */}
             <VisionInPartnershipSection />
         </div>
     );
