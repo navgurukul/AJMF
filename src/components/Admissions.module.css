@@ -173,6 +173,7 @@
     position: relative;
     max-width: 1000px;
     margin: 0 auto;
+    isolation: isolate;
   }
   
   /* The vertical line */
@@ -186,6 +187,7 @@
     left: 50%;
     margin-left: -2px;
     border-radius: 2px;
+    z-index: 0;
   }
   
   .timelineItem {
@@ -196,6 +198,12 @@
     box-sizing: border-box;
     animation: fadeInUp 1s ease-out forwards;
     opacity: 0; /* for animation */
+    z-index: 1;
+    margin-bottom: 48px;
+  }
+
+  .timelineItem:last-child {
+    margin-bottom: 0;
   }
   
   /* Left/Right container positioning */
@@ -226,6 +234,7 @@
     position: relative;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 1;
   }
   
   /* Little arrow pointing to timeline */
@@ -318,6 +327,7 @@
       width: 100%;
       padding-left: 70px;
       padding-right: 25px;
+      margin-bottom: 36px;
     }
     
     .timelineItem::before { left: 60px; border: medium solid white; border-width: 10px 10px 10px 0; border-color: transparent white transparent transparent; }

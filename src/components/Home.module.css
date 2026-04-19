@@ -1,586 +1,3 @@
-/* 
-:root {
-    --white-bg: #fcf8f2;
-    --text-dark: #333333;
-    --title-gold: #ff9100; 
-    --subtitle-blue: #004d99; 
-    --accent-orange: #ff9100; 
-    --author-color: #001c4f;
-    --author-title-color: #034d1f;
-    font-size: 18px;
-}
-
-
-.modernHeroSection {
-    width: 100%;
-    min-height: 85vh; 
-    display: flex;
-    align-items: center; 
-    overflow: hidden;
-    position: relative;
-    background-color: var(--white-bg);
-    color: var(--text-dark);
-    padding: 0;
-}
-
-.heroContent {
-    
-    flex: 0 0 42%; 
-    max-width: 42%; 
-    padding: 60px 40px 60px 60px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.modernTitle {
-   
-    font-family: 'Playfair Display', Georgia, serif; 
-    font-size: clamp(3rem, 6vw, 4.5rem); 
-    font-weight: 700;
-   
-    line-height:1.7rem ; 
-    color: var(--title-gold);
-    margin-bottom: 0; 
-    padding-bottom: 0;
-}
-
-
-.modernSubtitle {
-    font-size: clamp(1rem, 2vw, 1.25rem); 
-    font-weight: 700;
-    color: black;
-    text-transform: uppercase;
-   
-    margin: 30px 0; 
-}
-
-
-.modernAuthorInfo {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px; 
-}
-
-.modernAuthorImage {
-    width: 80px; 
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 15px;
-    border: 3px solid rgb(1, 93, 1); 
-    box-shadow: 0 0 0 1px #ddd; 
-}
-
-.modernAuthorName {
-    font-weight: 600;
-    font-size: 1.5rem;
-    color: var(--author-color);
-    line-height: 1.2rem;
-}
-
-.modernAuthorTitle {
-    font-size: 1.2rem;
-    color: var(--author-title-color); 
-    font-weight: 400;
-}
-
- 
-.modernHeroImageContainer {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    
- 
-    width: 55%; 
-    height: 100%; 
-    overflow: hidden;
-    
-    
-    background-color: white; 
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1); 
-}
-
-.modernHeroImage {
-    width: calc(100% - 10px); 
-    height: calc(100% - 0px);
-    object-fit: cover; 
-    position: absolute;
-      
-
-    
-}
-
-.modernTitleBlue {
-     
-    color: var(--subtitle-blue); 
-    font-family: 'Playfair Display', Georgia, serif; 
-    font-size: clamp(3rem, 6vw, 4.5rem); 
-    font-weight: 700;
-    line-height: 1.05; 
-    margin-bottom: 0; 
-    padding-bottom: 0;
-}
-
-
-:root {
- 
-    --v-m-background-light: #f4f8ff; 
-    --v-m-text-dark: #333333;
-    --v-m-header-blue: #003674; 
-}
-
-
-.missionVisionSection {
-    width: 100%;
-    max-width: 1400px;
-    margin: 60px auto;
-    padding: 0 40px;
-    box-sizing: border-box;
-}
-
-
-.topTextBlock {
-    width: 100%;
-    background-color: var(--v-m-background-light); 
-    padding: 30px 50px;
-    border-radius: 8px;
-    margin-bottom: 40px;
-}
-
-.topTextBlock p {
-    font-size: clamp(1rem, 1.2vw, 1.15rem);
-    line-height: 1.6;
-    color: var(--v-m-text-dark);
-}
-
-.cardsContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 30px;
-}
-
-
-.missionVisionCard {
-    background-color: var(--v-m-background-light); 
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
-    height: 100%;
-    box-sizing: border-box;
-}
-
-.cardTitle {
-    font-size: 1.8rem;
-    font-weight: 700;
-    text-align: center;
-    color: var(--v-m-header-blue);
-    margin-bottom: 25px;
-    letter-spacing: 1px;
-}
-
-.cardText {
-    font-size: clamp(2rem, 1.3vw, 1.10rem);
-    line-height: 1.6;
-    color: var(--v-m-text-dark);
-}
-
-
-@media (max-width: 900px) {
-    .missionVisionSection {
-        padding: 0 20px;
-    }
-    .cardsContainer {
-        
-        grid-template-columns: 1fr;
-    }
-} 
-
-
-
-
-
-:root {
-    --v-m-background-light: #f4f8ff; 
-    --v-m-text-dark: #333333;
-    --v-m-header-blue: #112B68; 
-}
-
-.missionVisionSection {
-    width: 100%;
-    max-width: 1400px;
-    margin: 40px auto 60px auto; 
-    padding: 0 0px;
-    box-sizing: border-box;
-}
-
-.topTextBlock {
-    width: 100%;
-    background-color: var(--v-m-background-light); 
-    border-radius: 8px;
-    margin-bottom: 30px; 
-}
-
-.topTextBlock p {
-    font-size: clamp(1rem, 1.2vw, 1.15rem);
-    line-height: 1.6;
-    color: var(--v-m-text-dark);
-}
-
-.cardsContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 30px;
-}
-
- 
-.missionVisionCard {
-   
-    background-color: #f4f8ff;
-    border-radius: 18px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);  
-    height: 100%;
-    box-sizing: border-box;
- 
-}
-.missionVisionCard ,.cardTitle{
-padding: 0;
-}
-.cardTitle {
-    font-size: 1.8rem;
-    font-weight: 700;
-    text-align: center;
-    color: #112B68;
-    
-    padding: 30px 20px;
-    letter-spacing: 1px;
-    background-color: #e7f1fd;
-    margin-top: 0;
-    
-
-}
-
-.cardText {
-  padding: 20px  30px 0;
-    font-size: clamp(1.1rem, 1.5vw, 1.05rem);
-    line-height: 1.6;
-    color: var(--v-m-text-dark);
-}
- 
-@media (max-width: 900px) {
-    .missionVisionSection {
-        padding: 0 20px;
-    }
-    .cardsContainer {
-        grid-template-columns: 1fr;
-    }
-    .topTextBlock {
-        padding: 20px 30px;
-    }
-}
-
-
-
-
-
-.founderSection {
-    max-width: 1400px;
-    margin: 80px auto;
-    padding: 0 0px;
-    box-sizing: border-box;
-    background-color: #F4F8FF;
-}
-
-.founderContainer {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start; 
-    margin-bottom: 30px;
-}
-
-.founderImageContainer {
-    flex-shrink: 0; 
-    width: 250px; 
-    height: 250px; 
-    overflow: hidden;
-    position: relative;
-    border-radius: 0%; 
-    border: 5px solid black; 
-    clip-path: circle(100% at 50% 50%); 
-}
-
-.founderImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.founderInfo {
-    flex-grow: 3;
-    padding-top: 10px; 
-}
-
-.founderNameTitle {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #112b68;
-    margin-bottom: 5px;
-}
-
-.founderRole {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #7d3900;
-    margin-bottom: 20px;
-}
-
-.founderDescription {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    color: #333;
-}
-
-.founderBottomText {
-    margin-top: 40px;
-    padding-left: 290px; 
-}
-
-.founderBottomText p {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #333;
-}
-
-@media (max-width: 768px) {
-    .founderContainer {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 20px;
-    }
-    .founderImageContainer {
-        width: 180px;
-        height: 180px;
-    }
-    .founderBottomText {
-        padding-left: 0;
-        text-align: center;
-    }
-    .founderNameTitle {
-        font-size: 1.5rem;
-    }
-}
-
-
-:root {
-    --green-bg-dark:  #11338114; 
-    --gold-highlight: #ffc107; 
-    --star-icon-color: #ffcc00; 
-    --legacy-heart-color: #f8f8f8; 
-}
-
-.visionPartnershipSection {
-    background-color: var(--green-bg-dark); 
-    padding: 80px 0;
-    color: #112b68;
-    position: relative;
-    overflow: hidden; 
-    border-radius: 12px; 
-    max-width: 1400px; 
-    margin: 60px auto; 
-}
-
-.visionPartnershipContent {
-    display: flex;
-    max-width: 1200px; 
-    margin: 0 auto;
-    padding: 0 40px;
-    gap: 60px;
-}
-
-.visionPartnershipLeft {
-    flex: 2; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    
-}
-
-.visionPartnershipRight {
-    flex: 1; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap:50px;
-    padding-top: 20px; 
-}
-
-.visionPartnershipTitle {
-    font-size: clamp(2.5rem, 4vw, 3.5rem);
-    font-weight: 700;
-    margin-bottom: 25px;
-    line-height: 1.2;
-    color: #1A3B7D; 
-}
-
-.visionPartnershipText {
-    font-size: clamp(1.3rem, 1.2vw, 1.15rem);
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.navgurukulHighlight {
-    color: #1A3B7D;
-    font-weight: 600;
-}
-
-.highlightGreen {
-    color: #1A3B7D; 
-    font-weight: 600;
-}
- 
-
-.starIcon {
-    color: var(--star-icon-color);
-    flex-shrink: 0;
-}
-
-.visionPartnershipImageContainer {
-    width: 150%;
-    border-radius: 8px; 
-    overflow: hidden;
-    
-}
-
-.visionPartnershipImage {
-    width: 100%;
-    height: 110%;
-    display: block;
-}
-
- 
-@media (max-width: 1024px) {
-    .visionPartnershipContent {
-        flex-direction: column;
-        gap: 40px;
-        padding: 0 30px;
-    }
-    .visionPartnershipRight {
-        align-items: center;
-        width: 80%; 
-        margin: 0 auto;
-        padding-top: 0;
-    }
-    .visionPartnershipImageContainer,
-    .legacyCard {
-        width: 100%; 
-    }
-    .visionPartnershipTitle {
-        text-align: center;
-    }
-    .visionPartnershipLeft {
-        align-items: center;
-        text-align: center;
-    }
-    .visionPartnershipText {
-        text-align: center;
-    }
-    
-}
-
-@media (max-width: 768px) {
-    .visionPartnershipSection {
-        padding: 60px 0;
-        margin: 40px auto;
-    }
-    .visionPartnershipContent {
-        padding: 0 20px;
-    }
-    .visionPartnershipRight {
-        width: 95%;
-    }
-    
-    .starIcon {
-        margin-bottom: 5px;
-    }
-}
-
-
-
-
-
-
-
- 
-
-.pedagogySection {
-    width: 100%;
-    max-width: 1400px;
-    margin: 40px auto;
-    box-sizing: border-box;
-     
-    background-color:  #f4f8ff; 
-    border-radius: 10px;
-    border: 1px solid var(--about-border);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    position: relative;
-}
-.pedagogyTitle {
-    font-size: 1.8rem;
-    font-weight: 700;
-
-    text-align: center;
-    background-color: #e7f1fd;
-    color:  #1A3B7D;    
-    padding: 40px; 
-      
-}
-.pedagogyText {
-  padding: 40px;
-    font-size: 1.3rem;
-    line-height: 1.7;
-    color:  #112B68;
-    margin-bottom: 20px; 
-    white-space: normal; 
-}
-@media (max-width: 768px) {
-    .pedagogySection {
-        padding: 20px;
-        margin: 30px auto;
-    }
-    .pedagogyTitle {
-        font-size: 1.5rem;
-    }
-    .pedagogyText {
-        font-size: 1rem;
-    }
-}
-
-
-
-.navgurukulHighlight {
-    color: #1A3B7D; 
-    font-weight: 600;
-
-    font-family: 'Samarkan', cursive; 
- 
-}
-
-
-.navgurukulHighlight {
-    color: #000000;
-    font-weight: 600;
-    font-family: 'Samarkan', cursive; 
-    font-size: clamp(1.4rem, 1.5vw, 1.3rem); 
-}
-.navgurukul{
-    color: #e91e63;
-} */
-
-
-
 /* --- Global Vars --- */
 :root {
     --white-bg: #fcf8f2;
@@ -598,79 +15,97 @@ padding: 0;
 
 /* ... (Hero Section styles remain same as previous code) ... */
 .modernHeroSection {
+    --hero-height: clamp(620px, 85vh, 1000px);
     width: 100%;
-    min-height: 85vh; 
+    min-height: var(--hero-height);
     display: flex;
-    align-items: center; 
+    align-items: center;
     overflow: hidden;
     position: relative;
     background-color: var(--white-bg);
     padding: 0;
 }
+
 .heroContent {
-    flex: 0 0 45%; 
-    padding: 60px; 
+    flex: 0 0 45%;
+    padding: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
 .modernTitle {
-    font-family: 'Playfair Display', serif; 
-    font-size: clamp(3rem, 5vw, 4.5rem); 
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 5vw, 4.5rem);
     font-weight: 700;
-    line-height: 1.1; 
+    line-height: 1.1;
     color: var(--gold);
     margin: 0;
 }
+
 .modernTitleBlue {
-    color: var(--deep-blue); 
-    font-family: 'Playfair Display', serif; 
-    font-size: clamp(3rem, 5vw, 4.5rem); 
+    color: var(--deep-blue);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 5vw, 4.5rem);
     font-weight: 700;
     line-height: 1.1;
     margin: 0;
 }
+
 .modernSubtitle {
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
     font-weight: 700;
     text-transform: uppercase;
-    margin: 30px 0; 
+    margin: 30px 0;
     letter-spacing: 2px;
 }
+
 .modernAuthorInfo {
     display: flex;
     align-items: center;
     gap: 20px;
 }
+
 .modernAuthorImage {
-    width: 90px; 
+    width: 90px;
     height: 90px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid var(--deep-blue); 
+    border: 3px solid var(--deep-blue);
 }
+
 .modernAuthorName {
     font-weight: 700;
     font-size: 1.4rem;
     color: var(--deep-blue);
     margin: 0;
 }
+
 .modernAuthorTitle {
     font-size: 1rem;
     color: #555;
     margin: 5px 0 0 0;
 }
+
 .modernHeroImageContainer {
-    width: 55%; 
-    height: 85vh; 
+    width: 55%;
+    /* height: 100%; */
+    height: var(--hero-height);
     position: absolute;
     right: 0;
     top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .modernHeroImage {
-    width: 100%; 
+    width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
+    object-position: center center;
+    transform: scale(0.99);
+    transition: transform 0.3s ease;
 }
 
 /* =========================================
@@ -726,7 +161,8 @@ padding: 0;
     line-height: 1.7;
     margin-bottom: 15px;
     color: #333;
-    list-style-type: square; /* Square bullets looks professional */
+    list-style-type: square;
+    /* Square bullets looks professional */
 }
 
 /* Image styling */
@@ -751,7 +187,7 @@ padding: 0;
     position: relative;
     z-index: 1;
     border-radius: 4px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* =========================================
@@ -773,7 +209,7 @@ padding: 0;
     right: -100px;
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(255,145,0,0.1) 0%, rgba(0,0,0,0) 70%);
+    background: radial-gradient(circle, rgba(255, 145, 0, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
     border-radius: 50%;
 }
 
@@ -800,7 +236,8 @@ padding: 0;
 
 .impactStatement {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(2rem, 4vw, 3.5rem); /* Bada Text */
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    /* Bada Text */
     line-height: 1.3;
     margin-bottom: 30px;
     color: #e0e0e0;
@@ -827,7 +264,8 @@ padding: 0;
 /* Beneficiaries Cards */
 .beneficiariesWrapper {
     margin-top: 60px;
-    text-align: left; /* Reset align for cards */
+    text-align: left;
+    /* Reset align for cards */
 }
 
 .beneTitle {
@@ -845,7 +283,8 @@ padding: 0;
 }
 
 .beneCard {
-    background: rgba(255, 255, 255, 0.05); /* Glass effect */
+    background: rgba(255, 255, 255, 0.05);
+    /* Glass effect */
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 40px 30px;
     border-radius: 12px;
@@ -884,23 +323,65 @@ padding: 0;
 /* Responsive */
 
 @media (max-width: 1240px) {
-    .modernHeroSection { flex-direction: row; min-height: auto; }
-    .heroContent { flex: none; width: 45%; padding: 20px 10px; }
-    .modernHeroImageContainer { position: relative; width: 80%; height: 400px; }
-    
-    .storyContainer { flex-direction: column; gap: 30px; }
-    .storyImageWrapper { width: 80%; }
-    
-    .beneGrid { grid-template-columns: 1fr; }
+    .modernHeroSection {
+        flex-direction: row;
+        min-height: auto;
+    }
+
+    .heroContent {
+        flex: none;
+        width: 45%;
+        padding: 20px 10px;
+    }
+
+    .modernHeroImageContainer {
+        position: relative;
+        width: 80%;
+        height: 400px;
+    }
+
+    .storyContainer {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .storyImageWrapper {
+        width: 80%;
+    }
+
+    .beneGrid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 950px) {
-    .modernHeroSection { flex-direction: column; min-height: auto; }
-    .heroContent { flex: none; width: 100%; padding: 40px 20px; }
-    .modernHeroImageContainer { position: relative; width: 100%; height: 300px; }
-    
-    .storyContainer { flex-direction: column; gap: 40px; }
-    .storyImageWrapper { width: 100%; }
-    
-    .beneGrid { grid-template-columns: 1fr; }
+    .modernHeroSection {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .heroContent {
+        flex: none;
+        width: 100%;
+        padding: 40px 20px;
+    }
+
+    .modernHeroImageContainer {
+        position: relative;
+        width: 100%;
+        height: 300px;
+    }
+
+    .storyContainer {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .storyImageWrapper {
+        width: 100%;
+    }
+
+    .beneGrid {
+        grid-template-columns: 1fr;
+    }
 }

@@ -95,7 +95,7 @@ const Gallery = () => {
             <div className={styles.galleryGrid}>
                 {galleryData.map((item, index) => (
                     <motion.div 
-                        key={item.id}
+                        key={`${item.id}-${item.src}`}
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}

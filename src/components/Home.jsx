@@ -4,7 +4,7 @@ import { Target, Users, BookOpen } from 'lucide-react'; // Icons for beneficiari
 import styles from './Home.module.css';
 
 // Images
-import campusImg4 from '../assets/Study Time.jpg';
+import campusImg4 from '../assets/study_time.jpg';
 import FoundationImage from '../assets/AJMF_0324.jpg';
 import BrigadierJadhav from '../assets/campus.png'; // Using the image you used in QuoteSection
 

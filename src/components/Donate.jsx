@@ -86,7 +86,7 @@ const Donate = () => {
                 Any amount donated to NavGurukul / AJMF is eligible for tax exemption under Section 80G of the Income Tax Act. 
                 <br/><br/>
                 <strong>Note:</strong> After making a donation, please email the transaction details to 
-                <span className={styles.emailHighlight}>jadhav_kl@yahoo.co.in</span> to receive your tax receipt.
+                <span className={styles.emailHighlight}> jadhav_kl@yahoo.co.in</span> to receive your tax receipt.
               </p>
             </div>
 

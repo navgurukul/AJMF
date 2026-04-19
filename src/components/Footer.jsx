@@ -1,9 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa'; // FaYoutube जोड़ा गया
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 
 import styles from './Footer.module.css';
-import ajmfLogo from '../assets/AJMF.jpeg'; // मान लीजिए यह आपका लोगो है
+import ajmfLogo from '../assets/AJMF.jpeg';
 
 function Footer() {
     const facebookUrl = "https://www.facebook.com/anishjmf/";
@@ -23,8 +23,11 @@ function Footer() {
                         <div className={styles.logoSocialsColumn}>
                             <div className={styles.logoSection}>
                                 <img src={ajmfLogo} alt="AJMF Logo" className={styles.mainFooterLogo} />
-                                {/*<p className={styles.schoolName}>The Anish Jadhav<br/>Memorial Foundation</p> */}
                             </div>
+
+                            <p className={styles.footerTagline}>
+                                Building access to education, guidance, and opportunity for young learners.
+                            </p>
 
                             {/* Social Icons */}
                             <div className={styles.socialsContainer}>
@@ -90,10 +93,19 @@ function Footer() {
                         <div className={styles.contactColumn}>
                             <h4 className={styles.linksHeading}>CONTACT</h4>
                             <div className={styles.contactInfo}>
-                                <p>Anish Jadhav Memorial Foundation Gharkul Society, Pathare Wasti, Lohegaon, Pune, Maharashtra, India</p>
-                                <p>Pin Code: 411047</p>
-                                <p className={styles.contactPhone}>+91 9906155699 / 9067330833</p>
-                                <p className={styles.contactEmail}>info@ajmf.org</p>
+                                <p className={styles.contactLine}>
+                                    <FaMapMarkerAlt className={styles.contactIcon} />
+                                    <span>Anish Jadhav Memorial Foundation, Gharkul Society, Pathare Wasti, Lohegaon, Pune, Maharashtra, India</span>
+                                </p>
+                                <p className={styles.contactLine}>
+                                    <FaPhoneAlt className={styles.contactIcon} />
+                                    <span>+91 9906155699 / 9067330833</span>
+                                </p>
+                                <p className={styles.contactLine}>
+                                    <FaEnvelope className={styles.contactIcon} />
+                                    <span>info@ajmf.org</span>
+                                </p>
+                                <p className={styles.contactNote}>Pin Code: 411047</p>
                             </div>
                         </div>
                     </div>
@@ -105,11 +117,11 @@ function Footer() {
                 </div>
             </footer>
 
-            {/* Bottom Bar: Copyright and Powered By (Matching screenshot content) */}
+            {/* Bottom Bar: Copyright */}
 
             <div className={styles.footerBottomContent}>
                 <p className={styles.copyright}>
-                    © Copyright 2026  Anish Jadhav Memorial Foundation. All rights reserved. {/* Updated to match screenshot text */}
+                    © Copyright 2026 Anish Jadhav Memorial Foundation. All rights reserved.
                 </p>
 
 

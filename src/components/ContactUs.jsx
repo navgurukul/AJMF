@@ -322,7 +322,7 @@ function ContactUs() {
           <div className={styles.mapPlaceholder}>
             <iframe
               // Make sure to use your **actual Google Maps embed URL** here!
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.3485913030067!2d73.93372741059488!3d18.602713082433926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c5e94895b787%3A0x1f5e8bbeb5cbb3c1!2sAnish%20Jadhav%20Memorial%20Foundation!5e1!3m2!1sen!2sin!4v1763013272717!5m2!1sen!2sin" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.3485913030067!2d73.93372741059488!3d18.602713082433926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c5e94895b787%3A0x1f5e8bbeb5cbb3c1!2sAnish%20Jadhav%20Memorial%20Foundation!5e1!3m2!1sen!2sin!4v1763013272717!5m2!1sen!2sin" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
               width="100%"
               height="100%"
               style={{ border: 0 }}
