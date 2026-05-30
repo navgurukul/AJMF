@@ -16,7 +16,7 @@ A clean, responsive frontend for the Anish Jadhav Memorial Foundation (AJMF) Ski
 
 ## Project Overview
 This repository contains the frontend source code for the AJMF website. The site showcases the foundation's mission, programs, campus, and other resources with an attractive, responsive UI.
-
+https://anish-project-5srn.vercel.app/
 ## Key Features
 - Responsive design using React + Tailwind CSS
 - Visual campus photo gallery with interactive effects
