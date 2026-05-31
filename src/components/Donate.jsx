@@ -5,6 +5,7 @@ import {
   ShieldCheck 
 } from 'lucide-react';
 import styles from './Donate.module.css'; 
+import { trackEvent } from '../utils/analytics'; 
 
 // Animation Variants
 const fadeInUp = {
@@ -46,21 +47,23 @@ const Donate = () => {
   const handleCopy = (text, fieldName) => {
     navigator.clipboard.writeText(text);
     setCopiedField(fieldName);
+    trackEvent('copy_bank_detail', { field: fieldName });
     setTimeout(() => setCopiedField(null), 2000);
   };
 
   const getSelectedAmountValue = () => Number(selectedAmount.replace(/[^\d]/g, ''));
 
   const handleGatewayPayment = async () => {
+    const amount = getSelectedAmountValue();
     try {
       setPaymentState({ status: 'loading', message: 'Preparing secure checkout...' });
+      trackEvent('donation_checkout_start', { amount });
 
       const scriptLoaded = await loadRazorpayScript();
       if (!scriptLoaded) {
         throw new Error('Razorpay checkout script could not be loaded.');
       }
 
-      const amount = getSelectedAmountValue();
       const createOrderResponse = await fetch(`${apiBaseUrl}/api/create-order`, {
         method: 'POST',
         headers: {
@@ -110,11 +113,14 @@ const Donate = () => {
               status: 'success',
               message: 'Payment successful. Thank you for your donation.'
             });
+            trackEvent('donation_checkout_success', { amount });
           } catch (error) {
+            const errorMsg = error.message || 'Payment completed, but verification failed.';
             setPaymentState({
               status: 'error',
-              message: error.message || 'Payment completed, but verification failed.'
+              message: errorMsg
             });
+            trackEvent('donation_checkout_failure', { amount, error: errorMsg });
           }
         },
         modal: {
@@ -123,23 +129,28 @@ const Donate = () => {
               status: 'idle',
               message: 'Payment window closed.'
             });
+            trackEvent('donation_checkout_dismiss', { amount });
           }
         }
       };
 
       const paymentObject = new window.Razorpay(options);
       paymentObject.on('payment.failed', (response) => {
+        const errorDesc = response.error?.description || 'Payment failed. Please try again.';
         setPaymentState({
           status: 'error',
-          message: response.error?.description || 'Payment failed. Please try again.'
+          message: errorDesc
         });
+        trackEvent('donation_checkout_failure', { amount, error: errorDesc });
       });
       paymentObject.open();
     } catch (error) {
+      const errorMsg = error.message || 'Unable to open secure payment.';
       setPaymentState({
         status: 'error',
-        message: error.message || 'Unable to open secure payment.'
+        message: errorMsg
       });
+      trackEvent('donation_checkout_failure', { amount, error: errorMsg });
     }
   };
 
@@ -218,7 +229,10 @@ const Donate = () => {
                   key={index}
                   type="button"
                   className={`${styles.amountCard} ${selectedAmount === item.amount ? styles.amountCardActive : ''}`}
-                  onClick={() => setSelectedAmount(item.amount)}
+                  onClick={() => {
+                    setSelectedAmount(item.amount);
+                    trackEvent('select_donation_amount', { amount: item.amount });
+                  }}
                 >
                   <div className={styles.amountValue}>{item.amount}</div>
                   <div className={styles.amountLabel}>{item.label}</div>
@@ -244,13 +258,19 @@ const Donate = () => {
               <div className={styles.tabs}>
                 <button 
                   className={`${styles.tabBtn} ${activeTab === 'bank' ? styles.activeTab : ''}`}
-                  onClick={() => setActiveTab('bank')}
+                  onClick={() => {
+                    setActiveTab('bank');
+                    trackEvent('switch_payment_method', { method: 'bank' });
+                  }}
                 >
                   <Landmark size={18} /> Bank Transfer
                 </button>
                 <button 
                   className={`${styles.tabBtn} ${activeTab === 'gateway' ? styles.activeTab : ''}`}
-                  onClick={() => setActiveTab('gateway')}
+                  onClick={() => {
+                    setActiveTab('gateway');
+                    trackEvent('switch_payment_method', { method: 'gateway' });
+                  }}
                 >
                   <ShieldCheck size={18} /> Payment Gateway
                 </button>

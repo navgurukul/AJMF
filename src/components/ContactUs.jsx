@@ -5,6 +5,7 @@ import {
   Instagram, Linkedin, Send, Map, ChevronDown, Youtube
 } from 'lucide-react';
 import styles from './ContactUs.module.css';
+import { trackEvent } from '../utils/analytics';
 
 // --- Animation Variants (Less Aggressive) ---
 const containerVariants = {
@@ -45,7 +46,20 @@ function ContactUs() {
   // const [mapLoaded, setMapLoaded] = useState(false); // New state for map
 
   const toggleFaq = (index) => {
-    setOpenFaq(openFaq === index ? null : index);
+    const nextState = openFaq === index ? null : index;
+    setOpenFaq(nextState);
+    if (nextState !== null) {
+      trackEvent('faq_expanded', { question: faqs[index].q });
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const subject = formData.get('subject') || 'general';
+    trackEvent('contact_form_submit', { subject });
+    alert('Thank you for your message. We will get back to you soon!');
+    e.target.reset();
   };
 
   const faqs = [
@@ -199,6 +213,7 @@ function ContactUs() {
                     rel="noopener noreferrer"
                     className={styles.socialLink} 
                     aria-label="Facebook"
+                    onClick={() => trackEvent('click_social', { platform: 'facebook' })}
                 >
                   <Facebook size={18} />
                 </a>
@@ -209,6 +224,7 @@ function ContactUs() {
                     rel="noopener noreferrer"
                     className={styles.socialLink} 
                     aria-label="Youtube"
+                    onClick={() => trackEvent('click_social', { platform: 'youtube' })}
                 >
                   <Youtube size={18} />
                 </a>
@@ -219,6 +235,7 @@ function ContactUs() {
                     rel="noopener noreferrer"
                     className={styles.socialLink} 
                     aria-label="Instagram"
+                    onClick={() => trackEvent('click_social', { platform: 'instagram' })}
                 >
                   <Instagram size={18} />
                 </a>
@@ -229,6 +246,7 @@ function ContactUs() {
                     rel="noopener noreferrer"
                     className={styles.socialLink} 
                     aria-label="LinkedIn"
+                    onClick={() => trackEvent('click_social', { platform: 'linkedin' })}
                 >
                   <Linkedin size={18} />
                 </a>
@@ -246,35 +264,35 @@ function ContactUs() {
           >
             <h2 className={`${styles.fontHeading} ${styles.sectionHeading} ${styles.formHeading}`}>Send Us a Message</h2>
             {/* Form elements remain motion-less for stability */}
-            <form className={styles.form}>
+            <form className={styles.form} onSubmit={handleSubmit}>
               {/* Full Name (Already there) */}
               <div>
                 <label className={`${styles.fontBody} ${styles.formLabel}`}>Full Name *</label>
-                <input type="text" placeholder="Your name" className={`${styles.fontBody} ${styles.formInput}`} required />
+                <input type="text" name="name" placeholder="Your name" className={`${styles.fontBody} ${styles.formInput}`} required />
               </div>
 
               {/* Email Address (NEW) */}
               <div>
                 <label className={`${styles.fontBody} ${styles.formLabel}`}>Email Address *</label>
-                <input type="email" placeholder="your.email@example.com" className={`${styles.fontBody} ${styles.formInput}`} required />
+                <input type="email" name="email" placeholder="your.email@example.com" className={`${styles.fontBody} ${styles.formInput}`} required />
               </div>
 
               {/* Phone Number (NEW) */}
               <div>
                 <label className={`${styles.fontBody} ${styles.formLabel}`}>Phone Number</label>
-                <input type="tel" placeholder="Your phone number" className={`${styles.fontBody} ${styles.formInput}`} />
+                <input type="tel" name="phone" placeholder="Your phone number" className={`${styles.fontBody} ${styles.formInput}`} />
               </div>
 
               {/* Subject (NEW) */}
               <div>
                 <label className={`${styles.fontBody} ${styles.formLabel}`}>Subject *</label>
-                <input type="text" placeholder="What is this regarding?" className={`${styles.fontBody} ${styles.formInput}`} required />
+                <input type="text" name="subject" placeholder="What is this regarding?" className={`${styles.fontBody} ${styles.formInput}`} required />
               </div>
 
               {/* Message (NEW) */}
               <div>
                 <label className={`${styles.fontBody} ${styles.formLabel}`}>Message *</label>
-                <textarea rows="5" placeholder="Tell us more..." className={`${styles.fontBody} ${styles.formInput} ${styles.formTextarea}`} required></textarea>
+                <textarea rows="5" name="message" placeholder="Tell us more..." className={`${styles.fontBody} ${styles.formInput} ${styles.formTextarea}`} required></textarea>
               </div>
 
               {/* Submit Button */}

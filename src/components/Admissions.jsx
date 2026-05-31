@@ -2,6 +2,7 @@ import React from 'react';
 import { FaUserGraduate, FaRupeeSign, FaLaptopCode, FaCheckCircle } from 'react-icons/fa';
 import { BiBrain } from "react-icons/bi";
 import styles from './Admissions.module.css';
+import { trackEvent } from '../utils/analytics';
 
 const Admissions = () => {
   return (
@@ -14,7 +15,13 @@ const Admissions = () => {
           <p className={styles.heroSubtitle}>
             In collaboration with <strong>NavGurukul</strong>, we offer a fully funded residential programming course for youth from underserved communities.
           </p>
-          <a href="https://admissions.navgurukul.org/" target="_blank" rel="noreferrer" className={styles.heroCta}>
+          <a 
+            href="https://admissions.navgurukul.org/" 
+            target="_blank" 
+            rel="noreferrer" 
+            className={styles.heroCta}
+            onClick={() => trackEvent('click_apply_now', { source: 'hero' })}
+          >
             Start Your Application
           </a>
         </div>
@@ -123,7 +130,15 @@ const Admissions = () => {
       {/* --- Final CTA --- */}
       <section className={styles.finalCta}>
         <h2>Ready to start your journey?</h2>
-        <a href="https://admissions.navgurukul.org/" target="_blank" rel="noopener noreferrer" className={styles.heroCta}>Apply Now</a>
+        <a 
+          href="https://admissions.navgurukul.org/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className={styles.heroCta}
+          onClick={() => trackEvent('click_apply_now', { source: 'footer_cta' })}
+        >
+          Apply Now
+        </a>
       </section>
 
     </div>
