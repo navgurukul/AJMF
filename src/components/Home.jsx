@@ -2,6 +2,8 @@ import React from 'react';
 import { motion as Motion } from 'framer-motion';
 import { Target, Users, BookOpen } from 'lucide-react'; // Icons for beneficiaries
 import styles from './Home.module.css';
+import { useScrollAnalytics } from '../utils/analyticsHooks';
+import { trackSectionView } from '../utils/analytics';
 
 // Images
 import campusImg4 from '../assets/study_time.jpg';
@@ -55,6 +57,7 @@ const FoundationStorySection = () => {
                     whileInView="visible"
                     viewport={{ once: true }}
                     variants={staggerContainer}
+                    onViewportEnter={() => trackSectionView('Story Section', 'Home')}
                 >
                     <Motion.h2 className={styles.sectionTitle} variants={baseVariants}>
                         The Story Behind the Foundation
@@ -107,6 +110,7 @@ const CurrentProjectSection = () => {
                     whileInView="visible"
                     viewport={{ once: true }}
                     variants={baseVariants}
+                    onViewportEnter={() => trackSectionView('Current Project Impact Section', 'Home')}
                 >
                     <span className={styles.tagline}>CURRENT PROJECT</span>
                     <h2 className={styles.impactStatement}>
@@ -170,6 +174,7 @@ const CurrentProjectSection = () => {
 
 // --- MAIN HOME COMPONENT ---
 const Home = () => {
+    useScrollAnalytics('Home');
     return (
         <div className={styles.pageContainer}>
             <HeroSection />

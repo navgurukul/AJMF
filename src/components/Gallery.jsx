@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ZoomIn } from 'lucide-react';
 import styles from './Gallery.module.css';
+import { useScrollAnalytics } from '../utils/analyticsHooks';
+import { trackEvent } from '../utils/analytics';
 
 // Images Import (Apni images use karein)
 import img1 from '../assets/img1.jpeg'; 
@@ -72,6 +74,14 @@ const galleryData = [
 
 const Gallery = () => {
     const [selectedImage, setSelectedImage] = useState(null);
+    useScrollAnalytics('Gallery');
+
+    const handleCloseLightbox = () => {
+        if (selectedImage) {
+            trackEvent('close_gallery_image', { image_id: selectedImage.id, category: selectedImage.category });
+        }
+        setSelectedImage(null);
+    };
 
     return (
         <div className={styles.pageContainer}>
@@ -101,7 +111,10 @@ const Gallery = () => {
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.1 }}
                         className={`${styles.imageCard} ${styles[item.size]}`} // Dynamic Class based on size
-                        onClick={() => setSelectedImage(item)}
+                        onClick={() => {
+                            setSelectedImage(item);
+                            trackEvent('open_gallery_image', { image_id: item.id, category: item.category });
+                        }}
                     >
                         <div className={styles.imageWrapper}>
                             <img src={item.src} alt={item.title} className={styles.gridImage} />
@@ -122,7 +135,7 @@ const Gallery = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        onClick={() => setSelectedImage(null)}
+                        onClick={handleCloseLightbox}
                     >
                         <motion.div 
                             className={styles.lightboxContent}
@@ -131,7 +144,7 @@ const Gallery = () => {
                             exit={{ scale: 0.8 }}
                             onClick={(e) => e.stopPropagation()}
                         >
-                            <button className={styles.closeBtn} onClick={() => setSelectedImage(null)}>
+                            <button className={styles.closeBtn} onClick={handleCloseLightbox}>
                                 <X size={32} />
                             </button>
                             <img src={selectedImage.src} alt={selectedImage.title} className={styles.fullImage} />

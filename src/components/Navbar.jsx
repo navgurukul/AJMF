@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
 import styles from './Navbar.module.css';
 import ajmfLogo from '../assets/AJMF-P.png'; 
+import { trackEvent } from '../utils/analytics'; 
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -69,7 +70,14 @@ function Navbar() {
       <div className={styles.container}>
 
         {/* Logo */}
-        <NavLink to="/" className={styles.logo} onClick={() => setIsMenuOpen(false)}>
+        <NavLink 
+          to="/" 
+          className={styles.logo} 
+          onClick={() => {
+            setIsMenuOpen(false);
+            trackEvent('navigate', { to: '/', label: 'Logo', menu: 'header' });
+          }}
+        >
           <img src={ajmfLogo} alt="AJMF Logo" className={styles.logoImage} />
         </NavLink>
 
@@ -86,7 +94,13 @@ function Navbar() {
               <NavLink 
                 to={link.path} 
                 className={({ isActive }) => isActive && link.path !== '#' ? `${styles.navLink} ${styles.active}` : styles.navLink}
-                onClick={(e) => link.path === '#' && e.preventDefault()} // Prevent click if it's just a dropdown holder
+                onClick={(e) => {
+                  if (link.path === '#') {
+                    e.preventDefault();
+                  } else {
+                    trackEvent('navigate', { to: link.path, label: link.label, menu: 'desktop' });
+                  }
+                }}
               >
                 {link.label} {link.dropdown.length > 0 && <FaChevronDown size={10} className={styles.chevron} />}
               </NavLink>
@@ -95,7 +109,12 @@ function Navbar() {
               {link.dropdown.length > 0 && (
                 <div className={styles.dropdownMenu}>
                   {link.dropdown.map((subItem, subIndex) => (
-                    <NavLink key={subIndex} to={subItem.path} className={styles.dropdownItem}>
+                    <NavLink 
+                      key={subIndex} 
+                      to={subItem.path} 
+                      className={styles.dropdownItem}
+                      onClick={() => trackEvent('navigate', { to: subItem.path, label: subItem.label, menu: 'desktop_dropdown' })}
+                    >
                       {subItem.label}
                     </NavLink>
                   ))}
@@ -108,7 +127,13 @@ function Navbar() {
         {/* --- MOBILE MENU OVERLAY --- */}
         <div className={`${styles.mobileMenuOverlay} ${isMenuOpen ? styles.menuOpen : ''}`}>
           <div className={styles.mobileMenuHeader}>
-             <NavLink to="/" onClick={toggleMenu}>
+             <NavLink 
+               to="/" 
+               onClick={() => {
+                 toggleMenu();
+                 trackEvent('navigate', { to: '/', label: 'Logo', menu: 'mobile_header' });
+               }}
+             >
                 <img src={ajmfLogo} alt="AJMF Logo" className={styles.logoImage} />
              </NavLink>
           </div>
@@ -118,9 +143,16 @@ function Navbar() {
               <div key={index} className={styles.mobileNavItem}>
                 <div className={styles.mobileLinkHeader} onClick={() => link.dropdown.length > 0 ? toggleMobileDropdown(link.label) : toggleMenu()}>
                     {link.path !== '#' ? (
-                         <NavLink to={link.path} className={styles.mobileNavLink} onClick={toggleMenu}>
-                            {link.label}
-                         </NavLink>
+                          <NavLink 
+                            to={link.path} 
+                            className={styles.mobileNavLink} 
+                            onClick={() => {
+                               toggleMenu();
+                               trackEvent('navigate', { to: link.path, label: link.label, menu: 'mobile' });
+                            }}
+                          >
+                             {link.label}
+                          </NavLink>
                     ) : (
                         <span className={styles.mobileNavLink}>{link.label}</span>
                     )}
@@ -135,7 +167,10 @@ function Navbar() {
                         key={subIndex} 
                         to={subItem.path} 
                         className={styles.mobileDropdownItem}
-                        onClick={toggleMenu}
+                        onClick={() => {
+                          toggleMenu();
+                          trackEvent('navigate', { to: subItem.path, label: subItem.label, menu: 'mobile_dropdown' });
+                        }}
                       >
                         {subItem.label}
                       </NavLink>

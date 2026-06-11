@@ -347,6 +347,8 @@ import {
     FaBookOpen, FaLaptop, FaSolarPanel
 } from 'react-icons/fa';
 import styles from './CampusAndFacilities.module.css';
+import { useScrollAnalytics } from '../utils/analyticsHooks';
+import { trackSectionView, trackFacilityInteraction } from '../utils/analytics';
 
 const MotionDiv = motion.div;
 const MotionSection = motion.section;
@@ -378,6 +380,7 @@ const FacilityIcon = ({ icon }) => (
 );
 
 function CampusAndFacilities() {
+    useScrollAnalytics('Campus & Facilities');
     
     const facilities = [
         { icon: <FaChalkboardTeacher />, title: "Training & Conference", description: "8 state-of-the-art training rooms equipped with projectors and audio systems, plus a mini auditorium and conference hall for large gatherings and workshops." },
@@ -422,6 +425,7 @@ function CampusAndFacilities() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.1 }}
                 variants={containerVariants}
+                onViewportEnter={() => trackSectionView('Facilities Section', 'Campus & Facilities')}
             >
                 <div className={styles.container}>
                     <MotionDiv variants={fadeInUp} className={styles.sectionHeader}>
@@ -438,6 +442,7 @@ function CampusAndFacilities() {
                                 className={styles.facilityCard}
                                 variants={facilityCardVariants}
                                 whileHover={{ y: -10, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
+                                onViewportEnter={() => trackFacilityInteraction(facility.title, 'view')}
                             >
                                 <FacilityIcon icon={facility.icon} />
                                 <div className={styles.cardContent}>
