@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anish Jadhav Memorial Foundation</title>
+
+    <link rel="stylesheet" href="facility.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+
+       <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+   
+    <!---  HEADER  --->
+
+    <header class="header">
+        <div class="container">
+
+            <div class="logo-area">
+                <a href="index.html" style="display: flex; align-items: center; gap: 16px; text-decoration: none;">
+                    <img src="logo.jpeg" alt="AJMF Logo">
+                    <div class="logo-content">
+                        <h2>Anish Jadhav <br> Memorial Foundation</h2>
+                        <p>EDUCATE • EMPOWER • ELEVATE</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Hamburger Menu Icon -->
+            <div class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle navigation menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <nav class="navbar" id="navMenu">
+                <ul>
+
+                <!-- HOME -->
+                <li class="dropdown">
+                    <a href="index.html">
+                        <span data-i18n="nav_home">Home</span> <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html" data-i18n="nav_home">Home Page</a></li>
+                        <li><a href="mission.html#mission" data-i18n="nav_mission">Mission & Vision</a></li>
+                    </ul>
+                </li>
+
+                <!-- ABOUT ANISH -->
+                <li>
+                    <a href="About.html" data-i18n="nav_about">About Anish</a>
+                </li>
+
+                <!-- ACADEMICS -->
+                <li class="dropdown">
+                    <a href="programs.html">
+                        <span data-i18n="nav_academics">Academics</span> <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="programs.html" data-i18n="nav_programs">Our Programs</a></li>
+                        <li><a href="padagogy.html" data-i18n="nav_pedagogy">Pedagogy</a></li>
+                        <li><a href="campusled.html" data-i18n="nav_campusled">Student-Led Campus</a></li>
+                        <li><a href="A_day.html" data-i18n="nav_aday">A Day At Campus</a></li>
+                    </ul>
+                </li>
+
+                <!-- STUDENT LIFE -->
+                <li class="dropdown">
+                    <a href="gallery.html">
+                        <span data-i18n="nav_studentlife">Student Life</span> <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="gallery.html" data-i18n="nav_gallery">Gallery</a></li>
+                        <li><a href="events.html" data-i18n="nav_events">Events</a></li>
+                        <li><a href="facility.html" data-i18n="nav_facility">Campus & Facilities</a></li>
+                        <li><a href="success.html" data-i18n="nav_success">Success Stories</a></li>
+                    </ul>
+                </li>
+
+                <!-- CONTACT -->
+                <li class="dropdown">
+                    <a href="contact.html">
+                        <span data-i18n="nav_contact">Contact Us</span> <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="getinvolved.html" data-i18n="nav_getinvolved">Get Involved</a></li>
+                        <li><a href="Apply.html" data-i18n="nav_apply">Apply Now</a></li>
+                        <li><a href="donate.html" data-i18n="nav_donate">Donate Now</a></li>
+                    </ul>
+                </li>
+
+                <li class="mobile-only-item">
+                    <a href="https://admissions.navgurukul.org/students/" class="donate-btn mobile-donate-btn" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-heart"></i>
+                        <span data-i18n="nav_apply">Apply Now</span>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <!-- Desktop Apply Button -->
+        <a href="https://admissions.navgurukul.org/students/" class="donate-btn desktop-only-btn" target="_blank" rel="noopener">
+            <i class="fa-solid fa-heart"></i>
+            <span data-i18n="apply_here">Apply Here</span>
+        </a>
+
+        </div>
+    </header>
+
+
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="micro-hero">
+        <div class="hero-overlay"></div>
+        <div class="decorative-dots"></div>
+        <div class="decorative-rings"></div>
+        
+        <div class="hero-inner-container">
+            <div class="hero-left-text">
+                <span class="hero-badge" data-i18n="hero_badge_facility"><i class="fa-solid fa-building-columns"></i> OUR CAMPUS & INFRASTRUCTURE</span>
+                <h1 data-i18n="hero_title_facility">World-Class Facilities For Learning & Growth</h1>
+                <div class="orange-accent-line"></div>
+                <p data-i18n="hero_sub_facility">A nurturing, fully-equipped residential campus designed to foster academic excellence, technical innovation, wellness, and vibrant community living.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= OUR PARTNER SECTION ================= -->
+    <section class="our-partner-section" id="partner">
+        <div class="partner-wrapper-row">
+            <!-- LEFT DARK GREEN PANEL -->
+            <div class="partner-green-panel">
+                <span class="partner-tag" data-i18n="partner_label">OUR PARTNER</span>
+                <h2 class="partner-title" data-i18n="partner_title_stronger">Stronger Together.<br>Greater Impact.</h2>
+                <p class="partner-desc" data-i18n="partner_banner_desc">
+                    Anish Jadhav Memorial Foundation is proud to partner with <span class="navgurukul-name"><span class="nav-text">Nav</span><span class="gurukul-text">Gurukul</span></span> to empower youth through industry-relevant education, technology and career-focused learning.
+                </p>
+                <a href="partnership.html" class="btn-partner-learn" data-i18n="explore_partnership">
+                    Learn About Our Partnership <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- RIGHT CREAM AREA WITH OVERLAPPING WHITE CARD -->
+            <div class="partner-cream-area">
+                <div class="partner-overlapping-card">
+                    <!-- LOGOS GROUP -->
+                    <div class="partner-logos-group">
+                        <img src="logo.jpeg" alt="AJMF Logo" class="partner-logo-img">
+                        <span class="partner-multiply"><i class="fa-solid fa-handshake"></i></span>
+                        <img src="navgurukul.logo.jpg" alt="NavGurukul Logo" class="partner-logo-img navgurukul-img">
+                    </div>
+
+                    <!-- VERTICAL SEPARATOR LINE (|) -->
+                    <div class="partner-vertical-line"></div>
+
+                    <!-- BENEFITS GROUP (HORIZONTAL ON DESKTOP) -->
+                    <div class="partner-benefits-group">
+                        <div class="partner-benefit-item">
+                            <div class="benefit-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+                            <span class="benefit-label" data-i18n="partner_benefit_1">Quality Education</span>
+                        </div>
+                        <div class="partner-benefit-item">
+                            <div class="benefit-icon"><i class="fa-solid fa-code"></i></div>
+                            <span class="benefit-label" data-i18n="partner_benefit_2">Skill Development</span>
+                        </div>
+                        <div class="partner-benefit-item">
+                            <div class="benefit-icon"><i class="fa-solid fa-briefcase"></i></div>
+                            <span class="benefit-label" data-i18n="partner_benefit_3">Career Opportunities</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FACILITIES SECTION ================= -->
+    <section class="facilities-area">
+        <div class="facilities-header">
+            <span class="section-eyebrow" data-i18n="fac_eyebrow">— WORLD-CLASS INFRASTRUCTURE —</span>
+            <h2 data-i18n="fac_heading">Explore Our Campus Facilities</h2>
+            <p data-i18n="fac_desc">Every aspect of our campus is thoughtfully designed to support student success, from academics and technology to nutrition, wellness, and green living.</p>
+        </div>
+
+        <div class="facilities-grid">
+            <!-- CARD 1: Training & Conference -->
+            <div class="clean-card">
+                <div class="card-img-wrapper book-flip-wrapper" data-stagger="0">
+                    <div class="book-flip-container">
+                        <img src="confrenceroom.jpeg" alt="Training & Conference Room" class="book-img base-img">
+                        <div class="book-page-flipper">
+                            <div class="page-face page-front">
+                                <img src="confrenceroom.jpeg" alt="Training & Conference Room" class="book-img">
+                            </div>
+                            <div class="page-face page-back">
+                                <img src="class.jpeg" alt="Modern Classroom" class="book-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-page-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+                <div class="card-title-row">
+                    <div class="icon-circle"><i class="fas fa-desktop"></i></div>
+                    <h3 data-i18n="fac1_title">Training & Conference</h3>
+                </div>
+                <div class="small-orange-bar"></div>
+                <p data-i18n="fac1_desc">8 state-of-the-art training rooms equipped with projectors and audio systems, plus a mini auditorium and conference hall for large gatherings and workshops.</p>
+            </div>
+
+            <!-- CARD 2: Student Accommodation -->
+            <div class="clean-card">
+                <div class="card-img-wrapper book-flip-wrapper" data-stagger="600">
+                    <div class="book-flip-container">
+                        <img src="dom1.jpeg" alt="Student Accommodation" class="book-img base-img">
+                        <div class="book-page-flipper">
+                            <div class="page-face page-front">
+                                <img src="dom1.jpeg" alt="Student Accommodation" class="book-img">
+                            </div>
+                            <div class="page-face page-back">
+                                <img src="dom2.jpeg" alt="Residential Room Interior" class="book-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-page-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+                <div class="card-title-row">
+                    <div class="icon-circle"><i class="fas fa-building"></i></div>
+                    <h3 data-i18n="fac2_title">Student Accommodation</h3>
+                </div>
+                <div class="small-orange-bar"></div>
+                <p data-i18n="fac2_desc">Safe and comfortable residential dormitories capable of housing 150 students, along with dedicated separate accommodation for 10 full-time instructors.</p>
+            </div>
+
+            <!-- CARD 3: Kitchen & Dining -->
+            <div class="clean-card">
+                <div class="card-img-wrapper book-flip-wrapper" data-stagger="1200">
+                    <div class="book-flip-container">
+                        <img src="images-photo/breakfast-1.jpeg" alt="Kitchen & Dining Hall" class="book-img base-img">
+                        <div class="book-page-flipper">
+                            <div class="page-face page-front">
+                                <img src="images-photo/breakfast-1.jpeg" alt="Kitchen & Dining Hall" class="book-img">
+                            </div>
+                            <div class="page-face page-back">
+                                <img src="images-photo/lunch-1.jpeg" alt="Campus Dining Hall Lunch" class="book-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-page-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+                <div class="card-title-row">
+                    <div class="icon-circle"><i class="fas fa-utensils"></i></div>
+                    <h3 data-i18n="fac3_title">Kitchen & Dining</h3>
+                </div>
+                <div class="small-orange-bar"></div>
+                <p data-i18n="fac3_desc">A hygienic, fully functional industrial-grade kitchen and a spacious community dining hall serving nutritious, balanced meals three times a day.</p>
+            </div>
+
+            <!-- CARD 4: Admin & Learning Center -->
+            <div class="clean-card">
+                <div class="card-img-wrapper book-flip-wrapper" data-stagger="1800">
+                    <div class="book-flip-container">
+                        <img src="library.jpeg" alt="Admin & Learning Center" class="book-img base-img">
+                        <div class="book-page-flipper">
+                            <div class="page-face page-front">
+                                <img src="library.jpeg" alt="Admin & Learning Center" class="book-img">
+                            </div>
+                            <div class="page-face page-back">
+                                <img src="reception.jpeg" alt="Main Administrative Reception" class="book-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-page-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+                <div class="card-title-row">
+                    <div class="icon-circle"><i class="fas fa-book"></i></div>
+                    <h3 data-i18n="fac4_title">Admin & Learning Center</h3>
+                </div>
+                <div class="small-orange-bar"></div>
+                <p data-i18n="fac4_desc">A central hub containing the reception, administrative offices, staff rooms, and a well-stocked library for self-paced learning.</p>
+            </div>
+
+            <!-- CARD 5: Eco-Friendly Infra -->
+            <div class="clean-card">
+                <div class="card-img-wrapper book-flip-wrapper" data-stagger="2400">
+                    <div class="book-flip-container">
+                        <img src="ecofriendly1.jpeg" alt="Eco-Friendly Solar Infrastructure" class="book-img base-img">
+                        <div class="book-page-flipper">
+                            <div class="page-face page-front">
+                                <img src="ecofriendly1.jpeg" alt="Eco-Friendly Solar Infrastructure" class="book-img">
+                            </div>
+                            <div class="page-face page-back">
+                                <img src="ecofriendly2.jpeg" alt="Eco-Friendly Green Campus" class="book-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-page-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+                <div class="card-title-row">
+                    <div class="icon-circle"><i class="fas fa-solar-panel"></i></div>
+                    <h3 data-i18n="fac5_title">Eco-Friendly Infra</h3>
+                </div>
+                <div class="small-orange-bar"></div>
+                <p data-i18n="fac5_desc">Committed to sustainability with a Sewage Treatment Plant (STP), Solar Power generation, Rainwater Harvesting, and energy-efficient architecture.</p>
+            </div>
+
+            <!-- CARD 6: Sports & Recreation -->
+            <div class="clean-card">
+                <div class="card-img-wrapper book-flip-wrapper" data-stagger="3000">
+                    <div class="book-flip-container">
+                        <img src="images-photo/Excercise1.jpeg" alt="Sports & Outdoor Playground" class="book-img base-img">
+                        <div class="book-page-flipper">
+                            <div class="page-face page-front">
+                                <img src="images-photo/Excercise1.jpeg" alt="Sports & Outdoor Playground" class="book-img">
+                            </div>
+                            <div class="page-face page-back">
+                                <img src="images-photo/Excercise2.jpeg" alt="Outdoor Physical Fitness" class="book-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-page-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+                <div class="card-title-row">
+                    <div class="icon-circle"><i class="fas fa-dumbbell"></i></div>
+                    <h3 data-i18n="fac6_title">Sports & Recreation</h3>
+                </div>
+                <div class="small-orange-bar"></div>
+                <p data-i18n="fac6_desc">A large outdoor playground for cricket, volleyball, and morning yoga sessions to ensure physical fitness alongside mental growth.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer-asymmetric-wave">
+        <svg viewBox="0 0 1440 160" fill="none" xmlns="http://www.w3.org/2000/svg" class="wave-svg">
+            <path d="M0,32L120,48C240,64,480,96,720,101.3C960,107,1200,85,1320,74.7L1440,64L1440,160L1320,160C1200,160,960,160,720,160C480,160,240,160,120,160L0,160Z" fill="#0f2c59"></path>
+        </svg>
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Column 1 -->
+            <div class="footer-col foundation">
+                <div class="logo-box">
+                    <img src="logo.jpeg" alt="AJMF Logo">
+                    <div class="footer-logo-content">
+                        <h2>Anish Jadhav <br> Memorial Foundation</h2>
+                        <p>EDUCATE • EMPOWER • ELEVATE</p>
+                    </div>
+                </div>
+
+                <p class="foundation-text" data-i18n="footer_foundation_text">
+                    Empowering young minds through education,
+                    research and community support.
+                </p>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/anishjmf" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/explore/locations/112795623857018/anish-jadhav-memorial-foundation/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/posts/brigadier-dr-kishor-jadhav-ph-d-97a3934b_anish-jadhav-memorial-foundation-skilling-activity-7180232279640719360-Uw2g/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/@AnishJadhavMemorialFoundation" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="footer-col">
+                <h3 data-i18n="footer_quick_links">Quick Links</h3>
+                <ul>
+                    <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                    <li><a href="About.html" data-i18n="nav_about">About Anish</a></li>
+                    <li><a href="programs.html" data-i18n="nav_academics">Academics</a></li>
+                    <li><a href="gallery.html" data-i18n="nav_studentlife">Student Life</a></li>
+                    <li><a href="contact.html" data-i18n="nav_contact">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="footer-col">
+                <h3 data-i18n="nav_programs">Our Programs</h3>
+                <ul>
+                    <li><a href="programs.html" data-i18n="prog_sop">School of Programming</a></li>
+                    <li><a href="programs.html" data-i18n="prog_sob">School of Business</a></li>
+                    <li><a href="programs.html" data-i18n="prog_sof">School of Finance</a></li>
+                    <li><a href="programs.html" data-i18n="prog_soe">School of Education</a></li>
+                    <li><a href="programs.html" data-i18n="prog_sosc">School of Second Chance</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4 -->
+            <div class="footer-col contact">
+                <h3 data-i18n="nav_contact">Contact Us</h3>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Anish+Jadhav+Memorial+Foundation+JW3M%2BC7+Gharukul+Properties+Survey+No.+60%2F1+Pathare+Wasti+Lohegaon+Pune+Maharashtra+411047+India" target="_blank" rel="noopener noreferrer">
+                        Anish Jadhav Memorial Foundation<br>
+                        JW3M+C7, Gharukul Properties,<br>
+                        Survey No. 60/1, Pathare Wasti,<br>
+                        Lohegaon, Pune,<br>
+                        Maharashtra 411047, India
+                    </a>
+                </p>
+                <p>
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:+919906155699">+91 99061 55699</a>
+                </p>
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:info@ajmfoundation.org">info@ajmfoundation.org</a>
+                </p>
+                <p>
+                    <i class="fas fa-globe"></i>
+                    <a href="http://anishjadhavmemorialfoundation.org/" target="_blank" rel="noopener noreferrer">
+                        anishjadhavmemorialfoundation.org
+                    </a>
+                </p>
+            </div>
+
+            <!-- Column 5 -->
+            <div class="footer-col newsletter">
+                <h3 data-i18n="footer_newsletter_title">Newsletter</h3>
+                <p data-i18n="footer_newsletter_desc">
+                    Stay updated with our latest
+                    initiatives and stories.
+                </p>
+                <form class="newsletter-form" novalidate>
+                    <input type="email" class="newsletter-email" placeholder="Enter your email" data-i18n-placeholder="placeholder_email" required aria-label="Email address">
+                    <button type="submit" data-i18n="subscribe">Subscribe</button>
+                    <div class="newsletter-message" aria-live="polite"></div>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © 2026 Anish Jadhav Memorial Foundation.
+                <span data-i18n="footer_rights">All Rights Reserved.</span>
+            </p>
+            <p data-i18n="footer_tagline">
+                Designed with ❤️ for a better tomorrow
+            </p>
+        </div>
+    </footer>
+
+    <!-- ================= FACILITY IMAGE LIGHTBOX MODAL ================= -->
+    <div class="facility-lightbox-modal" id="facilityLightbox" aria-hidden="true" role="dialog">
+        <div class="facility-lightbox-overlay" id="lightboxOverlay"></div>
+        <div class="facility-lightbox-content">
+            <button type="button" class="facility-lightbox-close" id="lightboxClose" aria-label="Close image preview">&times;</button>
+            <img src="" alt="Enlarged Facility Preview" id="lightboxImage" class="facility-lightbox-img">
+            <div class="facility-lightbox-caption" id="lightboxCaption"></div>
+        </div>
+    </div>
+
+    <script src="js/translations.js"></script>
+    <script src="js/language.js"></script>
+    <script src="header.js"></script>
+    <script src="js/book-flip.js"></script>
+</body>
+</html>

@@ -1,0 +1,386 @@
+/* ================= GLOBAL RESETS & FONTS ================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333333;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ================= HEADER ================= */
+
+.header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: #0B1F44;
+    padding: 26px 0;   /* pehle 20px tha */
+    transition: .35s;
+}
+
+.hero-content{
+    padding-left: 60px;
+}
+
+.header .container{
+    width:98%;
+    max-width:1700px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    /* justify-content:space-between; */
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-left:0px;      /* Left se bas thoda sa space */
+    flex-shrink:0;
+}
+
+.logo-area img{
+    width:78px;
+    height:78px;
+    border-radius:50%;
+}
+.logo-content h2{
+    font-family: 'poppins',sans-serif;
+    font-weight: 400;
+    color:#fff;
+    font-size:24px;
+    line-height:1.2;
+}
+
+.logo-content p{
+     font-family: 'poppins',sans-serif;
+    color:#d7d7d7;
+    font-size:11px;
+    letter-spacing:2px;
+}
+
+.navbar{
+    flex:1;
+    margin-left:50px;   
+    margin-right:40px;    
+    justify-content:center;
+}
+
+.navbar ul{
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+    /* width:700px;       */
+    gap: 28px;;
+}
+
+.navbar ul li a{
+    font-family: 'poppins',sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    align-items: center;
+    gap: 3px;     
+    font-weight: 500;    
+    color: #fff;
+    transition: 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.navbar a{
+    color:#fff;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size:15px;
+    text-decoration: none;
+    font-weight:600;
+    transition:.3s;
+}
+.navbar ul li a:hover{
+    color: #f57c00;
+}
+
+.donate-btn{
+    font-family:'Poppins',sans-serif;
+    background: #f57c00;
+    color:#fff;
+    margin-left: 80px;
+    padding:14px 28px;
+    border-radius:6px;
+    font-weight:600;
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
+        /* ==========================================================================
+           3. HERO TITLE SECTION
+           ========================================================================== */
+        .campus-hero-section {
+            background-color: #0A1D37;
+            color: #FFFFFF;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+        }
+        .campus-hero-title {
+            font-family: 'Marcellus', serif;
+            font-size: 42px;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+        .campus-hero-subtitle {
+            font-size: 15px;
+            color: #CBD5E1;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
+        /* ==========================================================================
+           4. CORE CONTENT TIMELINE LAYOUT
+           ========================================================================== */
+        .timeline-section {
+            padding: 80px 0;
+            background-color: #FFFFFF;
+        }
+        .timeline-wrapper {
+            position: relative;
+            width: 92%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 40px;
+            border-left: 2px dashed #E2E8F0;
+        }
+        
+        .timeline-block {
+            position: relative;
+            margin-bottom: 50px;
+        }
+        .timeline-block:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Timeline Node Counter */
+        .timeline-node {
+            position: absolute;
+            left: -61px;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            background-color: #FDF2EB;
+            border: 2px solid #E06A28;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #E06A28;
+            font-weight: 700;
+            font-size: 13px;
+            z-index: 10;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+        }
+
+        /* Card with Orange Top Border */
+        .timeline-content-card {
+            background-color: #FFFFFF;
+            border: 1px solid #F0F2F5;
+            border-top: 4px solid orange; 
+            border-right: 2px solid orange;
+            border-left: 2px solid orange;
+            border-bottom: 1px solid orange;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        /* Reverse grid direction alternatively */
+        .timeline-block:nth-child(even) .timeline-content-card {
+            grid-template-columns: 1fr 1.3fr;
+        }
+        .timeline-block:nth-child(even) .timeline-info-side {
+            grid-column: 2;
+        }
+        .timeline-block:nth-child(even) .timeline-image-side {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .time-badge {
+            display: inline-block;
+            background-color: #FDF2EB;
+            color: #E06A28;
+            font-weight: 700;
+            border-top: 4px solid orange; 
+            border-right: 2px solid orange;
+            font-size: 11.5px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        .event-title {
+            font-family: 'Marcellus', serif;
+            font-size: 22px;
+            color: #0A1D37;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .event-description {
+            font-size: 13.5px;
+            color: #4A5568;
+            line-height: 1.6;
+        }
+
+        /* ==========================================================================
+           DYNAMIC AUTO-CHANGING ROTATING IMAGE CONTAINER
+           ========================================================================== */
+        .timeline-image-side {
+            width: 100%;
+            height: 190px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .timeline-image-side img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: transform 0.4s ease;
+            animation: imageFadeCycle 9s infinite ease-in-out;
+        }
+
+        /* 3 Images Animation Setup (3s per image, total 9s loop) */
+        .timeline-image-side img:nth-child(1) {
+            animation-delay: 0s;
+        }
+        .timeline-image-side img:nth-child(2) {
+            animation-delay: 3s;
+        }
+        .timeline-image-side img:nth-child(3) {
+            animation-delay: 6s;
+        }
+
+        @keyframes imageFadeCycle {
+            0% { opacity: 0; z-index: 1; }
+            5% { opacity: 1; z-index: 2; }
+            33.33% { opacity: 1; z-index: 2; }
+            38.33% { opacity: 0; z-index: 1; }
+            100% { opacity: 0; z-index: 1; }
+        }
+
+        .timeline-content-card:hover .timeline-image-side img {
+            transform: scale(1.04);
+        }
+        /* ================= FOOTER (HANDLED CENTRALLY IN FOOTER.CSS) ================= */
+
+        /* ==========================================================================
+           6. RESPONSIVE MEDIA QUERIES
+           ========================================================================== */
+        @media screen and (max-width: 1024px) {
+            .timeline-wrapper {
+                width: 95%;
+                padding-left: 35px;
+            }
+            .timeline-content-card {
+                padding: 22px;
+                gap: 20px;
+            }
+            .campus-hero-title {
+                font-size: 36px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .campus-hero-section {
+                padding: 40px 16px;
+            }
+            .campus-hero-title {
+                font-size: 30px;
+            }
+            .campus-hero-subtitle {
+                font-size: 14px;
+            }
+            .timeline-section {
+                padding: 45px 16px;
+            }
+            .timeline-wrapper {
+                padding-left: 25px;
+                width: 100%;
+                border-left: 2px dashed #E06A28;
+            }
+            .timeline-node {
+                left: -42px;
+                width: 34px;
+                height: 34px;
+                font-size: 11.5px;
+            }
+            .timeline-content-card, 
+            .timeline-block:nth-child(even) .timeline-content-card {
+                grid-template-columns: 1fr;
+                gap: 16px;
+                padding: 20px 16px;
+            }
+            .timeline-block:nth-child(even) .timeline-info-side {
+                grid-column: 1;
+            }
+            .timeline-block:nth-child(even) .timeline-image-side {
+                grid-column: 1;
+                grid-row: auto;
+            }
+            .timeline-image-side {
+                height: 200px;
+            }
+            .event-title {
+                font-size: 20px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .campus-hero-title {
+                font-size: 24px;
+            }
+            .timeline-node {
+                left: -40px;
+                width: 30px;
+                height: 30px;
+                font-size: 10.5px;
+            }
+            .event-title {
+                font-size: 18px;
+            }
+            .event-description {
+                font-size: 13px;
+            }
+            .timeline-image-side {
+                height: 170px;
+            }
+        }
+    

@@ -1,0 +1,552 @@
+/* ================= GLOBAL RESETS & FONTS ================= */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body.pedagogy-page {
+    background-color: #ffffff;
+    color: #333333;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ================= HEADER & NAV DROPDOWN FIX ================= */
+
+.navbar > ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 28px;
+}
+
+/* Dropdown menu handled centrally in header.css */
+
+/* ==========================================================
+   PEDAGOGY PAGE REDESIGN & TYPOGRAPHY STYLES
+   ========================================================== */
+
+/* --- HERO SECTION --- */
+.pedagogy-page .hero-pedagogy-section {
+    position: relative;
+    background: linear-gradient(135deg, #0B1F44 0%, #0d2857 50%, #061530 100%);
+    padding: 90px 0 110px;
+    overflow: hidden;
+}
+
+.pedagogy-page .hero-pedagogy-section::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255,138,0,0.12) 0%, rgba(255,138,0,0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.pedagogy-page .hero-wrapper-grid {
+    max-width: 1300px;
+    width: 92%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.pedagogy-page .hero-info-left {
+    max-width: 850px;
+    padding: 0;
+    text-align: center;
+}
+
+.pedagogy-page .hero-tagline {
+    font-family: 'Poppins', sans-serif !important;
+    color: #ff8c00 !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    letter-spacing: 2.5px !important;
+    text-transform: uppercase !important;
+    display: inline-block;
+    margin-bottom: 16px;
+    background: rgba(255, 140, 0, 0.1);
+    padding: 6px 16px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 140, 0, 0.25);
+}
+
+.pedagogy-page .hero-display-title {
+    font-family: 'poppins', sans-serif !important;
+    font-size: 54px !important;
+    font-weight: 500 !important;
+    color: #ffffff !important;
+    line-height: 1.18 !important;
+    letter-spacing: -0.5px !important;
+    margin-bottom: 22px !important;
+}
+
+.pedagogy-page .hero-display-title .orange-text {
+    color: #ff8c00 !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.pedagogy-page .hero-description-para {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 19px !important;
+    line-height: 1.65 !important;
+    color: #cbd5e1 !important;
+    margin: 0 auto 36px auto !important;
+    max-width: 750px !important;
+    font-weight: 400 !important;
+}
+
+.pedagogy-page .hero-cta-flex-row {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 20px !important;
+}
+
+.pedagogy-page .btn-dark-pill {
+    font-family: 'Poppins', sans-serif !important;
+    background-color: #ff8c00 !important;
+    color: #ffffff !important;
+    border: none !important;
+    padding: 15px 32px !important;
+    border-radius: 8px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    box-shadow: 0 8px 20px rgba(255, 140, 0, 0.3) !important;
+    transition: all 0.3s ease !important;
+}
+
+.pedagogy-page .btn-dark-pill:hover {
+    background-color: #e06d00 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 12px 25px rgba(255, 140, 0, 0.4) !important;
+}
+
+.pedagogy-page .btn-link-orange {
+    font-family: 'Poppins', sans-serif !important;
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 15px 30px !important;
+    border-radius: 8px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    transition: all 0.3s ease !important;
+}
+
+.pedagogy-page .btn-link-orange:hover {
+    background: rgba(255, 255, 255, 0.18) !important;
+    color: #ff8c00 !important;
+    transform: translateY(-2px) !important;
+}
+
+/* --- SECTION HEADINGS --- */
+.pedagogy-page .centered-section-heading {
+    text-align: center;
+    max-width: 820px;
+    margin: 0 auto 55px auto;
+}
+
+.pedagogy-page .section-micro-tag {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    color: #ff8c00 !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.pedagogy-page .centered-section-heading h2 {
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-size: 40px !important;
+    font-weight: 700 !important;
+    color: #0B1F44 !important;
+    line-height: 1.25 !important;
+}
+
+.pedagogy-page .centered-section-heading p {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 17px !important;
+    color: #64748b !important;
+    margin-top: 14px !important;
+    line-height: 1.65 !important;
+    font-weight: 400 !important;
+}
+
+/* --- RESIDENTIAL PEDAGOGY / OUR APPROACH (5 CARDS) --- */
+.pedagogy-page .residential-pedagogy-section {
+    padding: 90px 0;
+    background-color: #ffffff;
+}
+
+.pedagogy-page .five-columns-row-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 22px;
+    max-width: 1400px;
+    width: 94%;
+    margin: 0 auto;
+}
+
+.pedagogy-page .approach-pillar-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 36px 22px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.pedagogy-page .approach-pillar-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.08);
+    border-color: rgba(255, 140, 0, 0.4);
+}
+
+.pedagogy-page .pillar-icon-box.orange-bg {
+    width: 58px;
+    height: 58px;
+    background-color: #fff4ea;
+    color: #ff8c00;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.pedagogy-page .approach-pillar-card:hover .pillar-icon-box.orange-bg {
+    background-color: #ff8c00;
+    color: #ffffff;
+    transform: scale(1.08);
+}
+
+.pedagogy-page .approach-pillar-card h3 {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 21px !important;
+    font-weight: 600 !important;
+    color: #0B1F44 !important;
+    margin-bottom: 12px !important;
+    line-height: 1.35 !important;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pedagogy-page .approach-pillar-card p {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 14.5px !important;
+    line-height: 1.6 !important;
+    color: #64748b !important;
+    font-weight: 400 !important;
+}
+
+.pedagogy-page .card-bottom-accent-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #ff8c00;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.pedagogy-page .approach-pillar-card:hover .card-bottom-accent-line {
+    transform: scaleX(1);
+}
+
+/* --- THE EDUCATION GAP (4 CARDS) --- */
+.pedagogy-page .education-gap-section {
+    padding: 90px 0 100px;
+    background-color: #f8fafc;
+}
+
+.pedagogy-page .four-columns-gap-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 26px;
+    max-width: 1350px;
+    width: 94%;
+    margin: 0 auto;
+}
+
+.pedagogy-page .gap-metric-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 36px 26px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.03);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pedagogy-page .gap-metric-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(0,0,0,0.08);
+}
+
+.pedagogy-page .gap-icon-sphere.blue-bg {
+    width: 58px;
+    height: 58px;
+    background-color: #0B1F44;
+    color: #ffffff;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.pedagogy-page .gap-metric-card:hover .gap-icon-sphere.blue-bg {
+    background-color: #ff8c00;
+    transform: scale(1.08);
+}
+
+.pedagogy-page .gap-metric-card h3 {
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-size: 23px !important;
+    font-weight: 700 !important;
+    color: #0B1F44 !important;
+    margin-bottom: 12px !important;
+}
+
+.pedagogy-page .gap-metric-card p {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    color: #64748b !important;
+}
+
+/* --- IMPACT RIBBON BAR --- */
+.pedagogy-page .impact-ribbon-bar-section {
+    background-color: #0B1F44;
+    padding: 45px 30px;
+    margin: -40px auto 60px auto;
+    max-width: 1300px;
+    width: 92%;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(11, 31, 68, 0.25);
+}
+
+.pedagogy-page .ribbon-flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.pedagogy-page .ribbon-metric-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.pedagogy-page .ribbon-icon-circle {
+    width: 52px;
+    height: 52px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #ff8c00;
+}
+
+.pedagogy-page .ribbon-text-data h3 {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 34px !important;
+    font-weight: 450 !important;
+    color: #ff8c00 !important;
+    line-height: 1.1 !important;
+}
+
+.pedagogy-page .ribbon-text-data p {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 15px !important;
+    color: #e2e8f0 !important;
+    font-weight: 500 !important;
+    margin-top: 4px;
+}
+
+/* ================= FOOTER (HANDLED CENTRALLY IN FOOTER.CSS) ================= */
+
+/* ================= COMPREHENSIVE RESPONSIVE MEDIA QUERIES FOR PEDAGOGY PAGE ================= */
+@media screen and (max-width: 1200px) {
+    .pedagogy-page .five-columns-row-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .pedagogy-page .hero-display-title {
+        font-size: 38px !important;
+    }
+
+    .pedagogy-page .five-columns-row-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .pedagogy-page .four-columns-gap-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .pedagogy-page .centered-section-heading h2 {
+        font-size: 32px !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .pedagogy-page .hero-pedagogy-section {
+        padding: 50px 0 70px;
+    }
+
+    .pedagogy-page .hero-display-title {
+        font-size: 28px !important;
+    }
+
+    .pedagogy-page .hero-description-para {
+        font-size: 15px !important;
+    }
+
+    .pedagogy-page .hero-cta-flex-row {
+        flex-direction: column;
+        gap: 12px !important;
+    }
+
+    .pedagogy-page .btn-dark-pill,
+    .pedagogy-page .btn-link-orange {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    .pedagogy-page .five-columns-row-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pedagogy-page .four-columns-gap-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pedagogy-page .impact-ribbon-bar-section {
+        margin: 20px auto !important;
+        width: 100% !important;
+        padding: 30px 20px !important;
+        border-radius: 16px !important;
+    }
+
+    .pedagogy-page .ribbon-flex-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        width: fit-content !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        gap: 26px !important;
+    }
+
+    .pedagogy-page .ribbon-metric-item {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        text-align: left !important;
+        gap: 20px !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .pedagogy-page .ribbon-icon-circle {
+        flex: 0 0 64px !important;
+        width: 64px !important;
+        height: 64px !important;
+        min-width: 64px !important;
+        border-radius: 50% !important;
+        background: rgba(255, 255, 255, 0.08) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 !important;
+        flex-shrink: 0 !important;
+    }
+
+    .pedagogy-page .ribbon-icon-circle i {
+        font-size: 26px !important;
+        color: #ff8c00 !important;
+        margin: 0 !important;
+    }
+
+    .pedagogy-page .ribbon-text-data {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        min-width: 160px !important;
+    }
+
+    .pedagogy-page .ribbon-text-data h3 {
+        font-family: 'Poppins', sans-serif !important;
+        font-size: clamp(1.8rem, 6.5vw, 2.3rem) !important;
+        font-weight: 600 !important;
+        color: #ff8c00 !important;
+        line-height: 1.1 !important;
+        margin: 0 !important;
+        text-align: left !important;
+    }
+
+    .pedagogy-page .ribbon-text-data p {
+        font-family: 'Poppins', sans-serif !important;
+        font-size: 15px !important;
+        color: #e2e8f0 !important;
+        font-weight: 500 !important;
+        margin: 4px 0 0 0 !important;
+        text-align: left !important;
+    }
+}

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anish Jadhav Memorial Foundation - Student-Led Campus</title>
+
+    <link rel="stylesheet" href="campusled.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+
+    <!-- Google Fonts: Playfair Display & Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+   
+<body class="student-led-campus-page">
+
+    <!---  HEADER (UNTOUCHED)  --->
+
+    <header class="header">
+        <div class="container">
+
+            <div class="logo-area">
+                <a href="index.html" style="display: flex; align-items: center; gap: 16px; text-decoration: none;">
+                    <img src="logo.jpeg" alt="AJMF Logo">
+                    <div class="logo-content">
+                        <h2>Anish Jadhav <br> Memorial Foundation</h2>
+                        <p>EDUCATE • EMPOWER • ELEVATE</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Hamburger Menu Icon -->
+            <div class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle navigation menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <nav class="navbar" id="navMenu">
+                <ul>
+
+                <!-- HOME -->
+                <li class="dropdown">
+                    <a href="index.html">
+                        <span data-i18n="nav_home">Home</span> <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html" data-i18n="nav_home">Home Page</a></li>
+                        <li><a href="mission.html#mission" data-i18n="nav_mission">Mission & Vision</a></li>
+                    </ul>
+                </li>
+
+                <!-- ABOUT ANISH -->
+                <li>
+                    <a href="About.html" data-i18n="nav_about">About Anish</a>
+                </li>
+
+                <!-- ACADEMICS -->
+                <li class="dropdown">
+                    <a href="programs.html">
+                        <span data-i18n="nav_academics">Academics</span> <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="programs.html" data-i18n="nav_programs">Our Programs</a></li>
+                        <li><a href="padagogy.html" data-i18n="nav_pedagogy">Pedagogy</a></li>
+                        <li><a href="campusled.html" data-i18n="nav_campusled">Student-Led Campus</a></li>
+                        <li><a href="A_day.html" data-i18n="nav_aday">A Day At Campus</a></li>
+                    </ul>
+                </li>
+
+                <!-- STUDENT LIFE -->
+                <li class="dropdown">
+                    <a href="gallery.html">
+                        <span data-i18n="nav_studentlife">Student Life</span> <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="gallery.html" data-i18n="nav_gallery">Gallery</a></li>
+                        <li><a href="events.html" data-i18n="nav_events">Events</a></li>
+                        <li><a href="facility.html" data-i18n="nav_facility">Campus & Facilities</a></li>
+                        <li><a href="success.html" data-i18n="nav_success">Success Stories</a></li>
+                    </ul>
+                </li>
+
+                <!-- CONTACT -->
+                <li class="dropdown">
+                    <a href="contact.html">
+                        <span data-i18n="nav_contact">Contact Us</span> <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="getinvolved.html" data-i18n="nav_getinvolved">Get Involved</a></li>
+                        <li><a href="Apply.html" data-i18n="nav_apply">Apply Now</a></li>
+                        <li><a href="donate.html" data-i18n="nav_donate">Donate Now</a></li>
+                    </ul>
+                </li>
+
+                <li class="mobile-only-item">
+                    <a href="https://admissions.navgurukul.org/students/" class="donate-btn mobile-donate-btn" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-heart"></i>
+                        <span data-i18n="nav_apply">Apply Now</span>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <!-- Desktop Apply Button -->
+        <a href="https://admissions.navgurukul.org/students/" class="donate-btn desktop-only-btn" target="_blank" rel="noopener">
+            <i class="fa-solid fa-heart"></i>
+            <span data-i18n="apply_here">Apply Here</span>
+        </a>
+
+        </div>
+    </header>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="main-content-wrapper">
+
+        <!-- ================= COUNCILS HERO ================= -->
+        <section class="council-hero">
+            <div class="campusled-container council-hero-wrapper">
+                <div class="council-hero-content">
+                    <h1 data-i18n="hero_title_campusled">Leadership <br><span>in Action</span></h1>
+                    
+                    <p data-i18n="hero_desc_campusled">
+                        A campus run entirely by students, for students. Developing real-world skills through ownership and responsibility.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#councils" class="primary-btn" data-i18n="explore_councils">
+                            Explore Our Councils <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="council-hero-spacer"></div>
+            </div>
+        </section>  
+
+    <!-- ================= OUR PARTNER SECTION (EXACT OVERLAPPING DESIGN) ================= -->
+    <section class="our-partner-section" id="partner">
+        <div class="partner-wrapper-row">
+            <!-- LEFT DARK GREEN PANEL -->
+            <div class="partner-green-panel">
+                <span class="partner-tag" data-i18n="partner_label">OUR PARTNER</span>
+                <h2 class="partner-title" data-i18n="partner_title_stronger">Stronger Together.<br>Greater Impact.</h2>
+                <p class="partner-desc" data-i18n="partner_banner_desc">
+                    Anish Jadhav Memorial Foundation is proud to partner with <span class="navgurukul-name"><span class="nav-text">Nav</span><span class="gurukul-text">Gurukul</span></span> to empower youth through industry-relevant education, technology and career-focused learning.
+                </p>
+                <a href="partnership.html" class="btn-partner-learn" data-i18n="explore_partnership">
+                    Learn About Our Partnership <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- RIGHT CREAM AREA WITH OVERLAPPING WHITE CARD -->
+            <div class="partner-cream-area">
+                <div class="partner-overlapping-card">
+                    <!-- LOGOS GROUP -->
+                    <div class="partner-logos-group">
+                        <img src="logo.jpeg" alt="AJMF Logo" class="partner-logo-img">
+                        <span class="partner-multiply"><i class="fa-solid fa-handshake"></i></span>
+                        <img src="navgurukul.logo.jpg" alt="NavGurukul Logo" class="partner-logo-img navgurukul-img">
+                    </div>
+
+                    <!-- VERTICAL SEPARATOR LINE (|) -->
+                    <div class="partner-vertical-line"></div>
+
+                    <!-- BENEFITS GROUP (HORIZONTAL ON DESKTOP) -->
+                    <div class="partner-benefits-group">
+                        <div class="partner-benefit-item">
+                            <div class="benefit-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+                            <span class="benefit-label" data-i18n="partner_benefit_1">Quality Education</span>
+                        </div>
+                        <div class="partner-benefit-item">
+                            <div class="benefit-icon"><i class="fa-solid fa-code"></i></div>
+                            <span class="benefit-label" data-i18n="partner_benefit_2">Skill Development</span>
+                        </div>
+                        <div class="partner-benefit-item">
+                            <div class="benefit-icon"><i class="fa-solid fa-briefcase"></i></div>
+                            <span class="benefit-label" data-i18n="partner_benefit_3">Career Opportunities</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- ================= COUNCILS SECTION ================= -->
+        <section class="councils-section" id="councils">
+            <div class="campusled-container">
+
+                <div class="section-heading">
+                    <span class="section-subtitle" data-i18n="subtitle_meet_councils">— MEET THE COUNCILS —</span>
+                    <h2 data-i18n="heading_12_councils">12 Councils. One Vision.</h2>
+                    <p data-i18n="desc_12_councils">
+                        Each council plays a vital role in building a vibrant campus.<br>
+                        Explore the teams behind the action.
+                    </p>
+                </div>
+
+                <!-- Filter Category Buttons -->
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All Councils</button>
+                    <button class="filter-btn" data-filter="campus-life" data-i18n="filter_campus_life">Campus Life</button>
+                    <button class="filter-btn" data-filter="academics" data-i18n="filter_academics">Academics</button>
+                    <button class="filter-btn" data-filter="wellness" data-i18n="filter_wellness">Wellness</button>
+                    <button class="filter-btn" data-filter="operations" data-i18n="filter_operations">Operations</button>
+                    <button class="filter-btn" data-filter="external" data-i18n="filter_external">External</button>
+                </div>
+
+                <!-- 12 Council Cards Grid -->
+                <div class="council-grid">
+
+                    <!-- CARD 01 -->
+                    <div class="council-card" data-category="campus-life">
+                        <div class="card-header-row">
+                            <div class="card-icon-badge">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <h3 class="card-title" data-i18n="c1_title">DISCO - Discipline<br>Coordinator</h3>
+                        </div>
+                        <div class="card-photo-box">
+                            <img src="DISCO.jpeg" alt="Discipline Coordinator" class="clickable-image">
+                        </div>
+                        <button class="view-more-btn" data-id="1" data-i18n="view_more">
+                            View More <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- CARD 02 -->
+                    <div class="council-card" data-category="academics">
+                        <div class="card-header-row">
+                            <div class="card-icon-badge">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <h3 class="card-title" data-i18n="c2_title">Academic<br>Coordinator</h3>
+                        </div>
+                        <div class="card-photo-box">
+                            <img src="AF.jpeg" alt="Academic Coordinator" class="clickable-image">
+                        </div>
+                        <button class="view-more-btn" data-id="2" data-i18n="view_more">
+                            View More <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- CARD 03 -->
+                    <div class="council-card" data-category="campus-life">
+                        <div class="card-header-row">
+                            <div class="card-icon-badge">
+                                <i class="fa-solid fa-utensils"></i>
+                            </div>
+                            <h3 class="card-title" data-i18n="c3_title">Kitchen<br>Coordinator</h3>
+                        </div>
+                        <div class="card-photo-box">
+                            <img src="kitchen.jpeg" alt="Kitchen Coordinator" class="clickable-image">
+                        </div>
+                        <button class="view-more-btn" data-id="3" data-i18n="view_more">
+                            View More <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- CARD 04 -->
+                    <div class="council-card" data-category="wellness">
+                        <div class="card-header-row">
+                            <div class="card-icon-badge">
+                                <i class="fa-solid fa-heart-pulse"></i>
+                            </div>
+                            <h3 class="card-title" data-i18n="c4_title">Health<br>Coordinator</h3>
+                        </div>
+                        <div class="card-photo-box">
+                            <img src="health.jpeg" alt="Health Coordinator" class="clickable-image">
+                        </div>
+                        <button class="view-more-btn" data-id="4" data-i18n="view_more">
+                            View More <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- CARD 05 -->
+                    <div class="council-card" data-category="wellness">
+                        <div class="card-header-row">
+                            <div class="card-icon-badge">
+                                <i class="fa-solid fa-dumbbell"></i>
+                            </div>
+                            <h3 class="card-title" data-i18n="c5_title">Workout<br>Coordinator</h3>
+                        </div>
+                        <div class="card-photo-box">
+                            <img src="workout.jpeg" alt="Workout Coordinator" class="clickable-image">
+                        </div>
+                        <button class="view-more-btn" data-id="5" data-i18n="view_more">
+                            View More <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- CARD 06 -->
+                    <div class="council-card" data-category="operations">
+                        <div class="card-header-row">
+                            <div class="card-icon-badge">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+                            <h3 class="card-title" data-i18n="c6_title">Facility<br>Manager</h3>
+                        </div>
+                        <div class="card-photo-box">
+                            <img src="Facility Managment.jpeg" alt="Facility Manager" class="clickable-image">
+                        </div>
+                        <button class="view-more-btn" data-id="6" data-i18n="view_more">
+                            View More <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- CARD 07 -->
+                    <div class="council-card" data-category="external">
+                        <div class="card-header-row">
+                            <div class="card-icon-badge">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <h3 class="card-title" data-i18n="c7_title">Outreach<br>Coordinator</h3>
+                        </div>
+                        <div class="card-photo-box">
+                            <img src="outreach.jpeg" alt="Outreach Coordinator" class="clickable-image">
+                        </div>
+                        <button class="view-more-btn" data-id="7" data-i18n="view_more">
+                            View More <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- CARD 08 -->
+                    <div class="council-card" data-category="operations">
+                        <div class="card-header-row">
+                            <div class="card-icon-badge">
+                                <i class="fa-solid fa-laptop-code"></i>
+                            </div>
+                            <h3 class="card-title" data-i18n="c8_title">IT<br>Coordinator</h3>
+                        </div>
+                        <div class="card-photo-box">
+                            <img src="IT cordinator.jpeg" alt="IT Coordinator" class="clickable-image">
+                        </div>
+                        <button class="view-more-btn" data-id="8" data-i18n="view_more">
+                            View More <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- CARD 09 -->
+                    <div class="council-card" data-category="campus-life">
+                        <div class="card-header-row">
+                            <div class="card-icon-badge">
+                                <i class="fa-solid fa-user-plus"></i>
+                            </div>
+                            <h3 class="card-title" data-i18n="c9_title">Onboarding<br>Coordinator</h3>
+                        </div>
+                        <div class="card-photo-box">
+                            <img src="onboarding.jpeg" alt="Onboarding Coordinator" class="clickable-image">
+                        </div>
+                        <button class="view-more-btn" data-id="9" data-i18n="view_more">
+                            View More <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- CARD 10 -->
+                    <div class="council-card" data-category="academics">
+                        <div class="card-header-row">
+                            <div class="card-icon-badge">
+                                <i class="fa-solid fa-comment-dots"></i>
+                            </div>
+                            <h3 class="card-title" data-i18n="c10_title">English<br>Coordinator</h3>
+                        </div>
+                        <div class="card-photo-box">
+                            <img src="english.jpeg" alt="English Coordinator" class="clickable-image">
+                        </div>
+                        <button class="view-more-btn" data-id="10" data-i18n="view_more">
+                            View More <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- CARD 11 -->
+                    <div class="council-card" data-category="external">
+                        <div class="card-header-row">
+                            <div class="card-icon-badge">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+                            <h3 class="card-title" data-i18n="c11_title">Placement<br>Coordinator</h3>
+                        </div>
+                        <div class="card-photo-box">
+                            <img src="placement.jpeg.png" alt="Placement Coordinator" class="clickable-image">
+                        </div>
+                        <button class="view-more-btn" data-id="11" data-i18n="view_more">
+                            View More <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- CARD 12 -->
+                    <div class="council-card" data-category="campus-life">
+                        <div class="card-header-row">
+                            <div class="card-icon-badge">
+                                <i class="fa-solid fa-music"></i>
+                            </div>
+                            <h3 class="card-title" data-i18n="c12_title">Cultural<br>Coordinator</h3>
+                        </div>
+                        <div class="card-photo-box">
+                            <img src="culture.jpeg" alt="Cultural Coordinator" class="clickable-image">
+                        </div>
+                        <button class="view-more-btn" data-id="12" data-i18n="view_more">
+                            View More <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= READY TO LEAD ================= -->
+        <section class="ready-section">
+            <div class="campusled-container">
+                <div class="ready-box">
+                    <div class="ready-left">
+                        <div class="ready-icon-wrap">
+                            <i class="fa-solid fa-flag-checkered"></i>
+                        </div>
+                        <div class="ready-content">
+                            <h2 data-i18n="ready_to_lead_heading">Ready to Lead?</h2>
+                            <p data-i18n="ready_to_lead_desc">
+                                Join a community where your voice matters and your actions shape the future. Apply now to become part of the Student Led Campus.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="ready-right">
+                        <a href="https://admissions.navgurukul.org/students/" class="cta-apply-btn" target="_blank" rel="noopener">
+                            <span data-i18n="nav_apply">Apply Now</span> <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                        <a href="programs.html" class="cta-programs-btn">
+                            <span data-i18n="view_programs">View Programs</span> <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= COUNCIL MODAL POPUP ================= -->
+    <div class="council-modal-overlay" id="councilModal">
+        <div class="council-modal-card">
+            <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">&times;</button>
+
+            <div class="modal-body-layout">
+                <div class="modal-photo-col">
+                    <img id="modalImg" src="" alt="Coordinator Photo">
+                </div>
+
+                <div class="modal-info-col">
+                    <h2 class="modal-council-title" id="modalTitle">DISCO - Discipline Coordinator</h2>
+                    <p class="modal-council-desc" id="modalDescription"></p>
+
+                    <div class="modal-resp-box">
+                        <h3 data-i18n="modal_key_resp">Key Responsibilities</h3>
+                        <ul class="modal-resp-list" id="modalResponsibilities"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+       <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Column 1 -->
+            <div class="footer-col foundation">
+                <div class="logo-box">
+                    <img src="logo.jpeg" alt="AJMF Logo">
+                    <div class="footer-logo-content">
+                        <h2>Anish Jadhav <br> Memorial Foundation</h2>
+                        <p>EDUCATE • EMPOWER • ELEVATE</p>
+                    </div>
+                </div>
+
+                <p class="foundation-text" data-i18n="footer_foundation_text">
+                    Empowering young minds through education,
+                    research and community support.
+                </p>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/anishjmf" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/explore/locations/112795623857018/anish-jadhav-memorial-foundation/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/posts/brigadier-dr-kishor-jadhav-ph-d-97a3934b_anish-jadhav-memorial-foundation-skilling-activity-7180232279640719360-Uw2g/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/@AnishJadhavMemorialFoundation" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="footer-col">
+                <h3 data-i18n="footer_quick_links">Quick Links</h3>
+                <ul>
+                    <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                    <li><a href="About.html" data-i18n="nav_about">About Anish</a></li>
+                    <li><a href="programs.html" data-i18n="nav_academics">Academics</a></li>
+                    <li><a href="gallery.html" data-i18n="nav_studentlife">Student Life</a></li>
+                    <li><a href="contact.html" data-i18n="nav_contact">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="footer-col">
+                <h3 data-i18n="nav_programs">Our Programs</h3>
+                <ul>
+                    <li><a href="programs.html" data-i18n="prog_sop">School of Programming</a></li>
+                    <li><a href="programs.html" data-i18n="prog_sob">School of Business</a></li>
+                    <li><a href="programs.html" data-i18n="prog_sof">School of Finance</a></li>
+                    <li><a href="programs.html" data-i18n="prog_soe">School of Education</a></li>
+                    <li><a href="programs.html" data-i18n="prog_sosc">School of Second Chance</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4 -->
+            <div class="footer-col contact">
+                <h3 data-i18n="nav_contact">Contact Us</h3>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Anish+Jadhav+Memorial+Foundation+JW3M%2BC7+Gharukul+Properties+Survey+No.+60%2F1+Pathare+Wasti+Lohegaon+Pune+Maharashtra+411047+India" target="_blank" rel="noopener noreferrer">
+                        Anish Jadhav Memorial Foundation<br>
+                        JW3M+C7, Gharukul Properties,<br>
+                        Survey No. 60/1, Pathare Wasti,<br>
+                        Lohegaon, Pune,<br>
+                        Maharashtra 411047, India
+                    </a>
+                </p>
+                <p>
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:+919906155699">+91 99061 55699</a>
+                </p>
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:info@ajmfoundation.org">info@ajmfoundation.org</a>
+                </p>
+                <p>
+                    <i class="fas fa-globe"></i>
+                    <a href="http://anishjadhavmemorialfoundation.org/" target="_blank" rel="noopener noreferrer">
+                        anishjadhavmemorialfoundation.org
+                    </a>
+                </p>
+            </div>
+
+            <!-- Column 5 -->
+            <div class="footer-col newsletter">
+                <h3 data-i18n="footer_newsletter_title">Newsletter</h3>
+                <p data-i18n="footer_newsletter_desc">
+                    Stay updated with our latest
+                    initiatives and stories.
+                </p>
+                <form class="newsletter-form" novalidate>
+                    <input type="email" class="newsletter-email" placeholder="Enter your email" data-i18n-placeholder="placeholder_email" required aria-label="Email address">
+                    <button type="submit" data-i18n="subscribe">Subscribe</button>
+                    <div class="newsletter-message" aria-live="polite"></div>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © 2026 Anish Jadhav Memorial Foundation.
+                <span data-i18n="footer_rights">All Rights Reserved.</span>
+            </p>
+            <p data-i18n="footer_tagline">
+                Designed with ❤️ for a better tomorrow
+            </p>
+        </div>
+    </footer>
+
+
+
+<script src="js/translations.js"></script>
+<script src="js/language.js"></script>
+<script src="header.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

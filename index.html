@@ -1,13 +1,1478 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/jpeg" href="/AJMF-P.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anish Jadhav Memorial Foundation</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<!---  HEADER  --->
+
+<header class="header">
+    <div class="container">
+
+        <div class="logo-area">
+            <a href="index.html" style="display: flex; align-items: center; gap: 16px; text-decoration: none;">
+                <img src="logo.jpeg" alt="AJMF Logo">
+                <div class="logo-content">
+                    <h2>Anish Jadhav <br> Memorial Foundation</h2>
+                    <p>EDUCATE • EMPOWER • ELEVATE</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- Hamburger Menu Icon -->
+        <div class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle navigation menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav class="navbar" id="navMenu">
+            <ul>
+
+                <!-- HOME -->
+                <li class="dropdown">
+                    <a href="index.html">
+                        <span data-i18n="nav_home">Home</span> <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html" data-i18n="nav_home">Home Page</a></li>
+                        <li><a href="mission.html#mission" data-i18n="nav_mission">Mission & Vision</a></li>
+                    </ul>
+                </li>
+
+                <!-- ABOUT ANISH -->
+                <li>
+                    <a href="About.html" data-i18n="nav_about">About Anish</a>
+                </li>
+
+                <!-- ACADEMICS -->
+                <li class="dropdown">
+                    <a href="#">
+                        <span data-i18n="nav_academics">Academics</span> <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="programs.html" data-i18n="nav_programs">Our Programs</a></li>
+                        <li><a href="padagogy.html" data-i18n="nav_pedagogy">Pedagogy</a></li>
+                        <li><a href="campusled.html" data-i18n="nav_campusled">Student-Led Campus</a></li>
+                        <li><a href="A_day.html" data-i18n="nav_aday">A Day At Campus</a></li>
+                    </ul>
+                </li>
+
+                <!-- STUDENT LIFE -->
+                <li class="dropdown">
+                    <a href="#">
+                        <span data-i18n="nav_studentlife">Student Life</span> <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="gallery.html" data-i18n="nav_gallery">Gallery</a></li>
+                        <li><a href="events.html" data-i18n="nav_events">Events</a></li>
+                        <li><a href="facility.html" data-i18n="nav_facility">Campus & Facilities</a></li>
+                        <li><a href="success.html" data-i18n="nav_success">Success Stories</a></li>
+                    </ul>
+                </li>
+
+                <!-- CONTACT -->
+                <li class="dropdown">
+                    <a href="contact.html">
+                        <span data-i18n="nav_contact">Contact Us</span> <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="getinvolved.html" data-i18n="nav_getinvolved">Get Involved</a></li>
+                        <li><a href="Apply.html" data-i18n="nav_apply">Apply Now</a></li>
+                        <li><a href="donate.html" data-i18n="nav_donate">Donate Now</a></li>
+                    </ul>
+                </li>
+
+                <li class="mobile-only-item">
+                    <a href="https://admissions.navgurukul.org/students/" class="donate-btn mobile-donate-btn"
+                        target="_blank" rel="noopener">
+                        <i class="fa-solid fa-heart"></i>
+                        <span data-i18n="nav_apply">Apply Now</span>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <!-- Desktop Apply Button -->
+        <a href="https://admissions.navgurukul.org/students/" class="donate-btn desktop-only-btn" target="_blank"
+            rel="noopener">
+            <i class="fa-solid fa-heart"></i>
+            <span data-i18n="apply_here">Apply Here</span>
+        </a>
+
+    </div>
+</header>
+
+<!-- ================= HERO ================= -->
+
+<main>
+
+    <section class="hero-slider-section">
+        <div class="hero-slider-track">
+            
+            <!-- SLIDE 1 -->
+            <div class="hero-slide active">
+                <div class="slide-bg">
+                    <img src="images/hero_slide_1.png" alt="Empowering Every Child Through Education" data-i18n-alt="slide1_title">
+                    <div class="slide-overlay"></div>
+                </div>
+                <div class="container hero-container">
+                    <div class="slide-content">
+                        <h1 class="slide-title" data-i18n="slide1_title">Empowering Every Child Through Education</h1>
+                        <p class="slide-description" data-i18n="slide1_desc">
+                            Anish Jadhav Memorial Foundation (Anish Jadhav Memorial Foundation) is a non-profit organization working to provide quality education, skills and opportunities to children from underserved communities.
+                        </p>
+                        <div class="slide-features">
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="fa-solid fa-book-open"></i></div>
+                                <div class="feature-text">
+                                    <h4 data-i18n="slide1_feat1_title">Education</h4>
+                                    <p data-i18n="slide1_feat1_desc">Providing access to quality learning.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="fa-solid fa-star"></i></div>
+                                <div class="feature-text">
+                                    <h4 data-i18n="slide1_feat2_title">Empowerment</h4>
+                                    <p data-i18n="slide1_feat2_desc">Building confidence and life skills.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="fa-solid fa-users"></i></div>
+                                <div class="feature-text">
+                                    <h4 data-i18n="slide1_feat3_title">Community</h4>
+                                    <p data-i18n="slide1_feat3_desc">Creating a stronger and inclusive society.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide-cta">
+                            <a href="https://admissions.navgurukul.org/students/" class="hero-btn btn-outline" target="_blank" rel="noopener">
+                                <i class="fa-regular fa-circle-play"></i> <span data-i18n="watch_here">Watch Here</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 2 -->
+            <div class="hero-slide">
+                <div class="slide-bg">
+                    <video autoplay muted playsinline loop>
+                        <source src="slide2.mp4" type="video/mp4">
+                    </video>
+                    <div class="slide-overlay"></div>
+                </div>
+                <div class="container hero-container">
+                    <div class="slide-content">
+                        <h1 class="slide-title" data-i18n="slide2_title">Learning Beyond the Classroom</h1>
+                        <p class="slide-description" data-i18n="slide2_desc">
+                            Our programs focus on education, digital literacy, life skills, and career readiness. Through workshops, mentorship, and partnerships, we help students build confidence and prepare for a brighter future.
+                        </p>
+                        <div class="slide-features">
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="fa-solid fa-laptop"></i></div>
+                                <div class="feature-text">
+                                    <h4 data-i18n="card_digital_title">Digital Learning</h4>
+                                    <p data-i18n="card_digital_desc">Building skills for the digital world.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="fa-solid fa-user-graduate"></i></div>
+                                <div class="feature-text">
+                                    <h4 data-i18n="card_mentorship_title">Mentorship</h4>
+                                    <p data-i18n="card_mentorship_desc">Guiding students every step of the way.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+                                <div class="feature-text">
+                                    <h4 data-i18n="card_lifeskills_title">Life Skills</h4>
+                                    <p data-i18n="card_lifeskills_desc">Empowering students for real life success.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide-cta">
+                            <button type="button" id="watchSlide2VideoBtn" class="hero-btn btn-outline" style="cursor: pointer;">
+                                <i class="fa-regular fa-circle-play"></i> <span data-i18n="btn_watch_more">Watch More</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 3 -->
+            <div class="hero-slide">
+                <div class="slide-bg">
+                    <img src="image (1).png" alt="Creating Meaningful Change Together" data-i18n-alt="slide3_title">
+                    <div class="slide-overlay"></div>
+                </div>
+                <div class="container hero-container">
+                    <div class="slide-content">
+                        <h1 class="slide-title" data-i18n="slide3_title">Creating Meaningful Change Together</h1>
+                        <p class="slide-description" data-i18n="slide3_desc">
+                            With the support of volunteers, donors, and partner organizations, Anish Jadhav Memorial Foundation has reached hundreds of students through educational programs, community events, and skill development initiatives.
+                        </p>
+                        <div class="slide-features">
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="fa-solid fa-user-group"></i></div>
+                                <div class="feature-text">
+                                    <h4 data-i18n="card_students_impacted">Students Impacted</h4>
+                                    <p data-i18n="card_students_desc">Hundreds of students empowered.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                                <div class="feature-text">
+                                    <h4 data-i18n="card_events_activities">Events & Activities</h4>
+                                    <p data-i18n="card_events_desc">Workshops, drives & awareness programs.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                                <div class="feature-text">
+                                    <h4 data-i18n="card_communities_title">Stronger Communities</h4>
+                                    <p data-i18n="card_communities_desc">Creating inclusive and supportive communities.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide-cta">
+                            <a href="About.html" class="hero-btn btn-solid">
+                                <span data-i18n="read_more">Read More</span> <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 4 -->
+            <div class="hero-slide">
+                <div class="slide-bg">
+                    <img src="slide4.jpeg" alt="Be Part of the Change" data-i18n-alt="slide4_title">
+                    <div class="slide-overlay"></div>
+                </div>
+                <div class="container hero-container">
+                    <div class="slide-content">
+                        <h1 class="slide-title" data-i18n="slide4_title">Be Part of the Change</h1>
+                        <p class="slide-description" data-i18n="slide4_desc">
+                            Every contribution makes a difference. Whether you choose to donate, volunteer, or partner with us, your support helps create opportunities for children and strengthens communities.
+                        </p>
+                        <div class="slide-features">
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="fa-solid fa-heart"></i></div>
+                                <div class="feature-text">
+                                    <h4 data-i18n="card_donate_title">Donate</h4>
+                                    <p data-i18n="card_donate_desc">Your support can change lives.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="fa-solid fa-hands-holding"></i></div>
+                                <div class="feature-text">
+                                    <h4 data-i18n="card_volunteer_title">Volunteer</h4>
+                                    <p data-i18n="card_volunteer_desc">Give your time, create impact.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="fa-solid fa-handshake"></i></div>
+                                <div class="feature-text">
+                                    <h4 data-i18n="card_partner_title">Partner</h4>
+                                    <p data-i18n="card_partner_desc">Together we can build a better tomorrow.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide-cta">
+                            <a href="donate.html" class="hero-btn btn-solid">
+                                <span data-i18n="read_more">Read More</span> <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Slider Arrows -->
+        <button class="slider-arrow prev-arrow" id="prevSlide" aria-label="Previous Slide">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="slider-arrow next-arrow" id="nextSlide" aria-label="Next Slide">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <!-- Pagination Dots -->
+        <div class="slider-dots-container" id="sliderDots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+        </div>
+    </section>
+
+    <!-- FULL VIDEO PLAYER MODAL FOR SLIDE 2 -->
+    <div id="slide2VideoModal" class="video-modal" aria-hidden="true" role="dialog" aria-label="Hero Video Player">
+        <div class="video-modal-backdrop" id="slide2VideoModalBackdrop"></div>
+        <div class="video-modal-container">
+            <button type="button" class="video-modal-close" id="closeSlide2VideoModalBtn" aria-label="Close video player">&times;</button>
+            <div class="video-player-wrapper">
+                <video id="slide2FullVideoPlayer" controls preload="metadata">
+                    <source src="slide2.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= STATS ================= -->
+
+    <section class="stats-section">
+
+        <div class="container">
+
+            <div class="stats-grid">
+
+                <article class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+
+                    <div class="stat-content">
+                        <h3>800+</h3>
+                        <p data-i18n="stat_students">Students Supported</p>
+                        <span class="stat-line"></span>
+                    </div>
+
+                </article>
+
+                <article class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div class="stat-content">
+                        <h3>7+</h3>
+                        <p data-i18n="stat_programs">Programs Conducted</p>
+                        <span class="stat-line"></span>
+                    </div>
+
+                </article>
+
+                <article class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+
+                    <div class="stat-content">
+                        <h3>10+</h3>
+                        <p data-i18n="stat_partners">Partner Organizations</p>
+                        <span class="stat-line"></span>
+                    </div>
+
+                </article>
+
+                <article class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+
+                    <div class="stat-content">
+                        <h3>25+</h3>
+                        <p data-i18n="stat_events">Events Conducted</p>
+                        <span class="stat-line"></span>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= OUR PARTNER SECTION (EXACT OVERLAPPING DESIGN) ================= -->
+    <section class="our-partner-section" id="partner">
+        <div class="partner-wrapper-row">
+            <!-- LEFT DARK GREEN PANEL -->
+            <div class="partner-green-panel">
+                <span class="partner-tag" data-i18n="partner_label">OUR PARTNER</span>
+                <h2 class="partner-title" data-i18n="partner_title_stronger">Stronger Together.<br>Greater Impact.</h2>
+                <p class="partner-desc" data-i18n="partner_banner_desc">
+                    Anish Jadhav Memorial Foundation is proud to partner with <span class="navgurukul-name"><span class="nav-text">Nav</span><span class="gurukul-text">Gurukul</span></span> to empower youth through industry-relevant education, technology and career-focused learning.
+                </p>
+                <a href="partnership.html" class="btn-partner-learn">
+                    <span data-i18n="learn_partnership">Learn About Our Partnership</span> <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- RIGHT CREAM AREA WITH OVERLAPPING WHITE CARD -->
+            <div class="partner-cream-area">
+                <div class="partner-overlapping-card">
+                    <!-- LOGOS GROUP -->
+                    <div class="partner-logos-group">
+                        <img src="logo.jpeg" alt="AJMF Logo" class="partner-logo-img">
+                        <span class="partner-multiply"><i class="fa-solid fa-handshake"></i></span>
+                        <img src="navgurukul.logo.jpg" alt="NavGurukul Logo" class="partner-logo-img navgurukul-img">
+                    </div>
+
+                    <!-- VERTICAL SEPARATOR LINE (|) -->
+                    <div class="partner-vertical-line"></div>
+
+                    <!-- BENEFITS GROUP (HORIZONTAL ON DESKTOP) -->
+                    <div class="partner-benefits-group">
+                        <div class="partner-benefit-item">
+                            <div class="benefit-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+                            <span class="benefit-label" data-i18n="partner_benefit_1">Quality Education</span>
+                        </div>
+                        <div class="partner-benefit-item">
+                            <div class="benefit-icon"><i class="fa-solid fa-code"></i></div>
+                            <span class="benefit-label" data-i18n="partner_benefit_2">Skill Development</span>
+                        </div>
+                        <div class="partner-benefit-item">
+                            <div class="benefit-icon"><i class="fa-solid fa-briefcase"></i></div>
+                            <span class="benefit-label" data-i18n="partner_benefit_3">Career Opportunities</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about-section">
+
+        <div class="container">
+
+            <div class="about-wrapper">
+
+                <div class="about-image">
+
+                    <img src="building.jpeg" alt="Foundation Building">
+
+                    <div class="floating-card">
+                        <i class="fa-solid fa-users"></i>
+                        <p data-i18n="about_float_text">Many Children<br>
+                            Countless Dreams<br>
+                            One Mission</p>
+                    </div>
+
+                </div>
+
+                <div class="about-content">
+
+                    <span class="section-label" data-i18n="about_us_tag">
+                        ABOUT US
+                    </span>
+
+                    <h2 data-i18n="about_story_title">
+                        The Story Behind<br>
+                        Anish Jadhav Memorial Foundation
+                    </h2>
+                    <div class="heading-line"></div>
+
+                    <p data-i18n="about_p1">
+                        The Anish Jadhav Memorial Foundation (Anish Jadhav Memorial Foundation)
+                        is a non-profit organization established
+                        in the loving memory of Anish Jadhav Sir. His vision, values and
+                        commitment to society continue to inspire us every day.
+                    </p>
+
+                    <p data-i18n="about_p2">
+                        Anish Jadhav Memorial Foundation works towards education to create
+                        a positive and lasting impact on society.
+                    </p>
+
+                    <div class="more-content" id="moreContent">
+
+                        <p data-i18n="about_extra_p1">
+                            We believe that every child deserves equal
+                            opportunities to learn, grow and succeed.
+                            Through scholarships, mentorship programs,
+                            skill development workshops and community
+                            initiatives, we strive to build a brighter
+                            future for the next generation.
+                        </p>
+
+                        <p data-i18n="about_extra_p2">
+                            Our foundation also collaborates with
+                            educational institutions, volunteers and
+                            partner organizations to create sustainable
+                            social impact across different communities.
+                        </p>
+
+                    </div>
+
+                    <button class="about-btn" id="readBtn">
+                        <span id="readBtnText">Read More About Us</span>
+                        <i class="fa-solid fa-arrow-down" id="readBtnIcon"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- WHAT WE DO SECTION (7 LEARNING APPROACHES SLIDER) -->
+    <section class="focus-area-section" id="what-we-do">
+
+        <div class="section-heading">
+            <span class="sub-title" data-i18n="method_tag">OUR LEARNING METHODOLOGY</span>
+            <h2 data-i18n="method_title">What We Do</h2>
+            <div class="heading-line"></div>
+        </div>
+
+        <div class="what-we-do-slider-wrapper">
+            <button class="slider-arrow-btn prev-btn" id="wwdPrevBtn" aria-label="Previous Slide">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <div class="slider-viewport" id="wwdSliderViewport">
+                <div class="slider-track" id="wwdSliderTrack">
+
+                    <!-- Card 1 -->
+                    <div class="focus-card learning-card" data-card-id="1">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-people-arrows"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3 data-i18n="wwd_card1_title">Peer-to-Peer Learning</h3>
+                            <p data-i18n="wwd_card1_desc">
+                                Students learn together by collaborating, discussing concepts, and teaching one another, fostering deep understanding and teamwork.
+                            </p>
+                            <button class="card-read-more-btn" data-card-id="1">
+                                <span data-i18n="read_more">Read More</span> <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="focus-card learning-card" data-card-id="2">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-user-graduate"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3 data-i18n="wwd_card2_title">Mentor-Mentee Learning</h3>
+                            <p data-i18n="wwd_card2_desc">
+                                Experienced mentors provide one-on-one guidance, industry insights, and personalized support to accelerate student growth.
+                            </p>
+                            <button class="card-read-more-btn" data-card-id="2">
+                                <span data-i18n="read_more">Read More</span> <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="focus-card learning-card" data-card-id="3">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3 data-i18n="wwd_card3_title">Learning Through Challenges</h3>
+                            <p data-i18n="wwd_card3_desc">
+                                Students learn by taking on meaningful challenges, solving practical problems, thinking critically, and building confidence through hands-on problem-solving.
+                            </p>
+                            <button class="card-read-more-btn" data-card-id="3">
+                                <span data-i18n="read_more">Read More</span> <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="focus-card learning-card" data-card-id="4">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-people-group"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3 data-i18n="wwd_card4_title">Group Study</h3>
+                            <p data-i18n="wwd_card4_desc">
+                                Students learn by studying together, discussing ideas, helping each other, sharing knowledge, and collaborating to build strong communication and teamwork skills.
+                            </p>
+                            <button class="card-read-more-btn" data-card-id="4">
+                                <span data-i18n="read_more">Read More</span> <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="focus-card learning-card" data-card-id="5">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-gamepad"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3 data-i18n="wwd_card5_title">Learning by Games</h3>
+                            <p data-i18n="wwd_card5_desc">
+                                Students learn through fun and interactive games that help them understand concepts, practice skills, and enjoy the learning process.
+                            </p>
+                            <button class="card-read-more-btn" data-card-id="5">
+                                <span data-i18n="read_more">Read More</span> <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="focus-card learning-card" data-card-id="7">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-shapes"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3 data-i18n="wwd_card7_title">Learning Space Activities</h3>
+                            <p data-i18n="wwd_card7_desc">
+                                Students learn by taking part in simple hands-on activities where they can explore, practice, and understand concepts in a practical way.
+                            </p>
+                            <button class="card-read-more-btn" data-card-id="7">
+                                <span data-i18n="read_more">Read More</span> <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <button class="slider-arrow-btn next-btn" id="wwdNextBtn" aria-label="Next Slide">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <div class="wwd-dots-container" id="wwdDots">
+            <span class="wwd-dot active" data-index="0"></span>
+            <span class="wwd-dot" data-index="1"></span>
+            <span class="wwd-dot" data-index="2"></span>
+            <span class="wwd-dot" data-index="3"></span>
+            <span class="wwd-dot" data-index="4"></span>
+            <span class="wwd-dot" data-index="5"></span>
+        </div>
+
+    </section>
+
+    <!-- WHAT WE DO DETAIL MODAL -->
+    <div class="learning-modal-overlay" id="learningModal" aria-hidden="true">
+        <div class="learning-modal-box">
+            <button class="learning-modal-close" id="learningModalCloseBtn" aria-label="Close detail modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="learning-modal-header">
+                <div class="learning-modal-icon" id="learningModalIcon">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+                <h3 id="learningModalTitle">Learning Approach</h3>
+            </div>
+            <div class="learning-modal-divider"></div>
+            <div class="learning-modal-body">
+                <p id="learningModalDescription">Detailed information will appear here.</p>
+                <div class="learning-modal-highlights" id="learningModalHighlights"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================= WHY CHOOSE AJMF SECTION ================= -->
+    <section class="why-choose-section" id="why-ajmf">
+        <div class="container">
+            <div class="section-heading">
+                <span class="sub-title" data-i18n="why_ajmf_tag">WHY Anish Jadhav Memorial Foundation?</span>
+                <h2 data-i18n="why_ajmf_title">Why Choose Anish Jadhav Memorial Foundation?</h2>
+                <div class="heading-line"></div>
+                <p class="why-choose-intro" data-i18n="why_ajmf_intro">
+                    More than an educational space, Anish Jadhav Memorial Foundation is a community where students are supported, challenged, and empowered to build a meaningful future.
+                </p>
+            </div>
+
+            <div class="why-choose-grid">
+                <!-- CARD 1 -->
+                <div class="why-choose-card">
+                    <div class="why-choose-icon">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <h3 data-i18n="why_card1_title">Student-Centered Growth</h3>
+                    <p data-i18n="why_card1_desc">Every student receives an environment that supports their individual journey, confidence, and personal development.</p>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="why-choose-card">
+                    <div class="why-choose-icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h3 data-i18n="why_card2_title">Real Opportunities</h3>
+                    <p data-i18n="why_card2_desc">Students gain exposure to practical experiences, career pathways, and opportunities that prepare them for the future.</p>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="why-choose-card">
+                    <div class="why-choose-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3 data-i18n="why_card3_title">A Strong Community</h3>
+                    <p data-i18n="why_card3_desc">We create a supportive community where students learn, collaborate, and grow together.</p>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="why-choose-card">
+                    <div class="why-choose-icon">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <h3 data-i18n="why_card4_title">Beyond Education</h3>
+                    <p data-i18n="why_card4_desc">Anish Jadhav Memorial Foundation focuses not only on learning, but also on confidence, leadership, life skills, and long-term growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- TESTIMONIAL SECTION -->
+    <section class="testimonial-section">
+
+        <div class="section-heading">
+            <span class="sub-title" data-i18n="testimonial_tag">WHAT PEOPLE SAY</span>
+            <h2 data-i18n="testimonial_title">Voices That Inspire Us</h2>
+            <div class="heading-line"></div>
+        </div>
+
+        <div class="testimonial-wrapper">
+
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+
+                <p data-i18n="testimonial_card1_p">
+                    The foundation has been a blessing in my life.
+                    It gave me the support and confidence to pursue my dreams.
+                </p>
+
+                <div class="testimonial-user">
+                    <img src="images/user-1.jpg" alt="Priya">
+
+                    <div>
+                        <h4>Priya S.</h4>
+                        <span data-i18n="role_student">Student</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+
+                <p data-i18n="testimonial_card2_p">
+                    Anish Jadhav Memorial Foundation is doing an incredible job in transforming lives
+                    through education and community support.
+                </p>
+
+                <div class="testimonial-user">
+                    <img src="images/user-2.jpg" alt="Rahul">
+
+                    <div>
+                        <h4>Rahul K.</h4>
+                        <span data-i18n="role_volunteer">Volunteer</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+
+                <p data-i18n="testimonial_card3_p">
+                    Proud to be associated with an organization that truly
+                    cares and works for the betterment of society.
+                </p>
+
+                <div class="testimonial-user">
+                    <img src="images/user-3.jpg" alt="Meera">
+
+                    <div>
+                        <h4>Meera T.</h4>
+                        <span data-i18n="role_partner_org">Partner Organization</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="testimonial-dots">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </section>
+
+    <!-- IMPACT -->
+    <section class="impact-banner"></section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials"></section>
+
+</main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Column 1 -->
+            <div class="footer-col foundation">
+                <div class="logo-box">
+                    <img src="logo.jpeg" alt="AJMF Logo">
+                    <div class="footer-logo-content">
+                        <h2>Anish Jadhav <br> Memorial Foundation</h2>
+                        <p>EDUCATE • EMPOWER • ELEVATE</p>
+                    </div>
+                </div>
+
+                <p class="foundation-text" data-i18n="footer_foundation_text">
+                    Empowering young minds through education,
+                    research and community support.
+                </p>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/anishjmf" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/explore/locations/112795623857018/anish-jadhav-memorial-foundation/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/posts/brigadier-dr-kishor-jadhav-ph-d-97a3934b_anish-jadhav-memorial-foundation-skilling-activity-7180232279640719360-Uw2g/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/@AnishJadhavMemorialFoundation" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="footer-col">
+                <h3 data-i18n="footer_quick_links">Quick Links</h3>
+                <ul>
+                    <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                    <li><a href="About.html" data-i18n="nav_about">About Anish</a></li>
+                    <li><a href="programs.html" data-i18n="nav_academics">Academics</a></li>
+                    <li><a href="gallery.html" data-i18n="nav_studentlife">Student Life</a></li>
+                    <li><a href="contact.html" data-i18n="nav_contact">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="footer-col">
+                <h3 data-i18n="nav_programs">Our Programs</h3>
+                <ul>
+                    <li><a href="programs.html" data-i18n="prog_sop">School of Programming</a></li>
+                    <li><a href="programs.html" data-i18n="prog_sob">School of Business</a></li>
+                    <li><a href="programs.html" data-i18n="prog_sof">School of Finance</a></li>
+                    <li><a href="programs.html" data-i18n="prog_soe">School of Education</a></li>
+                    <li><a href="programs.html" data-i18n="prog_sosc">School of Second Chance</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4 -->
+            <div class="footer-col contact">
+                <h3 data-i18n="nav_contact">Contact Us</h3>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Anish+Jadhav+Memorial+Foundation+JW3M%2BC7+Gharukul+Properties+Survey+No.+60%2F1+Pathare+Wasti+Lohegaon+Pune+Maharashtra+411047+India" target="_blank" rel="noopener noreferrer">
+                        Anish Jadhav Memorial Foundation<br>
+                        JW3M+C7, Gharukul Properties,<br>
+                        Survey No. 60/1, Pathare Wasti,<br>
+                        Lohegaon, Pune,<br>
+                        Maharashtra 411047, India
+                    </a>
+                </p>
+                <p>
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:+919876543210">+91 98765 43210</a>
+                </p>
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:info@ajmfoundation.org">info@ajmfoundation.org</a>
+                </p>
+                <p>
+                    <i class="fas fa-globe"></i>
+                    <a href="http://anishjadhavmemorialfoundation.org/" target="_blank" rel="noopener noreferrer">
+                        anishjadhavmemorialfoundation.org
+                    </a>
+                </p>
+            </div>
+
+            <!-- Column 5 -->
+            <div class="footer-col newsletter">
+                <h3 data-i18n="footer_newsletter_title">Newsletter</h3>
+                <p data-i18n="footer_newsletter_desc">
+                    Stay updated with our latest
+                    initiatives and stories.
+                </p>
+                <form class="newsletter-form" novalidate>
+                    <input type="email" class="newsletter-email" placeholder="Enter your email" data-i18n-placeholder="placeholder_email" required aria-label="Email address">
+                    <button type="submit" data-i18n="subscribe">Subscribe</button>
+                    <div class="newsletter-message" aria-live="polite"></div>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © 2026 Anish Jadhav Memorial Foundation.
+                <span data-i18n="footer_rights">All Rights Reserved.</span>
+            </p>
+            <p data-i18n="footer_tagline">
+                Designed with ❤️ for a better tomorrow
+            </p>
+        </div>
+    </footer>
+
+
+
+<script src="js/translations.js"></script>
+<script src="js/language.js"></script>
+<script src="header.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const readBtn = document.getElementById('readBtn');
+    const moreContent = document.getElementById('moreContent');
+    const readBtnText = document.getElementById('readBtnText');
+    const readBtnIcon = document.getElementById('readBtnIcon');
+
+    if (readBtn && moreContent) {
+        readBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            moreContent.classList.toggle('show');
+            if (moreContent.classList.contains('show')) { 
+                if (readBtnText) readBtnText.textContent = 'Read Less';
+                if (readBtnIcon) readBtnIcon.className = 'fa-solid fa-arrow-up';
+            } else {
+                if (readBtnText) readBtnText.textContent = 'Read More About Us';
+                if (readBtnIcon) readBtnIcon.className = 'fa-solid fa-arrow-down';
+            }
+        });
+    }
+
+    // Hero Slider Functionality
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('#sliderDots .dot');
+    const prevBtn = document.getElementById('prevSlide');
+    const nextBtn = document.getElementById('nextSlide');
+    const sliderContainer = document.querySelector('.hero-slider-container');
+    
+    if (slides.length > 0) {
+        let currentSlide = 0;
+        let slideInterval = null;
+        const autoSlideDuration = 5500;
+
+        function showSlide(index) {
+            if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else if (index >= slides.length) {
+                currentSlide = 0;
+            } else {
+                currentSlide = index;
+            }
+
+            slides.forEach((slide, i) => {
+                if (i === currentSlide) {
+                    slide.classList.add('active');
+                    const vid = slide.querySelector('video');
+                    if (vid) {
+                        vid.currentTime = 0;
+                        vid.play().catch(() => {});
+                    }
+                } else {
+                    slide.classList.remove('active');
+                    const vid = slide.querySelector('video');
+                    if (vid) {
+                        vid.pause();
+                    }
+                }
+            });
+
+            dots.forEach((dot, i) => {
+                if (i === currentSlide) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        function startAutoSlide() {
+            stopAutoSlide();
+            slideInterval = setInterval(() => {
+                showSlide(currentSlide + 1);
+            }, autoSlideDuration);
+        }
+
+        function stopAutoSlide() {
+            if (slideInterval) {
+                clearInterval(slideInterval);
+                slideInterval = null;
+            }
+        }
+
+        // Slide 2 Full Video Modal Handlers
+        const watchSlide2Btn = document.getElementById('watchSlide2VideoBtn');
+        const slide2Modal = document.getElementById('slide2VideoModal');
+        const slide2ModalBackdrop = document.getElementById('slide2VideoModalBackdrop');
+        const closeSlide2ModalBtn = document.getElementById('closeSlide2VideoModalBtn');
+        const slide2FullPlayer = document.getElementById('slide2FullVideoPlayer');
+
+        function openSlide2VideoModal() {
+            if (!slide2Modal || !slide2FullPlayer) return;
+            slide2Modal.classList.add('is-active');
+            slide2Modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            slide2FullPlayer.currentTime = 0;
+            slide2FullPlayer.muted = false;
+            slide2FullPlayer.volume = 1.0;
+            slide2FullPlayer.play().catch(() => {});
+        }
+
+        function closeSlide2VideoModal() {
+            if (!slide2Modal || !slide2FullPlayer) return;
+            slide2Modal.classList.remove('is-active');
+            slide2Modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            slide2FullPlayer.pause();
+            slide2FullPlayer.currentTime = 0;
+        }
+
+        if (watchSlide2Btn) {
+            watchSlide2Btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                openSlide2VideoModal();
+            });
+        }
+
+        if (closeSlide2ModalBtn) {
+            closeSlide2ModalBtn.addEventListener('click', closeSlide2VideoModal);
+        }
+
+        if (slide2ModalBackdrop) {
+            slide2ModalBackdrop.addEventListener('click', closeSlide2VideoModal);
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && slide2Modal && slide2Modal.classList.contains('is-active')) {
+                closeSlide2VideoModal();
+            }
+        });
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                showSlide(currentSlide - 1);
+                startAutoSlide();
+            });
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                showSlide(currentSlide + 1);
+                startAutoSlide();
+            });
+        }
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+                startAutoSlide();
+            });
+        });
+
+        if (sliderContainer) {
+            sliderContainer.addEventListener('mouseenter', stopAutoSlide);
+            sliderContainer.addEventListener('mouseleave', startAutoSlide);
+        }
+
+        startAutoSlide();
+    }
+
+    // ==========================================================
+    // WHAT WE DO SECTION (7 LEARNING APPROACHES SLIDER & MODAL)
+    // ==========================================================
+    const track = document.getElementById('wwdSliderTrack');
+    const viewport = document.getElementById('wwdSliderViewport');
+    const wwdPrevBtn = document.getElementById('wwdPrevBtn');
+    const wwdNextBtn = document.getElementById('wwdNextBtn');
+    const wwdDotsContainer = document.getElementById('wwdDots');
+
+    if (track && viewport) {
+        const cards = track.querySelectorAll('.learning-card');
+        const totalCards = cards.length;
+        let currentIndex = 0;
+        let autoSlideTimer = null;
+        const slideDuration = 4000;
+
+        function getVisibleCardsCount() {
+            if (window.innerWidth <= 640) return 1;
+            if (window.innerWidth <= 1024) return 2;
+            return 3;
+        }
+
+        function getMaxIndex() {
+            const visible = getVisibleCardsCount();
+            return Math.max(0, totalCards - visible);
+        }
+
+        function updateSliderPosition() {
+            const maxIdx = getMaxIndex();
+            if (currentIndex > maxIdx) {
+                currentIndex = 0;
+            } else if (currentIndex < 0) {
+                currentIndex = maxIdx;
+            }
+
+            if (cards.length > 0) {
+                const cardWidth = cards[0].getBoundingClientRect().width;
+                const gap = parseFloat(window.getComputedStyle(track).gap) || 25;
+                const moveDistance = (cardWidth + gap) * currentIndex;
+                track.style.transform = `translateX(-${moveDistance}px)`;
+            }
+
+            if (wwdDotsContainer) {
+                const dots = wwdDotsContainer.querySelectorAll('.wwd-dot');
+                dots.forEach((dot, idx) => {
+                    if (idx === currentIndex) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }
+        }
+
+        function nextSlide() {
+            const maxIdx = getMaxIndex();
+            if (currentIndex >= maxIdx) {
+                currentIndex = 0;
+            } else {
+                currentIndex++;
+            }
+            updateSliderPosition();
+        }
+
+        function prevSlide() {
+            const maxIdx = getMaxIndex();
+            if (currentIndex <= 0) {
+                currentIndex = maxIdx;
+            } else {
+                currentIndex--;
+            }
+            updateSliderPosition();
+        }
+
+        function startAutoSlide() {
+            stopAutoSlide();
+            autoSlideTimer = setInterval(nextSlide, slideDuration);
+        }
+
+        function stopAutoSlide() {
+            if (autoSlideTimer) {
+                clearInterval(autoSlideTimer);
+                autoSlideTimer = null;
+            }
+        }
+
+        if (wwdNextBtn) {
+            wwdNextBtn.addEventListener('click', function () {
+                nextSlide();
+                startAutoSlide();
+            });
+        }
+
+        if (wwdPrevBtn) {
+            wwdPrevBtn.addEventListener('click', function () {
+                prevSlide();
+                startAutoSlide();
+            });
+        }
+
+        if (wwdDotsContainer) {
+            const dots = wwdDotsContainer.querySelectorAll('.wwd-dot');
+            dots.forEach((dot) => {
+                dot.addEventListener('click', function () {
+                    const idx = parseInt(dot.getAttribute('data-index'), 10);
+                    if (!isNaN(idx)) {
+                        currentIndex = idx;
+                        updateSliderPosition();
+                        startAutoSlide();
+                    }
+                });
+            });
+        }
+
+        const sliderWrapper = document.querySelector('.what-we-do-slider-wrapper');
+        if (sliderWrapper) {
+            sliderWrapper.addEventListener('mouseenter', stopAutoSlide);
+            sliderWrapper.addEventListener('mouseleave', startAutoSlide);
+            sliderWrapper.addEventListener('touchstart', stopAutoSlide, { passive: true });
+            sliderWrapper.addEventListener('touchend', startAutoSlide, { passive: true });
+        }
+
+        window.addEventListener('resize', function () {
+            updateSliderPosition();
+        });
+
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        viewport.addEventListener('touchstart', function (e) {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        viewport.addEventListener('touchend', function (e) {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+
+        function handleSwipe() {
+            const swipeThreshold = 40;
+            if (touchStartX - touchEndX > swipeThreshold) {
+                nextSlide();
+                startAutoSlide();
+            } else if (touchEndX - touchStartX > swipeThreshold) {
+                prevSlide();
+                startAutoSlide();
+            }
+        }
+
+        updateSliderPosition();
+        startAutoSlide();
+
+        // Modal Logic
+        const learningData = {
+            1: {
+                title: "Peer-to-Peer Learning",
+                icon: "fa-solid fa-people-arrows",
+                description: "Peer-to-Peer Learning encourages students to engage in active group discussions, share diverse perspectives, and teach complex topics to fellow learners. This methodology builds confidence, improves communication skills, strengthens subject mastery, and creates a supportive community where everyone grows together.",
+                highlights: [
+                    "Active knowledge sharing among student groups",
+                    "Fosters collaborative problem-solving and communication skills",
+                    "Reinforces subject comprehension through peer explanations",
+                    "Creates a supportive, inclusive, and non-judgmental community"
+                ]
+            },
+            2: {
+                title: "Mentor-Mentee Learning",
+                icon: "fa-solid fa-user-graduate",
+                description: "Mentor-Mentee Learning pairs students with dedicated mentors who offer tailored academic direction, career advice, and personal guidance. Through regular feedback and goal-setting sessions, students overcome learning hurdles, discover career pathways, and gain real-world wisdom from industry practitioners.",
+                highlights: [
+                    "Personalized 1-on-1 academic and career mentorship",
+                    "Continuous feedback loops and individual goal tracking",
+                    "Industry insights and professional guidance",
+                    "Emotional and confidence-building support"
+                ]
+            },
+            3: {
+                title: "Learning Through Challenges",
+                icon: "fa-solid fa-lightbulb",
+                description: "Learning Through Challenges encourages students to take on meaningful problems and learn from every obstacle. By evaluating scenarios, finding innovative solutions, and thinking critically, learners build resilience, critical thinking, and problem-solving confidence.",
+                highlights: [
+                    "Taking on meaningful challenges and practical problems",
+                    "Critical thinking and strategic problem-solving",
+                    "Learning from challenges and constructive mistakes",
+                    "Building confidence through practical solutions"
+                ]
+            },
+            4: {
+                title: "Group Study",
+                icon: "fa-solid fa-people-group",
+                description: "Group Study enables students to collaborate in a supportive peer environment. By studying together, sharing knowledge, discussing ideas, and helping each other solve academic challenges, students strengthen teamwork and communication skills.",
+                highlights: [
+                    "Studying together and sharing knowledge",
+                    "Discussing ideas and helping peers succeed",
+                    "Collaborating on learning and problem-solving",
+                    "Building communication, empathy, and teamwork skills"
+                ]
+            },
+            5: {
+                title: "Learning by Games",
+                icon: "fa-solid fa-gamepad",
+                description: "Students learn through fun and interactive games that help them understand concepts, practice skills, and enjoy the learning process.",
+                highlights: [
+                    "Fun and interactive educational games",
+                    "Understanding concepts through play",
+                    "Practicing skills and problem-solving",
+                    "Enjoyable and engaging learning process"
+                ]
+            },
+            7: {
+                title: "Learning Space Activities",
+                icon: "fa-solid fa-shapes",
+                description: "Students learn by taking part in simple hands-on activities where they can explore, practice, and understand concepts in a practical way.",
+                highlights: [
+                    "Simple hands-on activities and practice",
+                    "Exploring concepts in a practical environment",
+                    "Interactive group and individual sessions",
+                    "Building real-world understanding by doing"
+                ]
+            }
+        };
+
+        const learningDataHi = {
+            1: {
+                title: "सहकर्मी से सहकर्मी सीखना",
+                icon: "fa-solid fa-people-arrows",
+                description: "सहकर्मी से सहकर्मी सीखना छात्रों को सक्रिय समूह चर्चाओं में संलग्न होने, विविध दृष्टिकोण साझा करने और साथी शिक्षार्थियों को जटिल विषय सिखाने के लिए प्रोत्साहित करता है। यह पद्धति आत्मविश्वास का निर्माण करती है, संचार कौशल में सुधार करती है, विषय महारत को मजबूत करती है और एक सहायक समुदाय बनाती है जहाँ सभी एक साथ बढ़ते हैं।",
+                highlights: [
+                    "छात्र समूहों के बीच सक्रिय ज्ञान साझा करना",
+                    "सहयोगात्मक समस्या-समाधान और संचार कौशल को बढ़ावा देता है",
+                    "सहकर्मी स्पष्टीकरण के माध्यम से विषय की समझ को मजबूत करता है",
+                    "एक सहायक, समावेशी और गैर-निर्णयात्मक समुदाय बनाता है"
+                ]
+            },
+            2: {
+                title: "मेंटर-मेंटी शिक्षण",
+                icon: "fa-solid fa-user-graduate",
+                description: "मेंटर-मेंटी लर्निंग छात्रों को समर्पित मेंटर्स के साथ जोड़ती है जो अनुकूलित शैक्षणिक दिशा, करियर सलाह और व्यक्तिगत मार्गदर्शन प्रदान करते हैं। नियमित फीडबैक और लक्ष्य-निर्धारण सत्रों के माध्यम से, छात्र सीखने की बाधाओं को दूर करते हैं, करियर के रास्ते खोजते हैं और उद्योग चिकित्सकों से वास्तविक दुनिया का ज्ञान प्राप्त करते हैं।",
+                highlights: [
+                    "व्यक्तिगत 1-ऑन-1 शैक्षणिक और करियर परामर्श",
+                    "सतत फीडबैक लूप और व्यक्तिगत लक्ष्य ट्रैकिंग",
+                    "उद्योग अंतर्दृष्टि और पेशेवर मार्गदर्शन",
+                    "भावात्मक और आत्मविश्वास निर्माण सहायता"
+                ]
+            },
+            3: {
+                title: "केस स्टडीज",
+                icon: "fa-solid fa-lightbulb",
+                description: "केस स्टडीज छात्रों को संगठनों और समुदायों द्वारा सामना की जाने वाली वास्तविक चुनौतियों का विश्लेषण करने की चुनौती देती है। मूल कारणों का विश्लेषण करके, समाधानों का मूल्यांकन करके और सिफारिशें प्रस्तुत करके, शिक्षार्थी पेशेवर वातावरण में आवश्यक विश्लेषणात्मक सोच, रणनीतिक तर्क और व्यावहारिक निर्णय लेने का विकास करते हैं।",
+                highlights: [
+                    "वास्तविक दुनिया परिदृश्य विश्लेषण और क्रिटिकल थिंकिंग",
+                    "मूल कारणों की पहचान और रणनीतिक योजना",
+                    "सिम्युलेटेड बाधाओं के तहत व्यावहारिक निर्णय लेना",
+                    "प्रस्तावित समाधानों की प्रस्तुति और रक्षा"
+                ]
+            },
+            4: {
+                title: "समूह असाइनमेंट",
+                icon: "fa-solid fa-people-group",
+                description: "समूह असाइनमेंट वास्तविक कार्यस्थलों में टीम की गतिशीलता का अनुकरण करते हैं। छात्र जिम्मेदारियों को विभाजित करते हैं, समयसीमा प्रबंधित करते हैं, व्यक्तिगत योगदानों का विश्लेषण करते हैं और व्यापक परियोजनाएं प्रदान करते हैं। यह सामूहिक जवाबदेही, अनुकूलन क्षमता, संघर्ष समाधान और प्रभावी टीम वर्क स्थापित करता है।",
+                highlights: [
+                    "कार्यस्थल टीम की गतिशीलता और प्रतिनिधिमंडल का अनुकरण",
+                    "परियोजना प्रबंधन, समय सीमा ट्रैकिंग और मील का पत्थर वितरण",
+                    "संघर्ष समाधान और सहयोगात्मक संश्लेषण",
+                    "गुणवत्तापूर्ण परिणामों के लिए साझा जवाबदेही"
+                ]
+            },
+            5: {
+                title: "खेलों द्वारा सीखना",
+                icon: "fa-solid fa-gamepad",
+                description: "छात्र मजेदार और इंटरैक्टिव खेलों के माध्यम से सीखते हैं जो उन्हें अवधारणाओं को समझने, कौशल का अभ्यास करने और सीखने की प्रक्रिया का आनंद लेने में मदद करते हैं।",
+                highlights: [
+                    "मजेदार और इंटरैक्टिव शैक्षणिक खेल",
+                    "खेल-खेल में अवधारणाओं को समझना",
+                    "कौशल और समस्या-समाधान का अभ्यास",
+                    "आनंददायक और आकर्षक शिक्षण प्रक्रिया"
+                ]
+            },
+            7: {
+                title: "लर्निंग स्पेस गतिविधियाँ",
+                icon: "fa-solid fa-shapes",
+                description: "छात्र सरल व्यावहारिक गतिविधियों में भाग लेकर सीखते हैं जहाँ वे व्यावहारिक तरीके से अवधारणाओं का पता लगा सकते हैं, अभ्यास कर सकते हैं और समझ सकते हैं।",
+                highlights: [
+                    "सरल व्यावहारिक गतिविधियाँ और अभ्यास",
+                    "व्यावहारिक वातावरण में अवधारणाओं को समझना",
+                    "इंटरएक्टिव समूह और व्यक्तिगत सत्र",
+                    "करके सीखने का व्यावहारिक तरीका"
+                ]
+            }
+        };
+
+        const learningModal = document.getElementById('learningModal');
+        const modalCloseBtn = document.getElementById('learningModalCloseBtn');
+        const modalIcon = document.getElementById('learningModalIcon');
+        const modalTitle = document.getElementById('learningModalTitle');
+        const modalDesc = document.getElementById('learningModalDescription');
+        const modalHighlights = document.getElementById('learningModalHighlights');
+        const readMoreBtns = document.querySelectorAll('.card-read-more-btn');
+
+        function openLearningModal(id) {
+            const currentLang = localStorage.getItem('language') || 'en';
+            const item = (currentLang === 'hi' && learningDataHi[id]) ? learningDataHi[id] : learningData[id];
+            if (!item || !learningModal) return;
+
+            if (modalIcon) {
+                modalIcon.innerHTML = `<i class="${item.icon}"></i>`;
+            }
+            if (modalTitle) {
+                modalTitle.textContent = item.title;
+            }
+            if (modalDesc) {
+                modalDesc.textContent = item.description;
+            }
+            if (modalHighlights) {
+                modalHighlights.innerHTML = '';
+                item.highlights.forEach(highlightText => {
+                    const div = document.createElement('div');
+                    div.className = 'learning-modal-highlight-item';
+                    div.innerHTML = `<i class="fa-solid fa-circle-check"></i> <span>${highlightText}</span>`;
+                    modalHighlights.appendChild(div);
+                });
+            }
+
+            learningModal.classList.add('is-active');
+            document.body.style.overflow = 'hidden';
+            stopAutoSlide();
+        }
+
+        function closeLearningModal() {
+            if (!learningModal) return;
+            learningModal.classList.remove('is-active');
+            document.body.style.overflow = '';
+            startAutoSlide();
+        }
+
+        readMoreBtns.forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                const id = btn.getAttribute('data-card-id');
+                openLearningModal(id);
+            });
+        });
+
+        if (modalCloseBtn) {
+            modalCloseBtn.addEventListener('click', closeLearningModal);
+        }
+
+        if (learningModal) {
+            learningModal.addEventListener('click', function (e) {
+                if (e.target === learningModal) {
+                    closeLearningModal();
+                }
+            });
+        }
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && learningModal && learningModal.classList.contains('is-active')) {
+                closeLearningModal();
+            }
+        });
+    }
+});
+</script>
+
+</body>
+
 </html>

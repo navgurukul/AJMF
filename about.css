@@ -1,0 +1,1277 @@
+/* ================= GLOBAL RESETS & FONTS ================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Poppins', sans-serif; */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#anish-story {
+    scroll-margin-top: 100px;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333333;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ================= HEADER ================= */
+
+.header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: #0B1F44;
+    padding: 26px 0;   /* pehle 20px tha */
+    transition: .35s;
+}
+
+.hero-content{
+    padding-left: 60px;
+}
+
+.header .container{
+    width:98%;
+    max-width:1700px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-left:0px;      /* Left se bas thoda sa space */
+    flex-shrink:0;
+}
+
+.logo-area img{
+    width:78px;
+    height:78px;
+    border-radius:50%;
+}
+.logo-content h2{
+    font-family: 'poppins',sans-serif;
+    font-weight: 400;
+    color:#fff;
+    font-size:24px;
+    line-height:1.2;
+}
+
+.logo-content p{
+     font-family: 'poppins',sans-serif;
+    color:#d7d7d7;
+    font-size:11px;
+    letter-spacing:2px;
+}
+
+.navbar{
+    flex:1;
+    margin-left:50px;   
+    margin-right:40px;    
+    justify-content:center;
+}
+
+.navbar ul{
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+    /* width:700px;       */
+    gap: 28px;;
+}
+
+.navbar ul li a{
+    font-family: 'poppins',sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    align-items: center;
+    gap: 3px;     
+    font-weight: 500;    
+    color: #fff;
+    transition: 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.navbar a{
+    color:#fff;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size:15px;
+    text-decoration: none;
+    font-weight:600;
+    transition:.3s;
+}
+.navbar ul li a:hover{
+    color: #f57c00;
+}
+
+.donate-btn{
+    font-family:'Poppins',sans-serif;
+    background: #f57c00;
+    color:#fff;
+    margin-left: 80px;
+    padding:14px 28px;
+    border-radius:6px;
+    font-weight:600;
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
+
+ /* ==========================================================================
+           2. HERO BANNER & BACKGROUND IMAGE STYLES
+   ========================================================================== */
+        .hero-banner-section {
+            background-color: #0A1D37;
+            padding: 80px 0 100px 0;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            min-height: 540px;
+        }
+
+    .hero-container {
+       max-width: 1600px !important; 
+       margin: 0 auto;
+       width: 98%;
+       padding: 0 30px!important; /* Left padding 3.5% kar di (Paas lane ke liye) */
+       display: flex;
+       position: relative;
+       z-index: 10;
+   }
+
+        .hero-content-left {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .hero-tagline {
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            letter-spacing: 2px;
+            color: #E06A28;
+            font-weight: 700;
+            margin: 0 0 16px 0;
+            text-transform: uppercase;
+        }
+
+        .hero-main-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 54px;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin: 0 0 10px 0;
+            line-height: 1.15;
+        }
+
+        .hero-main-title .highlight-orange {
+            color: #E06A28;
+        }
+
+        .hero-subtitle {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 24px;
+            font-style: italic;
+            color: #f8fafc;
+            font-weight: 600;
+            margin: 0 0 22px 0;
+        }
+
+        .hero-description {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16.5px;
+            color: #cbd5e1;
+            line-height: 1.75;
+            margin: 0 0 34px 0;
+            max-width: 520px;
+        }
+
+        .hero-btn-group {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-hero {
+            font-family: 'Poppins', sans-serif;
+            padding: 13px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 1.2;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            height: 48px;
+            min-height: 48px;
+            max-height: 48px;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        .btn-orange {
+            background-color: #E06A28;
+            color: #FFFFFF;
+            border: 1.5px solid #E06A28;
+        }
+
+        .btn-orange:hover {
+            background-color: #c7591e;
+            border-color: #c7591e;
+        }
+
+        .btn-transparent {
+            background-color: transparent;
+            color: #FFFFFF;
+            border: 1.5px solid rgba(255, 255, 255, 0.6);
+        }
+
+        .btn-transparent:hover {
+            border-color: #FFFFFF;
+            background-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .btn-hero i {
+            font-size: 10px;
+        }
+
+        .hero-floating-box {
+            font-family: 'Poppins', sans-serif;
+            position: absolute;
+            right: 10px;
+            top: 65%;
+            transform: translateY(-50%);
+            width: 230px;
+            background-color: #FFFFFF;
+            border-radius: 12px;
+            padding: 38px 25px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+            text-align: center;
+            z-index: 15;
+        }
+
+        .heart-icon-circle {
+            width: 36px;
+            height: 36px;
+            background-color: #FDF2EB;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px auto;
+        }
+
+        .heart-icon-circle i {
+            color: #E06A28;
+            font-size: 15px;
+        }
+
+        .floating-box-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            line-height: 1.6;
+            color: #2D3748;
+            font-weight: 600;
+            margin: 0 0 5px 0;
+        }
+
+        .floating-box-divider {
+            width: 20px;
+            height: 2px;
+            background-color: #E06A28;
+            margin: 0 auto;
+        }
+
+        .hero-portrait-background {
+            position: absolute;
+            right: 15%;
+            bottom: 0;
+            width: 640px;
+            height: 100%;
+            background-image: url('images-photo/anish\'s_smile.jpeg');
+            background-size: cover;
+            background-position: top center;
+            z-index: 1;
+            pointer-events: none;
+            opacity: 0.95;
+            -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%), 
+                                linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 22%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+            mask-image: linear-gradient(to top, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%), 
+                        linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 22%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+            -webkit-mask-composite: source-in;
+            mask-composite: intersect;
+        }
+
+        .hero-ambient-glow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 85% 20%, rgba(224, 106, 40, 0.08) 0%, transparent 50%);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        /* ==========================================================================
+           3. ANISH'S JOURNEY SECTION STYLES
+           ========================================================================== */
+        .journey-content-section {
+            background-color: #FFFFFF;
+            padding: 90px 0;
+        }
+
+        .journey-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            width: 98%;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr 1.1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .orange-top-accent-line {
+            width: 32px;
+            height: 2px;
+            background-color: #E06A28;
+            margin-bottom: 16px;
+        }
+
+        .journey-tag-label {
+            font-family: 'poppins', sans-serif;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            color: #E06A28;
+            font-weight: 550;
+            margin-bottom: 12px;
+        }
+
+        .journey-main-heading {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: #0A1D37;
+            line-height: 1.25;
+            margin-bottom: 22px;
+        }
+
+        .journey-intro-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 17.5px;
+            color: #374151;
+            line-height: 1.75;
+            margin-bottom: 26px;
+        }
+
+        .btn-view-photos {
+            font-family: 'Poppins', sans-serif;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: #E06A28;
+            background-color: transparent;
+            border: 1.5px solid #E06A28;
+            border-radius: 25px;
+            padding: 10px 24px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-view-photos:hover {
+            background-color: #E06A28;
+            color: #ffffff;
+        }
+
+        .journey-col-center {
+            display: flex;
+            justify-content: center;
+        }
+
+        .center-portrait-card {
+            width: 100%;
+            max-width: 280px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        }
+
+        .journey-card-img {
+            width: 100%;
+            display: block;
+        }
+
+        .timeline-list-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .timeline-item-row {
+            display: flex;
+            gap: 16px;
+        }
+
+        .timeline-orange-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #E06A28;
+            border-radius: 50%;
+            margin-top: 6px;
+            flex-shrink: 0;
+        }
+
+        .timeline-text-node h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 19px;
+            font-weight: 600;
+            color: #0A1D37;
+            margin-bottom: 5px;
+        }
+
+        .timeline-text-node p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 15.5px;
+            color: #4b5563;
+            line-height: 1.65;
+        }
+
+/* Smooth expanding text */
+.extra-info-text {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.journey-intro-text,
+.extra-info-text p {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 17.5px !important;
+    font-weight: 400 !important;
+    line-height: 1.75 !important;
+    letter-spacing: normal !important;
+    color: #374151 !important;
+}
+
+.journey-intro-text {
+    margin-bottom: 26px;
+}
+
+.extra-info-text p {
+    margin-bottom: 20px;
+}
+
+.extra-info-text.show {
+    max-height: 800px;
+    opacity: 1;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+/* ================= OUR PARTNER SECTION TYPOGRAPHY (MATCHING IMAGE 2) ================= */
+.our-partner-section .partner-title {
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-size: 29px !important;
+    font-weight: 700 !important;
+    line-height: 1.15 !important;
+    color: #ffffff !important;
+}
+
+.our-partner-section .partner-tag,
+.our-partner-section .partner-desc,
+.our-partner-section .btn-partner-learn,
+.our-partner-section .benefit-label,
+.our-partner-section .partner-multiply {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+        /* ==========================================================================
+           4. ISOLATED NEW VALUES & STATS SECTIONS (BASIC CLASSES - NO SVG)
+           ========================================================================== */
+        .ajmf-custom-wrapper {
+            width: 100%;
+            padding: 60px 0;
+            background-color: #FDFBFA;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .ajmf-section-container {
+            max-width: 1600px;
+            width: 98%;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .ajmf-section {
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            letter-spacing: 2px;
+            color: #E06A28;
+            font-weight: 550;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .ajmf-section-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 40px;
+            color: #0A1D37;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+
+        .ajmf-title-divider {
+            width: 40px;
+            height: 2px;
+            background-color: #E06A28;
+            margin: 0 auto 40px auto;
+        }
+
+        .ajmf-values-grid {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .ajmf-value-card {
+            background-color: #ffffff;
+            border-radius: 14px;
+            padding: 35px 24px;
+            flex: 1;
+            min-width: 250px;
+            max-width: 265px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border: 1px solid rgba(0, 0, 0, 0.02);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .ajmf-icon-circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: #FDF2EB;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        /* Basic Font Awesome Icon Style instead of SVG */
+        .ajmf-icon-circle i {
+            font-size: 24px;
+            color: #E06A28;
+        }
+
+        .ajmf-card-heading {
+            font-size: 22px;
+            color: #0A1D37;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .ajmf-card-divider {
+            width: 16px;
+            height: 2px;
+            background-color: #E06A28;
+            margin-bottom: 14px;
+        }
+
+        .ajmf-card-text {
+            font-family: 'poppins',sans-serif;
+            font-size: 18px;
+            color: #718096;
+            line-height: 1.4;
+        }
+
+        /* Stats Block Layout */
+        .ajmf-stats-banner {
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 40px 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+            border: 1px solid rgba(0, 0, 0, 0.02);
+            width: 100%;
+        }
+
+        .ajmf-stats-row {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .ajmf-stat-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex: 1;
+            min-width: 220px;
+            justify-content: center;
+        } 
+            
+
+        .ajmf-stat-item:not(:last-child) {
+            border-right: 1px solid #F0E6DF;
+            padding-right: 20px;
+        }
+
+        .ajmf-stat-icon-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #FDF2EB;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        /* Basic Font Awesome Icon Style for Stats */
+        .ajmf-stat-icon-circle i {
+            font-size: 24px;
+            color: #E06A28;
+        }
+
+        .ajmf-stat-info {
+            text-align: left;
+        }
+
+        .ajmf-stat-number {
+            font-size: 42px;
+            font-weight: 700;
+            color: #E06A28;
+            line-height: 1.1;
+        }
+
+        .ajmf-stat-label {
+            font-size: 15px;
+            color: #0A1D37;
+            font-weight: 700;
+            margin-top: 4px;
+        }
+
+        /* Responsive Viewports */
+        @media (max-width: 992px) {
+            .hero-banner-section {
+                padding: 50px 0 60px;
+                min-height: auto;
+            }
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
+                padding: 0 20px !important;
+            }
+            .hero-content-left {
+                width: 100%;
+                align-items: center;
+            }
+            .hero-main-title {
+                font-size: 36px;
+            }
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            .hero-description {
+                max-width: 100%;
+            }
+            .hero-btn-group {
+                justify-content: center;
+            }
+            .hero-portrait-background {
+                position: relative;
+                right: auto;
+                bottom: auto;
+                width: 100%;
+                max-width: 400px;
+                height: 300px;
+                margin: 30px auto 0;
+                border-radius: 16px;
+            }
+            .hero-floating-box {
+                position: relative;
+                right: auto;
+                top: auto;
+                transform: none;
+                margin: 20px auto 0;
+                width: 100%;
+                max-width: 300px;
+            }
+            .ajmf-gallery-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+            .ajmf-stat-item:not(:last-child) {
+                border-right: none;
+                padding-right: 0;
+            }
+        }
+        @media (max-width: 768px) {
+            .journey-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .ajmf-values-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .ajmf-value-card {
+                width: 100%;
+                max-width: 350px;
+            }
+            .ajmf-stats-row {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                width: fit-content !important;
+                max-width: 100% !important;
+                margin: 0 auto !important;
+                gap: 28px !important;
+            }
+            .ajmf-stat-item {
+                display: flex !important;
+                flex-direction: row !important;
+                align-items: center !important;
+                justify-content: flex-start !important;
+                text-align: left !important;
+                gap: 18px !important;
+                width: 100% !important;
+                min-width: auto !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                border-right: none !important;
+            }
+            .ajmf-stat-icon-circle {
+                flex: 0 0 64px !important;
+                width: 64px !important;
+                height: 64px !important;
+                min-width: 64px !important;
+                border-radius: 50% !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                flex-shrink: 0 !important;
+                margin: 0 !important;
+            }
+            .ajmf-stat-icon-circle i {
+                font-size: 26px !important;
+                color: #E06A28 !important;
+                margin: 0 !important;
+            }
+            .ajmf-stat-info {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                text-align: left !important;
+                min-width: 160px !important;
+            }
+            .ajmf-stat-number {
+                font-family: 'Poppins', sans-serif !important;
+                font-size: clamp(2rem, 7vw, 2.5rem) !important;
+                font-weight: 600 !important;
+                line-height: 1.1 !important;
+                color: #E06A28 !important;
+                margin: 0 !important;
+                text-align: left !important;
+            }
+            .ajmf-stat-label {
+                font-size: 15px !important;
+                color: #0A1D37 !important;
+                font-weight: 600 !important;
+                margin: 4px 0 0 0 !important;
+                text-align: left !important;
+            }
+        }
+        @media (max-width: 600px) {
+            .hero-main-title {
+                font-size: 28px;
+            }
+            .hero-btn-group {
+                flex-direction: column;
+                width: 100%;
+            }
+            .btn-hero {
+                width: 100%;
+                justify-content: center;
+            }
+            .ajmf-gallery-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+       
+/* ==========================================================================
+   HEADER & TOP ARCHITECTURE STYLES
+   ========================================================================== */
+.ajmf-gallery-section {
+    padding: 60px 0 80px 0;
+    background-color: #FDFBFA;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.ajmf-gallery-container {
+    max-width: 1600px;
+    width: 98%;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Tagline with elegant lines on side */
+.ajmf-section-tagline {
+    font-size: 13px;
+    font-weight: 550;
+    text-transform: uppercase;
+    color: #E06A28;
+    letter-spacing: 1.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.ajmf-section-tagline::before,
+.ajmf-section-tagline::after {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 1px;
+    background-color: #E06A28;
+    opacity: 0.6;
+}
+
+/* Elegant Bold Title */
+.ajmf-section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #112239;
+    margin: 0 auto 12px auto;
+}
+
+/* Orange central mini line divider below header */
+.ajmf-title-divider {
+    width: 45px;
+    height: 3px;
+    background-color: #E06A28;
+    margin: 0 auto 35px auto;
+    border-radius: 2px;
+}
+
+/* ==========================================================================
+   3-CARD BALANCED GALLERY GRID
+   ========================================================================== */
+.ajmf-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Updated from 5 to 3 for clean visual balance */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.ajmf-gallery-card {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    height: 360px; /* Slightly heightened for broader 3-card structure look */
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ajmf-gallery-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.ajmf-gallery-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 35%,
+        rgba(0, 0, 0, 0.35) 60%,
+        rgba(0, 0, 0, 0.85) 100%
+    );
+    pointer-events: none;
+    z-index: 1;
+    transition: background 0.3s ease;
+}
+
+.ajmf-gallery-card:hover::after {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 30%,
+        rgba(0, 0, 0, 0.45) 55%,
+        rgba(0, 0, 0, 0.92) 100%
+    );
+}
+
+.ajmf-gallery-overlay {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 32px 18px 24px 18px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Card Heading Text Styling inside the Dark Box */
+.ajmf-gallery-card h4 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #FFFFFF;
+    margin: 0;
+    letter-spacing: 0.3px;
+    text-transform: capitalize;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Icon matching the design spacing */
+.ajmf-gallery-icon-circle {
+    width: 36px;
+    height: 36px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px auto;
+    box-shadow: 0 2px 6px rgba(152, 150, 150, 0.1);
+}
+
+.ajmf-gallery-icon-circle i {
+    font-size: 13px;
+    color: #E06A28;
+}
+
+
+.ajmf-vision-section-wrapper {
+    width: 100%;
+    padding: 40px 0;
+    background-color: #FDFBFA; 
+    box-sizing: border-box;
+}
+
+.ajmf-vision-banner {
+    max-width: 1140px;
+    margin: 0 auto;
+    background-color: #0A192F; 
+    border-radius: 14px;
+    display: flex; /* Flex layout blocks layout overlapping */
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden; /* Excess shoulder area out of boundary gets cut cleanly */
+    min-height: 280px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Perfect alignment alignment framework for texts */
+.ajmf-vision-content-left {
+    flex: 1;
+    max-width: 60%;
+    padding: 50px 0 50px 60px;
+    text-align: center;
+    z-index: 2;
+}
+
+/* Separate side handler module to control portrait zoom precisely */
+.ajmf-vision-image-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background-image: linear-gradient(to right, #0A192F 0%, rgba(10, 25, 47, 0.6) 40%, rgba(10, 25, 47, 0.1) 100%), 
+                      url('images-photo/anish_camra.jpeg');
+    background-size: cover;
+    /* Face matrix settings: Locks position precisely to avoid neck view */
+    background-position: center 12%; 
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.ajmf-vision-quote {
+    color: #E06A28;
+    font-size: 36px;
+    line-height: 1;
+    margin-bottom: 12px;
+    opacity: 0.9;
+}
+
+.ajmf-vision-text {
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 0 0 12px 0;
+    letter-spacing: 0.3px;
+}
+
+.ajmf-vision-divider {
+    width: 32px;
+    height: 2px;
+    background-color: #E06A28;
+    margin: 0 auto 25px auto;
+    border-radius: 2px;
+}
+
+.ajmf-vision-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #E06A28 0%, #C85618 100%);
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 13px 26px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(224, 106, 40, 0.25);
+    transition: all 0.3s ease;
+}
+
+.ajmf-vision-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(224, 106, 40, 0.4);
+    background: linear-gradient(135deg, #EA7533 0%, #D35C1C 100%);
+}
+
+/* Responsive Handling for About Page Layouts */
+@media screen and (max-width: 992px) {
+    .hero-banner-section {
+        padding: 40px 16px 50px 16px;
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-portrait-background {
+        order: 1;
+        position: relative;
+        right: auto;
+        bottom: auto;
+        top: auto;
+        left: auto;
+        width: 100%;
+        max-width: 440px;
+        height: 320px;
+        margin: 0 auto 28px auto;
+        border-radius: 20px;
+        -webkit-mask-image: none;
+        mask-image: none;
+        opacity: 1;
+        background-position: center 15%;
+        background-size: cover;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+        z-index: 5;
+    }
+
+    .hero-container {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 auto;
+        z-index: 10;
+    }
+
+    .hero-content-left {
+        order: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-tagline {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+
+    .hero-main-title {
+        font-size: 36px;
+        line-height: 1.15;
+        margin-bottom: 8px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+        line-height: 1.65;
+        max-width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .hero-btn-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        width: 100%;
+        margin-bottom: 28px;
+    }
+
+    .btn-hero {
+        width: auto;
+        min-width: 165px;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 11px 22px;
+        font-size: 14px;
+        height: 44px;
+        min-height: 44px;
+        max-height: 44px;
+        box-sizing: border-box;
+    }
+
+    .hero-floating-box {
+        order: 2;
+        position: relative;
+        right: auto;
+        top: auto;
+        bottom: auto;
+        transform: none;
+        width: 100%;
+        max-width: 380px;
+        margin: 0 auto;
+        padding: 24px 20px;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        z-index: 15;
+    }
+
+    .journey-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .orange-top-accent-line {
+        margin: 0 auto 16px;
+    }
+
+    .btn-view-photos {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .hero-portrait-background {
+        height: 260px;
+        max-width: 100%;
+        border-radius: 16px;
+    }
+
+    .hero-main-title {
+        font-size: 28px;
+    }
+
+    .journey-main-heading {
+        font-size: 28px;
+    }
+
+    .journey-intro-text {
+        font-size: 16px;
+    }
+
+    .hero-btn-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .btn-hero {
+        width: auto;
+        min-width: 165px;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+    }
+
+    .ajmf-vision-banner {
+        margin: 0 16px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .ajmf-vision-content-left {
+        max-width: 100%;
+        padding: 35px 16px;
+    }
+
+    .ajmf-vision-image-right {
+        width: 100%;
+        opacity: 0.25;
+        background-position: center 20%;
+    }
+
+    .ajmf-vision-text {
+        font-size: 18px;
+    }
+}

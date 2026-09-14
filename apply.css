@@ -1,0 +1,638 @@
+/* ================= GLOBAL RESETS & FONTS ================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333333;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ================= HEADER ================= */
+
+.header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: #0B1F44;
+    padding: 26px 0;   /* pehle 20px tha */
+    transition: .35s;
+}
+
+.hero-content{
+    padding-left: 60px;
+}
+
+.header .container{
+    width:98%;
+    max-width:1700px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    /* justify-content:space-between; */
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-left:0px;      /* Left se bas thoda sa space */
+    flex-shrink:0;
+}
+
+.logo-area img{
+    width:78px;
+    height:78px;
+    border-radius:50%;
+}
+.logo-content h2{
+    font-family: 'poppins',sans-serif;
+    font-weight: 400;
+    color:#fff;
+    font-size:24px;
+    line-height:1.2;
+}
+
+.logo-content p{
+     font-family: 'poppins',sans-serif;
+    color:#d7d7d7;
+    font-size:11px;
+    letter-spacing:2px;
+}
+
+.navbar{
+    flex:1;
+    margin-left:50px;   
+    margin-right:40px;    
+    justify-content:center;
+}
+
+.navbar ul{
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+    /* width:700px;       */
+    gap: 28px;;
+}
+
+.navbar ul li a{
+    font-family: 'poppins',sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    align-items: center;
+    gap: 3px;     
+    font-weight: 500;    
+    color: #fff;
+    transition: 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.navbar a{
+    color:#fff;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size:15px;
+    text-decoration: none;
+    font-weight:600;
+    transition:.3s;
+}
+.navbar ul li a:hover{
+    color: #f57c00;
+}
+
+.donate-btn{
+    font-family:'Poppins',sans-serif;
+    background: #f57c00;
+    color:#fff;
+    margin-left: 80px;
+    padding:14px 28px;
+    border-radius:6px;
+    font-weight:600;
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
+
+        /* ==========================================================================
+           3. PREMIUM HERO SECTION (Warm Off-white & Radial glow)
+           ========================================================================== */
+        .clean-hero {
+            background: radial-gradient(circle at top right, #FFFFFF 0%, #FAF6F0 100%);
+            padding: 100px 0 80px 0;
+            text-align: center;
+            position: relative;
+            border-bottom: 1px solid #EBEFF5;
+        }
+
+        .clean-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54 48c-2 0-3 1.2-3 3s1 3 3 3 3-1.2 3-3-1-3-3-3zM6 12c-2 0-3 1.2-3 3s1 3 3 3 3-1.2 3-3-1-3-3-3zm0 36c-2 0-3 1.2-3 3s1 3 3 3 3-1.2 3-3-1-3-3-3zm48-36c-2 0-3 1.2-3 3s1 3 3 3 3-1.2 3-3-1-3-3-3z' fill='%23e06a28' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.8;
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #FDF2EB; /* Very Light Orange background */
+            color: #E06A28;
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+        }
+
+        .hero-badge i {
+            font-size: 10px;
+        }
+
+        .hero-content h1 {
+            font-family: 'Marcellus', serif;
+            font-size: 48px;
+            color: #0A1D37;
+            font-weight: 500;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+
+        .hero-content h1 span {
+            color: #E06A28;
+        }
+
+        .hero-subtext {
+            font-size: 16px;
+            color: #5A6A80;
+            line-height: 1.7;
+            max-width: 750px;
+            margin: 0 auto 36px auto;
+        }
+
+        .hero-subtext strong {
+            color: #0A1D37;
+            font-weight: 700;
+        }
+
+        .btn-orange-glow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #E06A28 0%, #E85E15 100%);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 16px 38px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 14px;
+            box-shadow: 0 8px 24px rgba(224, 106, 40, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-orange-glow:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(224, 106, 40, 0.3);
+        }
+
+        /* ==========================================================================
+           4. TARGET SECTION: WHO CAN APPLY (Original Text Kept)
+           ========================================================================== */
+        .target-section {
+            padding: 90px 0;
+            background-color: #FFFFFF;
+        }
+
+        .section-title-wrap {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 60px auto;
+        }
+
+        .section-title-wrap h2 {
+            font-family: 'Marcellus', serif;
+            font-size: 34px;
+            color: #0A1D37;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .title-underline {
+            width: 48px;
+            height: 3px;
+            background-color: #E06A28;
+            margin: 0 auto 16px auto;
+            border-radius: 2px;
+        }
+
+        .section-intro {
+            font-size: 14.5px;
+            color: #5A6A80;
+            line-height: 1.6;
+        }
+
+        .target-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .target-card {
+            background: #FFFFFF;
+            border: 1px solid #EBEFF5;
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: left;
+            box-shadow: 0 4px 12px rgba(10, 29, 55, 0.03);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .target-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #E06A28;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .target-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(10, 29, 55, 0.06);
+            border-color: rgba(224, 106, 40, 0.15);
+        }
+
+        .target-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card-icon-wrap {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            background-color: #FDF2EB;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 28px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-icon {
+            font-size: 22px;
+            color: #E06A28;
+        }
+
+        .target-card:hover .card-icon-wrap {
+            background-color: #E06A28;
+        }
+
+        .target-card:hover .card-icon {
+            color: #FFFFFF;
+        }
+
+        .target-card h3 {
+            font-family: 'Marcellus', serif;
+            font-size: 20px;
+            color: #0A1D37;
+            margin-bottom: 14px;
+        }
+
+        .target-card p {
+            color: #5A6A80;
+            font-size: 13.5px;
+            line-height: 1.65;
+        }
+
+        /* ==========================================================================
+           5. SELECTION PROCESS TIMELINE ROADMAP (Clean Border-Top Style)
+           ========================================================================== */
+        .selection-section {
+            padding: 90px 0;
+            background-color: #FDFBFA; /* Warm Off-white */
+            border-top: 1px solid #EBEFF5;
+            border-bottom: 1px solid #EBEFF5;
+        }
+
+        .process-timeline {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            position: relative;
+        }
+
+        .step-box {
+            background: #FFFFFF;
+            border: 1px solid #EBEFF5;
+            padding: 35px 25px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(10, 29, 55, 0.03);
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Simple timeline arrow markers */
+        .step-box::after {
+            content: '\f0da';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: -16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #EBEFF5;
+            font-size: 20px;
+            z-index: 2;
+        }
+
+        .step-box:last-child::after {
+            display: none;
+        }
+
+        .step-num {
+            font-size: 13px;
+            font-weight: 800;
+            color: #E06A28;
+            background-color: #FDF2EB;
+            padding: 4px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .step-box h3 {
+            font-family: 'Marcellus', serif;
+            font-size: 18px;
+            color: #0A1D37;
+            margin-bottom: 12px;
+        }
+
+        .step-box p {
+            color: #5A6A80;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .step-box:hover {
+            border-color: rgba(13, 90, 167, 0.15);
+            box-shadow: 0 12px 30px rgba(10, 29, 55, 0.06);
+            transform: translateY(-2px);
+        }
+
+        /* ==========================================================================
+           6. FAQ ACCORDION SECTION 
+           ========================================================================== */
+        .faq-section {
+            padding: 90px 0;
+            background-color: #FFFFFF;
+        }
+
+        .faq-max-width {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: #FDFBFA;
+            border: 1px solid #EBEFF5;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .faq-trigger {
+            width: 100%;
+            padding: 22px 28px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: none;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .faq-trigger h4 {
+            font-family: 'Marcellus', serif;
+            font-size: 17px;
+            color: #0A1D37;
+            font-weight: 500;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .faq-trigger i {
+            color: #E06A28;
+            font-size: 14px;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: #FFFFFF;
+        }
+
+        .faq-panel p {
+            padding: 0 28px 24px 28px;
+            color: #5A6A80;
+            font-size: 13.5px;
+            line-height: 1.65;
+        }
+
+        .faq-item.active {
+            border-color: #E06A28;
+            box-shadow: 0 4px 12px rgba(10, 29, 55, 0.03);
+        }
+
+        .faq-item.active .faq-trigger h4 {
+            color: #E06A28;
+        }
+
+        .faq-item.active .faq-trigger i {
+            transform: rotate(180deg);
+        }
+
+        /* ==========================================================================
+           7. CALL TO ACTION PANEL
+           ========================================================================== */
+.cta-strip-wrapper {
+    background-color: #FFFFFF; 
+    padding: 60px 0; 
+}
+
+/* The actual floating curved card matching your image style */
+.cta-strip {
+    background-color: #0A1D37; /* Navy Blue inside card */
+    color: #FFFFFF;
+    max-width: 1140px; /* Restricts width so it looks like a clean box */
+    margin: 0 auto; /* Centers the box horizontally */
+    padding: 60px 40px; /* Comfortable inner breathing space */
+    border-radius: 24px; /* Soft curved corners matching your image */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(10, 29, 55, 0.15); /* Soft premium floating shadow */
+}
+
+/* Light background accent glow inside the box */
+.cta-strip::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(224, 106, 40, 0.15) 0%, transparent 70%);
+    top: -120px;
+    right: -60px;
+    pointer-events: none;
+}
+
+.cta-strip h3 {
+    font-family: 'Marcellus', serif;
+    font-size: 34px;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.cta-strip p {
+    font-size: 15px;
+    color: #CBD5E1;
+    max-width: 650px;
+    margin: 0 auto 36px auto;
+    line-height: 1.6;
+}
+
+/* Clean Orange Button Tuning */
+.btn-orange-glow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #E06A28; /* Your brand orange */
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-orange-glow:hover {
+    background-color: #c9591e;
+    transform: translateY(-2px);
+}
+/* ================= FOOTER (HANDLED CENTRALLY IN FOOTER.CSS) ================= */
+        /* ==========================================================================
+           9. MEDIA RESPONSIVE RULES
+           ========================================================================== */
+        @media screen and (max-width: 1024px) {
+            .clean-hero {
+                padding: 60px 24px 50px;
+            }
+            .hero-content h1 {
+                font-size: 38px;
+            }
+            .target-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+            .process-timeline {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+            .step-box::after {
+                display: none;
+            }
+            .cta-strip {
+                padding: 45px 30px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .clean-hero {
+                padding: 40px 16px 35px;
+            }
+            .hero-content h1 {
+                font-size: 28px;
+            }
+            .hero-subtext {
+                font-size: 14.5px;
+                margin-bottom: 24px;
+            }
+            .target-section,
+            .process-section,
+            .faq-section,
+            .cta-strip-wrapper {
+                padding: 45px 16px;
+            }
+            .target-grid, .process-timeline {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .cta-strip {
+                padding: 30px 20px;
+                border-radius: 16px;
+            }
+            .cta-strip h3 {
+                font-size: 24px;
+            }
+            .cta-strip p {
+                font-size: 14px;
+                margin-bottom: 24px;
+            }
+            .faq-trigger {
+                padding: 16px 20px;
+            }
+            .faq-trigger h4 {
+                font-size: 15px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 24px;
+            }
+            .hero-badge {
+                font-size: 10.5px;
+                padding: 4px 12px;
+            }
+            .btn-orange-glow {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    
+

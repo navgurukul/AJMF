@@ -1,0 +1,689 @@
+/* ==========================================================
+   AJMF GET INVOLVED PAGE STYLES (getinvolved.css)
+   Scoped strictly under .get-involved-page / .get-involved-body
+   ========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* SOFT COOL-TONED LIGHT BLUE / OFF-WHITE PAGE BACKGROUND (#F4F8FA) */
+body.get-involved-body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    background-color: #F4F8FA;
+    color: #1e293b;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.get-involved-body * {
+    box-sizing: border-box;
+}
+
+.get-involved-page {
+    background-color: #F4F8FA;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.get-container {
+    width: 92%;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* ================= GLOBAL SECTION TITLES ================= */
+.get-involved-page .section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.get-involved-page .section-top-tag,
+.get-involved-page .hero-eyebrow-tag {
+    display: inline-block;
+    font-size: 13.5px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #F97316;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.get-involved-page .section-title h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 42px;
+    color: #0b1f44;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.get-involved-page .section-title p {
+    font-size: 17px;
+    color: #475569;
+    max-width: 720px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* ================= 1. HERO SPLIT SECTION ================= */
+.get-involved-page .hero-split-section {
+    position: relative;
+    background: linear-gradient(180deg, #eef4f8 0%, #F4F8FA 100%);
+    padding: 85px 0 110px;
+    overflow: hidden;
+}
+
+.get-involved-page .hero-split-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 52px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.get-involved-page .hero-main-heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 54px;
+    font-weight: 700;
+    color: #063F32;
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.get-involved-page .highlight-orange {
+    color: #F97316;
+    display: inline-block;
+}
+
+.get-involved-page .script-highlight {
+    font-family: 'Caveat', cursive, sans-serif;
+    color: #F97316;
+    font-size: 68px;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.get-involved-page .hero-sub-text {
+    font-size: 17.5px;
+    line-height: 1.75;
+    color: #475569;
+    margin-bottom: 38px;
+    max-width: 580px;
+}
+
+.get-involved-page .hero-actions-row {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.get-involved-page .btn-hero-primary {
+    background-color: #063F32;
+    color: #ffffff;
+    padding: 16px 36px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(6, 63, 50, 0.22);
+}
+
+.get-involved-page .btn-hero-primary:hover {
+    background-color: #F97316;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(249, 115, 22, 0.35);
+}
+
+.get-involved-page .btn-hero-secondary {
+    background-color: transparent;
+    color: #0b1f44;
+    padding: 15px 34px;
+    border-radius: 30px;
+    border: 2px solid #cbd5e1;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.get-involved-page .btn-hero-secondary:hover {
+    border-color: #F97316;
+    color: #F97316;
+    transform: translateY(-3px);
+}
+
+.get-involved-page .hero-image-frame {
+    position: relative;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(11, 31, 68, 0.12);
+    border: 1px solid #e2e8f0;
+}
+
+.get-involved-page .hero-img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    display: block;
+}
+
+.get-involved-page .hero-bottom-curve {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.get-involved-page .hero-bottom-curve svg {
+    width: 100%;
+    height: 50px;
+}
+
+/* ================= 2. WAYS TO GET INVOLVED ================= */
+.get-involved-page .ways-section {
+    padding: 85px 0 100px;
+    background-color: #F4F8FA;
+}
+
+.get-involved-page .ways-grid-four {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+}
+
+.get-involved-page .way-feature-card {
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 44px 30px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(11, 31, 68, 0.05);
+    transition: all 0.35s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.get-involved-page .way-feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(11, 31, 68, 0.1);
+    border-color: #cbd5e1;
+}
+
+.get-involved-page .way-card-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-bottom: 24px;
+}
+
+.get-involved-page .badge-green {
+    background-color: #f0fdf4;
+    color: #16a34a;
+    border: 1px solid #dcfce7;
+}
+
+.get-involved-page .badge-orange {
+    background-color: #fff7ed;
+    color: #F97316;
+    border: 1px solid #ffedd5;
+}
+
+.get-involved-page .badge-teal {
+    background-color: #f0fdfa;
+    color: #0d9488;
+    border: 1px solid #ccfbf1;
+}
+
+.get-involved-page .badge-amber {
+    background-color: #fffbebfb;
+    color: #d97706;
+    border: 1px solid #fef3c7;
+}
+
+.get-involved-page .way-feature-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0b1f44;
+    margin-bottom: 14px;
+}
+
+.get-involved-page .way-feature-card p {
+    font-size: 16px;
+    color: #64748b;
+    line-height: 1.65;
+    margin-bottom: 28px;
+}
+
+.get-involved-page .way-action-link {
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    margin-top: auto;
+    transition: all 0.3s ease;
+}
+
+.get-involved-page .link-dark {
+    color: #0b1f44;
+}
+
+.get-involved-page .link-orange {
+    color: #F97316;
+}
+
+.get-involved-page .way-action-link:hover {
+    color: #F97316;
+    transform: translateX(4px);
+}
+
+/* ================= 3. OUR IMPACT SO FAR ================= */
+.get-involved-page .impact-stats-section {
+    padding: 85px 0 95px;
+    background-color: #F4F8FA;
+}
+
+.get-involved-page .impact-stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 44px 38px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(11, 31, 68, 0.05);
+}
+
+.get-involved-page .stat-unit {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.get-involved-page .stat-icon-circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    flex-shrink: 0;
+}
+
+.get-involved-page .bg-teal {
+    background-color: #063F32;
+    color: #ffffff;
+}
+
+.get-involved-page .bg-orange {
+    background-color: #F97316;
+    color: #ffffff;
+}
+
+.get-involved-page .bg-dark {
+    background-color: #0b1f44;
+    color: #ffffff;
+}
+
+.get-involved-page .bg-gold {
+    background-color: #f59e0b;
+    color: #ffffff;
+}
+
+.get-involved-page .stat-number-box h3 {
+    font-size: 38px;
+    font-weight: 700;
+    color: #0b1f44;
+    line-height: 1.1;
+    margin: 0 0 4px;
+}
+
+.get-involved-page .stat-number-box span {
+    font-size: 15.5px;
+    color: #64748b;
+    font-weight: 600;
+}
+
+/* ================= 4. VOLUNTEER & PARTNER TWIN BLOCKS ================= */
+.get-involved-page .vol-partner-blocks-section {
+    padding: 90px 0 105px;
+    background-color: #F4F8FA;
+}
+
+.get-involved-page .twin-blocks-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+}
+
+.get-involved-page .twin-card {
+    background-color: #ffffff;
+    border-radius: 26px;
+    padding: 44px 38px;
+    box-shadow: 0 12px 35px rgba(11, 31, 68, 0.05);
+    border: 1px solid #e2e8f0;
+    display: grid;
+    grid-template-columns: 1fr 0.85fr;
+    gap: 28px;
+    align-items: center;
+}
+
+.get-involved-page .card-mini-tag {
+    display: inline-block;
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #063F32;
+    margin-bottom: 12px;
+}
+
+.get-involved-page .orange-tag {
+    color: #F97316;
+}
+
+.get-involved-page .twin-card h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #0b1f44;
+    line-height: 1.25;
+    margin-bottom: 14px;
+}
+
+.get-involved-page .twin-card p {
+    font-size: 15.5px;
+    color: #64748b;
+    line-height: 1.65;
+    margin-bottom: 22px;
+}
+
+.get-involved-page .twin-check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.get-involved-page .twin-check-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15.5px;
+    font-weight: 500;
+    color: #334155;
+}
+
+.get-involved-page .twin-check-list i {
+    color: #063F32;
+    font-size: 17px;
+}
+
+.get-involved-page .orange-check i {
+    color: #F97316;
+}
+
+.get-involved-page .btn-twin {
+    padding: 15px 32px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.get-involved-page .btn-dark {
+    background-color: #063F32;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(6, 63, 50, 0.2);
+}
+
+.get-involved-page .btn-dark:hover {
+    background-color: #F97316;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(249, 115, 22, 0.3);
+}
+
+.get-involved-page .btn-orange {
+    background-color: #F97316;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.25);
+}
+
+.get-involved-page .btn-orange:hover {
+    background-color: #e0650d;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(249, 115, 22, 0.35);
+}
+
+.get-involved-page .twin-card-media {
+    border-radius: 20px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.get-involved-page .twin-img {
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ================= 5. FINAL CTA HERO BANNER ================= */
+.get-involved-page .final-cta-hero-banner {
+    position: relative;
+    background: linear-gradient(rgba(11, 31, 68, 0.88), rgba(11, 31, 68, 0.92)),
+        url("main-img.jpeg");
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    color: #ffffff;
+    text-align: center;
+}
+
+.get-involved-page .cta-content-wrapper {
+    max-width: 860px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.get-involved-page .cta-heart-badge {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background-color: #F97316;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin: 0 auto 24px;
+    box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
+}
+
+.get-involved-page .cta-content-wrapper h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.get-involved-page .cta-content-wrapper p {
+    font-size: 17.5px;
+    line-height: 1.75;
+    color: #cbd5e1;
+    margin-bottom: 40px;
+}
+
+.get-involved-page .btn-final-action {
+    background-color: #F97316;
+    color: #ffffff;
+    padding: 17px 42px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 16.5px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 22px rgba(249, 115, 22, 0.4);
+}
+
+.get-involved-page .btn-final-action:hover {
+    background-color: #e0650d;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(249, 115, 22, 0.5);
+}
+
+/* ================= RESPONSIVE MEDIA QUERIES ================= */
+@media screen and (max-width: 1024px) {
+    .get-involved-page .hero-main-heading {
+        font-size: 44px;
+    }
+
+    .get-involved-page .script-highlight {
+        font-size: 56px;
+    }
+
+    .get-involved-page .ways-grid-four {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .get-involved-page .impact-stats-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .get-involved-page .twin-blocks-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html, body.get-involved-body {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    .get-involved-page {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    .get-involved-page .hero-split-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .get-involved-page .hero-img {
+        height: 360px;
+    }
+
+    .get-involved-page .twin-card {
+        grid-template-columns: 1fr;
+    }
+
+    .get-involved-page .twin-card-media {
+        order: -1;
+    }
+
+    .get-involved-page .twin-img {
+        height: 250px;
+        min-height: auto;
+    }
+
+    .get-involved-page .cta-content-wrapper h2 {
+        font-size: 34px;
+    }
+
+    .get-involved-page .section-title h2 {
+        font-size: 32px;
+    }
+
+    .get-involved-page .stat-number-box h3,
+    .get-involved-page .counter {
+        font-family: 'Poppins', sans-serif !important;
+        font-size: clamp(2rem, 7vw, 2.5rem) !important;
+        font-weight: 600 !important;
+        line-height: 1.1 !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .get-involved-page .hero-main-heading {
+        font-size: 34px;
+    }
+
+    .get-involved-page .script-highlight {
+        font-size: 44px;
+    }
+
+    .get-involved-page .ways-grid-four {
+        grid-template-columns: 1fr;
+    }
+
+    .get-involved-page .impact-stats-row {
+        grid-template-columns: 1fr;
+        padding: 28px 22px;
+    }
+
+    .get-involved-page .hero-actions-row {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .get-involved-page .btn-hero-primary,
+    .get-involved-page .btn-hero-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+}

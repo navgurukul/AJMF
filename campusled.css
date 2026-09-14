@@ -1,0 +1,789 @@
+/* ==========================================================
+   STUDENT-LED CAMPUS PAGE STYLES (SCOPED TO PAGE)
+   ========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.student-led-campus-page {
+    background-color: #f8fafc;
+    color: #333333;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.student-led-campus-page * {
+    box-sizing: border-box;
+}
+
+/* Page Container (Increased width to reduce side margins) */
+.campusled-container {
+    width: 95%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* ==========================================================
+   1. COUNCIL HERO SECTION
+   ========================================================== */
+.student-led-campus-page .council-hero {
+    background: linear-gradient(to right, #00173d 0%, #00173d 48%, rgba(0, 23, 61, 0.85) 65%, rgba(0, 23, 61, 0.15) 100%), 
+                url('building.jpeg'); 
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    padding: 70px 0;
+    color: #ffffff;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+}
+
+.student-led-campus-page .council-hero-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.student-led-campus-page .council-hero-content {
+    flex: 0 0 55%;
+}
+
+.student-led-campus-page .council-hero-content h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+
+.student-led-campus-page .council-hero-content h1 span {
+    color: #ff8800;
+}
+
+.student-led-campus-page .council-hero-content p {
+    font-size: 16.5px;
+    color: #cbd5e0;
+    margin-bottom: 28px;
+    line-height: 1.65;
+    max-width: 90%;
+}
+
+.student-led-campus-page .hero-buttons {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.student-led-campus-page .primary-btn {
+    background-color: #ff8800;
+    color: #ffffff;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 136, 0, 0.3);
+}
+
+.student-led-campus-page .primary-btn:hover {
+    background-color: #e07700;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 136, 0, 0.4);
+}
+
+.student-led-campus-page .council-hero-spacer {
+    flex: 0 0 45%;
+}
+
+/* ==========================================================
+   2. COUNCILS SECTION & FILTER
+   ========================================================== */
+.student-led-campus-page .councils-section {
+    padding: 80px 0 90px;
+    background-color: #ffffff;
+}
+
+.student-led-campus-page .section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.student-led-campus-page .section-subtitle {
+    color: #ff8800;
+    font-size: 14.5px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.student-led-campus-page .section-heading h2 {
+    font-family: 'Playfair Display', 'Poppins', serif;
+    font-size: 44px;
+    color: #0b1f44;
+    font-weight: 700;
+    margin: 8px 0 16px;
+}
+
+.student-led-campus-page .section-heading p {
+    max-width: 680px;
+    margin: 0 auto;
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Category Filter Buttons */
+.student-led-campus-page .filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 50px;
+}
+
+.student-led-campus-page .filter-btn {
+    padding: 10px 24px;
+    border: 1px solid #e2e8f0;
+    background-color: #f1f5f9;
+    color: #475569;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14.5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.student-led-campus-page .filter-btn.active,
+.student-led-campus-page .filter-btn:hover {
+    background-color: #0b1f44;
+    color: #ffffff;
+    border-color: #0b1f44;
+    box-shadow: 0 4px 12px rgba(11, 31, 68, 0.2);
+}
+
+/* ==========================================================
+   3. COUNCIL CARDS GRID (Slightly Increased Card Width)
+   ========================================================== */
+.student-led-campus-page .council-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.student-led-campus-page .council-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 22px 20px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.student-led-campus-page .council-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 35px rgba(11, 31, 68, 0.12);
+    border-color: #cbd5e0;
+}
+
+/* Card Header Row (Horizontal Layout: Icon Left, Title Right, Vertically Centered) */
+.student-led-campus-page .card-header-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.student-led-campus-page .card-icon-badge {
+    width: 48px;
+    height: 48px;
+    background-color: #0b1f44;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    box-shadow: 0 4px 10px rgba(11, 31, 68, 0.2);
+    flex-shrink: 0;
+}
+
+/* Card Title */
+.student-led-campus-page .card-title {
+    font-size: 15.5px;
+    font-weight: 700;
+    color: #0b1f44;
+    line-height: 1.3;
+    margin: 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+/* Photo Box (Blends naturally into main card as a single clean card) */
+.student-led-campus-page .card-photo-box {
+    width: 100%;
+    height: 240px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    display: block;
+}
+
+.student-led-campus-page .card-photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 12px;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.student-led-campus-page .council-card:hover .card-photo-box img {
+    transform: scale(1.04);
+}
+
+/* View More Link Button (Compact & Proportional) */
+.student-led-campus-page .view-more-btn {
+    background: transparent;
+    border: none;
+    color: #0b1f44;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    margin-top: auto;
+    outline: none;
+}
+
+.student-led-campus-page .view-more-btn i {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.student-led-campus-page .view-more-btn:hover {
+    color: #ff8800;
+    background-color: #fff7ed;
+}
+
+.student-led-campus-page .view-more-btn:hover i {
+    transform: translateX(4px);
+}
+
+/* ==========================================================
+   4. COUNCIL MODAL POPUP
+   ========================================================== */
+.council-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(11, 31, 68, 0.75);
+    backdrop-filter: blur(5px);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.council-modal-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.council-modal-card {
+    background-color: #ffffff;
+    width: 720px;
+    max-width: 95%;
+    border-radius: 20px;
+    padding: 36px;
+    position: relative;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+    transform: scale(0.92);
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.council-modal-overlay.is-open .council-modal-card {
+    transform: scale(1);
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #f1f5f9;
+    border: none;
+    font-size: 24px;
+    color: #0b1f44;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+    line-height: 1;
+    z-index: 10;
+}
+
+.modal-close-btn:hover {
+    background-color: #0b1f44;
+    color: #ffffff;
+}
+
+.modal-body-layout {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+}
+
+.modal-photo-col {
+    flex: 0 0 200px;
+    height: 250px;
+    border-radius: 14px;
+    overflow: hidden;
+    background-color: #f1f5f9;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-photo-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
+
+.modal-info-col {
+    flex: 1;
+}
+
+.modal-council-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0b1f44;
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+.modal-council-desc {
+    color: #475569;
+    font-size: 14.5px;
+    line-height: 1.65;
+    margin-bottom: 20px;
+}
+
+.modal-resp-box h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0b1f44;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 6px;
+}
+
+.modal-resp-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.modal-resp-list li {
+    font-size: 13.5px;
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.modal-resp-list li i {
+    color: #ff8800;
+    font-size: 14px;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+/* ==========================================================
+   5. READY TO LEAD CTA SECTION
+   ========================================================== */
+.student-led-campus-page .ready-section {
+    padding: 20px 0 80px;
+    background-color: #ffffff;
+}
+
+.student-led-campus-page .ready-box {
+    background: linear-gradient(135deg, #0b1f44 0%, #001233 100%), url('students.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 24px;
+    padding: 45px 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    box-shadow: 0 15px 35px rgba(11, 31, 68, 0.2);
+}
+
+.student-led-campus-page .ready-left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.student-led-campus-page .ready-icon-wrap {
+    width: 90px;
+    height: 90px;
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 25px;
+    flex-shrink: 0;
+}
+
+.student-led-campus-page .ready-icon-wrap i {
+    font-size: 52px;
+    color: #ff8800;
+}
+
+.student-led-campus-page .ready-content {
+    max-width: 480px;
+}
+
+.student-led-campus-page .ready-content h2 {
+    font-size: 38px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.student-led-campus-page .ready-content p {
+    color: #cbd5e0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.student-led-campus-page .ready-right {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.student-led-campus-page .cta-apply-btn {
+    background-color: #ff8800;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 14.5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 136, 0, 0.3);
+}
+
+.student-led-campus-page .cta-apply-btn:hover {
+    background-color: #e07700;
+    transform: translateY(-2px);
+}
+
+.student-led-campus-page .cta-programs-btn {
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 14.5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.student-led-campus-page .cta-programs-btn:hover {
+    background-color: #ffffff;
+    color: #0b1f44;
+    border-color: #ffffff;
+}
+
+/* ================= FOOTER (HANDLED CENTRALLY IN FOOTER.CSS) ================= */
+
+/* ==========================================================
+   6. RESPONSIVE DESIGN BREAKPOINTS
+   ========================================================== */
+
+/* Laptop / Small Desktop (max-width: 1100px) */
+@media screen and (max-width: 1100px) {
+    .student-led-campus-page .council-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Tablet (max-width: 900px) */
+@media screen and (max-width: 900px) {
+    .student-led-campus-page .council-hero {
+        padding: 50px 0;
+        min-height: auto;
+        background-position: center;
+    }
+
+    .student-led-campus-page .council-hero-content {
+        flex: 0 0 100%;
+        text-align: center;
+    }
+
+    .student-led-campus-page .council-hero-content h1 {
+        font-size: 42px;
+    }
+
+    .student-led-campus-page .council-hero-content p {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .student-led-campus-page .hero-buttons {
+        justify-content: center;
+    }
+
+    .student-led-campus-page .council-hero-spacer {
+        display: none;
+    }
+
+    .student-led-campus-page .council-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .student-led-campus-page .ready-box {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+        padding: 35px 30px;
+    }
+
+    .student-led-campus-page .ready-left {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .student-led-campus-page .ready-icon-wrap {
+        border-right: none;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        padding-right: 0;
+        padding-bottom: 15px;
+        height: auto;
+        width: auto;
+    }
+
+    .student-led-campus-page .ready-right {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .modal-body-layout {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .modal-photo-col {
+        flex: 0 0 180px;
+        width: 180px;
+        height: 200px;
+    }
+
+    .modal-resp-list li {
+        text-align: left;
+    }
+}
+
+/* Mobile (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .student-led-campus-page .hero-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .student-led-campus-page .primary-btn {
+        width: auto;
+        max-width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 24px;
+        font-size: 14.5px;
+    }
+}
+
+/* Mobile (max-width: 600px) */
+@media screen and (max-width: 600px) {
+    .student-led-campus-page .council-hero-content h1 {
+        font-size: 28px;
+    }
+
+    .student-led-campus-page .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .student-led-campus-page .filter-buttons {
+        gap: 8px;
+        justify-content: center;
+    }
+
+    .student-led-campus-page .filter-btn {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+
+    .student-led-campus-page .council-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .student-led-campus-page .ready-box {
+        padding: 24px 16px !important;
+        border-radius: 16px !important;
+    }
+
+    .student-led-campus-page .ready-content h2 {
+        font-size: 26px;
+    }
+
+    .student-led-campus-page .ready-right {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .student-led-campus-page .cta-apply-btn,
+    .student-led-campus-page .cta-programs-btn {
+        width: 100%;
+    }
+
+    .council-modal-card {
+        padding: 20px 14px !important;
+        max-width: 95% !important;
+    }
+
+    .gallery-stats,
+    .campusled-impact-stats {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 30px 16px !important;
+        gap: 16px !important;
+        width: 100% !important;
+    }
+
+    .gallery-stats .stat-box,
+    .campusled-impact-card,
+    .stat-box {
+        width: 100% !important;
+        max-width: 320px !important;
+        min-height: auto !important;
+        padding: 24px 18px !important;
+        margin: 0 auto !important;
+        border-radius: 18px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+    }
+
+    .gallery-stats .stat-box i,
+    .campusled-impact-card i,
+    .stat-box i {
+        font-size: 42px !important;
+        color: #ff8c00 !important;
+        margin-bottom: 10px !important;
+    }
+
+    .gallery-stats .stat-box h2,
+    .campusled-impact-card h2,
+    .stat-box h2 {
+        font-family: 'Poppins', sans-serif !important;
+        font-size: clamp(1.8rem, 6.5vw, 2.2rem) !important;
+        font-weight: 600 !important;
+        line-height: 1.1 !important;
+        margin-bottom: 4px !important;
+    }
+
+    .gallery-stats .stat-box p,
+    .campusled-impact-card p,
+    .stat-box p {
+        font-family: 'Poppins', sans-serif !important;
+        font-size: 14.5px !important;
+        color: #ddd !important;
+        margin: 0 !important;
+    }
+}

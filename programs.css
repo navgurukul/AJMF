@@ -1,0 +1,983 @@
+/* ================= GLOBAL RESETS & FONTS ================= */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333333;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ================= HEADER ================= */
+
+.header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: #0B1F44;
+    padding: 26px 0;   /* pehle 20px tha */
+    transition: .35s;
+}
+
+.hero-content{
+    padding-left: 60px;
+}
+
+.header .container{
+    width:98%;
+    max-width:1700px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    /* justify-content:space-between; */
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-left:0px;      /* Left se bas thoda sa space */
+    flex-shrink:0;
+}
+
+.logo-area img{
+    width:78px;
+    height:78px;
+    border-radius:50%;
+}
+.logo-content h2{
+    font-family: 'poppins',sans-serif;
+    font-weight: 400;
+    color:#fff;
+    font-size:24px;
+    line-height:1.2;
+}
+
+.logo-content p{
+     font-family: 'poppins',sans-serif;
+    color:#d7d7d7;
+    font-size:11px;
+    letter-spacing:2px;
+}
+
+.navbar{
+    flex:1;
+    margin-left:50px;   
+    margin-right:40px;    
+    justify-content:center;
+}
+
+.navbar ul{
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+    /* width:700px;       */
+    gap: 28px;;
+}
+
+.navbar ul li a{
+    font-family: 'poppins',sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    align-items: center;
+    gap: 3px;     
+    font-weight: 500;    
+    color: #fff;
+    transition: 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.navbar a{
+    color:#fff;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size:15px;
+    text-decoration: none;
+    font-weight:600;
+    transition:.3s;
+}
+.navbar ul li a:hover{
+    color: #f57c00;
+}
+
+.donate-btn{
+    font-family:'Poppins',sans-serif;
+    background: #f57c00;
+    color:#fff;
+    margin-left: 80px;
+    padding:14px 28px;
+    border-radius:6px;
+    font-weight:600;
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
+
+/* HERO */
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    min-height:460px;
+    background:#f7f7f7;
+    padding:0 0 0 60px;
+    position:relative;
+    overflow:visible;
+}
+
+/* Left white curved shape */
+.hero::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-150px;
+    width:500px;
+    height:100%;
+    background:rgb(238,236,236);
+    border-radius:0 60% 60% 0;
+}
+
+.hero-content,
+.hero-image{
+    position:relative;
+    z-index:1;
+}
+
+.hero-content{
+    width:45%;
+    padding-top:40px;
+}
+
+.hero-content h1{
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size:56px;
+    color:#0b2b6f;
+    line-height:1.2;
+}
+
+.orange{
+    color:#ff8c00;
+}
+
+.hero-image{
+    width:55%;
+    align-self:flex-start;
+}
+
+.hero-image img,
+.hero-image video{
+    width:100%;
+    height:auto;
+    object-fit:cover;
+    display:block;
+    border-radius:0 0 0 120px;
+    cursor:pointer;
+}
+
+.tag{
+    color:#ff8c00;
+    font-weight:bold;
+    font-size:30px;
+}
+
+.hero-content p{
+    line-height:1.7;
+    color:#666;
+    font-size:20px;
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+}
+
+.primary-btn{
+    background:#08245c;
+    color:white;
+    border:none;
+    padding:14px 28px;
+    border-radius:8px;
+    font-size:18px;
+}
+
+.secondary-btn{
+    background:white;
+    border:2px solid #ff8c00;
+    color:#ff8c00;
+    padding:14px 28px;
+    border-radius:8px;
+    font-size:18px;
+}
+
+/* SECTION TITLE */
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title span{
+    color:#ff8c00;
+    font-weight:bold;
+}
+
+.section-title h2{
+    color:#08245c;
+    margin-top:10px;
+    font-size:40px;
+}
+
+/* PROGRAMS */
+
+.programs{
+    padding:70px 8%;
+    font-size:20px;
+}
+
+.program-card{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    display:flex;
+    gap:25px;
+    margin-bottom:25px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    align-items:center;
+    border-bottom:5px solid orange;
+    border-top:1px solid orange;
+    border-left:2px solid orange;
+    border-right:2px solid orange;
+
+}
+
+.program-image img,
+.program-image video {
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:15px;
+    display:block;
+}
+
+.program-content{
+    width:45%;
+}
+
+.program-content h3{
+    color:#08245c;
+    margin-bottom:15px;
+    font-size:30px;
+}
+
+.program-content p{
+    color:#666;
+    line-height:1.6;
+    font-size:18px;
+}
+
+.program-content ul{
+    padding-left:20px;
+    margin-top:15px;
+}
+
+.program-content li{
+    margin-bottom:8px;
+}
+
+.career-box{
+    width:24%;
+    background:#eef2ff;
+    border-radius:15px;
+    padding:20px;
+    min-height:220px;
+    display:flex;
+    flex-direction:column;
+    margin-left:auto;
+    
+}
+
+.career-box h4{
+    color:#08245c;
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.career-box ul{
+    list-style:none;
+}
+
+.career-list li{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    margin-bottom:22px;
+    font-size:20px;
+    line-height:30px;
+}
+
+.career-list i{
+    color:#284a9f;
+    font-size:22px;
+}
+
+.p-career i{
+    font-size:48px;
+    margin-right:10px;
+}
+
+.p-description{
+    font-size:16px;
+    font-family:'Poppins', sans-serif;
+    line-height:1.65;
+    color:#555555;
+}
+
+.p-title{
+    font-size:28px;
+    font-family:'Playfair Display', Georgia, serif;
+    font-weight:700;
+    color:#08245c;
+}
+
+.p-highlights{
+    font-size:14.5px;
+    font-family:'Poppins', sans-serif;
+    line-height:1.6;
+    color:#444444;
+}
+
+.p-career{
+    font-size:18px;
+    font-family:'Poppins', sans-serif;
+    font-weight:700;
+    letter-spacing:0.3px;
+}
+
+/* ==========================================================
+   OUR PROGRAMS PAGE TYPOGRAPHY REFINEMENTS
+   Matches Reference Image Typography Style
+   ========================================================== */
+
+/* Scoped font styling for Our Programs page */
+body.our-programs-page {
+    font-family: 'Poppins', sans-serif;
+    color: #333333;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Taglines & Small Section Labels ("OUR PROGRAMS", "OUR SCHOOLS", etc.) */
+.our-programs-page .tag,
+.our-programs-page .sub-title,
+.our-programs-page .section-title span {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    color: #ff8c00 !important;
+}
+
+/* Hero Vertical Centering Alignment */
+.our-programs-page .hero {
+    align-items: center !important;
+}
+
+.our-programs-page .hero-content {
+    padding-top: 0 !important;
+    align-self: center !important;
+}
+
+/* Main Hero Title */
+.our-programs-page .hero-content h1 {
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-size: 50px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    color: #0b2b6f !important;
+    letter-spacing: -0.5px !important;
+}
+
+.our-programs-page .hero-content h1 .orange {
+    color: #ff8c00 !important;
+    font-family: 'Playfair Display', Georgia, serif !important;
+}
+
+/* Hero Description Subheading */
+.our-programs-page .hero-content p {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 17px !important;
+    font-weight: 400 !important;
+    line-height: 1.65 !important;
+    color: #555555 !important;
+}
+
+/* Hero Buttons Typography */
+.our-programs-page .primary-btn,
+.our-programs-page .secondary-btn {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.4px !important;
+}
+
+/* Section Headings ("Programs That Build Futures", "A Day At Campus") */
+.our-programs-page .section-title h2 {
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-size: 38px !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
+    color: #08245c !important;
+    letter-spacing: -0.3px !important;
+}
+
+/* Program Card Titles ("School of Programming", "School of Education", etc.) */
+.our-programs-page .program-content h3,
+.our-programs-page .p-title {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 34px !important;
+    font-weight: 700 !important;
+    line-height: 1.3 !important;
+    color: #08245c !important;
+    margin-bottom: 12px !important;
+}
+
+/* Program Card Description */
+.our-programs-page .program-content p,
+.our-programs-page .p-description {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 17.5px !important;
+    font-weight: 400 !important;
+    line-height: 1.65 !important;
+    color: #555555 !important;
+}
+
+/* Curriculum Highlights Title & Items */
+.our-programs-page .highlights-title {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+}
+
+.our-programs-page .p-highlights,
+.our-programs-page .p-highlights li {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 15.5px !important;
+    font-weight: 400 !important;
+    line-height: 1.6 !important;
+    color: #444444 !important;
+}
+
+/* Career Paths Title & Items */
+.our-programs-page .career-box h4,
+.our-programs-page .p-career {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.3px !important;
+}
+
+.our-programs-page .career-list li {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 15.5px !important;
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
+    color: #333333 !important;
+}
+
+/* Stats Section Typography */
+.our-programs-page .stat-card h2 {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 36px !important;
+    font-weight: 700 !important;
+    line-height: 1.1 !important;
+    color: #ffffff !important;
+}
+
+.our-programs-page .stat-card p {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 14.5px !important;
+    font-weight: 500 !important;
+    line-height: 1.35 !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Campus Timeline Typography */
+.our-programs-page .time-card h4 {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    color: #08245c !important;
+}
+
+.our-programs-page .time-card p {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 13.5px !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+    color: #444444 !important;
+}
+
+/* Footer Typography Refinements for Our Programs Page */
+.our-programs-page .footer-col h3 {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+}
+
+.our-programs-page .footer-col ul li a {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+}
+
+.our-programs-page .foundation-text {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 15px !important;
+    line-height: 1.75 !important;
+}
+
+.our-programs-page .contact p {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+}
+
+.our-programs-page .newsletter p {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 15px !important;
+    line-height: 1.75 !important;
+}
+
+.our-programs-page .footer-bottom p {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 15px !important;
+}
+
+/* STATS */
+
+.stats{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    background:#061a52;
+    padding:40px;
+    margin: 0 140px 75px 140px; 
+    border-radius:20px;
+    color:white;
+    flex-wrap:wrap;
+}
+
+.stat-card{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.stat-icon{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:24px;
+}
+
+.green{
+    background:#2e9d62;
+}
+
+.purple{
+    background:#8b5cf6;
+}
+
+.blue{
+    background:#3b82f6;
+}
+
+.pink{
+    background:#ec4899;
+}
+
+.stat-card h2{
+    margin:0;
+    font-size:22px;     
+    /* font-weight:400;        */
+    line-height:1.1;
+}
+
+
+.stat-card p{
+    margin:5px 0 0;
+    font-size:18px;
+}
+
+.stat-icon i{
+    font-size:35px;
+}
+/* ================= CAMPUS ================= */
+
+.campus{
+    padding:70px 8%;
+    background:white;
+}
+
+.timeline{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    position:relative;
+    margin-top:50px;
+    flex-wrap:wrap;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    top:65px;
+    left:0;
+    width:100%;
+    height:4px;
+    background:#d6def5;
+}
+
+.time-item{
+    width:130px;
+    text-align:center;
+    position:relative;
+    z-index:1;
+}
+
+.circle{
+    width:90px;
+    height:90px;
+    font-size:42px;
+    border-radius:50%;
+    background:#dbdde6;
+    border:3px solid #8fb3ff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+}
+
+.time-card{
+    background:#f2f5f5;
+    margin-top:12px;
+    padding:12px 8px;
+    border-radius:10px;
+    min-height:90px;
+}
+
+.time-card h4{
+    font-size:18px;
+    color:#08245c;
+    margin-bottom:8px;
+}
+
+.time-card p{
+    font-size:16px;
+    color:#333;
+    line-height:1.4;
+}
+/* ================= FOOTER & RESPONSIVE MEDIA QUERIES ================= */
+@media screen and (max-width: 1024px) {
+    .hero {
+        padding: 30px 24px;
+        min-height: auto;
+    }
+    .hero-content h1 {
+        font-size: 42px;
+    }
+    .stats {
+        margin: 0 20px 45px 20px;
+        gap: 20px;
+    }
+    .program-card {
+        padding: 24px 20px;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 30px 16px;
+    }
+    .hero::before {
+        display: none;
+    }
+    .hero-content,
+    .hero-image {
+        width: 100%;
+    }
+    .hero-content {
+        padding-top: 0;
+        padding-left: 0;
+    }
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    .hero-content p {
+        font-size: 15px;
+    }
+    .hero-image {
+        margin-top: 20px;
+    }
+    .hero-image img,
+    .hero-image video {
+        border-radius: 20px;
+        max-height: 300px;
+    }
+    .programs {
+        padding: 35px 16px;
+    }
+    .program-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 16px;
+    }
+    .program-image,
+    .program-content,
+    .career-box {
+        width: 100%;
+    }
+    .career-box {
+        margin-left: 0;
+        margin-top: 16px;
+    }
+    .stats {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        width: fit-content !important;
+        max-width: 100% !important;
+        margin: 25px auto 45px auto !important;
+        padding: 24px 20px !important;
+        gap: 24px !important;
+    }
+
+    .our-programs-page .stat-card,
+    .stat-card {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        text-align: left !important;
+        gap: 18px !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .stat-icon {
+        flex: 0 0 72px !important;
+        width: 72px !important;
+        height: 72px !important;
+        min-width: 72px !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 !important;
+        flex-shrink: 0 !important;
+    }
+
+    .stat-icon i {
+        font-size: 28px !important;
+        margin: 0 !important;
+    }
+
+    .our-programs-page .stat-card h2,
+    .stat-card h2 {
+        font-family: 'Poppins', sans-serif !important;
+        font-size: clamp(1.8rem, 6.5vw, 2.3rem) !important;
+        font-weight: 600 !important;
+        line-height: 1.1 !important;
+        margin: 0 !important;
+        text-align: left !important;
+    }
+
+    .our-programs-page .stat-card p,
+    .stat-card p {
+        font-size: 15px !important;
+        margin: 3px 0 0 0 !important;
+        text-align: left !important;
+    }
+    .campus {
+        padding: 35px 16px;
+    }
+    .timeline {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .timeline::before {
+        display: none;
+    }
+    .time-item {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 26px;
+    }
+    .hero-content p {
+        font-size: 13.5px;
+    }
+    .tag {
+        font-size: 22px;
+    }
+    .program-card h3 {
+        font-size: 20px;
+    }
+}
+
+/* ==========================================================
+   SOF VIDEO MODAL & PREVIEW PLAY OVERLAY STYLES
+   ========================================================== */
+.program-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.video-play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 56px;
+    height: 56px;
+    background: rgba(8, 36, 92, 0.85);
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    pointer-events: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+    transition: transform 0.3s ease, background 0.3s ease;
+    z-index: 2;
+}
+
+.program-image:hover .video-play-overlay {
+    transform: translate(-50%, -50%) scale(1.15);
+    background: #e60067;
+}
+
+.sof-video-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.sof-video-modal.is-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sof-video-modal-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(5px);
+}
+
+.sof-video-modal-container {
+    position: relative;
+    z-index: 100000;
+    width: 92%;
+    max-width: 920px;
+    background: #000000;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+}
+
+.sof-video-modal-close {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    z-index: 100001;
+    background: rgba(0, 0, 0, 0.65);
+    color: #ffffff;
+    border: none;
+    font-size: 28px;
+    line-height: 1;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.sof-video-modal-close:hover {
+    background: #e60067;
+    transform: scale(1.1);
+}
+
+.sof-video-player {
+    width: 100%;
+    max-height: 82vh;
+    display: block;
+    outline: none;
+    background: #000000;
+}
+
+@media screen and (max-width: 768px) {
+    .sof-video-modal-container {
+        width: 95%;
+        max-width: 100%;
+    }
+
+    .sof-video-player {
+        max-height: 75vh;
+    }
+
+    .video-play-overlay {
+        width: 46px;
+        height: 46px;
+        font-size: 18px;
+    }
+}

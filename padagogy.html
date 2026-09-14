@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedagogy - Anish Jadhav Memorial Foundation</title>
+
+    <link rel="stylesheet" href="padagogy.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+
+    <!-- Google Fonts: Playfair Display & Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+   
+<body class="pedagogy-page">
+
+    <!---  HEADER  --->
+
+    <header class="header">
+        <div class="container">
+
+            <div class="logo-area">
+                <a href="index.html" style="display: flex; align-items: center; gap: 16px; text-decoration: none;">
+                    <img src="logo.jpeg" alt="AJMF Logo">
+                    <div class="logo-content">
+                        <h2>Anish Jadhav <br> Memorial Foundation</h2>
+                        <p>EDUCATE • EMPOWER • ELEVATE</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Hamburger Menu Icon -->
+            <div class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle navigation menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <nav class="navbar" id="navMenu">
+                <ul>
+
+                <!-- HOME -->
+                <li class="dropdown">
+                    <a href="index.html">
+                        <span data-i18n="nav_home">Home</span> <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html" data-i18n="nav_home">Home Page</a></li>
+                        <li><a href="mission.html#mission" data-i18n="nav_mission">Mission & Vision</a></li>
+                    </ul>
+                </li>
+
+                <!-- ABOUT ANISH -->
+                <li>
+                    <a href="About.html" data-i18n="nav_about">About Anish</a>
+                </li>
+
+                <!-- ACADEMICS -->
+                <li class="dropdown">
+                    <a href="programs.html">
+                        <span data-i18n="nav_academics">Academics</span> <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="programs.html" data-i18n="nav_programs">Our Programs</a></li>
+                        <li><a href="padagogy.html" data-i18n="nav_pedagogy">Pedagogy</a></li>
+                        <li><a href="campusled.html" data-i18n="nav_campusled">Student-Led Campus</a></li>
+                        <li><a href="A_day.html" data-i18n="nav_aday">A Day At Campus</a></li>
+                    </ul>
+                </li>
+
+                <!-- STUDENT LIFE -->
+                <li class="dropdown">
+                    <a href="gallery.html">
+                        <span data-i18n="nav_studentlife">Student Life</span> <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="gallery.html" data-i18n="nav_gallery">Gallery</a></li>
+                        <li><a href="events.html" data-i18n="nav_events">Events</a></li>
+                        <li><a href="facility.html" data-i18n="nav_facility">Campus & Facilities</a></li>
+                        <li><a href="success.html" data-i18n="nav_success">Success Stories</a></li>
+                    </ul>
+                </li>
+
+                <!-- CONTACT -->
+                <li class="dropdown">
+                    <a href="contact.html">
+                        <span data-i18n="nav_contact">Contact Us</span> <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="getinvolved.html" data-i18n="nav_getinvolved">Get Involved</a></li>
+                        <li><a href="Apply.html" data-i18n="nav_apply">Apply Now</a></li>
+                        <li><a href="donate.html" data-i18n="nav_donate">Donate Now</a></li>
+                    </ul>
+                </li>
+
+                <li class="mobile-only-item">
+                    <a href="https://admissions.navgurukul.org/students/" class="donate-btn mobile-donate-btn" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-heart"></i>
+                        <span data-i18n="nav_apply">Apply Now</span>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <!-- Desktop Apply Button -->
+        <a href="https://admissions.navgurukul.org/students/" class="donate-btn desktop-only-btn" target="_blank" rel="noopener">
+            <i class="fa-solid fa-heart"></i>
+            <span data-i18n="apply_here">Apply Here</span>
+        </a>
+
+        </div>
+    </header>
+   
+<!--================ HERO ================-->
+
+<section class="hero-pedagogy-section">
+
+        <div class="hero-wrapper-grid">
+
+            <div class="hero-info-left">
+
+                <span class="hero-tagline" data-i18n="pedagogy_hero_tagline">PEDAGOGY & HIGHER EDUCATION</span>
+
+                <h1 class="hero-display-title" data-i18n="pedagogy_hero_title">
+                    Innovative Learning.<br>
+                    <span class="orange-text">Meaningful Change.</span>
+                </h1>
+                <p class="hero-description-para" data-i18n="pedagogy_hero_desc">
+                    Our residential programs combine self-learning, mentorship and life skills to prepare students for real-world success.
+                </p>
+                <div class="hero-cta-flex-row">
+                    <a href="programs.html" class="btn-dark-pill" data-i18n="explore_approach">Explore Our Approach <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="mission.html" class="btn-link-orange" data-i18n="learn_more">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        
+        </div>
+        <!-- <div class="wave-divider-bottom">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,42.4V0Z" class="shape-fill"></path>
+            </svg> -->
+        </div>
+    </section>
+
+    <!-- ================= OUR PARTNER SECTION (EXACT OVERLAPPING DESIGN) ================= -->
+    <section class="our-partner-section" id="partner">
+        <div class="partner-wrapper-row">
+            <!-- LEFT DARK GREEN PANEL -->
+            <div class="partner-green-panel">
+                <span class="partner-tag" data-i18n="partner_label">OUR PARTNER</span>
+                <h2 class="partner-title" data-i18n="partner_title_stronger">Stronger Together.<br>Greater Impact.</h2>
+                <p class="partner-desc" data-i18n="partner_banner_desc">
+                    Anish Jadhav Memorial Foundation is proud to partner with <span class="navgurukul-name"><span class="nav-text">Nav</span><span class="gurukul-text">Gurukul</span></span> to empower youth through industry-relevant education, technology and career-focused learning.
+                </p>
+                <a href="partnership.html" class="btn-partner-learn" data-i18n="explore_partnership">
+                    Learn About Our Partnership <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- RIGHT CREAM AREA WITH OVERLAPPING WHITE CARD -->
+            <div class="partner-cream-area">
+                <div class="partner-overlapping-card">
+                    <!-- LOGOS GROUP -->
+                    <div class="partner-logos-group">
+                        <img src="logo.jpeg" alt="AJMF Logo" class="partner-logo-img">
+                        <span class="partner-multiply"><i class="fa-solid fa-handshake"></i></span>
+                        <img src="navgurukul.logo.jpg" alt="NavGurukul Logo" class="partner-logo-img navgurukul-img">
+                    </div>
+
+                    <!-- VERTICAL SEPARATOR LINE (|) -->
+                    <div class="partner-vertical-line"></div>
+
+                    <!-- BENEFITS GROUP (HORIZONTAL ON DESKTOP) -->
+                    <div class="partner-benefits-group">
+                        <div class="partner-benefit-item">
+                            <div class="benefit-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+                            <span class="benefit-label" data-i18n="partner_benefit_1">Quality Education</span>
+                        </div>
+                        <div class="partner-benefit-item">
+                            <div class="benefit-icon"><i class="fa-solid fa-code"></i></div>
+                            <span class="benefit-label" data-i18n="partner_benefit_2">Skill Development</span>
+                        </div>
+                        <div class="partner-benefit-item">
+                            <div class="benefit-icon"><i class="fa-solid fa-briefcase"></i></div>
+                            <span class="benefit-label" data-i18n="partner_benefit_3">Career Opportunities</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<!--=========================
+        CHALLENGE
+==========================-->
+
+<section class="residential-pedagogy-section">
+        <div class="global-container">
+            <div class="centered-section-heading">
+                <span class="section-micro-tag" data-i18n="micro_our_approach">OUR APPROACH</span>
+                <h2 data-i18n="residential_pedagogy_heading">Residential Courses – Pedagogy</h2>
+                <p data-i18n="residential_pedagogy_sub">At our campus, we follow a unique and effective learning approach designed for the modern world.</p>
+            </div>
+
+            <div class="five-columns-row-grid">
+                
+                <div class="approach-pillar-card">
+                    <div class="pillar-icon-box orange-bg">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3 data-i18n="pillar1_title">Self-Learning First</h3>
+                    <p data-i18n="pillar1_desc">We emphasize Self-Learning, guided by a structured system of peer mentorship and industry mentors.</p>
+                    <div class="card-bottom-accent-line"></div>
+                </div>
+
+                <div class="approach-pillar-card">
+                    <div class="pillar-icon-box orange-bg">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3 data-i18n="pillar2_title">Learning Facilitators</h3>
+                    <p data-i18n="pillar2_desc">Facilitators act as learning coaches to support and enhance the process, rather than traditional full-time teachers.</p>
+                    <div class="card-bottom-accent-line"></div>
+                </div>
+
+                <div class="approach-pillar-card">
+                    <div class="pillar-icon-box orange-bg">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <h3 data-i18n="pillar3_title">Future-Ready Curriculum</h3>
+                    <p data-i18n="pillar3_desc">Our curriculum focuses on developing the essential ability of "Learning How to Learn" in a world driven by AI.</p>
+                    <div class="card-bottom-accent-line"></div>
+                </div>
+
+                <div class="approach-pillar-card">
+                    <div class="pillar-icon-box orange-bg">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+                    <h3 data-i18n="pillar4_title">Student Leadership</h3>
+                    <p data-i18n="pillar4_desc">Our student-driven campus provides real-world leadership and collaboration opportunities through the Student Council System.</p>
+                    <div class="card-bottom-accent-line"></div>
+                </div>
+
+                <div class="approach-pillar-card">
+                    <div class="pillar-icon-box orange-bg">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <h3 data-i18n="pillar5_title">Life Skills for Life</h3>
+                    <p data-i18n="pillar5_desc">The program develops essential life skills like communication, negotiation, problem-solving, and teamwork.</p>
+                    <div class="card-bottom-accent-line"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<!------------- The challenge -------------->
+
+    <section class="education-gap-section">
+        <div class="global-container">
+            <div class="centered-section-heading">
+                <span class="section-micro-tag" data-i18n="micro_the_challenge">THE CHALLENGE</span>
+                <h2 data-i18n="education_gap_heading">The Higher Education Gap</h2>
+                <p data-i18n="education_gap_desc">India's higher education system struggles to equip students with the skills needed for real-world employment. Limited affordability, outdated curricula, language barriers, and a disconnect from industry demands leave millions unprepared.</p>
+            </div>
+
+            <div class="four-columns-gap-grid">
+                
+                <div class="gap-metric-card">
+                    <div class="gap-icon-sphere blue-bg">
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
+                    </div>
+                    <h3 data-i18n="gap1_title">Unaffordability</h3>
+                    <p data-i18n="gap1_desc">Private colleges are expensive by large margins, making quality education inaccessible for many talented students.</p>
+                </div>
+
+                <div class="gap-metric-card">
+                    <div class="gap-icon-sphere blue-bg">
+                        <i class="fa-solid fa-gear"></i>
+                    </div>
+                    <h3 data-i18n="gap2_title">Outdated Curricula</h3>
+                    <p data-i18n="gap2_desc">Lack of proper pedagogy and an outdated learning system result in low placement rates and irrelevant skills.</p>
+                </div>
+
+                <div class="gap-metric-card">
+                    <div class="gap-icon-sphere blue-bg">
+                        <i class="fa-solid fa-comment-dots"></i>
+                    </div>
+                    <h3 data-i18n="gap3_title">Language Barrier</h3>
+                    <p data-i18n="gap3_desc">Most content is in English, creating a difficult environment for regional and rural students.</p>
+                </div>
+
+                <div class="gap-metric-card">
+                    <div class="gap-icon-sphere blue-bg">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h3 data-i18n="gap4_title">Unemployability</h3>
+                    <p data-i18n="gap4_desc">Even after completing degrees, 90%+ of graduates lack the technical and cognitive skills required for modern workplaces.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+<!--========================
+        COUNTER
+=========================-->
+
+<section class="impact-ribbon-bar-section">
+        <div class="global-container ribbon-flex-container">
+            <div class="ribbon-metric-item">
+                <div class="ribbon-icon-circle"><i class="fa-solid fa-user-graduate"></i></div>
+                <div class="ribbon-text-data">
+                    <h3>200+</h3>
+                    <p data-i18n="stat_youth_trained">Youth Trained</p>
+                </div>
+            </div>
+            <div class="ribbon-metric-item">
+                <div class="ribbon-icon-circle"><i class="fa-solid fa-building-user"></i></div>
+                <div class="ribbon-text-data">
+                    <h3>1000+</h3>
+                    <p data-i18n="stat_successfully_placed">Successfully Placed</p>
+                </div>
+            </div>
+            <div class="ribbon-metric-item">
+                <div class="ribbon-icon-circle"><i class="fa-solid fa-handshake"></i></div>
+                <div class="ribbon-text-data">
+                    <h3>50+</h3>
+                    <p data-i18n="stat_industry_mentors">Industry Mentors</p>
+                </div>
+            </div>
+            <div class="ribbon-metric-item">
+                <div class="ribbon-icon-circle"><i class="fa-solid fa-award"></i></div>
+                <div class="ribbon-text-data">
+                    <h3>10+</h3>
+                    <p data-i18n="stat_programs_initiatives">Programs & Initiatives</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Column 1 -->
+            <div class="footer-col foundation">
+                <div class="logo-box">
+                    <img src="logo.jpeg" alt="AJMF Logo">
+                    <div class="footer-logo-content">
+                        <h2>Anish Jadhav <br> Memorial Foundation</h2>
+                        <p>EDUCATE • EMPOWER • ELEVATE</p>
+                    </div>
+                </div>
+
+                <p class="foundation-text" data-i18n="footer_foundation_text">
+                    Empowering young minds through education,
+                    research and community support.
+                </p>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/anishjmf" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/explore/locations/112795623857018/anish-jadhav-memorial-foundation/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/posts/brigadier-dr-kishor-jadhav-ph-d-97a3934b_anish-jadhav-memorial-foundation-skilling-activity-7180232279640719360-Uw2g/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/@AnishJadhavMemorialFoundation" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="footer-col">
+                <h3 data-i18n="footer_quick_links">Quick Links</h3>
+                <ul>
+                    <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                    <li><a href="About.html" data-i18n="nav_about">About Anish</a></li>
+                    <li><a href="programs.html" data-i18n="nav_academics">Academics</a></li>
+                    <li><a href="gallery.html" data-i18n="nav_studentlife">Student Life</a></li>
+                    <li><a href="contact.html" data-i18n="nav_contact">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="footer-col">
+                <h3 data-i18n="nav_programs">Our Programs</h3>
+                <ul>
+                    <li><a href="programs.html" data-i18n="prog_sop">School of Programming</a></li>
+                    <li><a href="programs.html" data-i18n="prog_sob">School of Business</a></li>
+                    <li><a href="programs.html" data-i18n="prog_sof">School of Finance</a></li>
+                    <li><a href="programs.html" data-i18n="prog_soe">School of Education</a></li>
+                    <li><a href="programs.html" data-i18n="prog_sosc">School of Second Chance</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4 -->
+            <div class="footer-col contact">
+                <h3 data-i18n="nav_contact">Contact Us</h3>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Anish+Jadhav+Memorial+Foundation+JW3M%2BC7+Gharukul+Properties+Survey+No.+60%2F1+Pathare+Wasti+Lohegaon+Pune+Maharashtra+411047+India" target="_blank" rel="noopener noreferrer">
+                        Anish Jadhav Memorial Foundation<br>
+                        JW3M+C7, Gharukul Properties,<br>
+                        Survey No. 60/1, Pathare Wasti,<br>
+                        Lohegaon, Pune,<br>
+                        Maharashtra 411047, India
+                    </a>
+                </p>
+                <p>
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:+919906155699">+91 99061 55699</a>
+                </p>
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:info@ajmfoundation.org">info@ajmfoundation.org</a>
+                </p>
+
+                <p>
+                    <i class="fas fa-globe"></i>
+                    <a href="http://anishjadhavmemorialfoundation.org/" target="_blank" rel="noopener noreferrer">
+                        anishjadhavmemorialfoundation.org
+                    </a>
+                </p>
+            </div>
+
+            <!-- Column 5 -->
+            <div class="footer-col newsletter">
+                <h3 data-i18n="footer_newsletter_title">Newsletter</h3>
+                <p data-i18n="footer_newsletter_desc">
+                    Stay updated with our latest
+                    initiatives and stories.
+                </p>
+                <form class="newsletter-form" novalidate>
+                    <input type="email" class="newsletter-email" placeholder="Enter your email" data-i18n-placeholder="placeholder_email" required aria-label="Email address">
+                    <button type="submit" data-i18n="subscribe">Subscribe</button>
+                    <div class="newsletter-message" aria-live="polite"></div>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © 2026 Anish Jadhav Memorial Foundation.
+                <span data-i18n="footer_rights">All Rights Reserved.</span>
+            </p>
+            <p data-i18n="footer_tagline">
+                Designed with ❤️ for a better tomorrow
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/language.js"></script>
+    <script src="header.js"></script>
+</body>
+
+</html>
