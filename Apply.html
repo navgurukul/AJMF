@@ -13,11 +13,12 @@
     <link rel="stylesheet" href="footer.css">
 
        <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="About.css">
 </head>
    
     <!---  HEADER  --->
@@ -267,48 +268,75 @@
         </div>
     </section>
 
-    <!-- ================= OUR PARTNER SECTION (EXACT OVERLAPPING DESIGN) ================= -->
-    <section class="our-partner-section" id="partner">
-        <div class="partner-wrapper-row">
-            <!-- LEFT DARK GREEN PANEL -->
-            <div class="partner-green-panel">
-                <span class="partner-tag" data-i18n="partner_label">OUR PARTNER</span>
-                <h2 class="partner-title" data-i18n="partner_title_stronger">Stronger Together.<br>Greater Impact.</h2>
-                <p class="partner-desc" data-i18n="partner_banner_desc">
-                    Anish Jadhav Memorial Foundation is proud to partner with <span class="navgurukul-name"><span class="nav-text">Nav</span><span class="gurukul-text">Gurukul</span></span> to empower youth through industry-relevant education, technology and career-focused learning.
-                </p>
-                <a href="partnership.html" class="btn-partner-learn" data-i18n="explore_partnership">
-                    Learn About Our Partnership <i class="fa-solid fa-arrow-right"></i>
-                </a>
+    <!-- ================= PARTNERSHIP SECTION (MATCHING REFERENCE ASSETS & LAYOUT) ================= -->
+    <section class="ajmf-values-outer-wrapper" style="background: #fff9f3; padding: 30px 0 50px 0; position: relative; overflow: hidden;" id="partner">
+<div class="our-partner-wrapper">
+            <!-- LEFT BOTANICAL BACKGROUND ACCENT -->
+            
+
+            <!-- RIGHT BOTANICAL & HANDWRITTEN ACCENTS -->
+            
+            <div class="values-script-right" style="top: 40px; right: 10px; z-index: 2;">
+                <span>Better<br>Futures<br>Together</span>
+                <span class="accent-stroke"></span>
             </div>
 
-            <!-- RIGHT CREAM AREA WITH OVERLAPPING WHITE CARD -->
-            <div class="partner-cream-area">
-                <div class="partner-overlapping-card">
-                    <!-- LOGOS GROUP -->
-                    <div class="partner-logos-group">
-                        <img src="logo.jpeg" alt="AJMF Logo" class="partner-logo-img">
-                        <span class="partner-multiply"><i class="fa-solid fa-handshake"></i></span>
-                        <img src="navgurukul.logo.jpg" alt="NavGurukul Logo" class="partner-logo-img navgurukul-img">
+            <div class="partner-row-container">
+                <!-- LEFT DARK NAVY PANEL (WITH BLENDED HANDS PHOTO & SCRIPT) -->
+                <div class="partner-left-panel">
+                    <span class="partner-tag" data-i18n="partner_label">OUR PARTNER</span>
+                    <h2 class="partner-title" data-i18n="partner_title_stronger">Stronger Together.<br>Greater <span class="highlight-orange">Impact.</span></h2>
+                    <p class="partner-desc" data-i18n="partner_banner_desc">
+                        Working together with <span class="navgurukul-name"><span class="nav-text">Nav</span><span class="gurukul-text">Gurukul</span></span> to empower youth through industry-relevant education, technology and career-focused learning.
+                    </p>
+                    <a href="partnership.html" class="btn-partner-learn">
+                        <span data-i18n="explore_partnership">Explore Our Partnership</span> <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <div class="partner-script-accent">
+                        <span>Empower<br>Educate<br>Elevate</span>
+                        <span class="accent-stroke"></span>
+                    </div>
+                </div>
+
+                <!-- RIGHT WHITE INFORMATION PANEL -->
+                <div class="partner-right-panel">
+                    <!-- OUR PARTNER LOGOS BLOCK -->
+                    <div class="partner-block partner-logos-block">
+                        <div class="partner-logos-pair">
+                            <img src="logo.jpeg" alt="AJMF Logo" class="partner-logo-img" />
+                            <span class="partner-times">×</span>
+                            <img src="navgurukul.logo.jpg" alt="NavGurukul Logo" class="partner-logo-img navgurukul-img" />
+                        </div>
+                        <h4 class="partner-block-title" data-i18n="our_partner_title">Our Partner</h4>
+                        <p class="partner-block-desc" data-i18n="our_partner_desc">Working together for a brighter tomorrow.</p>
                     </div>
 
-                    <!-- VERTICAL SEPARATOR LINE (|) -->
-                    <div class="partner-vertical-line"></div>
+                    <div class="partner-divider"></div>
 
-                    <!-- BENEFITS GROUP (HORIZONTAL ON DESKTOP) -->
-                    <div class="partner-benefits-group">
-                        <div class="partner-benefit-item">
-                            <div class="benefit-icon"><i class="fa-solid fa-book-open-reader"></i></div>
-                            <span class="benefit-label" data-i18n="partner_benefit_1">Quality Education</span>
-                        </div>
-                        <div class="partner-benefit-item">
-                            <div class="benefit-icon"><i class="fa-solid fa-code"></i></div>
-                            <span class="benefit-label" data-i18n="partner_benefit_2">Skill Development</span>
-                        </div>
-                        <div class="partner-benefit-item">
-                            <div class="benefit-icon"><i class="fa-solid fa-briefcase"></i></div>
-                            <span class="benefit-label" data-i18n="partner_benefit_3">Career Opportunities</span>
-                        </div>
+                    <!-- BENEFIT 1: QUALITY EDUCATION -->
+                    <div class="partner-block">
+                        <div class="partner-icon-circle"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <h4 class="partner-block-title" data-i18n="partner_benefit_1">Quality Education</h4>
+                        <p class="partner-block-desc">Building practical skills for real opportunities.</p>
+                    </div>
+
+                    <div class="partner-divider"></div>
+
+                    <!-- BENEFIT 2: SKILL DEVELOPMENT -->
+                    <div class="partner-block">
+                        <div class="partner-icon-circle"><i class="fa-solid fa-code"></i></div>
+                        <h4 class="partner-block-title" data-i18n="partner_benefit_2">Skill Development</h4>
+                        <p class="partner-block-desc">Hands-on learning for future careers.</p>
+                    </div>
+
+                    <div class="partner-divider"></div>
+
+                    <!-- BENEFIT 3: CAREER OPPORTUNITIES -->
+                    <div class="partner-block">
+                        <div class="partner-icon-circle"><i class="fa-solid fa-briefcase"></i></div>
+                        <h4 class="partner-block-title" data-i18n="partner_benefit_3">Career Opportunities</h4>
+                        <p class="partner-block-desc">Creating pathways to meaningful growth.</p>
                     </div>
                 </div>
             </div>

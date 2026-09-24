@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap');
+
 /* ==========================================================
    STANDARDIZED GLOBAL FOOTER STYLES
    Used across all pages for pixel-perfect consistency
@@ -380,279 +382,348 @@
    ========================================================== */
 
 /* ==========================================================
-   SHARED OUR PARTNER SECTION STYLES (COMPACT OVERLAPPING DESIGN)
+   SHARED OUR PARTNER SECTION STYLES
    ========================================================== */
 
 /* ==========================================================
-   SHARED OUR PARTNER SECTION STYLES (PROPORTIONAL & BALANCED)
+   REBUILT & CLEAN OUR PARTNERSHIP SECTION STYLES
+   Clean, standard section matching the site's design system
    ========================================================== */
 
-.our-partner-section {
+.partner-impact-wrapper,
+section.ajmf-values-outer-wrapper[id="partner"],
+section.our-partner-section[id="partner"] {
+    position: relative;
     width: 100%;
-    padding: 55px 0;
-    background-color: #FFF8EF;
-    box-sizing: border-box;
-    border-top: 1px solid rgba(245, 124, 0, 0.14);
-    border-bottom: 1px solid rgba(245, 124, 0, 0.14);
-    box-shadow: inset 0 2px 8px rgba(11, 31, 68, 0.03);
+    padding: 60px 0 !important;
+    margin: 0 !important;
+    background: #f8fafc !important;
+    overflow: hidden;
 }
 
-.partner-wrapper-row {
-    width: 92%;
-    max-width: 1320px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    position: relative;
-    border-radius: 24px;
-    background-color: #FFF8EF;
+.partner-impact-wrapper::before,
+section.ajmf-values-outer-wrapper[id="partner"]::before,
+section.our-partner-section[id="partner"]::before {
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-image: url('images-photo/watercolor_frame_bg.png') !important;
+    background-size: 100% 100% !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    opacity: 0.16 !important;
+    pointer-events: none !important;
+    z-index: 1 !important;
 }
 
-/* LEFT DARK GREEN PANEL */
-.partner-green-panel {
-    width: 410px;
-    flex-shrink: 0;
-    background: linear-gradient(135deg, #063F32 0%, #03241c 100%);
-    border-radius: 22px;
-    padding: 42px 38px 42px 38px;
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-shadow: 0 10px 30px rgba(6, 63, 50, 0.14);
-    position: relative;
-    z-index: 1;
+.partner-impact-wrapper::after,
+section.ajmf-values-outer-wrapper[id="partner"]::after,
+section.our-partner-section[id="partner"]::after {
+    display: none !important;
+    content: none !important;
 }
 
-.partner-green-panel .partner-tag {
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    color: #ff8800;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-}
-
-.partner-green-panel .partner-title {
-    font-family: 'Playfair Display', Georgia, serif !important;
-    font-size: 29px;
-    font-weight: 700;
-    line-height: 1.15;
-    color: #ffffff;
-    margin-bottom: 12px;
-}
-
-.partner-green-panel .partner-desc {
-    font-size: 14px;
-    line-height: 1.45;
-    color: #cbd5e1;
-    margin-bottom: 20px;
-}
-
-.partner-green-panel .btn-partner-learn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 11px 24px;
-    border: 1.5px solid rgba(255, 255, 255, 0.35);
-    border-radius: 30px;
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    width: fit-content;
-}
-
-.partner-green-panel .btn-partner-learn:hover {
-    background-color: #ff8800;
-    border-color: #ff8800;
-    color: #ffffff;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(255, 136, 0, 0.4);
-}
-
-/* RIGHT CREAM AREA WITH LARGER PROMINENT WHITE CARD */
-.partner-cream-area {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
+.our-partner-wrapper {
+    max-width: 1200px !important;
+    width: 90% !important;
+    margin: 0 auto !important;
     position: relative;
     z-index: 2;
 }
 
-.partner-overlapping-card {
-    background-color: #ffffff;
-    border-radius: 22px;
-    padding: 42px 48px;
-    box-shadow: 0 16px 45px rgba(11, 31, 68, 0.09);
-    border: 1px solid #e2e8f0;
+.partner-row-container {
+    display: flex;
+    align-items: stretch;
+    gap: 24px;
+    width: 100%;
+}
+
+/* LEFT DARK NAVY PANEL */
+.partner-left-panel {
+    flex: 0 0 42%;
+    max-width: 42%;
+    background-color: #061325 !important;
+    background-image: linear-gradient(90deg, rgba(6, 19, 37, 0.92) 0%, rgba(6, 19, 37, 0.65) 50%, rgba(11, 31, 59, 0.35) 100%),
+        url('images-photo/partnership_bg.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    border: 1px solid #1e293b;
+    border-radius: 16px !important;
+    padding: 36px 32px !important;
+    box-shadow: 0 4px 20px rgba(11, 26, 48, 0.12) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.partner-left-panel::before,
+.partner-left-panel::after {
+    display: none !important;
+    content: none !important;
+}
+
+.partner-left-panel>* {
+    position: relative;
+    z-index: 2;
+}
+
+.partner-left-panel .partner-tag {
+    font-family: 'Poppins', sans-serif !important;
+    color: #f97316 !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+    margin-bottom: 12px !important;
+    display: block !important;
+}
+
+.partner-left-panel .partner-title {
+    font-family: 'Playfair Display', Georgia, serif !important;
+    color: #ffffff !important;
+    font-size: 30px !important;
+    line-height: 1.25 !important;
+    margin: 0 0 16px 0 !important;
+    font-weight: 700 !important;
+}
+
+.partner-left-panel .partner-title .highlight-orange {
+    color: #f97316 !important;
+}
+
+.partner-left-panel .partner-desc {
+    font-family: 'Poppins', sans-serif !important;
+    color: #cbd5e1 !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin: 0 0 24px 0 !important;
+    max-width: 100% !important;
+}
+
+.partner-left-panel .gurukul-text,
+.partner-left-panel .navgurukul-name .gurukul-text,
+.partner-desc .gurukul-text {
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
+.partner-left-panel .btn-partner-learn {
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: #f97316 !important;
+    color: #ffffff !important;
+    border-radius: 50px !important;
+    text-decoration: none !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 14px rgba(249, 115, 22, 0.3) !important;
+    transition: all 0.3s ease !important;
+}
+
+.partner-left-panel .btn-partner-learn:hover {
+    background: #ea580c !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 18px rgba(249, 115, 22, 0.4) !important;
+}
+
+/* HIDE DECORATIVE SCRIPT OVERLAYS */
+.partner-script-accent,
+.values-script-right {
+    display: none !important;
+}
+
+/* RIGHT WHITE PANEL */
+.partner-right-panel {
+    flex: 1;
+    background-color: #ffffff !important;
+    border-radius: 16px !important;
+    padding: 28px 20px !important;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05) !important;
+    border: 1px solid #e2e8f0 !important;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
-    margin-left: 0;
-    width: 100%;
+    box-sizing: border-box;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.partner-right-panel::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 130px;
+    height: 130px;
+    max-width: 28%;
+    max-height: 55%;
+    background-image: url('images-photo/12_left_botanical_decor.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top left;
+    opacity: 0.14;
+    pointer-events: none;
+    z-index: 1;
+    filter: brightness(0.95) contrast(0.9);
+}
+
+.partner-right-panel::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 130px;
+    height: 130px;
+    max-width: 28%;
+    max-height: 55%;
+    background-image: url('images-photo/13_right_botanical_decor.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    opacity: 0.14;
+    pointer-events: none;
+    z-index: 1;
+    filter: brightness(0.95) contrast(0.9);
+}
+
+.partner-right-panel>* {
     position: relative;
     z-index: 2;
 }
 
-.partner-logos-group {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 28px;
-    flex-shrink: 0;
-    padding: 0 8px;
-}
-
-.partner-logo-img {
-    height: 85px;
-    width: auto;
-    max-width: 170px;
-    object-fit: contain;
-}
-
-.partner-logo-img.navgurukul-img {
-    height: 90px;
-    width: auto;
-    max-width: 190px;
-    object-fit: contain;
-}
-
-.partner-multiply {
-    font-size: 24px;
-    color: #059669;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.partner-vertical-line {
-    width: 1px;
-    height: 75px;
-    background-color: #cbd5e1;
-    border-left: 1px solid #e2e8f0;
-    flex-shrink: 0;
-}
-
-.partner-benefits-group {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 32px;
-    flex-grow: 1;
-}
-
-.partner-benefit-item {
+.partner-block {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
     text-align: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    position: relative !important;
+    overflow: hidden !important;
 }
 
-.partner-benefit-item .benefit-icon {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    background-color: #fff7ed;
-    border: 1px solid #ffedd5;
-    color: #ff8800;
+.partner-logos-block {
+    justify-content: center;
+}
+
+.partner-logos-pair {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 22px;
-    box-shadow: 0 4px 12px rgba(255, 136, 0, 0.1);
-    transition: all 0.3s ease;
+    gap: 10px;
+    margin-bottom: 12px;
 }
 
-.partner-benefit-item:hover .benefit-icon {
-    background-color: #ff8800;
-    color: #ffffff;
-    border-color: #ff8800;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(255, 136, 0, 0.35);
+.partner-logo-img {
+    height: 44px;
+    max-height: 44px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain !important;
+    display: block;
 }
 
-.partner-benefit-item .benefit-label {
-    font-size: 16.5px;
-    font-weight: 600;
-    color: #0b1f44;
-    line-height: 1.3;
+.partner-logo-img.navgurukul-img {
+    height: 38px;
+    max-height: 38px;
 }
 
-/* RESPONSIVE FOR PARTNER SECTION */
-@media screen and (max-width: 1100px) {
-    .our-partner-section {
-        padding: 45px 0;
+.partner-times {
+    color: #94a3b8 !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+}
+
+.partner-divider {
+    width: 1px;
+    height: 100px;
+    background: #e2e8f0 !important;
+    flex-shrink: 0;
+}
+
+.partner-icon-circle {
+    width: 46px;
+    height: 46px;
+    border-radius: 50% !important;
+    background: #ffedd5 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.partner-icon-circle i {
+    font-size: 18px !important;
+    color: #ea580c !important;
+}
+
+.partner-block-title {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    margin: 0 0 6px 0 !important;
+    line-height: 1.3 !important;
+}
+
+.partner-block-desc {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 12.5px !important;
+    color: #64748b !important;
+    line-height: 1.45 !important;
+    margin: 0 !important;
+}
+
+/* RESPONSIVE LAYOUT */
+@media screen and (max-width: 991px) {
+
+    .partner-impact-wrapper,
+    section.ajmf-values-outer-wrapper[id="partner"],
+    section.our-partner-section[id="partner"] {
+        padding: 40px 0 !important;
     }
 
-    .partner-wrapper-row {
+    .partner-row-container {
         flex-direction: column;
-        align-items: stretch;
-        gap: 28px;
+        gap: 20px;
     }
 
-    .partner-green-panel {
+    .partner-left-panel {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        padding: 28px 24px !important;
+    }
+
+    .partner-right-panel {
+        flex-direction: column !important;
+        gap: 24px !important;
+        padding: 28px 20px !important;
+    }
+
+    .partner-block {
         width: 100%;
-        padding: 45px 35px;
-        border-radius: 22px;
+        padding: 6px 0;
     }
 
-    .partner-cream-area {
-        padding: 0;
-        width: 100%;
-    }
-
-    .partner-overlapping-card {
-        margin-left: 0;
-        width: 100%;
-        margin-top: 0;
-        border-radius: 22px;
-    }
-}
-
-@media screen and (max-width: 850px) {
-    .our-partner-section {
-        padding: 35px 0;
-    }
-
-    .partner-overlapping-card {
-        flex-direction: column;
-        gap: 24px;
-        margin-top: 0;
-        padding: 30px 24px;
-    }
-
-    .partner-vertical-line {
-        width: 100%;
-        height: 1px;
-    }
-
-    .partner-multiply {
-        display: flex;
-        font-size: 20px;
-        color: #059669;
-    }
-
-    .partner-benefits-group {
-        flex-direction: column;
-        gap: 18px;
-    }
-
-    .partner-green-panel {
-        padding: 35px 24px;
-    }
-
-    .partner-logo-img {
-        height: 65px;
-    }
-
-    .partner-logo-img.navgurukul-img {
-        height: 70px;
+    .partner-divider {
+        width: 100% !important;
+        height: 1px !important;
+        margin: 4px 0 !important;
     }
 }
 

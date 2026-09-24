@@ -39,122 +39,168 @@ ul {
    PEDAGOGY PAGE REDESIGN & TYPOGRAPHY STYLES
    ========================================================== */
 
-/* --- HERO SECTION --- */
+/* --- HERO SECTION (EXACT REFERENCE RECREATION) --- */
 .pedagogy-page .hero-pedagogy-section {
     position: relative;
-    background: linear-gradient(135deg, #0B1F44 0%, #0d2857 50%, #061530 100%);
-    padding: 90px 0 110px;
+    background: linear-gradient(180deg, #fefdf9 0%, #fff7ef 100%);
+    padding: 20px 0 15px;
     overflow: hidden;
+    min-height: auto;
 }
 
-.pedagogy-page .hero-pedagogy-section::before {
-    content: "";
+/* TOP-LEFT BOTANICAL ACCENT */
+.pedagogy-page .pedagogy-top-left-leaf {
     position: absolute;
-    top: -50%;
-    right: -10%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(255,138,0,0.12) 0%, rgba(255,138,0,0) 70%);
-    border-radius: 50%;
+    top: 0;
+    left: 0;
+    width: 280px;
     pointer-events: none;
+    z-index: 1;
+    opacity: 0.24;
 }
 
+.pedagogy-page .pedagogy-top-left-leaf img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* BOTTOM-RIGHT BOTANICAL ACCENT */
+.pedagogy-page .pedagogy-bottom-right-leaf {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 260px;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.24;
+}
+
+.pedagogy-page .pedagogy-bottom-right-leaf img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* HERO GRID LAYOUT */
 .pedagogy-page .hero-wrapper-grid {
-    max-width: 1300px;
-    width: 92%;
+    max-width: 1240px;
+    width: 90%;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    text-align: center;
+    justify-content: space-between;
+    gap: 40px;
     position: relative;
     z-index: 2;
+    padding-top: 0;
 }
 
+/* LEFT COLUMN CONTENT */
 .pedagogy-page .hero-info-left {
-    max-width: 850px;
-    padding: 0;
-    text-align: center;
+    flex: 1;
+    max-width: 580px;
+    text-align: left;
 }
 
-.pedagogy-page .hero-tagline {
-    font-family: 'Poppins', sans-serif !important;
-    color: #ff8c00 !important;
-    font-size: 14px !important;
-    font-weight: 400 !important;
-    letter-spacing: 2.5px !important;
-    text-transform: uppercase !important;
+/* MICRO TAGLINE WITH LINES */
+.pedagogy-page .pedagogy-micro-tagline {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.pedagogy-page .pedagogy-micro-tagline .tag-line-stroke {
     display: inline-block;
-    margin-bottom: 16px;
-    background: rgba(255, 140, 0, 0.1);
-    padding: 6px 16px;
-    border-radius: 30px;
-    border: 1px solid rgba(255, 140, 0, 0.25);
+    width: 32px;
+    height: 1.5px;
+    background-color: #94a3b8;
 }
 
+.pedagogy-page .pedagogy-micro-tagline .hero-tagline {
+    font-family: 'Poppins', sans-serif !important;
+    color: #ea580c !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+/* HERO MAIN TITLE */
 .pedagogy-page .hero-display-title {
-    font-family: 'poppins', sans-serif !important;
-    font-size: 54px !important;
-    font-weight: 500 !important;
-    color: #ffffff !important;
-    line-height: 1.18 !important;
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-size: 52px !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    line-height: 1.15 !important;
     letter-spacing: -0.5px !important;
-    margin-bottom: 22px !important;
+    margin-bottom: 20px !important;
+    text-align: left !important;
 }
 
 .pedagogy-page .hero-display-title .orange-text {
-    color: #ff8c00 !important;
-    font-family: 'Poppins', sans-serif !important;
+    color: #ea580c !important;
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-weight: 700 !important;
 }
 
+/* HERO DESCRIPTION PARAGRAPH */
 .pedagogy-page .hero-description-para {
     font-family: 'Poppins', sans-serif !important;
-    font-size: 19px !important;
+    font-size: 16px !important;
     line-height: 1.65 !important;
-    color: #cbd5e1 !important;
-    margin: 0 auto 36px auto !important;
-    max-width: 750px !important;
+    color: #475569 !important;
+    margin: 0 0 32px 0 !important;
+    max-width: 510px !important;
     font-weight: 400 !important;
+    text-align: left !important;
 }
 
+/* CTA BUTTONS */
 .pedagogy-page .hero-cta-flex-row {
     display: flex !important;
     align-items: center !important;
-    justify-content: center !important;
-    gap: 20px !important;
+    justify-content: flex-start !important;
+    gap: 16px !important;
 }
 
-.pedagogy-page .btn-dark-pill {
+.pedagogy-page .btn-orange-pill {
     font-family: 'Poppins', sans-serif !important;
-    background-color: #ff8c00 !important;
+    background-color: #ea580c !important;
     color: #ffffff !important;
     border: none !important;
-    padding: 15px 32px !important;
-    border-radius: 8px !important;
-    font-size: 16px !important;
+    padding: 13px 28px !important;
+    border-radius: 50px !important;
+    font-size: 15px !important;
     font-weight: 600 !important;
     text-decoration: none !important;
     display: inline-flex !important;
     align-items: center !important;
     gap: 10px !important;
-    box-shadow: 0 8px 20px rgba(255, 140, 0, 0.3) !important;
+    box-shadow: 0 4px 15px rgba(234, 88, 12, 0.25) !important;
     transition: all 0.3s ease !important;
 }
 
-.pedagogy-page .btn-dark-pill:hover {
-    background-color: #e06d00 !important;
+.pedagogy-page .btn-orange-pill:hover {
+    background-color: #c2410c !important;
     transform: translateY(-2px) !important;
-    box-shadow: 0 12px 25px rgba(255, 140, 0, 0.4) !important;
+    box-shadow: 0 8px 20px rgba(234, 88, 12, 0.35) !important;
 }
 
-.pedagogy-page .btn-link-orange {
+.pedagogy-page .btn-outline-navy {
     font-family: 'Poppins', sans-serif !important;
-    color: #ffffff !important;
-    background: rgba(255, 255, 255, 0.08) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    padding: 15px 30px !important;
-    border-radius: 8px !important;
-    font-size: 16px !important;
+    color: #0f172a !important;
+    background: transparent !important;
+    border: 1.5px solid #1e293b !important;
+    padding: 13px 28px !important;
+    border-radius: 50px !important;
+    font-size: 15px !important;
     font-weight: 600 !important;
     text-decoration: none !important;
     display: inline-flex !important;
@@ -163,10 +209,278 @@ ul {
     transition: all 0.3s ease !important;
 }
 
-.pedagogy-page .btn-link-orange:hover {
-    background: rgba(255, 255, 255, 0.18) !important;
-    color: #ff8c00 !important;
+.pedagogy-page .btn-outline-navy:hover {
+    background: #0f172a !important;
+    color: #ffffff !important;
     transform: translateY(-2px) !important;
+}
+
+/* RIGHT COLUMN PHOTO CONTAINER */
+.pedagogy-page .hero-photo-right {
+    position: relative;
+    width: 500px;
+    height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* WATERCOLOR BACKDROP BRUSH */
+.pedagogy-page .hero-watercolor-brush-bg {
+    position: absolute;
+    top: -35px;
+    right: -35px;
+    bottom: -35px;
+    left: -35px;
+    background: url('images-photo/watercolor_frame_bg.png') no-repeat center center;
+    background-size: contain;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.24;
+}
+
+/* FLOATING DASH SPARKLES */
+.pedagogy-page .hero-dash-accent {
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    z-index: 3;
+    display: flex;
+    gap: 6px;
+    pointer-events: none;
+    opacity: 0.55;
+}
+
+.pedagogy-page .hero-dash-accent .dash {
+    display: block;
+    width: 4px;
+    height: 18px;
+    background-color: #ea580c;
+    border-radius: 4px;
+}
+
+.pedagogy-page .hero-dash-accent .d1 {
+    transform: rotate(-25deg);
+}
+
+.pedagogy-page .hero-dash-accent .d2 {
+    transform: rotate(15deg);
+    margin-top: -6px;
+}
+
+/* ORGANIC PHOTO FRAME */
+.pedagogy-page .hero-organic-photo-frame {
+    position: relative;
+    z-index: 2;
+    width: 470px;
+    height: 325px;
+    border-radius: 40px 140px 50px 120px / 110px 45px 130px 60px;
+    overflow: hidden;
+    border: 6px solid #ffffff;
+    box-shadow: 0 18px 40px rgba(234, 88, 12, 0.12), 0 6px 18px rgba(15, 23, 42, 0.06);
+    background-color: #f8fafc;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+}
+
+.pedagogy-page .hero-organic-photo-frame:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 24px 48px rgba(234, 88, 12, 0.18), 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.pedagogy-page .hero-organic-photo-frame .hero-photo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.pedagogy-page .hero-organic-photo-frame:hover .hero-photo-img {
+    transform: scale(1.03);
+}
+
+/* FLOATING PHOTO TAG BADGE */
+.pedagogy-page .photo-frame-tag {
+    position: absolute;
+    bottom: 16px;
+    left: 20px;
+    z-index: 3;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.pedagogy-page .photo-frame-tag i {
+    color: #f97316;
+}
+
+/* BOTANICAL ACCENT ON FRAME */
+.pedagogy-page .hero-frame-botanical-branch {
+    position: absolute;
+    bottom: -25px;
+    right: -35px;
+    width: 170px;
+    z-index: 4;
+    pointer-events: none;
+    opacity: 0.26;
+    transition: transform 0.4s ease;
+}
+
+.pedagogy-page .hero-photo-right:hover .hero-frame-botanical-branch {
+    transform: scale(1.05) rotate(2deg);
+}
+
+.pedagogy-page .hero-frame-botanical-branch img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* BOTTOM FEATURES HIGHLIGHTS BAR */
+.pedagogy-page .hero-bottom-features-bar {
+    max-width: 1200px;
+    width: 90%;
+    margin: 18px auto 0;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 60px;
+    padding: 18px 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 10px 30px rgba(234, 88, 12, 0.05), 0 2px 10px rgba(0, 0, 0, 0.02);
+    position: relative;
+    z-index: 3;
+}
+
+.pedagogy-page .feature-bar-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.pedagogy-page .feature-icon-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #ffedd5;
+    color: #ea580c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.pedagogy-page .feature-content-text h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.pedagogy-page .feature-content-text p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #64748b;
+    margin: 2px 0 0 0;
+    line-height: 1.3;
+}
+
+.pedagogy-page .feature-bar-divider {
+    width: 1px;
+    height: 34px;
+    background-color: #cbd5e1;
+    opacity: 0.6;
+}
+
+/* RESPONSIVE MEDIA QUERIES FOR HERO */
+@media screen and (max-width: 1024px) {
+    .pedagogy-page .hero-wrapper-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .pedagogy-page .hero-info-left {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .pedagogy-page .hero-display-title {
+        text-align: center !important;
+        font-size: 42px !important;
+    }
+
+    .pedagogy-page .hero-description-para {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .pedagogy-page .hero-cta-flex-row {
+        justify-content: center !important;
+    }
+
+    .pedagogy-page .hero-photo-right {
+        width: 100%;
+        max-width: 460px;
+        margin-top: 30px;
+    }
+
+    .pedagogy-page .hero-bottom-features-bar {
+        flex-wrap: wrap;
+        border-radius: 24px;
+        gap: 20px;
+        justify-content: center;
+        padding: 24px;
+    }
+
+    .pedagogy-page .feature-bar-divider {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .pedagogy-page .hero-display-title {
+        font-size: 32px !important;
+    }
+
+    .pedagogy-page .hero-organic-photo-frame {
+        width: 320px;
+        height: 230px;
+    }
+
+    .pedagogy-page .hero-cta-flex-row {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .pedagogy-page .btn-orange-pill,
+    .pedagogy-page .btn-outline-navy {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .pedagogy-page .feature-bar-item {
+        width: 100%;
+    }
 }
 
 /* --- SECTION HEADINGS --- */
@@ -204,160 +518,453 @@ ul {
     font-weight: 400 !important;
 }
 
-/* --- RESIDENTIAL PEDAGOGY / OUR APPROACH (5 CARDS) --- */
+/* --- RESIDENTIAL PEDAGOGY / OUR APPROACH (BOTANICAL COMPOSITION) --- */
 .pedagogy-page .residential-pedagogy-section {
-    padding: 90px 0;
-    background-color: #ffffff;
+    position: relative;
+    padding: 75px 0 85px;
+    background: linear-gradient(180deg, #fffaf4 0%, #ffffff 100%);
+    overflow: hidden;
+}
+
+/* Very light cutout background watermark decoration */
+.pedagogy-page .residential-pedagogy-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images-photo/watercolor_frame_bg.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.12;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.pedagogy-page .residential-pedagogy-section > * {
+    position: relative;
+    z-index: 2;
+}
+
+.pedagogy-page .section-micro-tagline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.pedagogy-page .section-micro-tagline .tag-line-stroke {
+    display: inline-block;
+    width: 30px;
+    height: 1.5px;
+    background-color: #94a3b8;
+}
+
+.pedagogy-page .section-micro-tagline .section-micro-tag {
+    color: #ea580c !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    margin: 0 !important;
 }
 
 .pedagogy-page .five-columns-row-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 22px;
-    max-width: 1400px;
+    gap: 26px;
+    max-width: 1380px;
     width: 94%;
-    margin: 0 auto;
+    margin: 20px auto 0;
+    position: relative;
+    z-index: 2;
 }
 
+/* INDIVIDUAL BOTANICAL ACCENTS ON CARDS (COMPLETELY CONTAINED INSIDE CARDS) */
 .pedagogy-page .approach-pillar-card {
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 16px;
-    padding: 36px 22px 30px;
+    background: #ffffff;
+    border: 1px solid #ffedd5;
+    border-radius: 20px;
+    padding: 34px 22px 28px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 10px 30px rgba(234, 88, 12, 0.05), 0 2px 8px rgba(15, 23, 42, 0.03);
+    position: relative !important;
+    overflow: hidden !important;
+    z-index: 2;
+    transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.pedagogy-page .approach-pillar-card > * {
     position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    z-index: 2;
 }
 
 .pedagogy-page .approach-pillar-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.08);
-    border-color: rgba(255, 140, 0, 0.4);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(234, 88, 12, 0.16);
+    border-color: #f97316;
+    z-index: 5;
+}
+
+/* BOTANICAL LEAF OVERLAYS STRICTLY INSIDE CARDS */
+.pedagogy-page .card-botanical-accent {
+    position: absolute !important;
+    pointer-events: none;
+    z-index: 1 !important;
+    opacity: 0.32;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.pedagogy-page .approach-pillar-card:hover .card-botanical-accent {
+    opacity: 0.45;
+    transform: scale(1.05);
+}
+
+/* TOP-LEFT BOTANICAL LEAF (CARDS 1, 3, 5) - POSITIVE INSETS ONLY */
+.pedagogy-page .card-botanical-accent.leaf-left {
+    top: 10px;
+    left: 10px;
+    width: 90px;
+    height: 90px;
+    max-width: 45%;
+    transform: rotate(-5deg);
+}
+
+.pedagogy-page .card-botanical-accent.leaf-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* BOTTOM-RIGHT BOTANICAL LEAF (CARDS 2, 4) - POSITIVE INSETS ONLY */
+.pedagogy-page .card-botanical-accent.leaf-right {
+    bottom: 10px;
+    right: 10px;
+    width: 90px;
+    height: 90px;
+    max-width: 45%;
+    transform: rotate(10deg);
+}
+
+.pedagogy-page .card-botanical-accent.leaf-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 .pedagogy-page .pillar-icon-box.orange-bg {
-    width: 58px;
-    height: 58px;
-    background-color: #fff4ea;
-    color: #ff8c00;
+    position: relative;
+    z-index: 2;
+    width: 56px;
+    height: 56px;
+    background-color: #ffedd5;
+    color: #ea580c;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    font-size: 22px;
+    margin-bottom: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(234, 88, 12, 0.1);
 }
 
 .pedagogy-page .approach-pillar-card:hover .pillar-icon-box.orange-bg {
-    background-color: #ff8c00;
+    background-color: #ea580c;
     color: #ffffff;
-    transform: scale(1.08);
+    transform: scale(1.1) rotate(4deg);
+    box-shadow: 0 8px 20px rgba(234, 88, 12, 0.25);
 }
 
 .pedagogy-page .approach-pillar-card h3 {
-    font-family: 'Poppins', sans-serif !important;
-    font-size: 21px !important;
-    font-weight: 600 !important;
-    color: #0B1F44 !important;
-    margin-bottom: 12px !important;
-    line-height: 1.35 !important;
-    min-height: 52px;
+    position: relative;
+    z-index: 2;
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-size: 19px !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    margin-bottom: 10px !important;
+    line-height: 1.3 !important;
+    min-height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .pedagogy-page .approach-pillar-card p {
+    position: relative;
+    z-index: 2;
     font-family: 'Poppins', sans-serif !important;
-    font-size: 14.5px !important;
+    font-size: 13.5px !important;
     line-height: 1.6 !important;
-    color: #64748b !important;
+    color: #475569 !important;
     font-weight: 400 !important;
 }
 
 .pedagogy-page .card-bottom-accent-line {
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: #ff8c00;
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 60px;
+    height: 3px;
+    background-color: #ea580c;
+    border-radius: 3px;
+    transition: transform 0.35s ease;
+    z-index: 2;
 }
 
 .pedagogy-page .approach-pillar-card:hover .card-bottom-accent-line {
-    transform: scaleX(1);
+    transform: translateX(-50%) scaleX(1);
 }
 
-/* --- THE EDUCATION GAP (4 CARDS) --- */
+/* --- THE EDUCATION GAP (4 CARDS MATCHING REFERENCE IMAGE EXACTLY) --- */
 .pedagogy-page .education-gap-section {
-    padding: 90px 0 100px;
-    background-color: #f8fafc;
+    position: relative;
+    padding: 80px 0 100px 0;
+    background: linear-gradient(180deg, #fffdf9 0%, #fff7ef 60%, #ffefe0 100%);
+    overflow: hidden;
 }
 
-.pedagogy-page .four-columns-gap-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 26px;
-    max-width: 1350px;
-    width: 94%;
+/* Very light SVG cutout background watermark decoration */
+.pedagogy-page .education-gap-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images-photo/watercolor_frame_bg.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.12;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.pedagogy-page .education-gap-section > * {
+    position: relative;
+    z-index: 2;
+}
+
+.pedagogy-page .education-gap-container {
+    max-width: 1280px;
+    width: 92%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Header Area */
+.pedagogy-page .centered-section-heading {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+.pedagogy-page .section-micro-tag {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    color: #ea580c !important;
+    letter-spacing: 2.5px !important;
+    text-transform: uppercase !important;
+    display: inline-block;
+    margin-bottom: 12px !important;
+}
+
+.pedagogy-page .challenge-title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.pedagogy-page .challenge-main-title {
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-size: 42px !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+}
+
+.pedagogy-page .challenge-main-title .highlight-orange {
+    color: #ea580c !important;
+}
+
+.pedagogy-page .heading-sparkle {
+    display: inline-flex;
+    align-items: center;
+}
+
+.pedagogy-page .challenge-main-desc {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+    color: #64748b !important;
+    max-width: 760px;
     margin: 0 auto;
 }
 
+/* 4-Columns Grid */
+.pedagogy-page .four-columns-gap-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    align-items: stretch;
+}
+
+/* Metric Cards */
 .pedagogy-page .gap-metric-card {
-    background-color: #ffffff;
-    border-radius: 16px;
-    padding: 36px 26px;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.03);
+    position: relative;
+    padding: 38px 24px 30px 24px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .pedagogy-page .gap-metric-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 16px 35px rgba(0,0,0,0.08);
 }
 
-.pedagogy-page .gap-icon-sphere.blue-bg {
-    width: 58px;
-    height: 58px;
-    background-color: #0B1F44;
-    color: #ffffff;
+/* Warm Card Background (Cards 1 & 3) */
+.pedagogy-page .gap-metric-card.warm-card {
+    background: linear-gradient(135deg, rgba(254, 243, 199, 0.75) 0%, rgba(255, 237, 213, 0.5) 100%);
+    border-radius: 40px 50px 35px 45px / 45px 35px 50px 40px;
+    border: 1px solid rgba(251, 146, 60, 0.18);
+    box-shadow: 0 10px 30px rgba(234, 88, 12, 0.04);
+}
+
+/* Cool Card Background (Cards 2 & 4) */
+.pedagogy-page .gap-metric-card.cool-card {
+    background: linear-gradient(135deg, rgba(224, 242, 254, 0.75) 0%, rgba(238, 242, 255, 0.5) 100%);
+    border-radius: 45px 35px 50px 40px / 35px 45px 40px 50px;
+    border: 1px solid rgba(59, 130, 246, 0.18);
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.04);
+}
+
+/* Top Badge */
+.pedagogy-page .gap-badge {
+    position: absolute;
+    top: 18px;
+    left: 22px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 22px;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: 15px;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
-.pedagogy-page .gap-metric-card:hover .gap-icon-sphere.blue-bg {
-    background-color: #ff8c00;
-    transform: scale(1.08);
+.pedagogy-page .gap-badge.orange-badge {
+    background-color: #ea580c;
+}
+
+.pedagogy-page .gap-badge.blue-badge {
+    background-color: #2563eb;
+}
+
+/* Illustration Box */
+.pedagogy-page .card-illustration-box {
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 16px;
 }
 
 .pedagogy-page .gap-metric-card h3 {
     font-family: 'Playfair Display', Georgia, serif !important;
-    font-size: 23px !important;
+    font-size: 21px !important;
     font-weight: 700 !important;
-    color: #0B1F44 !important;
-    margin-bottom: 12px !important;
+    color: #0f172a !important;
+    margin: 0 0 10px 0 !important;
+    line-height: 1.25 !important;
 }
 
 .pedagogy-page .gap-metric-card p {
     font-family: 'Poppins', sans-serif !important;
-    font-size: 15px !important;
-    line-height: 1.6 !important;
+    font-size: 13.5px !important;
+    line-height: 1.55 !important;
     color: #64748b !important;
+    margin: 0 !important;
+}
+
+/* Bottom Pill Line */
+.pedagogy-page .card-bottom-pill {
+    width: 36px;
+    height: 3px;
+    border-radius: 3px;
+    margin-top: 18px;
+}
+
+.pedagogy-page .card-bottom-pill.orange-pill {
+    background-color: #ea580c;
+}
+
+.pedagogy-page .card-bottom-pill.blue-pill {
+    background-color: #2563eb;
+}
+
+/* Responsive Media Queries */
+@media screen and (max-width: 1024px) {
+    .pedagogy-page .four-columns-gap-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .pedagogy-page .challenge-main-title {
+        font-size: 34px !important;
+    }
+
+    .pedagogy-page .gap-botanical-top-left {
+        width: 200px;
+        height: 200px;
+    }
+
+    .pedagogy-page .gap-botanical-bottom-right {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .pedagogy-page .four-columns-gap-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .pedagogy-page .challenge-main-title {
+        font-size: 28px !important;
+    }
+
+    .pedagogy-page .challenge-title-wrapper {
+        flex-direction: row;
+    }
+
+    .pedagogy-page .gap-metric-card {
+        padding: 34px 20px 24px 20px;
+    }
 }
 
 /* --- IMPACT RIBBON BAR --- */
@@ -369,6 +976,33 @@ ul {
     width: 92%;
     border-radius: 16px;
     box-shadow: 0 15px 35px rgba(11, 31, 68, 0.25);
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.pedagogy-page .impact-ribbon-bar-section::before {
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-image: url('images-photo/watercolor_frame_bg.png') !important;
+    background-size: 100% 100% !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    opacity: 0.15 !important;
+    filter: brightness(1.6) contrast(0.85);
+    pointer-events: none !important;
+    z-index: 1 !important;
+}
+
+.pedagogy-page .impact-ribbon-bar-section > * {
+    position: relative;
+    z-index: 2;
 }
 
 .pedagogy-page .ribbon-flex-container {

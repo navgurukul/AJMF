@@ -101,7 +101,7 @@ nav,
     top: 0;
     width: 100%;
     z-index: 100;
-    background: #0B1F44;
+    background: #ffffff;
     padding: 26px 0;
     /* pehle 20px tha */
     transition: .35s;
@@ -208,10 +208,11 @@ nav,
 
 .hero-slider-section {
     position: relative;
+    z-index: 1;
     width: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: visible;
     background: #111217;
 }
 
@@ -219,6 +220,7 @@ nav,
     position: relative;
     width: 100%;
     min-height: 640px;
+    overflow: hidden;
 }
 
 .hero-slide {
@@ -933,12 +935,7 @@ nav,
     font-weight: 600;
 }
 
-.testimonial-section {
-    padding: 70px 0;
-    background: #fbfbfb;
-    overflow: hidden;
-}
-
+.testimonial-section,
 .video-carousel-section {
     width: 100%;
     max-width: none;
@@ -947,6 +944,26 @@ nav,
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
+}
+
+.testimonial-section::before,
+.video-carousel-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('images-photo/watercolor_frame_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.testimonial-section > *,
+.video-carousel-section > * {
+    position: relative;
+    z-index: 1;
 }
 
 .video-carousel-container {
