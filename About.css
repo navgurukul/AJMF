@@ -144,9 +144,9 @@ ul {
 
 /* ================= Page-specific Header White Theme Override for About Anish Page ================= */
 header.header.white-header {
-    background: #ffffff !important;
-    border-bottom: 1px solid rgba(11, 45, 92, 0.08) !important;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+    background: #faf8f5 !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02) !important;
 }
 
 .white-header .logo-content h2 {
@@ -159,29 +159,29 @@ header.header.white-header {
 }
 
 .white-header .navbar > ul > li > a {
-    color: #0b2d5c !important;
+    color: #1f2937 !important;
     font-weight: 600 !important;
 }
 
 .white-header .navbar > ul > li > a:hover {
-    color: #ff7900 !important;
+    color: #e75e18 !important;
 }
 
 .white-header .navbar ul li.dropdown > a i {
-    color: #0b2d5c !important;
+    color: #6b7280 !important;
 }
 
 .white-header .dropdown-menu {
-    background: #0B1F44 !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
-    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    background: #ffffff !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12) !important;
+    border: 1px solid #e5e7eb !important;
 }
 
 .white-header .dropdown-menu li a,
 .white-header .dropdown-menu li a span,
 .white-header .dropdown-menu a,
 .white-header .dropdown-menu a span {
-    color: #ffffff !important;
+    color: #1f2937 !important;
 }
 
 .white-header .dropdown-menu li a:hover,
@@ -190,8 +190,8 @@ header.header.white-header {
 .white-header .dropdown-menu li a:hover span,
 .white-header .dropdown-menu li a:focus span,
 .white-header .dropdown-menu li a:active span {
-    color: #ffffff !important;
-    background: rgba(255, 255, 255, 0.12) !important;
+    color: #e75e18 !important;
+    background: #fff7ed !important;
 }
 
 .white-header .hamburger-menu {
@@ -199,134 +199,101 @@ header.header.white-header {
 }
 
 .white-header .donate-btn.desktop-only-btn {
-    background: #ff7900 !important;
+    background: #e75e18 !important;
     color: #ffffff !important;
-    box-shadow: 0 4px 14px rgba(255, 121, 0, 0.3) !important;
+    border-radius: 14px !important;
+    box-shadow: none !important;
+    padding: 11px 24px !important;
+    font-size: 15px !important;
 }
 
 .white-header .donate-btn.desktop-only-btn:hover {
-    background: #e06a00 !important;
+    background: #d45211 !important;
 }
 
-/* Language selector dropdown background preserved DARK BLUE (#17345f) */
+/* Language selector dropdown background light theme with dark text */
 .white-header .lang-dropdown-wrapper,
 .white-header .lang-dropdown-btn,
 .white-header .lang-selector,
 .white-header .language-dropdown {
-    background: #17345f !important;
-    color: #ffffff !important;
-    border: 1px solid rgba(255, 255, 255, 0.25) !important;
-    border-radius: 6px !important;
+    background: #ffffff !important;
+    color: #1f2937 !important;
+    border: 1.5px solid #e5e7eb !important;
+    border-radius: 14px !important;
 }
 
 .white-header .lang-dropdown-btn:hover,
 .white-header .lang-dropdown-btn:focus {
-    background: #0f274a !important;
-    border-color: #ff7900 !important;
-    color: #ffffff !important;
+    background: #ffffff !important;
+    border-color: #e75e18 !important;
+    color: #111827 !important;
 }
 
 .white-header .lang-dropdown-btn .lang-globe-icon {
-    color: #ff7900 !important;
+    color: #374151 !important;
 }
 
 .white-header .lang-dropdown-btn .lang-chevron,
 .white-header .lang-dropdown-btn #currentLangText,
 .white-header .lang-dropdown-btn span {
-    color: #ffffff !important;
+    color: #1f2937 !important;
 }
 
 .white-header .lang-dropdown-menu {
-    background: #17345f !important;
-    border: 1px solid rgba(255, 255, 255, 0.25) !important;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
 }
 
 .white-header .lang-dropdown-menu button,
 .white-header .lang-dropdown-menu a {
-    color: #ffffff !important;
+    color: #1f2937 !important;
 }
 
 .white-header .lang-dropdown-menu button:hover,
 .white-header .lang-dropdown-menu a:hover,
 .white-header .lang-dropdown-menu button.is-active,
 .white-header .lang-dropdown-menu a.is-active {
-    background: rgba(255, 121, 0, 0.2) !important;
-    color: #ff7900 !important;
+    background: #fff7ed !important;
+    color: #e75e18 !important;
 }
 
 /* =========================================================
    AJMF HERO - COHESIVE LIGHT ELEGANT THEME (#fffaf5)
    ========================================================= */
 
+/* =========================================================
+   AJMF HERO - ELEGANT DARK GRADIENT MEMORIAL BANNER
+   ========================================================= */
+
+/* =========================================================
+   AJMF HERO - ELEGANT DARK GRADIENT MEMORIAL BANNER
+   ========================================================= */
+
 .ajmf-hero {
     position: relative;
     width: 100%;
-    background-color: #fffaf5;
-    padding: 75px 0 90px 0;
+    background: linear-gradient(108deg, #061325 0%, #0b1f3b 45%, #132d54 70%, #873e15 92%, #aa4914 100%);
+    padding: 35px 0 0 0;
     overflow: hidden;
     display: flex;
-    align-items: center;
-    min-height: 560px;
+    align-items: flex-end;
+    min-height: 500px;
+    color: #ffffff;
 }
 
-/* Decorative CSS Shapes */
-.hero-shape-peach {
-    position: absolute;
-    top: -60px;
-    right: 5%;
-    width: 460px;
-    height: 460px;
-    border-radius: 50%;
-    background: #f7ddd2;
-    opacity: 0.45;
-    filter: blur(40px);
-    pointer-events: none;
-    z-index: 1;
-}
-
-.hero-shape-orange {
-    position: absolute;
-    bottom: -80px;
-    right: 18%;
-    width: 320px;
-    height: 320px;
-    border-radius: 50%;
-    background: rgba(255, 121, 0, 0.12);
-    filter: blur(50px);
-    pointer-events: none;
-    z-index: 1;
-}
-
-.hero-leaf-accent {
-    position: absolute;
-    top: 10%;
-    right: 3%;
-    width: 160px;
-    height: 220px;
-    opacity: 0.6;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.hero-leaf-accent svg {
-    width: 100%;
-    height: 100%;
-}
-
-/* Main Container - Two-Column Cohesive Layout */
+/* Main Container Layout */
 .ajmf-hero-container {
-    max-width: 1400px;
-    width: 94%;
+    max-width: 1440px;
+    width: 95%;
     height: auto;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
     position: relative;
     z-index: 5;
-    gap: 48px;
     overflow: visible;
 }
 
@@ -334,28 +301,58 @@ header.header.white-header {
     display: none;
 }
 
-/* Left Content - Cohesive Light Theme */
+/* Left Content Wrapper */
 .ajmf-hero-content {
     position: relative;
     left: auto;
     top: auto;
     transform: none;
     flex: 1;
-    max-width: 580px;
+    max-width: 500px;
     width: auto;
     background: transparent;
-    padding: 0;
+    padding: 0 0 30px 0;
+    margin-top: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     z-index: 10;
 }
 
+/* Botanical Flower Asset Watermark (Leaf asset coming from deep bottom edge) */
+.hero-flower-watermark {
+    position: absolute;
+    left: 290px;
+    bottom: -160px;
+    height: 550px;
+    width: auto;
+    opacity: 0.6;
+    filter: brightness(0.6) contrast(1.1);
+    pointer-events: none;
+    z-index: 2;
+    object-fit: contain;
+    margin-bottom: -20px;
+}
+
+/* Handwritten Brighter Tomorrow Image Asset (Right side of flower stem) */
+.hero-brighter-tomorrow-img {
+    position: absolute;
+    left: 450px;
+    bottom: 110px;
+    width: 185px;
+    height: auto;
+    z-index: 12;
+    pointer-events: none;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.4));
+}
+
 .ajmf-memory-label {
     display: flex;
     align-items: center;
     gap: 14px;
-    margin-bottom: 14px;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .ajmf-memory-label span {
@@ -363,33 +360,30 @@ header.header.white-header {
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 2.5px;
-    color: #ff7900;
+    color: #ea580c !important;
     text-transform: uppercase;
     white-space: nowrap;
 }
 
 .ajmf-memory-label .label-line,
 .ajmf-memory-label div {
-    width: 80px;
-    height: 2px;
-    background: #ff7900;
-    border-radius: 2px;
+    display: none !important;
 }
 
 .hero-title,
 .ajmf-hero-content h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 54px;
-    line-height: 1.12;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 66px;
+    line-height: 1.08;
     font-weight: 700;
     letter-spacing: -1px;
-    color: #0b2d5c;
+    color: #ffffff !important;
     margin: 0 0 10px 0;
 }
 
 .hero-title span,
 .ajmf-hero-content h1 span {
-    color: #ff7900;
+    color: #ea580c !important;
 }
 
 .hero-subtitle,
@@ -398,21 +392,22 @@ header.header.white-header {
     font-size: 26px;
     line-height: 1.35;
     font-style: italic;
-    font-weight: 500;
-    color: #0b2d5c;
+    font-weight: 400;
+    color: #ffffff !important;
     margin: 0 0 20px 0;
+    opacity: 0.95;
 }
 
 .hero-description,
 .ajmf-hero-content>p {
     font-family: 'Poppins', sans-serif;
-    font-size: 16.5px;
-    line-height: 1.7;
+    font-size: 15.5px;
+    line-height: 1.65;
     font-weight: 400;
-    color: #475569;
+    color: #cbd5e1 !important;
     margin: 0 0 32px 0;
     width: 100%;
-    max-width: 530px;
+    max-width: 520px;
 }
 
 .ajmf-hero-buttons {
@@ -420,18 +415,19 @@ header.header.white-header {
     align-items: center;
     gap: 16px;
     flex-wrap: wrap;
+    margin-bottom: 14px;
 }
 
 .ajmf-hero-buttons a {
     height: 48px;
-    padding: 0 30px;
+    padding: 0 28px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    border-radius: 30px;
+    border-radius: 50px;
     font-family: 'Poppins', sans-serif;
-    font-size: 14px;
+    font-size: 14.5px;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -440,32 +436,64 @@ header.header.white-header {
 /* Primary Button (Our Story) */
 .ajmf-btn-primary {
     color: #ffffff !important;
-    background: #ff7900 !important;
-    border: 1.5px solid #ff7900 !important;
-    box-shadow: 0 6px 20px rgba(255, 121, 0, 0.3) !important;
+    background: #ea580c !important;
+    border: 1.5px solid #ea580c !important;
+    box-shadow: 0 6px 20px rgba(234, 88, 12, 0.4) !important;
 }
 
 .ajmf-btn-primary:hover {
-    background: #ea6b00 !important;
-    border-color: #ea6b00 !important;
+    background: #c2410c !important;
+    border-color: #c2410c !important;
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(255, 121, 0, 0.4) !important;
+    box-shadow: 0 8px 25px rgba(234, 88, 12, 0.5) !important;
 }
 
-/* Secondary Button (Get Involved) - Dark Navy Border & Text on Light Background */
+/* Secondary Button (Get Involved) */
 .ajmf-btn-outline {
-    color: #0b2d5c !important;
+    color: #ffffff !important;
     background: transparent !important;
-    border: 1.5px solid #0b2d5c !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.75) !important;
 }
 
 .ajmf-btn-outline:hover {
-    background: #0b2d5c !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-color: #ffffff !important;
     color: #ffffff !important;
     transform: translateY(-2px);
 }
 
-/* Right Photo Area & Modern Frame */
+/* Bottom Tagline Bar */
+.ajmf-hero-tagline-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    margin-top: 8px;
+    margin-bottom: 24px;
+}
+
+.ajmf-hero-tagline-bar .tagline-text {
+    color: #8ea3bb;
+}
+
+.ajmf-hero-tagline-bar .bar-line {
+    width: 28px;
+    height: 2px;
+    background: #ea580c;
+    display: inline-block;
+}
+
+.ajmf-hero-tagline-bar .dot {
+    color: #ea580c;
+    font-weight: 700;
+    margin: 0 4px;
+}
+
+/* Right Photo Area - Anchored to Bottom Edge */
 .ajmf-hero-photo-area {
     position: relative;
     flex: 1;
@@ -475,64 +503,69 @@ header.header.white-header {
     background: transparent;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-self: flex-end;
     z-index: 5;
-}
-
-.ajmf-hero-photo-area::before,
-.ajmf-hero-photo-area::after {
-    display: none;
 }
 
 .ajmf-photo-frame {
     position: relative;
     width: 100%;
-    max-width: 440px;
-    background: #ffffff;
-    padding: 14px;
-    border-radius: 24px;
-    box-shadow: 0 20px 45px rgba(11, 45, 92, 0.1);
-    border: 1px solid rgba(247, 221, 210, 0.8);
+    max-width: 480px;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
     z-index: 4;
+    display: flex;
+    align-items: flex-end;
 }
 
 .ajmf-hero-photo {
     width: 100%;
-    height: 420px;
-    object-fit: cover;
-    object-position: top center;
-    border-radius: 16px;
+    height: 520px;
+    object-fit: contain;
+    object-position: bottom center;
+    border-radius: 0;
     display: block;
-    filter: none !important;
-    border: none !important;
-    box-shadow: none !important;
-    -webkit-mask-image: none !important;
-    mask-image: none !important;
+    margin-bottom: 0;
+    filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.4));
+}
+
+/* Handwritten Script Accent Text */
+.hero-script-overlay {
+    position: absolute;
+    left: -40px;
+    bottom: 80px;
+    font-family: 'Caveat', 'Playfair Display', cursive, serif;
+    font-size: 32px;
+    font-style: italic;
+    color: #fcd34d;
+    z-index: 12;
+    transform: rotate(-8deg);
+    text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    pointer-events: none;
+    line-height: 1.1;
 }
 
 /* Modern Floating Quote Card */
 .ajmf-hero-card {
     position: absolute;
-    bottom: -20px;
-    right: -20px;
-    width: 240px;
-    min-height: auto;
+    bottom: 80px;
+    right: 0;
+    width: 230px;
     background: #ffffff;
-    border-radius: 18px;
-    padding: 22px 18px;
-    box-shadow: 0 16px 36px rgba(11, 45, 92, 0.12);
+    border-radius: 20px;
+    padding: 24px 18px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
     text-align: center;
     z-index: 10;
-    border: 1px solid rgba(255, 121, 0, 0.15);
-    transform: none;
-    top: auto;
 }
 
 .ajmf-heart-circle {
-    width: 38px;
-    height: 38px;
-    background: #fff4ea;
+    width: 42px;
+    height: 42px;
+    background: #fff7ed;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -541,22 +574,25 @@ header.header.white-header {
 }
 
 .ajmf-heart-circle i {
-    color: #ff7900;
+    color: #ea580c;
     font-size: 16px;
 }
 
 .ajmf-hero-card p {
     font-family: 'Poppins', sans-serif;
-    font-size: 13px;
-    line-height: 1.55;
-    color: #0b2d5c;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #1e293b;
     font-weight: 600;
     margin: 0 0 10px 0;
 }
 
-.ajmf-hero-card .card-line,
-.ajmf-hero-card>span {
-    display: block;
+.ajmf-hero-card .card-line {
+    width: 24px;
+    height: 3px;
+    background: #ea580c;
+    border-radius: 2px;
+    margin: 0 auto;
 }
 
 

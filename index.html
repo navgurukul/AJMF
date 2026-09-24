@@ -23,7 +23,7 @@
 
 <!---  HEADER  --->
 
-<header class="header">
+<header class="header white-header">
     <div class="container">
 
         <div class="logo-area">
@@ -108,12 +108,27 @@
             </ul>
         </nav>
 
-        <!-- Desktop Apply Button -->
-        <a href="https://admissions.navgurukul.org/students/" class="donate-btn desktop-only-btn" target="_blank"
-            rel="noopener">
-            <i class="fa-solid fa-heart"></i>
-            <span data-i18n="apply_here">Apply Here</span>
-        </a>
+        <!-- Header Actions: Language Selector + Apply Button -->
+        <div class="header-actions">
+            <div class="lang-dropdown-wrapper">
+                <button class="lang-dropdown-btn" id="langDropdownBtn" type="button" aria-expanded="false" aria-label="Select Language">
+                    <i class="fa-solid fa-globe lang-globe-icon"></i>
+                    <span id="currentLangText">English</span>
+                    <i class="fa-solid fa-chevron-down lang-chevron"></i>
+                </button>
+                <ul class="lang-dropdown-menu" id="langDropdownMenu" role="menu">
+                    <li><button type="button" data-lang="en" class="is-active">English</button></li>
+                    <li><button type="button" data-lang="hi">Hindi (हिंदी)</button></li>
+                </ul>
+            </div>
+
+            <!-- Desktop Apply Button -->
+            <a href="https://admissions.navgurukul.org/students/" class="donate-btn desktop-only-btn" target="_blank"
+                rel="noopener">
+                <i class="fa-solid fa-heart"></i>
+                <span data-i18n="apply_here">Apply Here</span>
+            </a>
+        </div>
 
     </div>
 </header>

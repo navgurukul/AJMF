@@ -109,37 +109,44 @@
             </ul>
         </nav>
 
-        <!-- Desktop Apply Button -->
-        <a href="https://admissions.navgurukul.org/students/" class="donate-btn desktop-only-btn" target="_blank"
-            rel="noopener">
-            <i class="fa-solid fa-heart"></i>
-            <span data-i18n="apply_here">Apply Here</span>
-        </a>
+        <!-- Header Actions: Language Selector + Apply Button -->
+        <div class="header-actions">
+            <div class="lang-dropdown-wrapper">
+                <button class="lang-dropdown-btn" id="langDropdownBtn" type="button" aria-expanded="false" aria-label="Select Language">
+                    <i class="fa-solid fa-globe lang-globe-icon"></i>
+                    <span id="currentLangText">English</span>
+                    <i class="fa-solid fa-chevron-down lang-chevron"></i>
+                </button>
+                <ul class="lang-dropdown-menu" id="langDropdownMenu" role="menu">
+                    <li><button type="button" data-lang="en" class="is-active">English</button></li>
+                    <li><button type="button" data-lang="hi">Hindi (हिंदी)</button></li>
+                </ul>
+            </div>
+
+            <!-- Desktop Apply Button -->
+            <a href="https://admissions.navgurukul.org/students/" class="donate-btn desktop-only-btn" target="_blank"
+                rel="noopener">
+                <i class="fa-solid fa-heart"></i>
+                <span data-i18n="apply_here">Apply Here</span>
+            </a>
+        </div>
 
     </div>
 </header>
 
 <!-- ================= HERO SECTION ================= -->
 <section class="ajmf-hero">
-    <!-- Subtle Decorative CSS Shapes -->
-    <div class="hero-shape-peach"></div>
-    <div class="hero-shape-orange"></div>
-    <div class="hero-leaf-accent">
-        <svg viewBox="0 0 140 200" fill="none" stroke="#f7ddd2" stroke-width="2.5" stroke-linecap="round">
-            <path d="M20 180C45 130 55 90 85 45 C115 120 150 80 200 25" />
-            <path d="M55 145 C35 130 25 110 38 94 C58 98 68 121 55 145Z" fill="#f7ddd2" opacity="0.6" />
-            <path d="M76 100 C55 84 50 63 65 50 C86 58 91 82 76 100Z" fill="#f7ddd2" opacity="0.6" />
-        </svg>
-    </div>
-
     <div class="ajmf-hero-container">
 
         <!-- LEFT SIDE: CONTENT -->
         <div class="ajmf-hero-content">
 
+            <!-- Botanical Flower Watermark & Brighter Tomorrow Text anchored to Left Content -->
+            <img src="images-photo/ic_flower.png" alt="" class="hero-flower-watermark" />
+            <img src="images-photo/brighter_tommrow.png" alt="A brighter tomorrow" class="hero-brighter-tomorrow-img" />
+
             <div class="ajmf-memory-label">
                 <span data-i18n="about_hero_tagline">IN LOVING MEMORY OF</span>
-                <div class="label-line"></div>
             </div>
 
             <h1 class="hero-title">
@@ -151,22 +158,24 @@
             </h2>
 
             <p class="hero-description" data-i18n="about_hero_description">
-                The Anish Jadhav Memorial Foundation
-                (Anish Jadhav Memorial Foundation) was established
-                in loving memory of Anish, the beloved son of
-                Brigadier Kishor and Mrs. Neeta Jadhav.
+                The Anish Jadhav Memorial Foundation was established in loving memory of Anish, the beloved son of Brigadier Kishor and Mrs. Neeta Jadhav.
             </p>
 
             <div class="ajmf-hero-buttons">
                 <a href="#anish-story" class="ajmf-btn-primary">
                     <span data-i18n="our_story">Our Story</span>
-                    <i class="fas fa-arrow-right"></i>
+                    <i class="fas fa-chevron-right"></i>
                 </a>
 
                 <a href="getinvolved.html" class="ajmf-btn-outline">
                     <span data-i18n="nav_getinvolved">Get Involved</span>
-                    <i class="fas fa-arrow-right"></i>
+                    <i class="fas fa-chevron-right"></i>
                 </a>
+            </div>
+
+            <div class="ajmf-hero-tagline-bar">
+                <span class="bar-line"></span>
+                <span class="tagline-text">EDUCATE <span class="dot">&bull;</span> EMPOWER <span class="dot">&bull;</span> ELEVATE</span>
             </div>
 
         </div>
@@ -174,7 +183,7 @@
         <!-- RIGHT SIDE: FRAMED PHOTO & FLOATING CARD -->
         <div class="ajmf-hero-photo-area">
             <div class="ajmf-photo-frame">
-                <img src="images-photo/anish's_smile.jpeg" alt="Anish Jadhav" class="ajmf-hero-photo" />
+                <img src="images-photo/anish_plain_bg.png" alt="Anish Jadhav" class="ajmf-hero-photo" />
             </div>
 
             <!-- FLOATING CARD -->
