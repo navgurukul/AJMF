@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 52" width="250" height="52" fill="none">
+  <!-- NavGurukul Wordmark Light Version (for Dark Backgrounds) -->
+  <g transform="translate(2, 6)">
+    <!-- Pink 'nav' group -->
+    <path d="M 4 2 L 62 2" stroke="#E60067" stroke-width="3.5" stroke-linecap="square" />
+    <text x="2" y="35" fill="#E60067" font-family="'Poppins', 'Montserrat', sans-serif" font-weight="800" font-size="31" letter-spacing="-1px">nav</text>
+    
+    <!-- White 'gurukul' group for dark background visibility -->
+    <path d="M 68 2 L 236 2" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="square" />
+    <text x="68" y="35" fill="#FFFFFF" font-family="'Playfair Display', 'Georgia', 'Tiro Devanagari Hindi', serif" font-weight="700" font-size="30" letter-spacing="-0.5px">gurukul</text>
+  </g>
+</svg>

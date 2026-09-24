@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="logo.jpeg">
+    <link rel="shortcut icon" type="image/jpeg" href="logo.jpeg">
+    <title>Anish Jadhav Memorial Foundation</title>
+
+    <link rel="stylesheet" href="About.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<!---  HEADER  --->
+
+<header class="header white-header">
+    <div class="container">
+
+        <div class="logo-area">
+            <a href="index.html" style="display: flex; align-items: center; gap: 16px; text-decoration: none;">
+                <img src="logo.jpeg" alt="AJMF Logo">
+                <div class="logo-content">
+                    <h2>Anish Jadhav <br> Memorial Foundation</h2>
+                    <p>EDUCATE • EMPOWER • ELEVATE</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- Hamburger Menu Icon -->
+        <div class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle navigation menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav class="navbar" id="navMenu">
+            <ul>
+
+                <!-- ABOUT ANISH -->
+                <li>
+                    <a href="About.html" data-i18n="nav_about">About Anish</a>
+                </li>
+
+                <!-- HOME -->
+                <li class="dropdown">
+                    <a href="index.html">
+                        <span data-i18n="nav_home">Home</span> <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="mission.html#mission" data-i18n="nav_mission">Mission & Vision</a></li>
+                    </ul>
+                </li>
+
+                <!-- ACADEMICS -->
+                <li class="dropdown">
+                    <a href="programs.html">
+                        <span data-i18n="nav_academics">Academics</span> <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="programs.html" data-i18n="nav_programs">Our Programs</a></li>
+                        <li><a href="padagogy.html" data-i18n="nav_pedagogy">Pedagogy</a></li>
+                        <li><a href="campusled.html" data-i18n="nav_campusled">Student-Led Campus</a></li>
+                        <li><a href="A_day.html" data-i18n="nav_aday">A Day At Campus</a></li>
+                    </ul>
+                </li>
+
+                <!-- STUDENT LIFE -->
+                <li class="dropdown">
+                    <a href="gallery.html">
+                        <span data-i18n="nav_studentlife">Student Life</span> <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="gallery.html" data-i18n="nav_gallery">Gallery</a></li>
+                        <li><a href="events.html" data-i18n="nav_events">Events</a></li>
+                        <li><a href="facility.html" data-i18n="nav_facility">Campus & Facilities</a></li>
+                        <li><a href="success.html" data-i18n="nav_success">Success Stories</a></li>
+                    </ul>
+                </li>
+
+                <!-- CONTACT -->
+                <li class="dropdown">
+                    <a href="contact.html">
+                        <span data-i18n="nav_contact">Contact Us</span> <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="getinvolved.html" data-i18n="nav_getinvolved">Get Involved</a></li>
+                        <li><a href="Apply.html" data-i18n="nav_apply">Apply Now</a></li>
+                        <li><a href="donate.html" data-i18n="nav_donate">Donate Now</a></li>
+                    </ul>
+                </li>
+
+                <li class="mobile-only-item">
+                    <a href="https://admissions.navgurukul.org/students/" class="donate-btn mobile-donate-btn"
+                        target="_blank" rel="noopener">
+                        <i class="fa-solid fa-heart"></i>
+                        <span data-i18n="nav_apply">Apply Now</span>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <!-- Desktop Apply Button -->
+        <a href="https://admissions.navgurukul.org/students/" class="donate-btn desktop-only-btn" target="_blank"
+            rel="noopener">
+            <i class="fa-solid fa-heart"></i>
+            <span data-i18n="apply_here">Apply Here</span>
+        </a>
+
+    </div>
+</header>
+
+<!-- ================= HERO SECTION ================= -->
+<section class="ajmf-hero">
+    <!-- Subtle Decorative CSS Shapes -->
+    <div class="hero-shape-peach"></div>
+    <div class="hero-shape-orange"></div>
+    <div class="hero-leaf-accent">
+        <svg viewBox="0 0 140 200" fill="none" stroke="#f7ddd2" stroke-width="2.5" stroke-linecap="round">
+            <path d="M20 180C45 130 55 90 85 45 C115 120 150 80 200 25" />
+            <path d="M55 145 C35 130 25 110 38 94 C58 98 68 121 55 145Z" fill="#f7ddd2" opacity="0.6" />
+            <path d="M76 100 C55 84 50 63 65 50 C86 58 91 82 76 100Z" fill="#f7ddd2" opacity="0.6" />
+        </svg>
+    </div>
+
+    <div class="ajmf-hero-container">
+
+        <!-- LEFT SIDE: CONTENT -->
+        <div class="ajmf-hero-content">
+
+            <div class="ajmf-memory-label">
+                <span data-i18n="about_hero_tagline">IN LOVING MEMORY OF</span>
+                <div class="label-line"></div>
+            </div>
+
+            <h1 class="hero-title">
+                Anish <span>Jadhav</span>
+            </h1>
+
+            <h2 class="hero-subtitle" data-i18n="about_hero_subtitle">
+                Inspiring Lives Beyond Time
+            </h2>
+
+            <p class="hero-description" data-i18n="about_hero_description">
+                The Anish Jadhav Memorial Foundation
+                (Anish Jadhav Memorial Foundation) was established
+                in loving memory of Anish, the beloved son of
+                Brigadier Kishor and Mrs. Neeta Jadhav.
+            </p>
+
+            <div class="ajmf-hero-buttons">
+                <a href="#anish-story" class="ajmf-btn-primary">
+                    <span data-i18n="our_story">Our Story</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+                <a href="getinvolved.html" class="ajmf-btn-outline">
+                    <span data-i18n="nav_getinvolved">Get Involved</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE: FRAMED PHOTO & FLOATING CARD -->
+        <div class="ajmf-hero-photo-area">
+            <div class="ajmf-photo-frame">
+                <img src="images-photo/anish's_smile.jpeg" alt="Anish Jadhav" class="ajmf-hero-photo" />
+            </div>
+
+            <!-- FLOATING CARD -->
+            <div class="ajmf-hero-card">
+                <div class="ajmf-heart-circle">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <p data-i18n="about_floating_text">
+                    A life that touched many,<br>
+                    continues to inspire<br>
+                    millions.
+                </p>
+                <div class="card-line"></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="journey-content-section" id="anish-story">
+    <div class="journey-container">
+
+        <!-- LEFT COLUMN: Content & Read More -->
+        <div class="journey-col-left">
+            <div class="orange-top-accent-line"></div>
+            <p class="journey-tag-label" data-i18n="section_anish_journey">ANISH'S JOURNEY</p>
+            <h2 class="journey-main-heading" data-i18n="journey_main_heading">
+                A Life of <span class="highlight-orange">Passion</span>, Purpose & <span
+                    class="highlight-orange">Impact</span>
+            </h2>
+
+            <p class="journey-intro-text" data-i18n="journey_p1">
+                Anish was a bright, deeply compassionate, and multitalented young man who left a lasting impression on
+                everyone he met before his passing at the age of twenty-five. Academically gifted, he graduated with a
+                BBA in Marketing and earned the "Best Project of the College" award for his insightful comparative
+                study, "Marketing Strategies of Nikon vs Canon." His passion and disciplined self-learning led him to
+                master professional photography, paving the way for a remarkable achievement: being selected for Nikon
+                India Ltd.’s Core Technical Team.
+            </p>
+
+            <!-- Extra content jo Read More par expand hoga -->
+            <div id="extraInfoText" class="extra-info-text">
+                <p data-i18n="journey_p2">
+                    This prestigious role was typically reserved for film institute graduates with advanced training in
+                    cinematography, yet Anish stood out for his exceptional technical competence, interpersonal warmth,
+                    and natural ability to connect with people. In this position, he conducted nationwide photography
+                    workshops, demonstrated cutting-edge camera technologies, and supported major promotional
+                    initiatives. Outside of his professional life, Anish loved playing the guitar, and his cheerful,
+                    outgoing nature, quick humor, and genuine kindness earned him a wide, cherished circle of friends.
+                    Though his life was brief, his dream, spirit, and legacy continue to inspire those who knew him.
+                </p>
+            </div>
+
+            <a href="javascript:void(0);" id="journeyReadMoreBtn" class="btn-view-photos">
+                <span id="journeyBtnText" data-i18n="read_more">Read More</span>
+                <i id="journeyBtnIcon" class="fas fa-chevron-down" style="margin-left: 6px;"></i>
+            </a>
+        </div>
+
+        <!-- CENTER COLUMN: Editorial Scrapbook Photo Composition -->
+        <div class="journey-col-center">
+            <div class="journey-polaroid-wrapper">
+                <!-- Layer 1: Light Cream/Beige/Peach Zigzag Paint-Brush Backdrop -->
+                <div class="journey-painted-backdrop"></div>
+
+                <!-- Layer 2: Half-Hidden Vintage Camera Line-Art Sketch (On LEFT Side) -->
+                <div class="journey-camera-sketch-wrapper">
+                    <svg class="journey-camera-sketch-svg" viewBox="0 0 180 150" fill="none" stroke="#B87A4F"
+                        stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <!-- Detailed Rangefinder Vintage Camera Body -->
+                        <rect x="20" y="42" width="145" height="92" rx="10" fill="rgba(253, 246, 238, 0.92)"
+                            stroke="#B87A4F" />
+                        <path d="M20 66H165" stroke="#D4996A" stroke-width="1.5" stroke-dasharray="4 3" />
+                        <path d="M50 42V26C50 23 52 21 55 21H125C128 21 130 23 130 26V42"
+                            fill="rgba(250, 238, 224, 0.85)" />
+                        <!-- Buttons & Dial -->
+                        <rect x="35" y="26" width="12" height="16" rx="2" fill="#E06A28" />
+                        <circle cx="145" cy="28" r="8" stroke="#B87A4F" fill="#FDF5EB" />
+                        <rect x="100" y="28" width="20" height="11" rx="2" stroke="#B87A4F" fill="#E06A28"
+                            opacity="0.4" />
+                        <!-- Main Concentric Lens -->
+                        <circle cx="90" cy="88" r="36" fill="#FDF5EB" stroke="#B87A4F" />
+                        <circle cx="90" cy="88" r="28" fill="rgba(224, 106, 40, 0.15)" stroke="#D4996A" />
+                        <circle cx="90" cy="88" r="18" fill="#B87A4F" opacity="0.25" />
+                        <circle cx="82" cy="80" r="5" fill="#FFFFFF" opacity="0.8" />
+                        <rect x="35" y="52" width="18" height="14" rx="2" stroke="#D4996A" />
+                        <path d="M12 60H20M165 60H173" stroke="#B87A4F" stroke-width="3" />
+                    </svg>
+                </div>
+
+                <!-- Layer 3: Subtle Hand-Drawn Sparkle Doodles -->
+                <div class="journey-doodle-backdrop">
+                    <svg class="journey-doodle-svg doodle-left-sparkle" viewBox="0 0 40 40" fill="none" stroke="#D4996A"
+                        stroke-width="1.8" stroke-linecap="round">
+                        <path d="M20 5V35M5 20H35M10 10L30 30M30 10L10 30" opacity="0.75" />
+                    </svg>
+                    <svg class="journey-doodle-svg doodle-top-sparkle" viewBox="0 0 40 40" fill="none" stroke="#E06A28"
+                        stroke-width="1.6" stroke-linecap="round">
+                        <path d="M20 5V35M5 20H35" opacity="0.6" />
+                    </svg>
+                </div>
+
+                <!-- Layer 4: Upper-Right Handwritten Text Note -->
+                <div class="journey-note-top-right">
+                    <span class="journey-script-text">A brighter<br>tomorrow</span>
+                </div>
+
+                <!-- Layer 5: Tilted Framed Anish Photograph (Rotated Clockwise) -->
+                <div class="journey-polaroid-frame">
+                    <div class="journey-tape-accent"></div>
+                    <img src="images-photo/anish.png" alt="Anish Journey" class="journey-card-img">
+                </div>
+
+                <!-- Layer 6: Lower-Right Floating Paper Card -->
+                <div class="journey-card-bottom-right">
+                    <div class="journey-floating-paper">
+                        <span class="journey-floating-text">Capture<br>Create<br>Inspire</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN: 4 Journey Highlight Items -->
+        <div class="journey-col-right">
+            <div class="timeline-list-wrapper">
+
+                <div class="timeline-item-row">
+                    <div class="journey-icon-circle">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-text-node">
+                        <h3 data-i18n="timeline_node1_title">Early Life & Education</h3>
+                        <p data-i18n="timeline_node1_desc">Excelled in academics and developed a curiosity for learning
+                            and exploring new ideas.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item-row">
+                    <div class="journey-icon-circle">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <div class="timeline-text-node">
+                        <h3 data-i18n="timeline_node2_title">Passion for Photography</h3>
+                        <p data-i18n="timeline_node2_desc">A gifted photographer who saw the world through a unique and
+                            creative lens.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item-row">
+                    <div class="journey-icon-circle">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-text-node">
+                        <h3 data-i18n="timeline_node3_title">Career at Nikon</h3>
+                        <p data-i18n="timeline_node3_desc">Associated with Nikon India Ltd., where his talent and
+                            dedication were truly recognized.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item-row">
+                    <div class="journey-icon-circle">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="timeline-text-node">
+                        <h3 data-i18n="timeline_node4_title">Community Impact</h3>
+                        <p data-i18n="timeline_node4_desc">Supported education, conducted workshops and inspired young
+                            minds to learn big.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div class="ajmf-custom-wrapper">
+
+    <section class="ajmf-section-container">
+        <div class="ajmf-section" data-i18n="values_guiding_light">His Values, Our Guiding Light</div>
+        <h2 class="ajmf-section-title" data-i18n="values_lived_by_title">The Values He Lived By</h2>
+        <!-- <div class="ajmf-title-divider"></div> -->
+
+        <div class="ajmf-values-grid">
+            <div class="ajmf-value-card">
+                <div class="ajmf-icon-circle">
+                    <i class="fas fa-hand-holding-heart brand-custom-icon"></i>
+                </div>
+                <h3 class="ajmf-card-heading" data-i18n="val_card1_title">Compassion</h3>
+                <div class="ajmf-card-divider"></div>
+                <p class="ajmf-card-text" data-i18n="val_card1_desc">He cared deeply for people and believed in making a
+                    difference.</p>
+            </div>
+
+            <div class="ajmf-value-card">
+                <div class="ajmf-icon-circle">
+                    <i class="fas fa-book-open brand-custom-icon"></i>
+                </div>
+                <h3 class="ajmf-card-heading" data-i18n="val_card2_title">Education</h3>
+                <div class="ajmf-card-divider"></div>
+                <p class="ajmf-card-text" data-i18n="val_card2_desc">He valued knowledge and supported learning for all.
+                </p>
+            </div>
+
+            <div class="ajmf-value-card">
+                <div class="ajmf-icon-circle">
+                    <i class="fas fa-camera brand-custom-icon"></i>
+                    <!-- <i class="fa-light fa-camera"></i> -->
+                </div>
+                <h3 class="ajmf-card-heading" data-i18n="val_card3_title">Creativity</h3>
+                <div class="ajmf-card-divider"></div>
+                <p class="ajmf-card-text" data-i18n="val_card3_desc">His creativity and passion inspired everyone around
+                    him.</p>
+            </div>
+
+            <div class="ajmf-value-card">
+                <div class="ajmf-icon-circle">
+                    <i class="fas fa-user-group brand-custom-icon"></i>
+                </div>
+                <h3 class="ajmf-card-heading" data-i18n="val_card4_title">Leadership</h3>
+                <div class="ajmf-card-divider"></div>
+                <p class="ajmf-card-text" data-i18n="val_card4_desc">A natural leader who motivated and empowered
+                    others.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= OUR PARTNER SECTION (EXACT OVERLAPPING DESIGN) ================= -->
+    <section class="our-partner-section" id="partner">
+        <div class="partner-wrapper-row">
+            <!-- LEFT DARK GREEN PANEL -->
+            <div class="partner-green-panel">
+                <span class="partner-tag" data-i18n="partner_label">OUR PARTNER</span>
+                <h2 class="partner-title" data-i18n="partner_title_stronger">Stronger Together.<br>Greater Impact.</h2>
+                <p class="partner-desc" data-i18n="partner_banner_desc">
+                    Anish Jadhav Memorial Foundation is proud to partner with <span class="navgurukul-name"><span
+                            class="nav-text">Nav</span><span class="gurukul-text">Gurukul</span></span> to empower youth
+                    through industry-relevant education, technology and career-focused learning.
+                </p>
+                <a href="partnership.html" class="btn-partner-learn" data-i18n="explore_partnership">
+                    Explore Our Partnership <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- RIGHT CREAM AREA WITH OVERLAPPING WHITE CARD -->
+            <div class="partner-cream-area">
+                <div class="partner-overlapping-card">
+                    <!-- LOGOS GROUP -->
+                    <div class="partner-logos-group">
+                        <img src="logo.jpeg" alt="AJMF Logo" class="partner-logo-img">
+                        <span class="partner-multiply"><i class="fa-solid fa-handshake"></i></span>
+                        <img src="navgurukul.logo.jpg" alt="NavGurukul Logo" class="partner-logo-img navgurukul-img">
+                    </div>
+
+                    <!-- VERTICAL SEPARATOR LINE (|) -->
+                    <div class="partner-vertical-line"></div>
+
+                    <!-- BENEFITS GROUP (HORIZONTAL ON DESKTOP) -->
+                    <div class="partner-benefits-group">
+                        <div class="partner-benefit-item">
+                            <div class="benefit-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+                            <span class="benefit-label" data-i18n="partner_benefit_1">Quality Education</span>
+                        </div>
+                        <div class="partner-benefit-item">
+                            <div class="benefit-icon"><i class="fa-solid fa-code"></i></div>
+                            <span class="benefit-label" data-i18n="partner_benefit_2">Skill Development</span>
+                        </div>
+                        <div class="partner-benefit-item">
+                            <div class="benefit-icon"><i class="fa-solid fa-briefcase"></i></div>
+                            <span class="benefit-label" data-i18n="partner_benefit_3">Career Opportunities</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= HIS LEGACY IN NUMBERS SECTION ================= -->
+    <section class="stats-outer-wrapper">
+        <div class="ajmf-stats-inner-card">
+            <!-- LEFT BOTANICAL LEAF DECORATION (SAME AS HIS VALUES SECTION) -->
+            <div class="stats-tree-left">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 320">
+                    <path d="M20 300 C45 250 55 210 85 165 C115 120 150 80 200 25" fill="none" stroke="#f3cabb" stroke-width="4" stroke-linecap="round"/>
+                    <path d="M55 225 C35 210 25 190 38 174 C58 178 68 201 55 225Z" fill="#f7ddd2"/>
+                    <path d="M63 218 C72 195 91 185 105 194 C101 214 82 226 63 218Z" fill="#f7ddd2"/>
+                    <path d="M76 180 C55 164 50 143 65 130 C86 138 91 162 76 180Z" fill="#f7ddd2"/>
+                    <path d="M86 174 C99 151 119 145 132 157 C126 177 105 185 86 174Z" fill="#f7ddd2"/>
+                    <path d="M105 138 C86 122 82 102 98 90 C118 100 122 121 105 138Z" fill="#f7ddd2"/>
+                    <path d="M116 132 C130 109 150 104 163 116 C157 136 137 143 116 132Z" fill="#f7ddd2"/>
+                    <path d="M135 101 C119 85 117 66 132 54 C150 65 153 85 135 101Z" fill="#f7ddd2"/>
+                    <path d="M147 94 C161 73 179 69 191 81 C185 99 166 105 147 94Z" fill="#f7ddd2"/>
+                    <path d="M163 68 C151 52 154 36 168 28 C182 40 179 57 163 68Z" fill="#f7ddd2"/>
+                    <circle cx="35" cy="260" r="5" fill="#f3cabb"/>
+                    <circle cx="72" cy="205" r="4" fill="#f3cabb"/>
+                    <circle cx="112" cy="145" r="5" fill="#f3cabb"/>
+                </svg>
+            </div>
+
+            <!-- RIGHT HANDWRITTEN DECORATION (INSIDE INNER CARD) -->
+            <div class="stats-script-right">
+                <span>A<br>brighter<br>tomorrow</span>
+                <svg class="script-stroke-svg" viewBox="0 0 80 15" fill="none" stroke="#E06A28" stroke-width="2"
+                    stroke-linecap="round">
+                    <path d="M5 8C25 3 55 12 75 5" opacity="0.65" />
+                </svg>
+            </div>
+
+            <!-- CENTERED HEADING WITH EYEBROW ACCENT LINES -->
+            <div class="stats-header-group">
+                <div class="ajmf-section-tagline" data-i18n="legacy_numbers">HIS LEGACY IN NUMBERS</div>
+                <h2 class="ajmf-section-title" data-i18n="impact_that_lasts">Creating <span
+                        class="highlight-orange">Impact</span> That Lasts</h2>
+                <div class="ajmf-title-divider"></div>
+            </div>
+
+            <!-- 4 IMPACT ITEMS IN ONE ROW (DESKTOP) WITH SUBTLE DIVIDERS -->
+            <div class="ajmf-stats-row">
+                <div class="ajmf-stat-item">
+                    <div class="ajmf-stat-icon-circle">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="ajmf-stat-info">
+                        <div class="ajmf-stat-number">500+</div>
+                        <div class="ajmf-stat-label" data-i18n="stat_students_inspired">Students Inspired</div>
+                    </div>
+                </div>
+
+                <div class="ajmf-stat-item">
+                    <div class="ajmf-stat-icon-circle">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <div class="ajmf-stat-info">
+                        <div class="ajmf-stat-number">7+</div>
+                        <div class="ajmf-stat-label" data-i18n="stat_programs">Programs Conducted</div>
+                    </div>
+                </div>
+
+                <div class="ajmf-stat-item">
+                    <div class="ajmf-stat-icon-circle">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="ajmf-stat-info">
+                        <div class="ajmf-stat-number">10+</div>
+                        <div class="ajmf-stat-label" data-i18n="stat_partners">Partner Organizations</div>
+                    </div>
+                </div>
+
+                <div class="ajmf-stat-item">
+                    <div class="ajmf-stat-icon-circle">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="ajmf-stat-info">
+                        <div class="ajmf-stat-number">25+</div>
+                        <div class="ajmf-stat-label" data-i18n="stat_events_label">Events</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+
+<section class="ajmf-gallery-section">
+
+    <!-- Right side decorative leaves -->
+    <div class="ajmf-leaf-tree">
+
+        <span class="tree-stem"></span>
+
+        <span class="leaf leaf-1"></span>
+        <span class="leaf leaf-2"></span>
+        <span class="leaf leaf-3"></span>
+        <span class="leaf leaf-4"></span>
+        <span class="leaf leaf-5"></span>
+        <span class="leaf leaf-6"></span>
+        <span class="leaf leaf-7"></span>
+        <span class="leaf leaf-8"></span>
+
+    </div>
+
+
+    <div class="ajmf-gallery-container">
+
+        <!-- Heading -->
+
+        <div
+            class="ajmf-section-tagline"
+            data-i18n="glimpses_of_anish">
+            Glimpses Of Anish
+        </div>
+
+        <h2
+            class="ajmf-section-title"
+            data-i18n="section_memories">
+            Memories That Inspire
+        </h2>
+
+        <div class="ajmf-title-divider"></div>
+
+
+        <!-- Gallery Cards -->
+
+        <div class="ajmf-gallery-grid">
+
+
+            <!-- CARD 1 -->
+
+            <div
+                class="ajmf-gallery-card"
+                style="
+                    background-image: url('images-photo/anish_camra.jpeg');
+                    background-position: center;
+                    background-size: contain;
+                "
+            >
+
+                <div class="ajmf-gallery-overlay">
+
+                    <div class="ajmf-gallery-icon-circle">
+                        <i class="fas fa-camera"></i>
+                    </div>
+
+                    <h4 data-i18n="gallery_card1_text">
+                        A Visionary<br>
+                        Eye for Life
+                    </h4>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 2 -->
+
+            <div
+                class="ajmf-gallery-card"
+                style="
+                    background-image: url('images-photo/anish\'s_smile.jpeg');
+                    background-position: center;
+                    /* background-size: cover; */
+                "
+            >
+
+                <div class="ajmf-gallery-overlay">
+
+                    <div class="ajmf-gallery-icon-circle">
+                        <i class="fas fa-face-smile"></i>
+                    </div>
+
+                    <h4 data-i18n="gallery_card2_text">
+                        The Smile<br>
+                        That Led Teams
+                    </h4>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 3 -->
+
+            <div
+                class="ajmf-gallery-card"
+                style="
+                    background-image: url('images-photo/anish.png');
+                    background-position: center;
+                    background-size: cover;
+                "
+            >
+
+                <div class="ajmf-gallery-overlay">
+
+                    <div class="ajmf-gallery-icon-circle">
+                        <i class="fas fa-star"></i>
+                    </div>
+
+                    <h4 data-i18n="gallery_card3_text">
+                        Driven by<br>
+                        Professional Excellence
+                    </h4>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<body>
+    <div class="ajmf-vision-section-wrapper">
+        <section class="ajmf-vision-banner">
+            <div class="ajmf-vision-content-left">
+                <div class="ajmf-vision-quote">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <h3 class="ajmf-vision-text" data-i18n="vision_banner_text">His vision continues to inspire future
+                    generations every day.</h3>
+                <div class="ajmf-vision-divider"></div>
+                <a href="donate.html" class="ajmf-vision-btn" data-i18n="support_mission">
+                    Support The Mission <i class="far fa-gem"></i>
+                </a> </a>
+            </div>
+
+            <div class="ajmf-vision-image-right"></div>
+        </section>
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Column 1 -->
+            <div class="footer-col foundation">
+                <div class="logo-box">
+                    <img src="logo.jpeg" alt="AJMF Logo">
+                    <div class="footer-logo-content">
+                        <h2>Anish Jadhav <br> Memorial Foundation</h2>
+                        <p>EDUCATE • EMPOWER • ELEVATE</p>
+                    </div>
+                </div>
+
+                <p class="foundation-text" data-i18n="footer_foundation_text">
+                    Empowering young minds through education,
+                    research and community support.
+                </p>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/anishjmf" target="_blank" rel="noopener noreferrer"
+                        aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/explore/locations/112795623857018/anish-jadhav-memorial-foundation/"
+                        target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/posts/brigadier-dr-kishor-jadhav-ph-d-97a3934b_anish-jadhav-memorial-foundation-skilling-activity-7180232279640719360-Uw2g/"
+                        target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/@AnishJadhavMemorialFoundation" target="_blank"
+                        rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="footer-col">
+                <h3 data-i18n="footer_quick_links">Quick Links</h3>
+                <ul>
+                    <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                    <li><a href="About.html" data-i18n="nav_about">About Anish</a></li>
+                    <li><a href="programs.html" data-i18n="nav_academics">Academics</a></li>
+                    <li><a href="gallery.html" data-i18n="nav_studentlife">Student Life</a></li>
+                    <li><a href="contact.html" data-i18n="nav_contact">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="footer-col">
+                <h3 data-i18n="nav_programs">Our Programs</h3>
+                <ul>
+                    <li><a href="programs.html#school-of-programming" data-i18n="prog_sop">School of Programming</a>
+                    </li>
+                    <li><a href="programs.html#school-of-business" data-i18n="prog_sob">School of Business</a></li>
+                    <li><a href="programs.html#school-of-finance" data-i18n="prog_sof">School of Finance</a></li>
+                    <li><a href="programs.html#school-of-education" data-i18n="prog_soe">School of Education</a></li>
+                    <li><a href="programs.html#school-of-second-chance" data-i18n="prog_sosc">School of Second
+                            Chance</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4 -->
+            <div class="footer-col contact">
+                <h3 data-i18n="nav_contact">Contact Us</h3>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Anish+Jadhav+Memorial+Foundation+JW3M%2BC7+Gharukul+Properties+Survey+No.+60%2F1+Pathare+Wasti+Lohegaon+Pune+Maharashtra+411047+India"
+                        target="_blank" rel="noopener noreferrer">
+                        Anish Jadhav Memorial Foundation<br>
+                        JW3M+C7, Gharukul Properties,<br>
+                        Survey No. 60/1, Pathare Wasti,<br>
+                        Lohegaon, Pune,<br>
+                        Maharashtra 411047, India
+                    </a>
+                </p>
+                <p>
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:+919906155699">+91 99061 55699</a>
+                </p>
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:info@ajmfoundation.org">info@ajmfoundation.org</a>
+                </p>
+                <p>
+                    <i class="fas fa-globe"></i>
+                    <a href="http://anishjadhavmemorialfoundation.org/" target="_blank" rel="noopener noreferrer">
+                        anishjadhavmemorialfoundation.org
+                    </a>
+                </p>
+            </div>
+
+            <!-- Column 5 -->
+            <div class="footer-col newsletter">
+                <h3 data-i18n="footer_newsletter_title">Newsletter</h3>
+                <p data-i18n="footer_newsletter_desc">
+                    Stay updated with our latest
+                    initiatives and stories.
+                </p>
+                <form class="newsletter-form" novalidate>
+                    <input type="email" class="newsletter-email" placeholder="Enter your email"
+                        data-i18n-placeholder="placeholder_email" required aria-label="Email address">
+                    <button type="submit" data-i18n="subscribe">Subscribe</button>
+                    <div class="newsletter-message" aria-live="polite"></div>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © 2026 Anish Jadhav Memorial Foundation.
+                <span data-i18n="footer_rights">All Rights Reserved.</span>
+            </p>
+            <p data-i18n="footer_tagline">
+                Designed with ❤️ for a better tomorrow
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/language.js"></script>
+    <script src="header.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const journeyReadMoreBtn = document.getElementById('journeyReadMoreBtn');
+            const extraInfoText = document.getElementById('extraInfoText');
+            const journeyBtnText = document.getElementById('journeyBtnText');
+            const journeyBtnIcon = document.getElementById('journeyBtnIcon');
+
+            if (journeyReadMoreBtn && extraInfoText) {
+                journeyReadMoreBtn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    extraInfoText.classList.toggle('show');
+                    const isHi = (localStorage.getItem('language') === 'hi');
+                    if (extraInfoText.classList.contains('show')) {
+                        if (journeyBtnText) journeyBtnText.textContent = isHi ? 'कम पढ़ें' : 'Read Less';
+                        if (journeyBtnIcon) journeyBtnIcon.className = 'fas fa-chevron-up';
+                    } else {
+                        if (journeyBtnText) journeyBtnText.textContent = isHi ? 'और पढ़ें' : 'Read More';
+                        if (journeyBtnIcon) journeyBtnIcon.className = 'fas fa-chevron-down';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,535 @@
+/* ==========================================================
+   CONTACT US PAGE STYLES
+   Scoped under .contact-page-wrapper / .contact-page-body
+   ========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body.contact-page-body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    background-color: #ffffff;
+    color: #333333;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.contact-page-body * {
+    box-sizing: border-box;
+}
+
+/* ==========================================================
+   MAIN PAGE WRAPPER & CONTAINER
+   ========================================================== */
+.contact-page-wrapper {
+    background-color: #f8fafc;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.contact-container {
+    width: 90%;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+/* Section Title Standard */
+.contact-page-wrapper .section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.contact-page-wrapper .section-title h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 38px;
+    color: #0b1f44;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.contact-page-wrapper .section-title p {
+    font-size: 16px;
+    color: #64748b;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* Buttons */
+.contact-page-wrapper .btn-orange {
+    background-color: #ff8800;
+    color: #ffffff;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 18px rgba(255, 136, 0, 0.35);
+    border: none;
+    cursor: pointer;
+}
+
+.contact-page-wrapper .btn-orange:hover {
+    background-color: #e07700;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 22px rgba(255, 136, 0, 0.45);
+}
+
+/* ==========================================================
+   1. HERO SECTION
+   ========================================================== */
+.contact-page-wrapper .contact-hero-section {
+    position: relative;
+    background: linear-gradient(to right, #00173d 0%, #00173d 50%, rgba(0, 23, 61, 0.88) 70%, rgba(0, 23, 61, 0.3) 100%), 
+                url("get-img.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 120px 0 80px;
+    color: #ffffff;
+    text-align: center;
+    min-height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-page-wrapper .hero-content-box {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.contact-page-wrapper .hero-tag {
+    display: inline-block;
+    padding: 8px 24px;
+    border-radius: 30px;
+    background-color: #ff8800;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 15px rgba(255, 136, 0, 0.3);
+}
+
+.contact-page-wrapper .hero-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+
+.contact-page-wrapper .hero-description {
+    font-size: 16.5px;
+    line-height: 1.7;
+    color: #cbd5e1;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+
+/* ==========================================================
+   2. CONTACT MAIN SECTION (INFO & FORM GRID)
+   ========================================================== */
+.contact-page-wrapper .contact-main-section {
+    padding: 80px 0;
+    background-color: #f8fafc;
+}
+
+.contact-page-wrapper .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 36px;
+    align-items: start;
+}
+
+/* Left Column: Contact Info Card */
+.contact-page-wrapper .contact-info-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e2e8f0;
+    border-top: 5px solid #ff8800;
+}
+
+.contact-page-wrapper .contact-info-card h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 32px;
+    color: #0b1f44;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.contact-page-wrapper .contact-intro {
+    font-size: 14.5px;
+    color: #64748b;
+    line-height: 1.65;
+    margin-bottom: 30px;
+}
+
+.contact-page-wrapper .info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 26px;
+}
+
+.contact-page-wrapper .info-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #fff7ed;
+    color: #ff8800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+    border: 1px solid #ffedd5;
+}
+
+.contact-page-wrapper .info-content h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #0b1f44;
+    margin-bottom: 6px;
+}
+
+.contact-page-wrapper .info-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #475569;
+    margin: 0;
+}
+
+.contact-page-wrapper .info-content a {
+    color: #ff8800;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-page-wrapper .info-content a:hover {
+    color: #0b1f44;
+    text-decoration: underline;
+}
+
+.contact-page-wrapper .hours-text {
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* Follow Us Box */
+.contact-page-wrapper .follow-us-box {
+    margin-top: 32px;
+    padding-top: 26px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.contact-page-wrapper .follow-us-box h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0b1f44;
+    margin-bottom: 16px;
+}
+
+.contact-page-wrapper .social-links-grid {
+    display: flex;
+    gap: 12px;
+}
+
+.contact-page-wrapper .social-links-grid a {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #f1f5f9;
+    color: #0b1f44;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.contact-page-wrapper .social-links-grid a:hover {
+    background-color: #ff8800;
+    color: #ffffff;
+    border-color: #ff8800;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 14px rgba(255, 136, 0, 0.35);
+}
+
+/* Right Column: Contact Form Card */
+.contact-page-wrapper .contact-form-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e2e8f0;
+    border-top: 5px solid #0b1f44;
+}
+
+.contact-page-wrapper .contact-form-card h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 32px;
+    color: #0b1f44;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.contact-page-wrapper .form-subheading {
+    font-size: 14.5px;
+    color: #64748b;
+    margin-bottom: 28px;
+}
+
+.contact-page-wrapper .contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-page-wrapper .contact-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.contact-page-wrapper .contact-form label {
+    display: block;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #0b1f44;
+    margin-bottom: 6px;
+}
+
+.contact-page-wrapper .contact-form label .required {
+    color: #ef4444;
+}
+
+.contact-page-wrapper .contact-form input,
+.contact-page-wrapper .contact-form textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #1e293b;
+    background-color: #f8fafc;
+    transition: all 0.3s ease;
+}
+
+.contact-page-wrapper .contact-form input:focus,
+.contact-page-wrapper .contact-form textarea:focus {
+    outline: none;
+    border-color: #ff8800;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3.5px rgba(255, 136, 0, 0.15);
+}
+
+.contact-page-wrapper .send-btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contact-page-wrapper .form-status-msg {
+    margin-top: 14px;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+/* ==========================================================
+   3. FREQUENTLY ASKED QUESTIONS (FAQ ACCORDION)
+   ========================================================== */
+.contact-page-wrapper .faq-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.contact-page-wrapper .faq-accordion {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-page-wrapper .faq-item {
+    background-color: #ffffff;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.contact-page-wrapper .faq-item:hover {
+    border-color: #cbd5e1;
+}
+
+.contact-page-wrapper .faq-item.active {
+    border-color: #ff8800;
+    box-shadow: 0 6px 20px rgba(255, 136, 0, 0.12);
+}
+
+.contact-page-wrapper .faq-question {
+    width: 100%;
+    padding: 22px 26px;
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16.5px;
+    font-weight: 600;
+    color: #0b1f44;
+    text-align: left;
+    gap: 16px;
+}
+
+.contact-page-wrapper .faq-question:hover {
+    color: #ff8800;
+}
+
+.contact-page-wrapper .faq-icon {
+    font-size: 14px;
+    color: #ff8800;
+    transition: transform 0.3s ease;
+}
+
+.contact-page-wrapper .faq-item.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+.contact-page-wrapper .faq-answer {
+    padding: 0 26px 22px;
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #475569;
+    display: none;
+}
+
+.contact-page-wrapper .faq-answer a {
+    color: #ff8800;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.contact-page-wrapper .faq-answer a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================================
+   4. GOOGLE MAP SECTION
+   ========================================================== */
+.contact-page-wrapper .map-section {
+    padding: 0 0 40px;
+    background-color: #ffffff;
+}
+
+.contact-page-wrapper .map-wrapper {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1.5px solid #e2e8f0;
+}
+
+.contact-page-wrapper .map-wrapper iframe {
+    display: block;
+    width: 100%;
+    height: 450px;
+}
+
+
+/* ==========================================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================================== */
+@media screen and (max-width: 992px) {
+    html, body.contact-page-body {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    .contact-page-wrapper {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    .contact-page-wrapper .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contact-page-wrapper .hero-title {
+        font-size: 42px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contact-page-wrapper .contact-hero-section {
+        padding: 100px 0 60px;
+        min-height: 280px;
+    }
+
+    .contact-page-wrapper .hero-title {
+        font-size: 32px;
+    }
+
+    .contact-page-wrapper .hero-description {
+        font-size: 14.5px;
+    }
+
+    .contact-page-wrapper .contact-info-card,
+    .contact-page-wrapper .contact-form-card {
+        padding: 26px 20px;
+        border-radius: 16px;
+    }
+
+    .contact-page-wrapper .contact-form .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .contact-page-wrapper .faq-question {
+        padding: 18px 20px;
+        font-size: 15px;
+    }
+
+    .contact-page-wrapper .faq-answer {
+        padding: 0 20px 18px;
+        font-size: 14px;
+    }
+
+    .contact-page-wrapper .map-wrapper iframe {
+        height: 320px;
+    }
+}
