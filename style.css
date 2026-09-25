@@ -1393,67 +1393,105 @@ nav,
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
+    .hero-slider-track {
+        min-height: 480px;
+    }
+
     .hero-container {
-        padding: 110px 16px 65px;
+        padding: 95px 18px 55px;
     }
 
     .slide-title {
-        font-size: 24px;
+        font-size: 28px;
+        line-height: 1.25;
         margin-bottom: 12px;
     }
 
     .slide-description {
-        font-size: 13px;
+        font-size: 14px;
         line-height: 1.6;
-        margin-bottom: 20px;
+        margin-bottom: 18px;
     }
 
     .slide-features {
-        grid-template-columns: 1fr;
-        gap: 10px;
-        margin-bottom: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 12px;
+        margin-bottom: 22px;
     }
 
     .feature-item {
-        gap: 10px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.08);
+        padding: 6px 12px 6px 8px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(4px);
     }
 
     .feature-icon {
-        width: 34px;
-        height: 34px;
-        font-size: 13px;
+        width: 28px;
+        height: 28px;
+        font-size: 11px;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        background: rgba(255, 255, 255, 0.12);
+        flex-shrink: 0;
     }
 
     .feature-text h4 {
         font-size: 12px;
+        font-weight: 600;
+        margin: 0;
+        white-space: nowrap;
+        color: #ffffff;
     }
 
     .feature-text p {
-        font-size: 11px;
+        display: none;
     }
 
     .hero-btn {
-        width: 100%;
-        justify-content: center;
+        display: inline-flex;
+        width: fit-content;
+        min-width: 150px;
+        padding: 10px 22px;
+        font-size: 14px;
+        border-radius: 30px;
     }
 
     .slider-arrow {
-        width: 36px;
-        height: 36px;
-        font-size: 14px;
-    }
-
-    .prev-arrow {
-        left: 10px;
-    }
-
-    .next-arrow {
-        right: 10px;
+        display: none; /* Hide arrows on mobile to keep UI clean, swipe and dots handle navigation */
     }
 
     .slider-dots-container {
-        bottom: 16px;
+        bottom: 14px;
+        gap: 8px;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    .dot.active {
+        width: 24px;
+        border-radius: 5px;
+    }
+
+    .video-modal-container {
+        width: 95%;
+        border-radius: 12px;
+    }
+
+    .video-modal-close {
+        top: 8px;
+        right: 8px;
+        width: 36px;
+        height: 36px;
+        font-size: 20px;
     }
 
     .focus-cards {
@@ -1473,6 +1511,25 @@ nav,
         bottom: auto;
         margin-top: 15px;
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-container {
+        padding: 90px 16px 50px;
+    }
+
+    .slide-title {
+        font-size: 24px;
+    }
+
+    .slide-description {
+        font-size: 13px;
+        line-height: 1.55;
+    }
+
+    .feature-text h4 {
+        font-size: 11px;
     }
 }
 

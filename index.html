@@ -1208,6 +1208,32 @@
             if (sliderContainer) {
                 sliderContainer.addEventListener('mouseenter', stopAutoSlide);
                 sliderContainer.addEventListener('mouseleave', startAutoSlide);
+
+                // Mobile Touch Swipe Support
+                let touchStartX = 0;
+                let touchEndX = 0;
+
+                sliderContainer.addEventListener('touchstart', function (e) {
+                    if (e.touches && e.touches.length > 0) {
+                        touchStartX = e.touches[0].clientX;
+                    }
+                    stopAutoSlide();
+                }, { passive: true });
+
+                sliderContainer.addEventListener('touchend', function (e) {
+                    if (e.changedTouches && e.changedTouches.length > 0) {
+                        touchEndX = e.changedTouches[0].clientX;
+                        const diffX = touchStartX - touchEndX;
+                        if (Math.abs(diffX) > 40) {
+                            if (diffX > 0) {
+                                showSlide(currentSlide + 1); // Swipe left
+                            } else {
+                                showSlide(currentSlide - 1); // Swipe right
+                            }
+                        }
+                    }
+                    startAutoSlide();
+                }, { passive: true });
             }
 
             startAutoSlide();
