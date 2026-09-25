@@ -138,30 +138,33 @@ ul {
 .hero {
     position: relative;
     width: 100%;
-    min-height: 520px;
-    background-image: url('missionstudent.jpg');
+    min-height: 580px;
+    background-image: url('image.png');
     background-size: cover;
-    background-position: right center;
+    background-position: center right;
     background-repeat: no-repeat;
-    padding: 70px 0 75px 0;
+    padding: 95px 0 100px 0;
     margin: 0;
     display: flex;
     align-items: center;
     overflow: hidden;
 }
 
-/* Blue overlay scoped ONLY to the left text area + ~35px buffer */
+/* Full overlay blending left text background into right students image */
 .hero::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: min(calc((100vw - 1280px) / 2 + 520px + 35px), 620px);
+    right: 0;
+    bottom: 0;
+    width: 100%;
     height: 100%;
     background: linear-gradient(90deg,
             #eef5ff 0%,
-            #eef5ff calc(100% - 45px),
-            rgba(238, 245, 255, 0.85) calc(100% - 25px),
+            #eef5ff 38%,
+            rgba(238, 245, 255, 0.88) 54%,
+            rgba(238, 245, 255, 0.35) 72%,
             rgba(238, 245, 255, 0) 100%);
     z-index: 1;
     pointer-events: none;
@@ -171,9 +174,9 @@ ul {
     position: absolute;
     top: 0;
     left: 0;
-    width: 220px;
+    width: 260px;
     height: auto;
-    opacity: 0.18;
+    opacity: 0.22 !important;
     pointer-events: none;
     z-index: 2;
 }
@@ -182,6 +185,7 @@ ul {
     width: 90%;
     max-width: 1280px;
     margin: 0 auto;
+    padding: 0 45px;
     display: flex;
     align-items: center;
     position: relative;
@@ -189,9 +193,9 @@ ul {
 }
 
 .hero-content {
-    max-width: 500px;
+    max-width: 520px;
     width: 100%;
-    padding-left: 0 !important;
+    padding: 10px 0 !important;
 }
 
 .hero-tagline-wrapper {
@@ -322,17 +326,41 @@ ul {
 /* ================= MISSION & VISION ================= */
 .mission-vision {
     background-color: #f0f6fc !important;
-    background-image: url('watercolor_frame_bg.png') !important;
-    background-size: cover !important;
-    background-position: center top !important;
-    background-repeat: no-repeat !important;
+    background-image: none !important;
     width: 100% !important;
     padding: 75px 0 85px 0 !important;
     position: relative !important;
     z-index: 1 !important;
     border-radius: 0 !important;
     overflow: visible !important;
-    filter: hue-rotate(185deg) saturate(0.7) opacity(0.95);
+    filter: none !important;
+    opacity: 1 !important;
+}
+
+.mission-vision::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-image: url('watercolor_frame_bg.png') !important;
+    background-size: cover !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+    opacity: 0.22 !important;
+    filter: hue-rotate(185deg) saturate(0.55) !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
+}
+
+.mission-vision > * {
+    position: relative !important;
+    z-index: 1 !important;
+    opacity: 1 !important;
+    filter: none !important;
 }
 
 .mission-vision .section-title {
@@ -1049,7 +1077,7 @@ New
     background-repeat: no-repeat !important;
     background-position: center !important;
     background-size: contain !important;
-    opacity: 0.35 !important;
+    opacity: 0.18 !important;
     pointer-events: none !important;
     z-index: 0 !important;
 }
@@ -1086,7 +1114,7 @@ New
     background-repeat: no-repeat !important;
     background-position: center !important;
     background-size: contain !important;
-    opacity: 0.25 !important;
+    opacity: 0.14 !important;
     pointer-events: none !important;
     z-index: 0 !important;
 }
@@ -1823,4 +1851,86 @@ New
     .gallery-container h2 {
         font-size: 24px;
     }
+}
+
+/* ==========================================================
+   PARTNERSHIP & IMPACT SUBTLE CUTOUT BACKGROUNDS
+   ========================================================== */
+section.ajmf-values-outer-wrapper[id="partner"],
+section.our-partner-section[id="partner"],
+.our-partner-section,
+.our-partner-wrapper {
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+section.ajmf-values-outer-wrapper[id="partner"]::before,
+section.our-partner-section[id="partner"]::before,
+.our-partner-section::before,
+.our-partner-wrapper::before {
+    content: '' !important;
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-image: url('watercolor_frame_bg.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    opacity: 0.22 !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
+}
+
+section.ajmf-values-outer-wrapper[id="partner"] > *,
+section.our-partner-section[id="partner"] > *,
+.our-partner-section > *,
+.our-partner-wrapper > * {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.impact-section,
+.programs-impact-section,
+.campusled-impact-stats,
+.ready-section,
+.student-led-campus-page .ready-section {
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.impact-section::before,
+.programs-impact-section::before,
+.campusled-impact-stats::before,
+.ready-section::before,
+.student-led-campus-page .ready-section::before {
+    content: '' !important;
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-image: url('watercolor_frame_bg.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    opacity: 0.22 !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
+}
+
+.impact-section > *,
+.programs-impact-section > *,
+.campusled-impact-stats > *,
+.ready-section > *,
+.student-led-campus-page .ready-section > * {
+    position: relative !important;
+    z-index: 1 !important;
 }

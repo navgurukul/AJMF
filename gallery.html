@@ -7,14 +7,13 @@
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="logo.jpeg">
     <link rel="shortcut icon" type="image/jpeg" href="logo.jpeg">
-    <title>Anish Jadhav Memorial Foundation</title>
+    <title>Gallery | Anish Jadhav Memorial Foundation</title>
 
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="gallery.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="footer.css">
 
-    <!-- Google Font -->
+    <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -24,667 +23,595 @@
     <link rel="stylesheet" href="About.css">
 </head>
 
-<!---  HEADER  --->
+<body class="gallery-page-body">
 
-<header class="header">
-    <div class="container">
+    <!-- Botanical Watermark Leaves Backdrop (Matching Reference Style) -->
+    <img src="12_left_botanical_decor.png" class="gallery-botanical-topleft" alt="" aria-hidden="true">
+    <img src="13_right_botanical_decor.png" class="gallery-botanical-topright" alt="" aria-hidden="true">
+    <img src="12_left_botanical_decor.png" class="gallery-botanical-midleft" alt="" aria-hidden="true">
+    <img src="13_right_botanical_decor.png" class="gallery-botanical-midright" alt="" aria-hidden="true">
+    <img src="12_left_botanical_decor.png" class="gallery-botanical-botleft" alt="" aria-hidden="true">
+    <img src="13_right_botanical_decor.png" class="gallery-botanical-botright" alt="" aria-hidden="true">
 
-        <div class="logo-area">
-            <a href="index.html" style="display: flex; align-items: center; gap: 16px; text-decoration: none;">
-                <img src="logo.jpeg" alt="AJMF Logo">
-                <div class="logo-content">
-                    <h2>Anish Jadhav <br> Memorial Foundation</h2>
-                    <p>EDUCATE • EMPOWER • ELEVATE</p>
-                </div>
+    <!--- HEADER --->
+    <header class="header">
+        <div class="container">
+
+            <div class="logo-area">
+                <a href="index.html" style="display: flex; align-items: center; gap: 16px; text-decoration: none;">
+                    <img src="logo.jpeg" alt="AJMF Logo">
+                    <div class="logo-content">
+                        <h2>Anish Jadhav <br> Memorial Foundation</h2>
+                        <p>EDUCATE • EMPOWER • ELEVATE</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Hamburger Menu Icon -->
+            <div class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle navigation menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <nav class="navbar" id="navMenu">
+                <ul>
+
+                    <!-- ABOUT ANISH -->
+                    <li>
+                        <a href="About.html" data-i18n="nav_about">About Anish</a>
+                    </li>
+
+                    <!-- HOME -->
+                    <li class="dropdown">
+                        <a href="index.html">
+                            <span data-i18n="nav_home">Home</span> <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="mission.html#mission" data-i18n="nav_mission">Mission & Vision</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- ACADEMICS -->
+                    <li class="dropdown">
+                        <a href="programs.html">
+                            <span data-i18n="nav_academics">Academics</span> <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="programs.html" data-i18n="nav_programs">Our Programs</a></li>
+                            <li><a href="padagogy.html" data-i18n="nav_pedagogy">Pedagogy</a></li>
+                            <li><a href="campusled.html" data-i18n="nav_campusled">Student-Led Campus</a></li>
+                            <li><a href="A_day.html" data-i18n="nav_aday">A Day At Campus</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- STUDENT LIFE -->
+                    <li class="dropdown">
+                        <a href="gallery.html">
+                            <span data-i18n="nav_studentlife">Student Life</span> <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="gallery.html" data-i18n="nav_gallery">Gallery</a></li>
+                            <li><a href="events.html" data-i18n="nav_events">Events</a></li>
+                            <li><a href="facility.html" data-i18n="nav_facility">Campus & Facilities</a></li>
+                            <li><a href="success.html" data-i18n="nav_success">Success Stories</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- CONTACT -->
+                    <li class="dropdown">
+                        <a href="contact.html">
+                            <span data-i18n="nav_contact">Contact Us</span> <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="getinvolved.html" data-i18n="nav_getinvolved">Get Involved</a></li>
+                            <li><a href="Apply.html" data-i18n="nav_apply">Apply Now</a></li>
+                            <li><a href="donate.html" data-i18n="nav_donate">Donate Now</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="mobile-only-item">
+                        <a href="https://admissions.navgurukul.org/students/" class="donate-btn mobile-donate-btn"
+                            target="_blank" rel="noopener">
+                            <i class="fa-solid fa-heart"></i>
+                            <span data-i18n="nav_apply">Apply Now</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <!-- Desktop Apply Button -->
+            <a href="https://admissions.navgurukul.org/students/" class="donate-btn desktop-only-btn" target="_blank"
+                rel="noopener">
+                <i class="fa-solid fa-heart"></i>
+                <span data-i18n="apply_here">Apply Here</span>
             </a>
+
         </div>
+    </header>
 
-        <!-- Hamburger Menu Icon -->
-        <div class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle navigation menu">
-            <i class="fa-solid fa-bars"></i>
-        </div>
+    <main class="gallery-main-wrapper">
 
-        <nav class="navbar" id="navMenu">
-            <ul>
-
-                <!-- ABOUT ANISH -->
-                <li>
-                    <a href="About.html" data-i18n="nav_about">About Anish</a>
-                </li>
-
-                <!-- HOME -->
-                <li class="dropdown">
-                    <a href="index.html">
-                        <span data-i18n="nav_home">Home</span> <i class="fa-solid fa-chevron-down"></i>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="mission.html#mission" data-i18n="nav_mission">Mission & Vision</a></li>
-                    </ul>
-                </li>
-
-                <!-- ACADEMICS -->
-                <li class="dropdown">
-                    <a href="programs.html">
-                        <span data-i18n="nav_academics">Academics</span> <i class="fa-solid fa-chevron-down"></i>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="programs.html" data-i18n="nav_programs">Our Programs</a></li>
-                        <li><a href="padagogy.html" data-i18n="nav_pedagogy">Pedagogy</a></li>
-                        <li><a href="campusled.html" data-i18n="nav_campusled">Student-Led Campus</a></li>
-                        <li><a href="A_day.html" data-i18n="nav_aday">A Day At Campus</a></li>
-                    </ul>
-                </li>
-
-                <!-- STUDENT LIFE -->
-                <li class="dropdown">
-                    <a href="gallery.html">
-                        <span data-i18n="nav_studentlife">Student Life</span> <i class="fa-solid fa-chevron-down"></i>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="gallery.html" data-i18n="nav_gallery">Gallery</a></li>
-                        <li><a href="events.html" data-i18n="nav_events">Events</a></li>
-                        <li><a href="facility.html" data-i18n="nav_facility">Campus & Facilities</a></li>
-                        <li><a href="success.html" data-i18n="nav_success">Success Stories</a></li>
-                    </ul>
-                </li>
-
-                <!-- CONTACT -->
-                <li class="dropdown">
-                    <a href="contact.html">
-                        <span data-i18n="nav_contact">Contact Us</span> <i class="fa-solid fa-chevron-down"></i>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="getinvolved.html" data-i18n="nav_getinvolved">Get Involved</a></li>
-                        <li><a href="Apply.html" data-i18n="nav_apply">Apply Now</a></li>
-                        <li><a href="donate.html" data-i18n="nav_donate">Donate Now</a></li>
-                    </ul>
-                </li>
-
-                <li class="mobile-only-item">
-                    <a href="https://admissions.navgurukul.org/students/" class="donate-btn mobile-donate-btn"
-                        target="_blank" rel="noopener">
-                        <i class="fa-solid fa-heart"></i>
-                        <span data-i18n="nav_apply">Apply Now</span>
-                    </a>
-                </li>
-
-            </ul>
-        </nav>
-
-        <!-- Desktop Apply Button -->
-        <a href="https://admissions.navgurukul.org/students/" class="donate-btn desktop-only-btn" target="_blank"
-            rel="noopener">
-            <i class="fa-solid fa-heart"></i>
-            <span data-i18n="apply_here">Apply Here</span>
-        </a>
-
-    </div>
-</header>
-
-<!-- ================= HERO ================= -->
-<section class="campus-showcase">
-
-    <div class="video-box">
-
-        <div class="video-heading">
-            <h2 data-i18n="hero_title_gallery">Experience Our Campus</h2>
-            <p data-i18n="hero_sub_gallery">
-                Take a quick look at our vibrant campus, activities and student life.
-            </p>
-        </div>
-
-        <video controls autoplay muted loop playsinline>
-            <source src="ng-video.mp4">
-        </video>
-
-    </div>
-
-</section>
-
-
-
-<!-- ================= FEATURED MEMORIES ================= -->
-
-<section class="featured" id="featured">
-
-    <div class="section-title">
-        <h2 data-i18n="featured_memories_title">Featured Memories</h2>
-        <p data-i18n="featured_memories_sub">
-            Every picture tells a story of learning,
-            friendship and growth.
-        </p>
-    </div>
-
-
-    <div class="featured-grid">
-
-        <div class="featured-card">
-            <img src="images/codingsession.jpeg" alt="">
-            <div class="overlay">
-                <h3 data-i18n="feat_card1_title">Coding Sessions</h3>
-                <p data-i18n="feat_card1_desc">
-                    Hands-on project learning
-                    every day.
+        <!-- ==========================================================================
+               SECTION 1: HERO / EXPERIENCE OUR CAMPUS (VIDEO & 3 HIGHLIGHT CARDS)
+               ========================================================================== -->
+        <section class="gallery-hero-section">
+            <div class="gallery-section-header">
+                <h1 data-i18n="hero_title_gallery">Experience Our Campus</h1>
+                <p data-i18n="hero_sub_gallery">
+                    Take a quick look at our vibrant campus, activities and student life.
                 </p>
             </div>
-        </div>
 
-        <div class="featured-card big">
-            <img src="images/campuslife.jpeg" alt="">
-            <div class="overlay">
-                <h3 data-i18n="feat_card2_title">Campus Life</h3>
-                <p data-i18n="feat_card2_desc">
-                    Beautiful moments of students
-                    enjoying campus life.
-                </p>
-            </div>
-        </div>
-
-        <div class="featured-card">
-            <img src="images/culturalact.jpeg" alt="">
-            <div class="overlay">
-                <h3 data-i18n="feat_card3_title">Cultural Activities</h3>
-                <p data-i18n="feat_card3_desc">
-                    Celebrating creativity,
-                    diversity and talent.
-                </p>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= MASONRY GALLERY START ================= -->
-<section class="gallery-section">
-
-    <div class="section-title">
-        <h2 data-i18n="life_at_campus_title">Life At Campus</h2>
-        <p data-i18n="life_at_campus_sub">
-            Every photograph reflects our journey of learning,
-            teamwork and success.
-        </p>
-    </div>
-
-    <div class="gallery-grid">
-
-        <div class="gallery-item tall">
-            <img src="pics2.jpeg" alt="">
-        </div>
-
-        <div class="gallery-item wide">
-            <img src="images/12.jpeg" alt="">
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/10.jpeg" alt="">
-        </div>
-
-        <div class="gallery-item tall">
-            <img src="images/4.jpeg" alt="">
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/3.jpeg" alt="">
-        </div>
-
-        <div class="gallery-item wide">
-            <img src="images/5.jpeg" alt="">
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/9.jpeg" alt="">
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/11.jpeg" alt="">
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/7.jpeg" alt="">
-        </div>
-
-        <div class="gallery-item tall ">
-            <img src="images/1.jpeg" alt="">
-        </div>
-
-        <div class="gallery-item ">
-            <img src="images/14.jpeg" alt="">
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/13.jpeg" alt="">
-        </div>
-
-        <div class="gallery-item square-card">
-            <img src="pics9.jpeg" alt="">
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/15.jpeg" alt="">
-        </div>
-
-        <div class="gallery-item">
-            <img src="pics1.jpeg" alt="">
-        </div>
-
-        <div class="gallery-item">
-            <img src="pics5.jpeg" alt="">
-        </div>
-
-        <div class="gallery-item square-card">
-            <img src="pics4.jpeg" alt="">
-        </div>
-
-        <div class="gallery-item square-card">
-            <img src="pics6.jpeg" alt="">
-        </div>
-
-        <!-- <div class="gallery-item square-card">
-            <img src="pics7.jpeg" alt="">
-        </div> -->
-
-        <div class="gallery-item square-card">
-            <img src="pics8.jpeg" alt="">
-        </div>
-
-    </div>
-
-
-
-</section>
-
-
-<!-- ================= CAMPUS TOUR ================= -->
-
-<section class="tour-banner">
-
-    <div class="tour-content">
-
-        <h2 data-i18n="tour_banner_title">Explore Our Campus</h2>
-
-        <p data-i18n="tour_banner_sub">
-            Discover classrooms, learning spaces, events and campus life through our gallery.
-        </p>
-        <a href="javascript:void(0)" class="hero-btn" id="openGallery" data-i18n="btn_explore_gallery">
-            Explore Gallery
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- ================= STUDENT LIFE ================= -->
-
-<section class="student-life">
-
-    <div class="section-title">
-
-        <span data-i18n="student_exp_label">Student Experiences</span>
-
-        <h2 data-i18n="memories_inspire_title">
-            Memories That Inspire
-        </h2>
-
-    </div>
-
-    <div class="life-container">
-
-        <div class="life-card">
-
-            <img src="coding.jpeg" alt="">
-
-            <div class="life-content">
-
-                <h3 data-i18n="life_card1_title">
-                    Coding Sessions
-                </h3>
-
-                <p data-i18n="life_card1_desc">
-                    Building projects, solving problems
-                    and learning together every day.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="life-card">
-
-            <img src="images/guidance.jpeg" alt="">
-
-            <div class="life-content">
-
-                <h3 data-i18n="life_card2_title">
-                    Career Guidance
-                </h3>
-
-                <p data-i18n="life_card2_desc">
-                    Expert mentors guiding students towards the
-                    right career path and personal growth.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="life-card">
-
-            <img src="images/culevent.jpeg" alt="">
-
-            <div class="life-content">
-
-                <h3 data-i18n="life_card3_title">
-                    Cultural Events
-                </h3>
-
-                <p data-i18n="life_card3_desc">
-                    Celebrating festivals, performances
-                    and unforgettable memories.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ================= STATISTICS START ================= -->
-
-<section class="gallery-stats">
-
-    <div class="stat-box">
-
-        <i class="fa-solid fa-images"></i>
-
-        <h2>500+</h2>
-
-        <p data-i18n="stat_campus_memories">Campus Memories</p>
-
-    </div>
-
-    <div class="stat-box">
-
-        <i class="fa-solid fa-users"></i>
-
-        <h2>200+</h2>
-
-        <p data-i18n="stat_students_count">Students</p>
-
-    </div>
-
-    <div class="stat-box">
-
-        <i class="fa-solid fa-calendar-check"></i>
-
-        <h2>25+</h2>
-
-        <p data-i18n="stat_events_organized">Events Organized</p>
-
-    </div>
-
-    <div class="stat-box">
-
-        <i class="fa-solid fa-heart"></i>
-
-        <h2>10K+</h2>
-
-        <p data-i18n="stat_happy_memories">Happy Memories</p>
-
-    </div>
-
-</section>
-
-
-
-<!-- ================= CALL TO ACTION ================= -->
-
-<section class="gallery-cta">
-
-    <h2 data-i18n="cta_every_picture">
-        Every Picture Tells A Story
-    </h2>
-
-    <p data-i18n="cta_gallery_desc">
-        Together we learn, grow and create unforgettable memories at
-        Anish Jadhav Memorial Foundation.
-    </p>
-
-    <a href="getinvolved.html" style="text-decoration: none;">
-        <button data-i18n="btn_join_journey">
-            Join Our Journey
-        </button>
-    </a>
-
-</section>
-
-    <!-- ================= PARTNERSHIP SECTION (MATCHING REFERENCE ASSETS & LAYOUT) ================= -->
-    <section class="ajmf-values-outer-wrapper" style="background: #fff9f3; padding: 30px 0 50px 0; position: relative; overflow: hidden;" id="partner">
-<div class="our-partner-wrapper">
-            <!-- LEFT BOTANICAL BACKGROUND ACCENT -->
-            
-
-            <!-- RIGHT BOTANICAL & HANDWRITTEN ACCENTS -->
-            
-            <div class="values-script-right" style="top: 40px; right: 10px; z-index: 2;">
-                <span>Better<br>Futures<br>Together</span>
-                <span class="accent-stroke"></span>
-            </div>
-
-            <div class="partner-row-container">
-                <!-- LEFT DARK NAVY PANEL (WITH BLENDED HANDS PHOTO & SCRIPT) -->
-                <div class="partner-left-panel">
-                    <span class="partner-tag" data-i18n="partner_label">OUR PARTNER</span>
-                    <h2 class="partner-title" data-i18n="partner_title_stronger">Stronger Together.<br>Greater <span class="highlight-orange">Impact.</span></h2>
-                    <p class="partner-desc" data-i18n="partner_banner_desc">
-                        Working together with <span class="navgurukul-name"><span class="nav-text">Nav</span><span class="gurukul-text">Gurukul</span></span> to empower youth through industry-relevant education, technology and career-focused learning.
-                    </p>
-                    <a href="partnership.html" class="btn-partner-learn">
-                        <span data-i18n="explore_partnership">Explore Our Partnership</span> <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-
-                    <div class="partner-script-accent">
-                        <span>Empower<br>Educate<br>Elevate</span>
-                        <span class="accent-stroke"></span>
-                    </div>
+            <div class="gallery-hero-showcase">
+                <!-- Main Featured Video Box -->
+                <div class="gallery-hero-video-card">
+                    <video controls autoplay muted loop playsinline poster="building.jpeg">
+                        <source src="ng-video.mp4" type="video/mp4">
+                        <source src="SOF.mp4" type="video/mp4">
+                    </video>
                 </div>
 
-                <!-- RIGHT WHITE INFORMATION PANEL -->
-                <div class="partner-right-panel">
-                    <!-- OUR PARTNER LOGOS BLOCK -->
-                    <div class="partner-block partner-logos-block">
-                        <div class="partner-logos-pair">
-                            <img src="logo.jpeg" alt="AJMF Logo" class="partner-logo-img" />
-                            <span class="partner-times">×</span>
-                            <img src="navgurukul.logo.jpg" alt="NavGurukul Logo" class="partner-logo-img navgurukul-img" />
+                <!-- 3 Top Video Highlight Cards in a Row -->
+                <div class="gallery-featured-grid">
+                    <div class="featured-card">
+                        <img src="images/codingsession.jpeg" alt="Coding Sessions">
+                        <div class="featured-card-overlay">
+                            <div class="featured-card-text">
+                                <h3 data-i18n="feat_card1_title">Coding Sessions</h3>
+                                <p data-i18n="feat_card1_desc">Learn, Build, Prepare for a brighter future.</p>
+                            </div>
+                            <div class="play-btn-circle">
+                                <i class="fas fa-play"></i>
+                            </div>
                         </div>
-                        <h4 class="partner-block-title" data-i18n="our_partner_title">Our Partner</h4>
-                        <p class="partner-block-desc" data-i18n="our_partner_desc">Working together for a brighter tomorrow.</p>
                     </div>
 
-                    <div class="partner-divider"></div>
-
-                    <!-- BENEFIT 1: QUALITY EDUCATION -->
-                    <div class="partner-block">
-                        <div class="partner-icon-circle"><i class="fa-solid fa-graduation-cap"></i></div>
-                        <h4 class="partner-block-title" data-i18n="partner_benefit_1">Quality Education</h4>
-                        <p class="partner-block-desc">Building practical skills for real opportunities.</p>
+                    <div class="featured-card">
+                        <img src="images/campuslife.jpeg" alt="Campus Life">
+                        <div class="featured-card-overlay">
+                            <div class="featured-card-text">
+                                <h3 data-i18n="feat_card2_title">Campus Life</h3>
+                                <p data-i18n="feat_card2_desc">A glimpse inside of our campus, rooms and activities.</p>
+                            </div>
+                            <div class="play-btn-circle">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="partner-divider"></div>
-
-                    <!-- BENEFIT 2: SKILL DEVELOPMENT -->
-                    <div class="partner-block">
-                        <div class="partner-icon-circle"><i class="fa-solid fa-code"></i></div>
-                        <h4 class="partner-block-title" data-i18n="partner_benefit_2">Skill Development</h4>
-                        <p class="partner-block-desc">Hands-on learning for future careers.</p>
-                    </div>
-
-                    <div class="partner-divider"></div>
-
-                    <!-- BENEFIT 3: CAREER OPPORTUNITIES -->
-                    <div class="partner-block">
-                        <div class="partner-icon-circle"><i class="fa-solid fa-briefcase"></i></div>
-                        <h4 class="partner-block-title" data-i18n="partner_benefit_3">Career Opportunities</h4>
-                        <p class="partner-block-desc">Creating pathways to meaningful growth.</p>
+                    <div class="featured-card">
+                        <img src="images/culturalact.jpeg" alt="Cultural Activities">
+                        <span class="card-purple-tag">For our new students</span>
+                        <div class="featured-card-overlay">
+                            <div class="featured-card-text">
+                                <h3 data-i18n="feat_card3_title">Cultural Activities</h3>
+                                <p data-i18n="feat_card3_desc">Celebrating creativity, diversity and talent.</p>
+                            </div>
+                            <div class="play-btn-circle">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-<!-- LIGHTBOX -->
+        </section>
 
-<div class="lightbox" id="lightbox">
+        <!-- ==========================================================================
+               SECTION 2: LIFE AT CAMPUS (MASONRY PHOTO GALLERY GRID)
+               ========================================================================== -->
+        <section class="gallery-masonry-section">
+            <div class="gallery-section-header">
+                <div class="header-tag-line">
+                    <span class="header-line"></span>
+                    <h2 data-i18n="life_at_campus_title">Life At Campus</h2>
+                    <span class="header-line"></span>
+                </div>
+                <p data-i18n="life_at_campus_sub">
+                    Every photograph reflects our journey of learning, teamwork and success.
+                </p>
+            </div>
 
-    <span class="close">&times;</span>
+            <div class="gallery-masonry-grid">
+                <div class="gallery-item tall">
+                    <img src="pics2.jpeg" alt="Campus Life photo 1">
+                </div>
 
-    <img class="lightbox-img" id="lightbox-img">
+                <div class="gallery-item wide">
+                    <img src="images/12.jpeg" alt="Campus Life photo 2">
+                </div>
 
-    <button class="prev">&#10094;</button>
+                <div class="gallery-item">
+                    <img src="images/10.jpeg" alt="Campus Life photo 3">
+                </div>
 
-    <button class="next">&#10095;</button>
+                <div class="gallery-item tall">
+                    <img src="images/4.jpeg" alt="Campus Life photo 4">
+                </div>
 
-</div>
+                <div class="gallery-item">
+                    <img src="images/3.jpeg" alt="Campus Life photo 5">
+                </div>
 
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
-    <div class="footer-container">
+                <div class="gallery-item wide">
+                    <img src="images/5.jpeg" alt="Campus Life photo 6">
+                </div>
 
-        <!-- Column 1 -->
-        <div class="footer-col foundation">
-            <div class="logo-box">
-                <img src="logo.jpeg" alt="AJMF Logo">
-                <div class="footer-logo-content">
-                    <h2>Anish Jadhav <br> Memorial Foundation</h2>
-                    <p>EDUCATE • EMPOWER • ELEVATE</p>
+                <div class="gallery-item">
+                    <img src="images/9.jpeg" alt="Campus Life photo 7">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/11.jpeg" alt="Campus Life photo 8">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/7.jpeg" alt="Campus Life photo 9">
+                </div>
+
+                <div class="gallery-item tall">
+                    <img src="images/1.jpeg" alt="Campus Life photo 10">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/14.jpeg" alt="Campus Life photo 11">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/13.jpeg" alt="Campus Life photo 12">
+                </div>
+
+                <div class="gallery-item square-card">
+                    <img src="pics9.jpeg" alt="Campus Life photo 13">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/15.jpeg" alt="Campus Life photo 14">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="pics1.jpeg" alt="Campus Life photo 15">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="pics5.jpeg" alt="Campus Life photo 16">
+                </div>
+
+                <div class="gallery-item square-card">
+                    <img src="pics4.jpeg" alt="Campus Life photo 17">
+                </div>
+
+                <div class="gallery-item square-card">
+                    <img src="pics6.jpeg" alt="Campus Life photo 18">
+                </div>
+
+                <div class="gallery-item square-card">
+                    <img src="pics8.jpeg" alt="Campus Life photo 19">
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+               SECTION 3: EXPLORE OUR CAMPUS (WIDE BANNER CARD)
+               ========================================================================== -->
+        <section class="gallery-tour-banner">
+            <div class="tour-banner-card">
+                <img src="building.jpeg" alt="Explore Our Campus" class="tour-banner-bg-img">
+                <div class="tour-banner-overlay">
+                    <h2 data-i18n="tour_banner_title">Explore Our Campus</h2>
+                    <p data-i18n="tour_banner_sub">
+                        Discover classrooms, learning spaces, events and campus life through our gallery.
+                    </p>
+                    <a href="facility.html" class="btn-primary-orange" id="openGallery" data-i18n="btn_explore_gallery">
+                        Explore Gallery
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+               SECTION 4: MEMORIES THAT INSPIRE (STUDENT EXPERIENCES)
+               ========================================================================== -->
+        <section class="gallery-student-life">
+            <div class="gallery-section-header">
+                <span class="section-badge-tag" data-i18n="student_exp_label">STUDENT EXPERIENCES</span>
+                <h2 data-i18n="memories_inspire_title">Memories That Inspire</h2>
+            </div>
+
+            <div class="gallery-life-grid">
+                <div class="life-card">
+                    <img src="coding.jpeg" alt="Coding Sessions">
+                    <div class="life-content">
+                        <h3 data-i18n="life_card1_title">Coding Sessions</h3>
+                        <p data-i18n="life_card1_desc">
+                            Building projects, solving problems and learning together every day.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="life-card">
+                    <img src="images/guidance.jpeg" alt="Career Guidance">
+                    <div class="life-content">
+                        <h3 data-i18n="life_card2_title">Career Guidance</h3>
+                        <p data-i18n="life_card2_desc">
+                            Expert mentors guiding students towards the right career path and personal growth.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="life-card">
+                    <img src="images/culevent.jpeg" alt="Cultural Events">
+                    <div class="life-content">
+                        <h3 data-i18n="life_card3_title">Cultural Events</h3>
+                        <p data-i18n="life_card3_desc">
+                            Celebrating festivals, performances and unforgettable memories.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+               SECTION 5: GALLERY STATS COUNTER STRIP
+               ========================================================================== -->
+        <section class="gallery-stats-banner">
+            <div class="stats-grid">
+                <div class="stat-box-card">
+                    <div class="stat-icon-circle"><i class="fas fa-images"></i></div>
+                    <h2>300+</h2>
+                    <p data-i18n="stat_campus_memories">Campus Memories</p>
+                </div>
+
+                <div class="stat-box-card">
+                    <div class="stat-icon-circle"><i class="fas fa-users"></i></div>
+                    <h2>200+</h2>
+                    <p data-i18n="stat_students_count">Students</p>
+                </div>
+
+                <div class="stat-box-card">
+                    <div class="stat-icon-circle"><i class="fas fa-calendar-check"></i></div>
+                    <h2>25+</h2>
+                    <p data-i18n="stat_events_organized">Events Organized</p>
+                </div>
+
+                <div class="stat-box-card">
+                    <div class="stat-icon-circle"><i class="fas fa-heart"></i></div>
+                    <h2>10K+</h2>
+                    <p data-i18n="stat_happy_memories">Happy Memories</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+               SECTION 6: EVERY PICTURE TELLS A STORY (CALL TO ACTION)
+               ========================================================================== -->
+        <section class="gallery-cta-section">
+            <div class="gallery-cta-content">
+                <h2 data-i18n="cta_every_picture">Every Picture Tells A Story</h2>
+                <p data-i18n="cta_gallery_desc">
+                    Together, we learn, grow and create unforgettable memories at Anish Jadhav Memorial Foundation.
+                </p>
+                <a href="getinvolved.html" class="btn-primary-orange" style="text-decoration: none;">
+                    <span data-i18n="btn_join_journey">Join Our Journey</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- ================= PARTNERSHIP SECTION (MATCHING REFERENCE ASSETS & LAYOUT) ================= -->
+        <section class="ajmf-values-outer-wrapper"
+            style="background: #fff9f3; padding: 30px 0 50px 0; position: relative; overflow: hidden;" id="partner">
+            <div class="our-partner-wrapper">
+                <!-- LEFT BOTANICAL BACKGROUND ACCENT -->
+
+                <!-- RIGHT BOTANICAL & HANDWRITTEN ACCENTS -->
+
+                <div class="values-script-right" style="top: 40px; right: 10px; z-index: 2;">
+                    <span>Better<br>Futures<br>Together</span>
+                    <span class="accent-stroke"></span>
+                </div>
+
+                <div class="partner-row-container">
+                    <!-- LEFT DARK NAVY PANEL (WITH BLENDED HANDS PHOTO & SCRIPT) -->
+                    <div class="partner-left-panel">
+                        <span class="partner-tag" data-i18n="partner_label">OUR PARTNER</span>
+                        <h2 class="partner-title" data-i18n="partner_title_stronger">Stronger Together.<br>Greater <span
+                                class="highlight-orange">Impact.</span></h2>
+                        <p class="partner-desc" data-i18n="partner_banner_desc">
+                            Working together with <span class="navgurukul-name"><span class="nav-text">Nav</span><span
+                                    class="gurukul-text">Gurukul</span></span> to empower youth through industry-relevant
+                            education, technology and career-focused learning.
+                        </p>
+                        <a href="partnership.html" class="btn-partner-learn">
+                            <span data-i18n="explore_partnership">Explore Our Partnership</span> <i
+                                class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                        <div class="partner-script-accent">
+                            <span>Empower<br>Educate<br>Elevate</span>
+                            <span class="accent-stroke"></span>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT WHITE INFORMATION PANEL -->
+                    <div class="partner-right-panel">
+                        <!-- OUR PARTNER LOGOS BLOCK -->
+                        <div class="partner-block partner-logos-block">
+                            <div class="partner-logos-pair">
+                                <img src="logo.jpeg" alt="AJMF Logo" class="partner-logo-img" />
+                                <span class="partner-times">×</span>
+                                <img src="navgurukul.logo.jpg" alt="NavGurukul Logo" class="partner-logo-img navgurukul-img" />
+                            </div>
+                            <h4 class="partner-block-title" data-i18n="our_partner_title">Our Partner</h4>
+                            <p class="partner-block-desc" data-i18n="our_partner_desc">Working together for a brighter tomorrow.
+                            </p>
+                        </div>
+
+                        <div class="partner-divider"></div>
+
+                        <!-- BENEFIT 1: QUALITY EDUCATION -->
+                        <div class="partner-block">
+                            <div class="partner-icon-circle"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <h4 class="partner-block-title" data-i18n="partner_benefit_1">Quality Education</h4>
+                            <p class="partner-block-desc">Building practical skills for real opportunities.</p>
+                        </div>
+
+                        <div class="partner-divider"></div>
+
+                        <!-- BENEFIT 2: SKILL DEVELOPMENT -->
+                        <div class="partner-block">
+                            <div class="partner-icon-circle"><i class="fa-solid fa-code"></i></div>
+                            <h4 class="partner-block-title" data-i18n="partner_benefit_2">Skill Development</h4>
+                            <p class="partner-block-desc">Hands-on learning for future careers.</p>
+                        </div>
+
+                        <div class="partner-divider"></div>
+
+                        <!-- BENEFIT 3: CAREER OPPORTUNITIES -->
+                        <div class="partner-block">
+                            <div class="partner-icon-circle"><i class="fa-solid fa-briefcase"></i></div>
+                            <h4 class="partner-block-title" data-i18n="partner_benefit_3">Career Opportunities</h4>
+                            <p class="partner-block-desc">Creating pathways to meaningful growth.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Column 1 -->
+            <div class="footer-col foundation">
+                <div class="logo-box">
+                    <img src="logo.jpeg" alt="AJMF Logo">
+                    <div class="footer-logo-content">
+                        <h2>Anish Jadhav <br> Memorial Foundation</h2>
+                        <p>EDUCATE • EMPOWER • ELEVATE</p>
+                    </div>
+                </div>
+
+                <p class="foundation-text" data-i18n="footer_foundation_text">
+                    Empowering young minds through education,
+                    research and community support.
+                </p>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/anishjmf" target="_blank" rel="noopener noreferrer"
+                        aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/explore/locations/112795623857018/anish-jadhav-memorial-foundation/"
+                        target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/posts/brigadier-dr-kishor-jadhav-ph-d-97a3934b_anish-jadhav-memorial-foundation-skilling-activity-7180232279640719360-Uw2g/"
+                        target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/@AnishJadhavMemorialFoundation" target="_blank"
+                        rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
 
-            <p class="foundation-text" data-i18n="footer_foundation_text">
-                Empowering young minds through education,
-                research and community support.
-            </p>
-
-            <div class="social-icons">
-                <a href="https://www.facebook.com/anishjmf" target="_blank" rel="noopener noreferrer"
-                    aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/explore/locations/112795623857018/anish-jadhav-memorial-foundation/"
-                    target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i
-                        class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/posts/brigadier-dr-kishor-jadhav-ph-d-97a3934b_anish-jadhav-memorial-foundation-skilling-activity-7180232279640719360-Uw2g/"
-                    target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
-                        class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.youtube.com/@AnishJadhavMemorialFoundation" target="_blank"
-                    rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <!-- Column 2 -->
+            <div class="footer-col">
+                <h3 data-i18n="footer_quick_links">Quick Links</h3>
+                <ul>
+                    <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                    <li><a href="About.html" data-i18n="nav_about">About Anish</a></li>
+                    <li><a href="programs.html" data-i18n="nav_academics">Academics</a></li>
+                    <li><a href="gallery.html" data-i18n="nav_studentlife">Student Life</a></li>
+                    <li><a href="contact.html" data-i18n="nav_contact">Contact Us</a></li>
+                </ul>
             </div>
+
+            <!-- Column 3 -->
+            <div class="footer-col">
+                <h3 data-i18n="nav_programs">Our Programs</h3>
+                <ul>
+                    <li><a href="programs.html#school-of-programming" data-i18n="prog_sop">School of Programming</a></li>
+                    <li><a href="programs.html#school-of-business" data-i18n="prog_sob">School of Business</a></li>
+                    <li><a href="programs.html#school-of-finance" data-i18n="prog_sof">School of Finance</a></li>
+                    <li><a href="programs.html#school-of-education" data-i18n="prog_soe">School of Education</a></li>
+                    <li><a href="programs.html#school-of-second-chance" data-i18n="prog_sosc">School of Second Chance</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Column 4 -->
+            <div class="footer-col contact">
+                <h3 data-i18n="nav_contact">Contact Us</h3>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Anish+Jadhav+Memorial+Foundation+JW3M%2BC7+Gharukul+Properties+Survey+No.+60%2F1+Pathare+Wasti+Lohegaon+Pune+Maharashtra+411047+India"
+                        target="_blank" rel="noopener noreferrer">
+                        Anish Jadhav Memorial Foundation<br>
+                        JW3M+C7, Gharukul Properties,<br>
+                        Survey No. 60/1, Pathare Wasti,<br>
+                        Lohegaon, Pune,<br>
+                        Maharashtra 411047, India
+                    </a>
+                </p>
+                <p>
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:+919906155699">+91 99061 55699</a>
+                </p>
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:info@ajmfoundation.org">info@ajmfoundation.org</a>
+                </p>
+                <p>
+                    <i class="fas fa-globe"></i>
+                    <a href="http://anishjadhavmemorialfoundation.org/" target="_blank" rel="noopener noreferrer">
+                        anishjadhavmemorialfoundation.org
+                    </a>
+                </p>
+            </div>
+
+            <!-- Column 5 -->
+            <div class="footer-col newsletter">
+                <h3 data-i18n="footer_newsletter_title">Newsletter</h3>
+                <p data-i18n="footer_newsletter_desc">
+                    Stay updated with our latest
+                    initiatives and stories.
+                </p>
+                <form class="newsletter-form" novalidate>
+                    <input type="email" class="newsletter-email" placeholder="Enter your email"
+                        data-i18n-placeholder="placeholder_email" required aria-label="Email address">
+                    <button type="submit" data-i18n="subscribe">Subscribe</button>
+                    <div class="newsletter-message" aria-live="polite"></div>
+                </form>
+            </div>
+
         </div>
 
-        <!-- Column 2 -->
-        <div class="footer-col">
-            <h3 data-i18n="footer_quick_links">Quick Links</h3>
-            <ul>
-                <li><a href="index.html" data-i18n="nav_home">Home</a></li>
-                <li><a href="About.html" data-i18n="nav_about">About Anish</a></li>
-                <li><a href="programs.html" data-i18n="nav_academics">Academics</a></li>
-                <li><a href="gallery.html" data-i18n="nav_studentlife">Student Life</a></li>
-                <li><a href="contact.html" data-i18n="nav_contact">Contact Us</a></li>
-            </ul>
-        </div>
-
-        <!-- Column 3 -->
-        <div class="footer-col">
-            <h3 data-i18n="nav_programs">Our Programs</h3>
-            <ul>
-                <li><a href="programs.html#school-of-programming" data-i18n="prog_sop">School of Programming</a></li>
-                <li><a href="programs.html#school-of-business" data-i18n="prog_sob">School of Business</a></li>
-                <li><a href="programs.html#school-of-finance" data-i18n="prog_sof">School of Finance</a></li>
-                <li><a href="programs.html#school-of-education" data-i18n="prog_soe">School of Education</a></li>
-                <li><a href="programs.html#school-of-second-chance" data-i18n="prog_sosc">School of Second Chance</a>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Column 4 -->
-        <div class="footer-col contact">
-            <h3 data-i18n="nav_contact">Contact Us</h3>
+        <div class="footer-bottom">
             <p>
-                <i class="fas fa-map-marker-alt"></i>
-                <a href="https://www.google.com/maps/search/?api=1&query=Anish+Jadhav+Memorial+Foundation+JW3M%2BC7+Gharukul+Properties+Survey+No.+60%2F1+Pathare+Wasti+Lohegaon+Pune+Maharashtra+411047+India"
-                    target="_blank" rel="noopener noreferrer">
-                    Anish Jadhav Memorial Foundation<br>
-                    JW3M+C7, Gharukul Properties,<br>
-                    Survey No. 60/1, Pathare Wasti,<br>
-                    Lohegaon, Pune,<br>
-                    Maharashtra 411047, India
-                </a>
+                © 2026 Anish Jadhav Memorial Foundation.
+                <span data-i18n="footer_rights">All Rights Reserved.</span>
             </p>
-            <p>
-                <i class="fas fa-phone-alt"></i>
-                <a href="tel:+919906155699">+91 99061 55699</a>
-            </p>
-            <p>
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:info@ajmfoundation.org">info@ajmfoundation.org</a>
-            </p>
-            <p>
-                <i class="fas fa-globe"></i>
-                <a href="http://anishjadhavmemorialfoundation.org/" target="_blank" rel="noopener noreferrer">
-                    anishjadhavmemorialfoundation.org
-                </a>
+            <p data-i18n="footer_tagline">
+                Designed with ❤️ for a better tomorrow
             </p>
         </div>
+    </footer>
 
-        <!-- Column 5 -->
-        <div class="footer-col newsletter">
-            <h3 data-i18n="footer_newsletter_title">Newsletter</h3>
-            <p data-i18n="footer_newsletter_desc">
-                Stay updated with our latest
-                initiatives and stories.
-            </p>
-            <form class="newsletter-form" novalidate>
-                <input type="email" class="newsletter-email" placeholder="Enter your email"
-                    data-i18n-placeholder="placeholder_email" required aria-label="Email address">
-                <button type="submit" data-i18n="subscribe">Subscribe</button>
-                <div class="newsletter-message" aria-live="polite"></div>
-            </form>
+    <!-- ================= GALLERY LIGHTBOX MODAL ================= -->
+    <div id="lightbox" class="gallery-lightbox" aria-hidden="true">
+        <div class="lightbox-container">
+            <img id="lightbox-img" class="lightbox-img" src="" alt="Enlarged photo view">
         </div>
-
+        <button id="lightboxClose" class="lightbox-close close" aria-label="Close photo modal" type="button">&times;</button>
+        <button id="lightboxPrev" class="lightbox-nav prev" aria-label="Previous photo" type="button"><i
+                class="fa-solid fa-chevron-left"></i></button>
+        <button id="lightboxNext" class="lightbox-nav next" aria-label="Next photo" type="button"><i
+                class="fa-solid fa-chevron-right"></i></button>
     </div>
 
-    <div class="footer-bottom">
-        <p>
-            © 2026 Anish Jadhav Memorial Foundation.
-            <span data-i18n="footer_rights">All Rights Reserved.</span>
-        </p>
-        <p data-i18n="footer_tagline">
-            Designed with ❤️ for a better tomorrow
-        </p>
-    </div>
-</footer>
-
-<!-- ================= GALLERY LIGHTBOX MODAL ================= -->
-<div id="lightbox" class="gallery-lightbox" aria-hidden="true">
-    <div class="lightbox-container">
-        <img id="lightbox-img" class="lightbox-img" src="" alt="Enlarged photo view">
-    </div>
-    <button id="lightboxClose" class="lightbox-close close" aria-label="Close photo modal" type="button">&times;</button>
-    <button id="lightboxPrev" class="lightbox-nav prev" aria-label="Previous photo" type="button"><i
-            class="fa-solid fa-chevron-left"></i></button>
-    <button id="lightboxNext" class="lightbox-nav next" aria-label="Next photo" type="button"><i
-            class="fa-solid fa-chevron-right"></i></button>
-</div>
-
-<script src="js/translations.js"></script>
-<script src="js/language.js"></script>
-<script src="header.js"></script>
-<script src="gallery.js"></script>
-
+    <script src="js/translations.js"></script>
+    <script src="js/language.js"></script>
+    <script src="header.js"></script>
+    <script src="gallery.js"></script>
+    <script src="js/global-lightbox.js"></script>
 </body>
 
 </html>

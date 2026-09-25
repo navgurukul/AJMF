@@ -191,8 +191,10 @@
 
 
     <!-- ================= OUR PARTNER & IMPACT SECTION (WITH BOTANICAL BACKGROUND DECORATION) ================= -->
-    <section class="partner-impact-wrapper">
-        <div class="our-partner-wrapper" id="partner">
+    <section class="partner-impact-wrapper" style="position: relative; overflow: hidden;">
+        <!-- BOTANICAL CUTOUT BACKGROUND DECORATION LAYER -->
+        <div style="position: absolute; inset: 0; background-image: url('images-photo/watercolor_frame_bg.png'); background-size: cover; background-position: center; opacity: 0.22; pointer-events: none; z-index: 0;"></div>
+        <div class="our-partner-wrapper" id="partner" style="position: relative; z-index: 1;">
             <div class="partner-row-container">
 
                 <!-- LEFT DARK NAVY PANEL -->
@@ -270,7 +272,10 @@
         </div>
 
         <!-- STATS / IMPACT -->
-        <section class="stats">
+        <section class="stats" style="position: relative; overflow: hidden;">
+            <!-- BOTANICAL CUTOUT BACKGROUND DECORATION LAYER -->
+            <div style="position: absolute; inset: 0; background-image: url('images-photo/watercolor_frame_bg.png'); background-size: cover; background-position: center; opacity: 0.22; pointer-events: none; z-index: 0;"></div>
+            <div style="position: relative; z-index: 1; display: flex; width: 100%; justify-content: space-around; flex-wrap: wrap;">
 
             <div class="stat-card">
                 <div class="stat-icon blue">
@@ -327,6 +332,7 @@
                 </div>
             </div>
 
+            </div>
         </section>
     </section>
 
@@ -453,6 +459,7 @@
     <script src="js/language.js"></script>
     <script src="header.js"></script>
     <script src="program.js"></script>
+    <script src="js/global-lightbox.js"></script>
 </body>
 
 </html>

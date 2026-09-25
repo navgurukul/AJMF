@@ -413,12 +413,59 @@ section.our-partner-section[id="partner"]::before {
     bottom: 0 !important;
     width: 100% !important;
     height: 100% !important;
-    background-image: url('images-photo/watercolor_frame_bg.png') !important;
-    background-size: 100% 100% !important;
+    background-image: url('watercolor_frame_bg.png') !important;
+    background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
-    opacity: 0.16 !important;
+    opacity: 0.22 !important;
     pointer-events: none !important;
+    z-index: 0 !important;
+}
+
+.impact-section,
+.programs-impact-section,
+.campusled-impact-stats,
+section.stats,
+.ready-section,
+.student-led-campus-page .ready-section {
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.impact-section::before,
+.programs-impact-section::before,
+.campusled-impact-stats::before,
+section.stats::before,
+.ready-section::before,
+.student-led-campus-page .ready-section::before {
+    content: '' !important;
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-image: url('watercolor_frame_bg.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    opacity: 0.22 !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
+}
+
+.partner-impact-wrapper > *,
+section.ajmf-values-outer-wrapper[id="partner"] > *,
+section.our-partner-section[id="partner"] > *,
+.impact-section > *,
+.programs-impact-section > *,
+.campusled-impact-stats > *,
+section.stats > *,
+.ready-section > *,
+.student-led-campus-page .ready-section > * {
+    position: relative !important;
     z-index: 1 !important;
 }
 

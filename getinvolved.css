@@ -84,12 +84,23 @@ body.get-involved-body {
 /* ================= 1. HERO SPLIT SECTION ================= */
 .get-involved-page .hero-split-section {
     position: relative;
-    background: linear-gradient(135deg, #f8fafc 0%, #edf5f7 50%, #fff8ef 100%);
+    background: #fffcf8;
     padding: 70px 0 100px;
     overflow: hidden;
     min-height: 560px;
     display: flex;
     align-items: center;
+}
+
+.get-involved-page .hero-section-cutout-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.28;
 }
 
 /* Background Soft Accent Circles */
@@ -319,7 +330,25 @@ body.get-involved-body {
 /* ================= 2. WAYS TO GET INVOLVED ================= */
 .get-involved-page .ways-section {
     padding: 85px 0 100px;
-    background-color: #F4F8FA;
+    background-color: #fffcf8;
+    position: relative;
+    overflow: hidden;
+}
+
+.get-involved-page .ways-section-cutout-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.28;
+}
+
+.get-involved-page .ways-section .get-container {
+    position: relative;
+    z-index: 2;
 }
 
 .get-involved-page .ways-grid-four {
@@ -488,7 +517,33 @@ body.get-involved-body {
 /* ================= 4. VOLUNTEER & PARTNER TWIN BLOCKS ================= */
 .get-involved-page .vol-partner-blocks-section {
     padding: 90px 0 105px;
-    background-color: #F4F8FA;
+    background-color: #fff9f3;
+    position: relative;
+    overflow: hidden;
+}
+
+.get-involved-page .vol-partner-section-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.16;
+}
+
+.get-involved-page .vol-partner-bg-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 249, 243, 0.4);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.get-involved-page .vol-partner-blocks-section .get-container {
+    position: relative;
+    z-index: 3;
 }
 
 .get-involved-page .twin-blocks-grid {
@@ -617,75 +672,7 @@ body.get-involved-body {
     display: block;
 }
 
-/* ================= 5. FINAL CTA HERO BANNER ================= */
-.get-involved-page .final-cta-hero-banner {
-    position: relative;
-    background: linear-gradient(rgba(11, 31, 68, 0.88), rgba(11, 31, 68, 0.92)),
-        url("main-img.jpeg");
-    background-size: cover;
-    background-position: center;
-    padding: 100px 0;
-    color: #ffffff;
-    text-align: center;
-}
 
-.get-involved-page .cta-content-wrapper {
-    max-width: 860px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
-}
-
-.get-involved-page .cta-heart-badge {
-    width: 68px;
-    height: 68px;
-    border-radius: 50%;
-    background-color: #F97316;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 28px;
-    margin: 0 auto 24px;
-    box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
-}
-
-.get-involved-page .cta-content-wrapper h2 {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 44px;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    color: #ffffff;
-}
-
-.get-involved-page .cta-content-wrapper p {
-    font-size: 17.5px;
-    line-height: 1.75;
-    color: #cbd5e1;
-    margin-bottom: 40px;
-}
-
-.get-involved-page .btn-final-action {
-    background-color: #F97316;
-    color: #ffffff;
-    padding: 17px 42px;
-    border-radius: 30px;
-    font-weight: 600;
-    font-size: 16.5px;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    transition: all 0.3s ease;
-    box-shadow: 0 6px 22px rgba(249, 115, 22, 0.4);
-}
-
-.get-involved-page .btn-final-action:hover {
-    background-color: #e0650d;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 28px rgba(249, 115, 22, 0.5);
-}
 
 /* ================= RESPONSIVE MEDIA QUERIES ================= */
 @media screen and (max-width: 1024px) {
@@ -712,7 +699,9 @@ body.get-involved-body {
 }
 
 @media screen and (max-width: 768px) {
-    html, body.get-involved-body {
+
+    html,
+    body.get-involved-body {
         margin: 0 !important;
         padding: 0 !important;
         width: 100% !important;

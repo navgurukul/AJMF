@@ -123,33 +123,99 @@
 
         <!-- ================= COUNCILS HERO ================= -->
         <section class="council-hero">
+            <!-- Background Decorative Botanical Leaf Watermarks -->
+            <img src="12_left_botanical_decor.png" alt="" class="hero-botanical-left" />
+            <img src="13_right_botanical_decor.png" alt="" class="hero-botanical-right" />
+
             <div class="campusled-container council-hero-wrapper">
                 <div class="council-hero-content">
-                    <h1 data-i18n="hero_title_campusled">Leadership <br><span>in Action</span></h1>
+                    <div class="hero-tagline-wrapper">
+                        <span class="hero-subtitle">LEADERSHIP</span>
+                        <span class="tag-dash"></span>
+                    </div>
+
+                    <h1 data-i18n="hero_title_campusled">
+                        Leadership <br>
+                        <span class="highlight-orange">in Action</span>
+                    </h1>
                     
                     <p data-i18n="hero_desc_campusled">
                         A campus run entirely by students, for students. Developing real-world skills through ownership and responsibility.
                     </p>
 
                     <div class="hero-buttons">
-                        <a href="#councils" class="primary-btn" data-i18n="explore_councils">
-                            Explore Our Councils <i class="fa-solid fa-chevron-right"></i>
+                        <a href="#councils" class="btn-outline-pill" data-i18n="explore_councils">
+                            <span>Explore Our Councils</span> <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
                 
-                <div class="council-hero-spacer"></div>
+                <!-- Center Graphic: "Student Led Campus" -->
+                <div class="student-led-badge">
+                    <div class="badge-rays">
+                        <span class="ray ray-1"></span>
+                        <span class="ray ray-2"></span>
+                        <span class="ray ray-3"></span>
+                    </div>
+                    <div class="badge-text">
+                        <span class="word-student">Student</span>
+                        <span class="word-led">Led</span>
+                        <span class="word-campus">
+                            Campus
+                            <svg class="campus-stroke" viewBox="0 0 110 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M 4 10 C 35 16, 75 14, 106 6 C 70 14, 30 14, 6 11" stroke="#ea580c" stroke-width="3.5" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Right Building Image Container -->
+                <div class="council-hero-image-wrapper">
+                    <!-- Watercolor Brush Frame Overlay behind building -->
+                    <div class="building-brush-bg"></div>
+
+                    <!-- Building Card Photo -->
+                    <div class="building-photo-card">
+                        <img src="building.jpeg" alt="Anish Jadhav Memorial Foundation Skilling Institute" class="building-img" />
+                    </div>
+
+                    <!-- Bottom Right Ribbon Badge -->
+                    <div class="learn-grow-ribbon">
+                        <span class="ribbon-text-1">A place to learn</span>
+                        <span class="ribbon-text-2">
+                            A place to grow
+                            <svg class="ribbon-stroke" viewBox="0 0 100 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M 3 6 C 30 10, 70 9, 97 4" stroke="#ea580c" stroke-width="2.5" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
             </div>
         </section>  
 
 
         <!-- ================= COUNCILS SECTION ================= -->
         <section class="councils-section" id="councils">
+            <!-- Background Decorative Botanical Leaf Watermarks -->
+            <img src="12_left_botanical_decor.png" alt="" class="councils-botanical-topleft" />
+            <img src="12_left_botanical_decor.png" alt="" class="councils-botanical-bottomleft" />
+            <img src="13_right_botanical_decor.png" alt="" class="councils-botanical-bottomright" />
+
+            <!-- Side Cursive Handwriting Labels -->
+            <div class="councils-side-badge badge-left">Real People <br>Real Impact</div>
+            <div class="councils-side-badge badge-right">Student <br>Led <br>Campus</div>
+
             <div class="campusled-container">
 
                 <div class="section-heading">
                     <span class="section-subtitle" data-i18n="subtitle_meet_councils">— MEET THE COUNCILS —</span>
-                    <h2 data-i18n="heading_12_councils">12 Councils. One Vision.</h2>
+                    <h2 data-i18n="heading_12_councils">
+                        12 Councils. <span class="title-highlight">One Vision.
+                            <svg class="title-underline" viewBox="0 0 110 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M 4 8 C 35 13, 75 12, 106 5" stroke="#ea580c" stroke-width="3" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                    </h2>
                     <p data-i18n="desc_12_councils">
                         Each council plays a vital role in building a vibrant campus.<br>
                         Explore the teams behind the action.
@@ -158,12 +224,12 @@
 
                 <!-- Filter Category Buttons -->
                 <div class="filter-buttons">
-                    <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All Councils</button>
-                    <button class="filter-btn" data-filter="campus-life" data-i18n="filter_campus_life">Campus Life</button>
-                    <button class="filter-btn" data-filter="academics" data-i18n="filter_academics">Academics</button>
-                    <button class="filter-btn" data-filter="wellness" data-i18n="filter_wellness">Wellness</button>
-                    <button class="filter-btn" data-filter="operations" data-i18n="filter_operations">Operations</button>
-                    <button class="filter-btn" data-filter="external" data-i18n="filter_external">External</button>
+                    <button class="filter-btn active" data-filter="all" data-i18n="filter_all"><i class="fa-solid fa-users"></i> All Councils</button>
+                    <button class="filter-btn" data-filter="campus-life" data-i18n="filter_campus_life"><i class="fa-solid fa-graduation-cap"></i> Campus Life</button>
+                    <button class="filter-btn" data-filter="academics" data-i18n="filter_academics"><i class="fa-solid fa-book-open"></i> Academics</button>
+                    <button class="filter-btn" data-filter="wellness" data-i18n="filter_wellness"><i class="fa-solid fa-heart"></i> Wellness</button>
+                    <button class="filter-btn" data-filter="operations" data-i18n="filter_operations"><i class="fa-solid fa-gear"></i> Operations</button>
+                    <button class="filter-btn" data-filter="external" data-i18n="filter_external"><i class="fa-solid fa-globe"></i> External</button>
                 </div>
 
                 <!-- 12 Council Cards Grid -->
@@ -367,7 +433,9 @@
 
     <!-- ================= PARTNERSHIP SECTION (MATCHING REFERENCE ASSETS & LAYOUT) ================= -->
     <section class="ajmf-values-outer-wrapper" style="background: #fff9f3; padding: 30px 0 50px 0; position: relative; overflow: hidden;" id="partner">
-<div class="our-partner-wrapper">
+        <!-- BOTANICAL CUTOUT BACKGROUND DECORATION LAYER -->
+        <div style="position: absolute; inset: 0; background-image: url('watercolor_frame_bg.png'); background-size: cover; background-position: center; opacity: 0.22; pointer-events: none; z-index: 0;"></div>
+        <div class="our-partner-wrapper" style="position: relative; z-index: 1;">
             <!-- LEFT BOTANICAL BACKGROUND ACCENT -->
             
 
@@ -441,8 +509,10 @@
     </section>
 
         <!-- ================= READY TO LEAD ================= -->
-        <section class="ready-section">
-            <div class="campusled-container">
+        <section class="ready-section" style="position: relative; overflow: hidden;">
+            <!-- BOTANICAL CUTOUT BACKGROUND DECORATION LAYER -->
+            <div style="position: absolute; inset: 0; background-image: url('watercolor_frame_bg.png'); background-size: cover; background-position: center; opacity: 0.22; pointer-events: none; z-index: 0;"></div>
+            <div class="campusled-container" style="position: relative; z-index: 1;">
                 <div class="ready-box">
                     <div class="ready-left">
                         <div class="ready-icon-wrap">
@@ -607,5 +677,6 @@
 <script src="header.js"></script>
 <script src="script.js"></script>
 
+    <script src="js/global-lightbox.js"></script>
 </body>
 </html>

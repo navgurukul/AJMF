@@ -2423,10 +2423,10 @@ body::before {
     z-index: 2;
 }
 
-/* Left Botanical Leaf Asset - Exposed clearly beside the cards */
+/* Left Botanical Leaf Asset - Positioned outward from the cards */
 .values-botanical-left {
     position: absolute;
-    left: -120px;
+    left: -155px;
     top: 40px;
     height: 320px;
     width: auto;
@@ -2437,10 +2437,10 @@ body::before {
     opacity: 0.10;
 }
 
-/* Right Handwritten Script Image Asset */
+/* Right Handwritten Script Image Asset - Positioned outward from the cards */
 .values-script-right-img {
     position: absolute;
-    right: -45px;
+    right: -75px;
     top: 105px;
     height: 135px;
     width: auto;
@@ -2688,9 +2688,31 @@ section.our-partner-section[id="partner"] {
 }
 
 .partner-impact-wrapper::before,
-.partner-impact-wrapper::after,
 section.ajmf-values-outer-wrapper[id="partner"]::before,
-section.ajmf-values-outer-wrapper[id="partner"]::after {
+section.our-partner-section[id="partner"]::before,
+.ready-section::before,
+.student-led-campus-page .ready-section::before {
+    content: '' !important;
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-image: url('watercolor_frame_bg.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    opacity: 0.22 !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
+}
+
+.partner-impact-wrapper::after,
+section.ajmf-values-outer-wrapper[id="partner"]::after,
+section.our-partner-section[id="partner"]::after {
     display: none !important;
     content: none !important;
 }
