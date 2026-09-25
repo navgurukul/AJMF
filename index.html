@@ -139,15 +139,24 @@
 <main>
 
     <section class="hero-slider-section">
+        <!-- Persistent YouTube Background Video Player -->
+        <div class="hero-video-bg-container" id="heroVideoBgContainer">
+            <div class="hero-video-wrapper">
+                <iframe id="heroBgVideoIframe"
+                    src="https://www.youtube.com/embed/MuvRV_MyX5I?enablejsapi=1&autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=MuvRV_MyX5I&modestbranding=1&playsinline=1&iv_load_policy=3&disablekb=1&fs=0"
+                    title="Anish Jadhav Memorial Foundation Background Video"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="hero-bg-overlay"></div>
+        </div>
+
         <div class="hero-slider-track">
 
             <!-- SLIDE 1 -->
             <div class="hero-slide active">
-                <div class="slide-bg">
-                    <img src="images/hero_slide_1.png" alt="Empowering Every Child Through Education"
-                        data-i18n-alt="slide1_title">
-                    <div class="slide-overlay"></div>
-                </div>
                 <div class="container hero-container">
                     <div class="slide-content">
                         <h1 class="slide-title" data-i18n="slide1_title">Empowering Every Child Through Education</h1>
@@ -180,10 +189,9 @@
                             </div>
                         </div>
                         <div class="slide-cta">
-                            <a href="https://admissions.navgurukul.org/students/" class="hero-btn btn-outline"
-                                target="_blank" rel="noopener">
+                            <button type="button" class="hero-btn btn-outline js-open-hero-video" id="watchHereBtn" style="cursor: pointer;">
                                 <i class="fa-regular fa-circle-play"></i> <span data-i18n="watch_here">Watch Here</span>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -191,12 +199,6 @@
 
             <!-- SLIDE 2 -->
             <div class="hero-slide">
-                <div class="slide-bg">
-                    <video autoplay muted playsinline loop>
-                        <source src="slide2.mp4" type="video/mp4">
-                    </video>
-                    <div class="slide-overlay"></div>
-                </div>
                 <div class="container hero-container">
                     <div class="slide-content">
                         <h1 class="slide-title" data-i18n="slide2_title">Learning Beyond the Classroom</h1>
@@ -229,10 +231,8 @@
                             </div>
                         </div>
                         <div class="slide-cta">
-                            <button type="button" id="watchSlide2VideoBtn" class="hero-btn btn-outline"
-                                style="cursor: pointer;">
-                                <i class="fa-regular fa-circle-play"></i> <span data-i18n="btn_watch_more">Watch
-                                    More</span>
+                            <button type="button" class="hero-btn btn-outline js-open-hero-video" id="watchSlide2VideoBtn" style="cursor: pointer;">
+                                <i class="fa-regular fa-circle-play"></i> <span data-i18n="watch_here">Watch Here</span>
                             </button>
                         </div>
                     </div>
@@ -241,10 +241,6 @@
 
             <!-- SLIDE 3 -->
             <div class="hero-slide">
-                <div class="slide-bg">
-                    <img src="image (1).png" alt="Creating Meaningful Change Together" data-i18n-alt="slide3_title">
-                    <div class="slide-overlay"></div>
-                </div>
                 <div class="container hero-container">
                     <div class="slide-content">
                         <h1 class="slide-title" data-i18n="slide3_title">Creating Meaningful Change Together</h1>
@@ -288,10 +284,6 @@
 
             <!-- SLIDE 4 -->
             <div class="hero-slide">
-                <div class="slide-bg">
-                    <img src="slide4.jpeg" alt="Be Part of the Change" data-i18n-alt="slide4_title">
-                    <div class="slide-overlay"></div>
-                </div>
                 <div class="container hero-container">
                     <div class="slide-content">
                         <h1 class="slide-title" data-i18n="slide4_title">Be Part of the Change</h1>
@@ -350,17 +342,20 @@
         </div>
     </section>
 
-    <!-- FULL VIDEO PLAYER MODAL FOR SLIDE 2 -->
-    <div id="slide2VideoModal" class="video-modal" aria-hidden="true" role="dialog" aria-label="Hero Video Player">
-        <div class="video-modal-backdrop" id="slide2VideoModalBackdrop"></div>
+    <!-- FULL YOUTUBE VIDEO MODAL -->
+    <div id="heroFullVideoModal" class="video-modal" aria-hidden="true" role="dialog" aria-label="Hero Video Player">
+        <div class="video-modal-backdrop" id="heroFullVideoModalBackdrop"></div>
         <div class="video-modal-container">
-            <button type="button" class="video-modal-close" id="closeSlide2VideoModalBtn"
+            <button type="button" class="video-modal-close" id="closeHeroFullVideoModalBtn"
                 aria-label="Close video player">&times;</button>
             <div class="video-player-wrapper">
-                <video id="slide2FullVideoPlayer" controls preload="metadata">
-                    <source src="slide2.mp4" type="video/mp4">
-                    Your browser does not support HTML5 video.
-                </video>
+                <iframe id="heroFullVideoIframe"
+                    src=""
+                    title="Anish Jadhav Memorial Foundation Video"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
             </div>
         </div>
     </div>
@@ -1071,12 +1066,12 @@
         const dots = document.querySelectorAll('#sliderDots .dot');
         const prevBtn = document.getElementById('prevSlide');
         const nextBtn = document.getElementById('nextSlide');
-        const sliderContainer = document.querySelector('.hero-slider-container');
+        const sliderContainer = document.querySelector('.hero-slider-section');
 
         if (slides.length > 0) {
             let currentSlide = 0;
             let slideInterval = null;
-            const autoSlideDuration = 5500;
+            const autoSlideDuration = 6000;
 
             function showSlide(index) {
                 if (index < 0) {
@@ -1090,17 +1085,8 @@
                 slides.forEach((slide, i) => {
                     if (i === currentSlide) {
                         slide.classList.add('active');
-                        const vid = slide.querySelector('video');
-                        if (vid) {
-                            vid.currentTime = 0;
-                            vid.play().catch(() => { });
-                        }
                     } else {
                         slide.classList.remove('active');
-                        const vid = slide.querySelector('video');
-                        if (vid) {
-                            vid.pause();
-                        }
                     }
                 });
 
@@ -1127,51 +1113,49 @@
                 }
             }
 
-            // Slide 2 Full Video Modal Handlers
-            const watchSlide2Btn = document.getElementById('watchSlide2VideoBtn');
-            const slide2Modal = document.getElementById('slide2VideoModal');
-            const slide2ModalBackdrop = document.getElementById('slide2VideoModalBackdrop');
-            const closeSlide2ModalBtn = document.getElementById('closeSlide2VideoModalBtn');
-            const slide2FullPlayer = document.getElementById('slide2FullVideoPlayer');
+            // Hero Full YouTube Video Modal Handlers
+            const heroVideoModal = document.getElementById('heroFullVideoModal');
+            const heroVideoModalBackdrop = document.getElementById('heroFullVideoModalBackdrop');
+            const closeHeroVideoModalBtn = document.getElementById('closeHeroFullVideoModalBtn');
+            const heroVideoIframe = document.getElementById('heroFullVideoIframe');
+            const openVideoButtons = document.querySelectorAll('.js-open-hero-video');
 
-            function openSlide2VideoModal() {
-                if (!slide2Modal || !slide2FullPlayer) return;
-                slide2Modal.classList.add('is-active');
-                slide2Modal.setAttribute('aria-hidden', 'false');
+            function openHeroFullVideoModal() {
+                if (!heroVideoModal || !heroVideoIframe) return;
+                stopAutoSlide();
+                heroVideoIframe.src = "https://www.youtube.com/embed/MuvRV_MyX5I?autoplay=1&rel=0&enablejsapi=1";
+                heroVideoModal.classList.add('is-active');
+                heroVideoModal.setAttribute('aria-hidden', 'false');
                 document.body.style.overflow = 'hidden';
-                slide2FullPlayer.currentTime = 0;
-                slide2FullPlayer.muted = false;
-                slide2FullPlayer.volume = 1.0;
-                slide2FullPlayer.play().catch(() => { });
             }
 
-            function closeSlide2VideoModal() {
-                if (!slide2Modal || !slide2FullPlayer) return;
-                slide2Modal.classList.remove('is-active');
-                slide2Modal.setAttribute('aria-hidden', 'true');
+            function closeHeroFullVideoModal() {
+                if (!heroVideoModal || !heroVideoIframe) return;
+                heroVideoModal.classList.remove('is-active');
+                heroVideoModal.setAttribute('aria-hidden', 'true');
+                heroVideoIframe.src = ""; // Clears iframe to stop playback instantly
                 document.body.style.overflow = '';
-                slide2FullPlayer.pause();
-                slide2FullPlayer.currentTime = 0;
+                startAutoSlide();
             }
 
-            if (watchSlide2Btn) {
-                watchSlide2Btn.addEventListener('click', function (e) {
+            openVideoButtons.forEach(btn => {
+                btn.addEventListener('click', function (e) {
                     e.preventDefault();
-                    openSlide2VideoModal();
+                    openHeroFullVideoModal();
                 });
+            });
+
+            if (closeHeroVideoModalBtn) {
+                closeHeroVideoModalBtn.addEventListener('click', closeHeroFullVideoModal);
             }
 
-            if (closeSlide2ModalBtn) {
-                closeSlide2ModalBtn.addEventListener('click', closeSlide2VideoModal);
-            }
-
-            if (slide2ModalBackdrop) {
-                slide2ModalBackdrop.addEventListener('click', closeSlide2VideoModal);
+            if (heroVideoModalBackdrop) {
+                heroVideoModalBackdrop.addEventListener('click', closeHeroFullVideoModal);
             }
 
             document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape' && slide2Modal && slide2Modal.classList.contains('is-active')) {
-                    closeSlide2VideoModal();
+                if (e.key === 'Escape' && heroVideoModal && heroVideoModal.classList.contains('is-active')) {
+                    closeHeroFullVideoModal();
                 }
             });
 
