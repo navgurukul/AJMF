@@ -143,7 +143,7 @@
         <div class="hero-video-bg-container" id="heroVideoBgContainer">
             <div class="hero-video-wrapper">
                 <iframe id="heroBgVideoIframe"
-                    src="https://www.youtube.com/embed/MuvRV_MyX5I?enablejsapi=1&autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=MuvRV_MyX5I&modestbranding=1&playsinline=1&iv_load_policy=3&disablekb=1&fs=0"
+                    src="https://www.youtube.com/embed/MuvRV_MyX5I?enablejsapi=1&autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=MuvRV_MyX5I&modestbranding=1&playsinline=1&iv_load_policy=3&disablekb=1&fs=0&vq=hd1080&hd=1"
                     title="Anish Jadhav Memorial Foundation Background Video"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1061,6 +1061,31 @@
             });
         }
 
+        // Hero Background Video 16:9 Aspect Ratio Resize Function
+        function resizeHeroVideo() {
+            const container = document.getElementById('heroVideoBgContainer');
+            const wrapper = document.querySelector('.hero-video-wrapper');
+            if (!container || !wrapper) return;
+            const w = container.offsetWidth || window.innerWidth;
+            const h = container.offsetHeight || 640;
+            const aspect = 16 / 9;
+
+            let videoW, videoH;
+            if (w / h > aspect) {
+                videoW = w;
+                videoH = w / aspect;
+            } else {
+                videoH = h;
+                videoW = h * aspect;
+            }
+
+            wrapper.style.width = Math.ceil(videoW) + 'px';
+            wrapper.style.height = Math.ceil(videoH) + 'px';
+        }
+
+        window.addEventListener('resize', resizeHeroVideo);
+        resizeHeroVideo();
+
         // Hero Slider Functionality
         const slides = document.querySelectorAll('.hero-slide');
         const dots = document.querySelectorAll('#sliderDots .dot');
@@ -1123,7 +1148,7 @@
             function openHeroFullVideoModal() {
                 if (!heroVideoModal || !heroVideoIframe) return;
                 stopAutoSlide();
-                heroVideoIframe.src = "https://www.youtube.com/embed/MuvRV_MyX5I?autoplay=1&rel=0&enablejsapi=1";
+                heroVideoIframe.src = "https://www.youtube.com/embed/MuvRV_MyX5I?autoplay=1&rel=0&enablejsapi=1&vq=hd1080&hd=1";
                 heroVideoModal.classList.add('is-active');
                 heroVideoModal.setAttribute('aria-hidden', 'false');
                 document.body.style.overflow = 'hidden';
@@ -1552,6 +1577,37 @@
     });
 </script>
 
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+    let heroBgYTPlayer;
+    function onYouTubeIframeAPIReady() {
+        heroBgYTPlayer = new YT.Player('heroBgVideoIframe', {
+            events: {
+                'onReady': function (e) {
+                    e.target.mute();
+                    if (typeof e.target.setPlaybackQuality === 'function') {
+                        e.target.setPlaybackQuality('hd1080');
+                    }
+                    if (typeof resizeHeroVideo === 'function') {
+                        resizeHeroVideo();
+                    }
+                    e.target.playVideo();
+                },
+                'onStateChange': function (e) {
+                    if (e.data === YT.PlayerState.PLAYING) {
+                        if (typeof e.target.setPlaybackQuality === 'function') {
+                            e.target.setPlaybackQuality('hd1080');
+                        }
+                    }
+                    if (e.data === YT.PlayerState.ENDED) {
+                        e.target.seekTo(0);
+                        e.target.playVideo();
+                    }
+                }
+            }
+        });
+    }
+</script>
 <script src="js/global-lightbox.js"></script>
 </body>
 
