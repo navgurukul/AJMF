@@ -143,7 +143,7 @@
         <div class="hero-video-bg-container" id="heroVideoBgContainer">
             <div class="hero-video-wrapper">
                 <iframe id="heroBgVideoIframe"
-                    src="https://www.youtube.com/embed/MuvRV_MyX5I?enablejsapi=1&autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=MuvRV_MyX5I&modestbranding=1&playsinline=1&iv_load_policy=3&disablekb=1&fs=0&vq=hd1080&hd=1"
+                    src="https://www.youtube.com/embed/MuvRV_MyX5I?enablejsapi=1&autoplay=1&mute=0&controls=0&showinfo=0&rel=0&loop=1&playlist=MuvRV_MyX5I&modestbranding=1&playsinline=1&iv_load_policy=3&disablekb=1&fs=0&vq=hd1080&hd=1"
                     title="Anish Jadhav Memorial Foundation Background Video"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -340,6 +340,12 @@
             <span class="dot" data-index="2"></span>
             <span class="dot" data-index="3"></span>
         </div>
+
+        <!-- Hero Sound Toggle Button -->
+        <button type="button" class="hero-sound-btn" id="heroSoundToggleBtn" aria-label="Toggle Background Video Sound" title="Sound is On">
+            <i class="fa-solid fa-volume-high" id="heroSoundIcon"></i>
+            <span class="sound-text" id="heroSoundText">Sound On</span>
+        </button>
     </section>
 
     <!-- FULL YOUTUBE VIDEO MODAL -->
@@ -1606,11 +1612,49 @@
 <script src="https://www.youtube.com/iframe_api"></script>
 <script>
     let heroBgYTPlayer;
+
+    function updateHeroSoundBtnUI(isUnmuted) {
+        const soundBtn = document.getElementById('heroSoundToggleBtn');
+        const soundIcon = document.getElementById('heroSoundIcon');
+        const soundText = document.getElementById('heroSoundText');
+        if (!soundBtn || !soundIcon) return;
+        if (isUnmuted) {
+            soundIcon.className = 'fa-solid fa-volume-high';
+            if (soundText) soundText.textContent = 'Sound On';
+            soundBtn.setAttribute('title', 'Click to Mute');
+            soundBtn.classList.remove('is-muted');
+        } else {
+            soundIcon.className = 'fa-solid fa-volume-xmark';
+            if (soundText) soundText.textContent = 'Sound Off';
+            soundBtn.setAttribute('title', 'Click to Unmute');
+            soundBtn.classList.add('is-muted');
+        }
+    }
+
+    function unmuteHeroVideo() {
+        if (heroBgYTPlayer && typeof heroBgYTPlayer.unMute === 'function') {
+            try {
+                heroBgYTPlayer.unMute();
+                heroBgYTPlayer.setVolume(100);
+                updateHeroSoundBtnUI(true);
+            } catch (err) {
+                console.warn('Hero unMute error:', err);
+            }
+        }
+    }
+
     function onYouTubeIframeAPIReady() {
         heroBgYTPlayer = new YT.Player('heroBgVideoIframe', {
             events: {
                 'onReady': function (e) {
-                    e.target.mute();
+                    try {
+                        e.target.unMute();
+                        e.target.setVolume(100);
+                        updateHeroSoundBtnUI(true);
+                    } catch (err) {
+                        console.warn('Initial unMute blocked by browser policy:', err);
+                    }
+
                     if (typeof e.target.setPlaybackQuality === 'function') {
                         e.target.setPlaybackQuality('hd1080');
                     }
@@ -1618,6 +1662,18 @@
                         resizeHeroVideo();
                     }
                     e.target.playVideo();
+
+                    // Modern browser autoplay policy fallback (unmutes on first user interaction if blocked initially)
+                    const tryUnmuteOnInteraction = function () {
+                        unmuteHeroVideo();
+                        ['click', 'touchstart', 'keydown', 'scroll'].forEach(function (evt) {
+                            window.removeEventListener(evt, tryUnmuteOnInteraction);
+                        });
+                    };
+
+                    ['click', 'touchstart', 'keydown', 'scroll'].forEach(function (evt) {
+                        window.addEventListener(evt, tryUnmuteOnInteraction, { passive: true });
+                    });
                 },
                 'onStateChange': function (e) {
                     if (e.data === YT.PlayerState.PLAYING) {
@@ -1633,6 +1689,24 @@
             }
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const soundBtn = document.getElementById('heroSoundToggleBtn');
+        if (soundBtn) {
+            soundBtn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                if (!heroBgYTPlayer || typeof heroBgYTPlayer.isMuted !== 'function') return;
+                if (heroBgYTPlayer.isMuted()) {
+                    heroBgYTPlayer.unMute();
+                    heroBgYTPlayer.setVolume(100);
+                    updateHeroSoundBtnUI(true);
+                } else {
+                    heroBgYTPlayer.mute();
+                    updateHeroSoundBtnUI(false);
+                }
+            });
+        }
+    });
 </script>
 <script src="js/global-lightbox.js"></script>
 </body>
