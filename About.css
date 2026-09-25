@@ -1795,7 +1795,7 @@ header.header.white-header {
 }
 
 .card-2-bg {
-    background-image: url('images-photo/anish\'s_smile.jpeg');
+    background-image: url("images-photo/anish's_smile.jpeg");
     background-position: center 20%;
     background-size: cover;
 }
@@ -2682,39 +2682,48 @@ section.our-partner-section[id="partner"] {
     width: 100%;
     padding: 60px 0 !important;
     margin: 0 !important;
-    background: #f8fafc !important;
-    background-image: none !important;
+    background: #fff9f3 !important;
     overflow: hidden;
 }
 
 .partner-impact-wrapper::before,
 section.ajmf-values-outer-wrapper[id="partner"]::before,
-section.our-partner-section[id="partner"]::before,
-.ready-section::before,
-.student-led-campus-page .ready-section::before {
+section.our-partner-section[id="partner"]::before {
     content: '' !important;
     display: block !important;
     position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
+    inset: 0 !important;
     background-image: url('watercolor_frame_bg.png') !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
-    opacity: 0.22 !important;
+    opacity: 0.16 !important;
     pointer-events: none !important;
     z-index: 0 !important;
 }
 
-.partner-impact-wrapper::after,
-section.ajmf-values-outer-wrapper[id="partner"]::after,
-section.our-partner-section[id="partner"]::after {
-    display: none !important;
-    content: none !important;
+.partner-cutout-bg-left {
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 230px;
+    height: auto;
+    opacity: 0.12;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.partner-cutout-bg-right {
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 230px;
+    height: auto;
+    opacity: 0.12;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .our-partner-wrapper {
@@ -3158,10 +3167,48 @@ header nav .dropdown-menu li a:active,
 .stats-outer-wrapper {
     width: 100%;
     padding: 45px 0 50px 0;
-    background: #fff9f3;
+    background: #fff9f3 !important;
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
+}
+
+.stats-outer-wrapper::before {
+    content: '' !important;
+    display: block !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background-image: url('watercolor_frame_bg.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    opacity: 0.16 !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
+}
+
+.stats-cutout-bg-left {
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 230px;
+    height: auto;
+    opacity: 0.12;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.stats-cutout-bg-right {
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 230px;
+    height: auto;
+    opacity: 0.12;
+    pointer-events: none;
+    z-index: 1;
 }
 
 /* Wide Centered Single Clean Impact Card */
