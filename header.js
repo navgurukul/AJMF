@@ -225,23 +225,35 @@ document.addEventListener('DOMContentLoaded', function () {
         }, { capture: true });
 
         // 5. Screenshot & Keyboard Shortcut Protection
+        // Note: OS screenshot tools (macOS Cmd+Shift+3/4/5, Windows Win+Shift+S) intercept
+        // the final number/letter key at the OS level before the browser sees it.
+        // However, the browser DOES receive the keydown for the modifier combo (Cmd+Shift / Ctrl+Shift)
+        // right before the final key is pressed. Activating the shield immediately on the modifier
+        // combo blocks the screen BEFORE the OS captures the frame.
+        let shieldLockedUntil = 0;
         let shieldTimeout = null;
+
         function activatePrivacyShield(durationMs) {
+            const lockMs = durationMs || 3500;
+            shieldLockedUntil = Date.now() + lockMs;
             document.body.classList.add('ajmf-capture-blocked');
+
             if (navigator.clipboard && navigator.clipboard.writeText) {
                 navigator.clipboard.writeText('').catch(function () {});
             }
+
             if (shieldTimeout) clearTimeout(shieldTimeout);
-            if (durationMs) {
-                shieldTimeout = setTimeout(function () {
-                    if (document.hasFocus()) {
-                        document.body.classList.remove('ajmf-capture-blocked');
-                    }
-                }, durationMs);
-            }
+            shieldTimeout = setTimeout(function () {
+                if (document.hasFocus() && Date.now() >= shieldLockedUntil) {
+                    document.body.classList.remove('ajmf-capture-blocked');
+                }
+            }, lockMs + 50);
         }
 
-        function deactivatePrivacyShield() {
+        function deactivatePrivacyShield(force) {
+            if (!force && Date.now() < shieldLockedUntil) {
+                return;
+            }
             if (shieldTimeout) {
                 clearTimeout(shieldTimeout);
                 shieldTimeout = null;
@@ -253,23 +265,30 @@ document.addEventListener('DOMContentLoaded', function () {
             const key = (e.key || '').toLowerCase();
             const isCmdOrCtrl = e.ctrlKey || e.metaKey;
 
+            // Immediately shield when Cmd+Shift, Win+Shift, Ctrl+Shift, or Cmd+Option is held down
+            // (fires BEFORE the 3/4/5/S key is intercepted by macOS/Windows screenshot utilities)
+            if ((e.metaKey && e.shiftKey) || (e.ctrlKey && e.shiftKey) || (e.metaKey && e.altKey)) {
+                activatePrivacyShield(4000);
+            }
+
             // PrintScreen key
             if (e.key === 'PrintScreen' || e.keyCode === 44) {
                 e.preventDefault();
-                activatePrivacyShield(2500);
+                activatePrivacyShield(4000);
                 return false;
             }
 
             // macOS screenshot shortcuts (Cmd + Shift + 3 / 4 / 5) or Windows/Browser capture (Ctrl/Win + Shift + S)
             if (isCmdOrCtrl && e.shiftKey && (key === '3' || key === '4' || key === '5' || key === 's')) {
                 e.preventDefault();
-                activatePrivacyShield(2500);
+                activatePrivacyShield(4000);
                 return false;
             }
 
             // Block Save (Ctrl/Cmd+S), Print (Ctrl/Cmd+P), View Source (Ctrl/Cmd+U)
             if (isCmdOrCtrl && (key === 's' || key === 'p' || key === 'u')) {
                 e.preventDefault();
+                activatePrivacyShield(2500);
                 return false;
             }
 
@@ -280,6 +299,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 (e.metaKey && e.altKey && (key === 'i' || key === 'j' || key === 'c' || key === 'u'))
             ) {
                 e.preventDefault();
+                activatePrivacyShield(2500);
                 return false;
             }
         }, { capture: true });
@@ -287,39 +307,37 @@ document.addEventListener('DOMContentLoaded', function () {
         window.addEventListener('keyup', function (e) {
             if (e.key === 'PrintScreen' || e.keyCode === 44) {
                 e.preventDefault();
-                activatePrivacyShield(2500);
+                activatePrivacyShield(4000);
             }
         }, { capture: true });
 
-        // Blur content when window loses focus (e.g., Snipping Tool or external screen capture app)
+        // Blur content immediately when window loses focus (e.g., Snipping Tool or external screen capture app)
         window.addEventListener('blur', function () {
-            setTimeout(function () {
-                // Allow embedded iframes (such as YouTube video players) to be clicked without locking the page
-                if (document.activeElement && document.activeElement.tagName === 'IFRAME') {
-                    return;
-                }
-                if (!document.hasFocus()) {
-                    document.body.classList.add('ajmf-capture-blocked');
-                }
-            }, 50);
+            if (document.activeElement && document.activeElement.tagName === 'IFRAME') {
+                return;
+            }
+            document.body.classList.add('ajmf-capture-blocked');
         });
 
-        window.addEventListener('focus', deactivatePrivacyShield);
+        window.addEventListener('focus', function () {
+            deactivatePrivacyShield(false);
+        });
+
         document.addEventListener('visibilitychange', function () {
             if (document.visibilityState === 'hidden') {
                 document.body.classList.add('ajmf-capture-blocked');
             } else if (document.hasFocus()) {
-                deactivatePrivacyShield();
+                deactivatePrivacyShield(false);
             }
         });
 
-        ['pointerdown', 'mousemove', 'touchstart'].forEach(function (evt) {
-            window.addEventListener(evt, function () {
-                if (document.hasFocus() && !shieldTimeout) {
-                    document.body.classList.remove('ajmf-capture-blocked');
-                }
-            }, { passive: true });
-        });
+        // Allow user to dismiss the shield by clicking on the page once they finish/cancel
+        window.addEventListener('pointerdown', function (e) {
+            if (!e.metaKey && !e.ctrlKey && !e.shiftKey) {
+                shieldLockedUntil = 0;
+                deactivatePrivacyShield(true);
+            }
+        }, { passive: true });
     })();
 });
 
