@@ -136,7 +136,7 @@
 
       <!-- RIGHT COLUMN: SINGLE LARGE IMMERSIVE VIDEO AREA -->
       <div class="hero-video-container">
-        <video class="hero-video-preview" id="heroPreviewVideo" autoplay muted playsinline preload="metadata">
+        <video class="hero-video-preview" id="heroPreviewVideo" autoplay muted playsinline preload="metadata" controlslist="nodownload noplaybackrate" disablepictureinpicture>
           <source src="youtube%20video.mp4" type="video/mp4">
           Your browser does not support HTML5 video.
         </video>
@@ -155,7 +155,7 @@
     <div class="video-modal-container">
       <button type="button" class="video-modal-close" id="closeVideoModalBtn" aria-label="Close video player">&times;</button>
       <div class="video-player-wrapper">
-        <video id="fullVideoPlayer" controls preload="metadata">
+        <video id="fullVideoPlayer" controls preload="metadata" controlslist="nodownload noplaybackrate" disablepictureinpicture>
           <source src="youtube%20video.mp4" type="video/mp4">
           Your browser does not support HTML5 video.
         </video>
@@ -490,19 +490,6 @@
                 </p>
             </div>
 
-            <!-- Column 5 -->
-            <div class="footer-col newsletter">
-                <h3 data-i18n="footer_newsletter_title">Newsletter</h3>
-                <p data-i18n="footer_newsletter_desc">
-                    Stay updated with our latest
-                    initiatives and stories.
-                </p>
-                <form class="newsletter-form" novalidate>
-                    <input type="email" class="newsletter-email" placeholder="Enter your email" data-i18n-placeholder="placeholder_email" required aria-label="Email address">
-                    <button type="submit" data-i18n="subscribe">Subscribe</button>
-                    <div class="newsletter-message" aria-live="polite"></div>
-                </form>
-            </div>
 
         </div>
 

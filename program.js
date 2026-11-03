@@ -183,7 +183,7 @@ if (cardsContainer) {
         <div class="program-card" id="${program.id}">
             <div class="program-image" ${program.video ? `style="cursor:pointer;" onclick="openSofVideoModal('${program.video}')" title="Click to view video with sound"` : ''}>
                 ${program.video ? `
-                    <video src="${program.video}" autoplay muted playsinline loop class="program-video-preview"></video>
+                    <video src="${program.video}" autoplay muted playsinline loop class="program-video-preview" controlslist="nodownload noplaybackrate" disablepictureinpicture></video>
                     <div class="video-play-overlay" aria-label="Play video with sound"><i class="fa-solid fa-play"></i></div>
                 ` : `<img src="${program.image}" alt="${program.title}">`}
             </div>
@@ -248,7 +248,7 @@ function ensureSofVideoModalExists() {
             <div class="sof-video-modal-backdrop" id="sofVideoModalBackdrop"></div>
             <div class="sof-video-modal-container">
                 <button type="button" class="sof-video-modal-close" id="closeSofVideoModalBtn" aria-label="Close video player">&times;</button>
-                <video id="sofFullVideoPlayer" class="sof-video-player" controls playsinline preload="metadata">
+                <video id="sofFullVideoPlayer" class="sof-video-player" controls playsinline preload="metadata" controlslist="nodownload noplaybackrate" disablepictureinpicture>
                     <source id="sofVideoSource" src="" type="video/mp4">
                     Your browser does not support HTML5 video.
                 </video>

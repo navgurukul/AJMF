@@ -116,43 +116,210 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // ==========================================================
-    // FOOTER NEWSLETTER FORM VALIDATION & SUBMISSION
+    // SITE-WIDE MEDIA & SCREENSHOT PROTECTION (PRIVACY & SECURITY)
+    // Prevents image/video downloading, right-click saving, drag-saving,
+    // print-to-PDF, and deters screenshots / screen capture tools.
     // ==========================================================
-    const newsletterForms = document.querySelectorAll('.newsletter form, form.newsletter-form');
-    
-    newsletterForms.forEach(function (form) {
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-            
-            const emailInput = form.querySelector('input[type="email"], .newsletter-email');
-            let messageBox = form.querySelector('.newsletter-message');
-            
-            if (!messageBox) {
-                messageBox = document.createElement('div');
-                messageBox.className = 'newsletter-message';
-                messageBox.setAttribute('aria-live', 'polite');
-                form.appendChild(messageBox);
+    (function initContentProtection() {
+        // 1. Inject protection styles & print blocker
+        const style = document.createElement('style');
+        style.id = 'ajmf-security-styles';
+        style.textContent = `
+            img, video, picture, canvas {
+                -webkit-user-drag: none !important;
+                user-drag: none !important;
+                -webkit-touch-callout: none !important;
+                -webkit-user-select: none !important;
+                -moz-user-select: none !important;
+                -ms-user-select: none !important;
+                user-select: none !important;
             }
-            
-            if (!emailInput) return;
-            
-            const emailValue = emailInput.value.trim();
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            
-            if (!emailValue) {
-                messageBox.textContent = 'Please enter your email address.';
-                messageBox.className = 'newsletter-message error';
-                emailInput.focus();
-            } else if (!emailRegex.test(emailValue)) {
-                messageBox.textContent = 'Please enter a valid email address.';
-                messageBox.className = 'newsletter-message error';
-                emailInput.focus();
-            } else {
-                messageBox.textContent = 'Thank you for subscribing to our newsletter!';
-                messageBox.className = 'newsletter-message success';
-                emailInput.value = '';
+            body.ajmf-capture-blocked > *:not(#ajmf-privacy-shield) {
+                filter: blur(30px) brightness(0.2) !important;
+                -webkit-filter: blur(30px) brightness(0.2) !important;
+                pointer-events: none !important;
+                user-select: none !important;
+            }
+            #ajmf-privacy-shield {
+                position: fixed;
+                inset: 0;
+                background: rgba(6, 27, 54, 0.96);
+                color: #ffffff;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+                padding: 24px;
+                z-index: 2147483647;
+                font-family: 'Poppins', sans-serif;
+            }
+            body.ajmf-capture-blocked #ajmf-privacy-shield {
+                display: flex !important;
+            }
+            @media print {
+                html, body {
+                    display: none !important;
+                    visibility: hidden !important;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // 2. Create privacy shield overlay for screenshot deterrence
+        const shield = document.createElement('div');
+        shield.id = 'ajmf-privacy-shield';
+        shield.setAttribute('aria-hidden', 'true');
+        shield.innerHTML = `
+            <i class="fas fa-shield-alt" style="font-size: 48px; color: #f57c00; margin-bottom: 16px;"></i>
+            <h3 style="margin: 0 0 8px; font-size: 22px; font-weight: 600;">Content Protected</h3>
+            <p style="margin: 0; font-size: 15px; color: #dcdcdc; max-width: 420px;">
+                For the safety and privacy of our students, screenshots and media downloads are disabled on this website.
+            </p>
+        `;
+        document.body.appendChild(shield);
+
+        // 3. Lock down all images and videos (existing and dynamically added)
+        function protectMediaElements(root) {
+            const scope = root && root.querySelectorAll ? root : document;
+            scope.querySelectorAll('img, video').forEach(function (el) {
+                el.setAttribute('draggable', 'false');
+                if (el.tagName === 'VIDEO') {
+                    el.setAttribute('controlsList', 'nodownload noplaybackrate');
+                    el.setAttribute('disablePictureInPicture', 'true');
+                    el.disablePictureInPicture = true;
+                }
+            });
+        }
+
+        protectMediaElements(document);
+
+        const observer = new MutationObserver(function (mutations) {
+            mutations.forEach(function (mutation) {
+                mutation.addedNodes.forEach(function (node) {
+                    if (node.nodeType === 1) {
+                        if (node.tagName === 'IMG' || node.tagName === 'VIDEO') {
+                            node.setAttribute('draggable', 'false');
+                            if (node.tagName === 'VIDEO') {
+                                node.setAttribute('controlsList', 'nodownload noplaybackrate');
+                                node.setAttribute('disablePictureInPicture', 'true');
+                                node.disablePictureInPicture = true;
+                            }
+                        }
+                        protectMediaElements(node);
+                    }
+                });
+            });
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+
+        // 4. Disable right-click context menu & drag-and-drop saving
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+            return false;
+        }, { capture: true });
+
+        document.addEventListener('dragstart', function (e) {
+            e.preventDefault();
+            return false;
+        }, { capture: true });
+
+        // 5. Screenshot & Keyboard Shortcut Protection
+        let shieldTimeout = null;
+        function activatePrivacyShield(durationMs) {
+            document.body.classList.add('ajmf-capture-blocked');
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText('').catch(function () {});
+            }
+            if (shieldTimeout) clearTimeout(shieldTimeout);
+            if (durationMs) {
+                shieldTimeout = setTimeout(function () {
+                    if (document.hasFocus()) {
+                        document.body.classList.remove('ajmf-capture-blocked');
+                    }
+                }, durationMs);
+            }
+        }
+
+        function deactivatePrivacyShield() {
+            if (shieldTimeout) {
+                clearTimeout(shieldTimeout);
+                shieldTimeout = null;
+            }
+            document.body.classList.remove('ajmf-capture-blocked');
+        }
+
+        window.addEventListener('keydown', function (e) {
+            const key = (e.key || '').toLowerCase();
+            const isCmdOrCtrl = e.ctrlKey || e.metaKey;
+
+            // PrintScreen key
+            if (e.key === 'PrintScreen' || e.keyCode === 44) {
+                e.preventDefault();
+                activatePrivacyShield(2500);
+                return false;
+            }
+
+            // macOS screenshot shortcuts (Cmd + Shift + 3 / 4 / 5) or Windows/Browser capture (Ctrl/Win + Shift + S)
+            if (isCmdOrCtrl && e.shiftKey && (key === '3' || key === '4' || key === '5' || key === 's')) {
+                e.preventDefault();
+                activatePrivacyShield(2500);
+                return false;
+            }
+
+            // Block Save (Ctrl/Cmd+S), Print (Ctrl/Cmd+P), View Source (Ctrl/Cmd+U)
+            if (isCmdOrCtrl && (key === 's' || key === 'p' || key === 'u')) {
+                e.preventDefault();
+                return false;
+            }
+
+            // Block DevTools (F12, Ctrl/Cmd+Shift+I/J/C, Cmd+Option+I/J/C/U)
+            if (
+                e.key === 'F12' ||
+                (isCmdOrCtrl && e.shiftKey && (key === 'i' || key === 'j' || key === 'c')) ||
+                (e.metaKey && e.altKey && (key === 'i' || key === 'j' || key === 'c' || key === 'u'))
+            ) {
+                e.preventDefault();
+                return false;
+            }
+        }, { capture: true });
+
+        window.addEventListener('keyup', function (e) {
+            if (e.key === 'PrintScreen' || e.keyCode === 44) {
+                e.preventDefault();
+                activatePrivacyShield(2500);
+            }
+        }, { capture: true });
+
+        // Blur content when window loses focus (e.g., Snipping Tool or external screen capture app)
+        window.addEventListener('blur', function () {
+            setTimeout(function () {
+                // Allow embedded iframes (such as YouTube video players) to be clicked without locking the page
+                if (document.activeElement && document.activeElement.tagName === 'IFRAME') {
+                    return;
+                }
+                if (!document.hasFocus()) {
+                    document.body.classList.add('ajmf-capture-blocked');
+                }
+            }, 50);
+        });
+
+        window.addEventListener('focus', deactivatePrivacyShield);
+        document.addEventListener('visibilitychange', function () {
+            if (document.visibilityState === 'hidden') {
+                document.body.classList.add('ajmf-capture-blocked');
+            } else if (document.hasFocus()) {
+                deactivatePrivacyShield();
             }
         });
-    });
+
+        ['pointerdown', 'mousemove', 'touchstart'].forEach(function (evt) {
+            window.addEventListener(evt, function () {
+                if (document.hasFocus() && !shieldTimeout) {
+                    document.body.classList.remove('ajmf-capture-blocked');
+                }
+            }, { passive: true });
+        });
+    })();
 });
 
