@@ -120,8 +120,10 @@ document.addEventListener('DOMContentLoaded', function () {
     // Prevents image/video downloading, right-click saving, drag-saving,
     // print-to-PDF, and deters screenshots / screen capture tools.
     // ==========================================================
+    const ENABLE_SCREENSHOT_PROTECTION = false; // Set to true to re-enable screenshot & blur shield
+
     (function initContentProtection() {
-        // 1. Inject protection styles & print blocker
+        // 1. Inject protection styles
         const style = document.createElement('style');
         style.id = 'ajmf-security-styles';
         style.textContent = `
@@ -134,52 +136,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 -ms-user-select: none !important;
                 user-select: none !important;
             }
-            body.ajmf-capture-blocked > *:not(#ajmf-privacy-shield) {
-                filter: blur(30px) brightness(0.2) !important;
-                -webkit-filter: blur(30px) brightness(0.2) !important;
-                pointer-events: none !important;
-                user-select: none !important;
-            }
-            #ajmf-privacy-shield {
-                position: fixed;
-                inset: 0;
-                background: rgba(6, 27, 54, 0.96);
-                color: #ffffff;
-                display: none;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                text-align: center;
-                padding: 24px;
-                z-index: 2147483647;
-                font-family: 'Poppins', sans-serif;
-            }
-            body.ajmf-capture-blocked #ajmf-privacy-shield {
-                display: flex !important;
-            }
-            @media print {
-                html, body {
-                    display: none !important;
-                    visibility: hidden !important;
-                }
-            }
         `;
         document.head.appendChild(style);
 
-        // 2. Create privacy shield overlay for screenshot deterrence
-        const shield = document.createElement('div');
-        shield.id = 'ajmf-privacy-shield';
-        shield.setAttribute('aria-hidden', 'true');
-        shield.innerHTML = `
-            <i class="fas fa-shield-alt" style="font-size: 48px; color: #f57c00; margin-bottom: 16px;"></i>
-            <h3 style="margin: 0 0 8px; font-size: 22px; font-weight: 600;">Content Protected</h3>
-            <p style="margin: 0; font-size: 15px; color: #dcdcdc; max-width: 420px;">
-                For the safety and privacy of our students, screenshots and media downloads are disabled on this website.
-            </p>
-        `;
-        document.body.appendChild(shield);
-
-        // 3. Lock down all images and videos (existing and dynamically added)
+        // 2. Lock down all images and videos from direct downloading
         function protectMediaElements(root) {
             const scope = root && root.querySelectorAll ? root : document;
             scope.querySelectorAll('img, video').forEach(function (el) {
@@ -219,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         observer.observe(document.body, { childList: true, subtree: true });
 
-        // 4. Disable right-click, middle-click open-in-new-tab, copy, & drag-and-drop saving
+        // 3. Disable right-click, middle-click open-in-new-tab, copy, & drag-and-drop saving on media
         document.addEventListener('contextmenu', function (e) {
             e.preventDefault();
             return false;
@@ -245,12 +205,55 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }, { capture: true });
 
-        // 5. Screenshot & Keyboard Shortcut Protection
-        // Note: OS screenshot tools (macOS Cmd+Shift+3/4/5, Windows Win+Shift+S) intercept
-        // the final number/letter key at the OS level before the browser sees it.
-        // However, the browser DOES receive the keydown for the modifier combo (Cmd+Shift / Ctrl+Shift)
-        // right before the final key is pressed. Activating the shield immediately on the modifier
-        // combo blocks the screen BEFORE the OS captures the frame.
+        // 4. Screenshot & Screen-Capture Shield (Controlled by ENABLE_SCREENSHOT_PROTECTION)
+        if (!ENABLE_SCREENSHOT_PROTECTION) return;
+
+        const shieldStyle = document.createElement('style');
+        shieldStyle.textContent = `
+            body.ajmf-capture-blocked > *:not(#ajmf-privacy-shield) {
+                filter: blur(30px) brightness(0.2) !important;
+                -webkit-filter: blur(30px) brightness(0.2) !important;
+                pointer-events: none !important;
+                user-select: none !important;
+            }
+            #ajmf-privacy-shield {
+                position: fixed;
+                inset: 0;
+                background: rgba(6, 27, 54, 0.96);
+                color: #ffffff;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+                padding: 24px;
+                z-index: 2147483647;
+                font-family: 'Poppins', sans-serif;
+            }
+            body.ajmf-capture-blocked #ajmf-privacy-shield {
+                display: flex !important;
+            }
+            @media print {
+                html, body {
+                    display: none !important;
+                    visibility: hidden !important;
+                }
+            }
+        `;
+        document.head.appendChild(shieldStyle);
+
+        const shield = document.createElement('div');
+        shield.id = 'ajmf-privacy-shield';
+        shield.setAttribute('aria-hidden', 'true');
+        shield.innerHTML = `
+            <i class="fas fa-shield-alt" style="font-size: 48px; color: #f57c00; margin-bottom: 16px;"></i>
+            <h3 style="margin: 0 0 8px; font-size: 22px; font-weight: 600;">Content Protected</h3>
+            <p style="margin: 0; font-size: 15px; color: #dcdcdc; max-width: 420px;">
+                For the safety and privacy of our students, screenshots and media downloads are disabled on this website.
+            </p>
+        `;
+        document.body.appendChild(shield);
+
         let shieldLockedUntil = 0;
         let shieldTimeout = null;
 
