@@ -184,10 +184,13 @@ document.addEventListener('DOMContentLoaded', function () {
             const scope = root && root.querySelectorAll ? root : document;
             scope.querySelectorAll('img, video').forEach(function (el) {
                 el.setAttribute('draggable', 'false');
+                el.setAttribute('oncontextmenu', 'return false;');
                 if (el.tagName === 'VIDEO') {
-                    el.setAttribute('controlsList', 'nodownload noplaybackrate');
+                    el.setAttribute('controlsList', 'nodownload noplaybackrate noremoteplayback');
                     el.setAttribute('disablePictureInPicture', 'true');
+                    el.setAttribute('disableRemotePlayback', 'true');
                     el.disablePictureInPicture = true;
+                    el.disableRemotePlayback = true;
                 }
             });
         }
@@ -200,10 +203,13 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (node.nodeType === 1) {
                         if (node.tagName === 'IMG' || node.tagName === 'VIDEO') {
                             node.setAttribute('draggable', 'false');
+                            node.setAttribute('oncontextmenu', 'return false;');
                             if (node.tagName === 'VIDEO') {
-                                node.setAttribute('controlsList', 'nodownload noplaybackrate');
+                                node.setAttribute('controlsList', 'nodownload noplaybackrate noremoteplayback');
                                 node.setAttribute('disablePictureInPicture', 'true');
+                                node.setAttribute('disableRemotePlayback', 'true');
                                 node.disablePictureInPicture = true;
+                                node.disableRemotePlayback = true;
                             }
                         }
                         protectMediaElements(node);
@@ -213,7 +219,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         observer.observe(document.body, { childList: true, subtree: true });
 
-        // 4. Disable right-click context menu & drag-and-drop saving
+        // 4. Disable right-click, middle-click open-in-new-tab, copy, & drag-and-drop saving
         document.addEventListener('contextmenu', function (e) {
             e.preventDefault();
             return false;
@@ -222,6 +228,21 @@ document.addEventListener('DOMContentLoaded', function () {
         document.addEventListener('dragstart', function (e) {
             e.preventDefault();
             return false;
+        }, { capture: true });
+
+        document.addEventListener('auxclick', function (e) {
+            if (e.target && e.target.closest && e.target.closest('img, video, picture, .global-lightbox-overlay, #lightbox')) {
+                e.preventDefault();
+                return false;
+            }
+        }, { capture: true });
+
+        document.addEventListener('copy', function (e) {
+            const sel = window.getSelection ? window.getSelection() : null;
+            if (sel && sel.anchorNode && sel.anchorNode.parentElement && sel.anchorNode.parentElement.closest('img, video')) {
+                e.preventDefault();
+                return false;
+            }
         }, { capture: true });
 
         // 5. Screenshot & Keyboard Shortcut Protection
